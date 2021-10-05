@@ -26,5 +26,11 @@ namespace CUMple
         {
 
         }
+
+        private void botingprog_Click(object sender, EventArgs e)
+        {
+            new Pruebadeconexiom().Show();
+            this.Hide();
+        }
     }
 }

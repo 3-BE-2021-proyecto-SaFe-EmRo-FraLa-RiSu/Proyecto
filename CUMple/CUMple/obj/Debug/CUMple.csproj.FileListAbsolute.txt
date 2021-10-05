@@ -8,7 +8,6 @@ C:\Users\Emilio\source\repos\CUMple\CUMple\obj\Debug\CUMple.csproj.CoreCompileIn
 C:\Users\Emilio\source\repos\CUMple\CUMple\obj\Debug\CUMple.exe
 C:\Users\Emilio\source\repos\CUMple\CUMple\obj\Debug\CUMple.pdb
 C:\Users\Emilio\source\repos\CUMple\CUMple\obj\Debug\CUMple.formadmin.resources
-C:\Users\Emilio\source\repos\CUMple\CUMple\obj\Debug\CUMple.Crearlosusuarios.resources
 C:\Users\Emilio\source\repos\CUMple\CUMple\obj\Debug\CUMple.forming.resources
 C:\Users\rimas\source\repos\CUMple\CUMple\bin\Debug\CUMple.exe.config
 C:\Users\rimas\source\repos\CUMple\CUMple\bin\Debug\CUMple.exe
@@ -47,3 +46,5 @@ C:\Users\Emilio\source\repos\CUMple\CUMple\bin\Debug\System.Memory.xml
 C:\Users\Emilio\source\repos\CUMple\CUMple\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Emilio\source\repos\CUMple\CUMple\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Emilio\source\repos\CUMple\CUMple\obj\Debug\CUMple.csproj.CopyComplete
+C:\Users\Emilio\source\repos\CUMple\CUMple\obj\Debug\CUMple.Pruebadeconexiom.resources
+C:\Users\Emilio\source\repos\CUMple\CUMple\obj\Debug\CUMple.Editarusuarios.resources

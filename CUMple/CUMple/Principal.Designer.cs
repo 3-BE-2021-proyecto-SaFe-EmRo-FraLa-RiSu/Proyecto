@@ -63,6 +63,7 @@ namespace CUMple
             this.botingprog.TabIndex = 6;
             this.botingprog.Text = "Grafica alumnos";
             this.botingprog.UseVisualStyleBackColor = false;
+            this.botingprog.Click += new System.EventHandler(this.botingprog_Click);
             // 
             // button1
             // 
@@ -119,7 +120,7 @@ namespace CUMple
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(221, 191);
+            this.textBox1.Location = new System.Drawing.Point(239, 191);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(285, 31);
             this.textBox1.TabIndex = 11;
@@ -130,7 +131,7 @@ namespace CUMple
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CUMple.Properties.Resources.logo_de_Academia_DO_difuminado_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(798, 470);
+            this.ClientSize = new System.Drawing.Size(757, 471);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

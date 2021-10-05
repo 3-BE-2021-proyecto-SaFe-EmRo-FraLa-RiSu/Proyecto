@@ -24,9 +24,14 @@ namespace CUMple
 
         private void botingprog_Click(object sender, EventArgs e)
         {
-            Crearlosusuarios chong = new Crearlosusuarios();
-            chong.Show();
+            new Principal().Show();
             this.Dispose();
+        }
+        private void botcrearus_Click(object sender, EventArgs e)
+        {
+            new Editarusuarios().Show();
+            this.Dispose();
+            
         }
     }
 }

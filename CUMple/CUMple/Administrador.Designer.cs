@@ -66,12 +66,13 @@ namespace CUMple
             this.botcrearus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botcrearus.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botcrearus.ForeColor = System.Drawing.Color.White;
-            this.botcrearus.Location = new System.Drawing.Point(119, 159);
+            this.botcrearus.Location = new System.Drawing.Point(119, 164);
             this.botcrearus.Name = "botcrearus";
             this.botcrearus.Size = new System.Drawing.Size(245, 41);
             this.botcrearus.TabIndex = 2;
-            this.botcrearus.Text = "Crear nuevo usuario";
+            this.botcrearus.Text = "Editar usuarios";
             this.botcrearus.UseVisualStyleBackColor = false;
+            this.botcrearus.Click += new System.EventHandler(this.botcrearus_Click);
             // 
             // formadmin
             // 

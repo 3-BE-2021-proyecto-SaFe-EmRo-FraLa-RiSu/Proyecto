@@ -24,7 +24,13 @@ namespace CUMple
         MySqlCommand comandoparamysql = new MySqlCommand();
         MySqlDataAdapter datosparamysql = new MySqlDataAdapter();
         
-        
+        public class Detallesusarios
+        {
+            private static string nombreusuario;
+            public static string nombreusuario_;
+
+
+        }
 
      
     
@@ -46,25 +52,35 @@ private void textBox2_TextChanged(object sender, EventArgs e)
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
-            
+
+
             conexionprograma.Open();
-            string logIn= "SELECT * FROM usuarios WHERE usuario= '" +txbuserb.Text+ "' and contraseña= '" +txbconb.Text+ "'";
+            string logIn = "SELECT * FROM usuarios WHERE usuario= '" + txbuserb.Text + "' and contraseña= '" + txbconb.Text + "'";
             comandoparamysql = new MySqlCommand(logIn, conexionprograma);
             MySqlDataReader lectordedatos = comandoparamysql.ExecuteReader();
 
-            if (lectordedatos.Read() == true)
+            if (lectordedatos.Read() == true && lectordedatos.GetString("tipo") == "Adm")
             {
 
-                new Principal().Show();              
+                new formadmin().Show();
                 this.Hide();
                 conexionprograma.Close();
             }
-            else {
+            else if (lectordedatos.Read() == true && lectordedatos.GetString("tipo") == "Alm")
+            {
+
+                new Principal().Show();
+                this.Hide();
+                conexionprograma.Close();
+            }
+
+            else 
+            {
 
                 MessageBox.Show("Usuario o contraseña incorrecta");
                 conexionprograma.Close();
             }
+         
 
             if (txbuserb.Text == "" && txbconb.Text == "")
             {
@@ -86,7 +102,7 @@ private void textBox2_TextChanged(object sender, EventArgs e)
             }
 
 
-
+            
 
         }
 
