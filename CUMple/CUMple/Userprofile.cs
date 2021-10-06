@@ -13,44 +13,67 @@ namespace CUMple
 {
     public partial class Userprofile : Form
     {
-        public Userprofile()
+        public Userprofile(string nombrebuscado)
         {
             InitializeComponent();
+            lblnombreuser.Text = nombrebuscado;
         }
-
+  
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
 
         public void editarusuario(string columna,string datoacambiar,string datonuevo)
         {
             conexionprograma.Open();
-            string comando = "update usuario set "+columna+"='"+datonuevo+"' where "+ columna +"='"+datoacambiar+"';";
+            string comando = "update discipulos set "+columna+"='"+datonuevo+"' where "+ columna +"='"+datoacambiar+"';";
             MySqlCommand comandoeditarusuario = new MySqlCommand(comando,conexionprograma);
-            comandoeditarusuario.ExecuteNonQuery();
+            try
+            {
+                comandoeditarusuario.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+            
+            MessageBox.Show("El usuario se ha editado correctamente");
             conexionprograma.Close();
         }
         
         public string mostrarlabel(string agarrardato)
         {
             conexionprograma.Open();
-            string reloco= "select * from usuario";
+            string dato;
+            string reloco= "select * from discipulos where nomcompleto='"+lblnombreuser.Text+"'";
             MySqlCommand comandolabel = new MySqlCommand(reloco,conexionprograma);
             MySqlDataReader lectordecomando = comandolabel.ExecuteReader();
-            lectordecomando.GetString(agarrardato) ;
-            conexionprograma.Close();
+            if (lectordecomando.Read())
+            {
+                dato=lectordecomando.GetString(agarrardato);
+                conexionprograma.Close();
+                return dato;
+            }
+            else
+            {
+                MessageBox.Show("El usuario indicado no existe.");
+                conexionprograma.Close();
+                return dato="";
+            }
+           
 
 
-            return agarrardato;
+           
         }
         private void Userprofile_Load(object sender, EventArgs e)
         {
-            lblapperf.Text = mostrarlabel("Apellido");
-            lblcedperf.Text = mostrarlabel("Cedula");
-            lblcelpref.Text = mostrarlabel("Celular");
-            lblemailpref.Text = mostrarlabel("Email");
-            lblfecingpref.Text = mostrarlabel("Fechadeing");
-            lblfecnacpref.Text = mostrarlabel("Fechadenac");
-            lblnomperf.Text = mostrarlabel("Nombre");
-            lblprofperf .Text = mostrarlabel("Profesion");
+           
+            lblcedperf.Text = mostrarlabel("cedula");
+            lblcelpref.Text = mostrarlabel("celular");
+            lblemailpref.Text = mostrarlabel("emails");
+            lblfecingpref.Text = mostrarlabel("fecha_de_ing");
+            lblfecnacpref.Text = mostrarlabel("fecha_de_nac");
+            lblnomperf.Text = mostrarlabel("nomcompleto");
+            lblprofperf .Text = mostrarlabel("profesiones");
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -85,7 +108,7 @@ namespace CUMple
             }
             else 
             {
-                editarusuario("Profesiones",txbprofedit.Text,lblprofperf.Text);
+                editarusuario("profesiones",txbprofedit.Text,lblprofperf.Text);
             }
 
             if (txbnomedit.Text == "")
@@ -93,44 +116,37 @@ namespace CUMple
             }
             else
             {
-                editarusuario("Nombre", txbnomedit.Text, lblnomperf.Text);
+                editarusuario("nomcompleto", txbnomedit.Text, lblnomperf.Text);
             }
             if (txbceddit.Text == "")
             {
             }
             else
             {
-                editarusuario("Cedula", txbceddit.Text, lblcedperf.Text);
+                editarusuario("cedula", txbceddit.Text, lblcedperf.Text);
             }
             if (txbceledit.Text == "")
             {
             }
             else
             {
-                editarusuario("Celular", txbceledit.Text, lblcelpref.Text);
+                editarusuario("celular", txbceledit.Text, lblcelpref.Text);
             }
             if (txbemailedit.Text == "")
             {              
             }
             else
             {
-                editarusuario("Emails", txbemailedit.Text, lblemailpref.Text);
+                editarusuario("emails", txbemailedit.Text, lblemailpref.Text);
             }
           
-            if (txbapedit.Text == "")
-            {
-            }
-            else
-            {
-                editarusuario("Apellido", txbapedit.Text, lblapperf.Text);
-            }
             if (txbfecdeingdit.Text == "")
             {
 
             }
             else
             {
-                editarusuario("Fechadeing", txbfecdeingdit.Text, txbfecdeingdit.Text);
+                editarusuario("fecha_de_ing", txbfecdeingdit.Text, txbfecdeingdit.Text);
             }
             if (txbfecdenacedit.Text == "")
             {
@@ -138,9 +154,19 @@ namespace CUMple
             }
             else
             {
-                editarusuario("Fechadenac", txbfecdenacedit.Text, lblfecnacpref.Text);
+                editarusuario("fecha_de_nac", txbfecdenacedit.Text, lblfecnacpref.Text);
             }
             //}
+        }
+
+        private void lblmostnom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbfecdenacedit_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

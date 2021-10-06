@@ -32,16 +32,11 @@ namespace CUMple
             this.components = new System.ComponentModel.Container();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.lblnombreuser = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnedit = new System.Windows.Forms.Button();
             this.lblmostnom = new System.Windows.Forms.Label();
-            this.lblapell = new System.Windows.Forms.Label();
             this.lblnomperf = new System.Windows.Forms.Label();
-            this.lblmostap = new System.Windows.Forms.Label();
             this.txbnomedit = new System.Windows.Forms.TextBox();
-            this.lblapell2 = new System.Windows.Forms.Label();
             this.lblmostnom2 = new System.Windows.Forms.Label();
-            this.txbapedit = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txbprofedit = new System.Windows.Forms.TextBox();
             this.txbceddit = new System.Windows.Forms.TextBox();
@@ -60,14 +55,12 @@ namespace CUMple
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.lblapperf = new System.Windows.Forms.Label();
             this.lblprofperf = new System.Windows.Forms.Label();
             this.lblcedperf = new System.Windows.Forms.Label();
             this.lblfecnacpref = new System.Windows.Forms.Label();
             this.lblfecingpref = new System.Windows.Forms.Label();
             this.lblemailpref = new System.Windows.Forms.Label();
             this.lblcelpref = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -85,14 +78,6 @@ namespace CUMple
             this.lblnombreuser.Size = new System.Drawing.Size(0, 20);
             this.lblnombreuser.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 51);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(216, 164);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnedit
             // 
             this.btnedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,75 +93,39 @@ namespace CUMple
             // 
             this.lblmostnom.AutoSize = true;
             this.lblmostnom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmostnom.Location = new System.Drawing.Point(238, 67);
+            this.lblmostnom.Location = new System.Drawing.Point(23, 75);
             this.lblmostnom.Name = "lblmostnom";
-            this.lblmostnom.Size = new System.Drawing.Size(69, 20);
+            this.lblmostnom.Size = new System.Drawing.Size(138, 20);
             this.lblmostnom.TabIndex = 3;
-            this.lblmostnom.Text = "Nombre:";
-            // 
-            // lblapell
-            // 
-            this.lblapell.AutoSize = true;
-            this.lblapell.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblapell.Location = new System.Drawing.Point(238, 109);
-            this.lblapell.Name = "lblapell";
-            this.lblapell.Size = new System.Drawing.Size(69, 20);
-            this.lblapell.TabIndex = 4;
-            this.lblapell.Text = "Apellido:";
+            this.lblmostnom.Text = "Nombre completo:";
+            this.lblmostnom.Click += new System.EventHandler(this.lblmostnom_Click);
             // 
             // lblnomperf
             // 
             this.lblnomperf.AutoSize = true;
             this.lblnomperf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnomperf.Location = new System.Drawing.Point(311, 67);
+            this.lblnomperf.Location = new System.Drawing.Point(156, 75);
             this.lblnomperf.Name = "lblnomperf";
             this.lblnomperf.Size = new System.Drawing.Size(0, 20);
             this.lblnomperf.TabIndex = 5;
             // 
-            // lblmostap
-            // 
-            this.lblmostap.AutoSize = true;
-            this.lblmostap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmostap.Location = new System.Drawing.Point(299, 109);
-            this.lblmostap.Name = "lblmostap";
-            this.lblmostap.Size = new System.Drawing.Size(0, 20);
-            this.lblmostap.TabIndex = 6;
-            // 
             // txbnomedit
             // 
             this.txbnomedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbnomedit.Location = new System.Drawing.Point(109, 388);
+            this.txbnomedit.Location = new System.Drawing.Point(152, 388);
             this.txbnomedit.Name = "txbnomedit";
             this.txbnomedit.Size = new System.Drawing.Size(100, 24);
             this.txbnomedit.TabIndex = 7;
-            // 
-            // lblapell2
-            // 
-            this.lblapell2.AutoSize = true;
-            this.lblapell2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblapell2.Location = new System.Drawing.Point(23, 425);
-            this.lblapell2.Name = "lblapell2";
-            this.lblapell2.Size = new System.Drawing.Size(69, 20);
-            this.lblapell2.TabIndex = 9;
-            this.lblapell2.Text = "Apellido:";
             // 
             // lblmostnom2
             // 
             this.lblmostnom2.AutoSize = true;
             this.lblmostnom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmostnom2.Location = new System.Drawing.Point(23, 388);
+            this.lblmostnom2.Location = new System.Drawing.Point(8, 388);
             this.lblmostnom2.Name = "lblmostnom2";
-            this.lblmostnom2.Size = new System.Drawing.Size(69, 20);
+            this.lblmostnom2.Size = new System.Drawing.Size(138, 20);
             this.lblmostnom2.TabIndex = 8;
-            this.lblmostnom2.Text = "Nombre:";
-            // 
-            // txbapedit
-            // 
-            this.txbapedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbapedit.Location = new System.Drawing.Point(109, 425);
-            this.txbapedit.Name = "txbapedit";
-            this.txbapedit.Size = new System.Drawing.Size(100, 24);
-            this.txbapedit.TabIndex = 10;
+            this.lblmostnom2.Text = "Nombre completo:";
             // 
             // label1
             // 
@@ -221,6 +170,7 @@ namespace CUMple
             this.txbfecdenacedit.Name = "txbfecdenacedit";
             this.txbfecdenacedit.Size = new System.Drawing.Size(100, 24);
             this.txbfecdenacedit.TabIndex = 18;
+            this.txbfecdenacedit.TextChanged += new System.EventHandler(this.txbfecdenacedit_TextChanged);
             // 
             // label3
             // 
@@ -293,7 +243,7 @@ namespace CUMple
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(238, 148);
+            this.label7.Location = new System.Drawing.Point(23, 112);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 20);
             this.label7.TabIndex = 23;
@@ -303,7 +253,7 @@ namespace CUMple
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(238, 182);
+            this.label8.Location = new System.Drawing.Point(23, 147);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 20);
             this.label8.TabIndex = 24;
@@ -313,7 +263,7 @@ namespace CUMple
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(473, 182);
+            this.label9.Location = new System.Drawing.Point(24, 182);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 20);
             this.label9.TabIndex = 25;
@@ -350,20 +300,11 @@ namespace CUMple
             this.label12.TabIndex = 28;
             this.label12.Text = "Fecha de ingreso:";
             // 
-            // lblapperf
-            // 
-            this.lblapperf.AutoSize = true;
-            this.lblapperf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblapperf.Location = new System.Drawing.Point(307, 109);
-            this.lblapperf.Name = "lblapperf";
-            this.lblapperf.Size = new System.Drawing.Size(0, 20);
-            this.lblapperf.TabIndex = 29;
-            // 
             // lblprofperf
             // 
             this.lblprofperf.AutoSize = true;
             this.lblprofperf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprofperf.Location = new System.Drawing.Point(311, 148);
+            this.lblprofperf.Location = new System.Drawing.Point(105, 112);
             this.lblprofperf.Name = "lblprofperf";
             this.lblprofperf.Size = new System.Drawing.Size(0, 20);
             this.lblprofperf.TabIndex = 30;
@@ -372,7 +313,7 @@ namespace CUMple
             // 
             this.lblcedperf.AutoSize = true;
             this.lblcedperf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcedperf.Location = new System.Drawing.Point(299, 182);
+            this.lblcedperf.Location = new System.Drawing.Point(92, 147);
             this.lblcedperf.Name = "lblcedperf";
             this.lblcedperf.Size = new System.Drawing.Size(0, 20);
             this.lblcedperf.TabIndex = 31;
@@ -408,7 +349,7 @@ namespace CUMple
             // 
             this.lblcelpref.AutoSize = true;
             this.lblcelpref.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcelpref.Location = new System.Drawing.Point(541, 182);
+            this.lblcelpref.Location = new System.Drawing.Point(86, 182);
             this.lblcelpref.Name = "lblcelpref";
             this.lblcelpref.Size = new System.Drawing.Size(0, 20);
             this.lblcelpref.TabIndex = 35;
@@ -424,7 +365,6 @@ namespace CUMple
             this.Controls.Add(this.lblfecnacpref);
             this.Controls.Add(this.lblcedperf);
             this.Controls.Add(this.lblprofperf);
-            this.Controls.Add(this.lblapperf);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -443,21 +383,15 @@ namespace CUMple
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbprofedit);
-            this.Controls.Add(this.txbapedit);
-            this.Controls.Add(this.lblapell2);
             this.Controls.Add(this.lblmostnom2);
             this.Controls.Add(this.txbnomedit);
-            this.Controls.Add(this.lblmostap);
             this.Controls.Add(this.lblnomperf);
-            this.Controls.Add(this.lblapell);
             this.Controls.Add(this.lblmostnom);
             this.Controls.Add(this.btnedit);
             this.Controls.Add(this.lblnombreuser);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "Userprofile";
             this.Text = "Perfil de usuario";
             this.Load += new System.EventHandler(this.Userprofile_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,17 +400,12 @@ namespace CUMple
         #endregion
 
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblnombreuser;
         private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Label lblmostnom;
-        private System.Windows.Forms.Label lblapell;
         private System.Windows.Forms.Label lblnomperf;
-        private System.Windows.Forms.Label lblmostap;
         private System.Windows.Forms.TextBox txbnomedit;
-        private System.Windows.Forms.Label lblapell2;
         private System.Windows.Forms.Label lblmostnom2;
-        private System.Windows.Forms.TextBox txbapedit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbprofedit;
         private System.Windows.Forms.TextBox txbceddit;
@@ -495,7 +424,6 @@ namespace CUMple
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lblapperf;
         private System.Windows.Forms.Label lblprofperf;
         private System.Windows.Forms.Label lblcedperf;
         private System.Windows.Forms.Label lblfecnacpref;

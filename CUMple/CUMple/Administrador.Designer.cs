@@ -33,6 +33,8 @@ namespace CUMple
             this.lblxd = new System.Windows.Forms.Label();
             this.botingprog = new System.Windows.Forms.Button();
             this.botcrearus = new System.Windows.Forms.Button();
+            this.txbdiscipulo = new System.Windows.Forms.TextBox();
+            this.btnbuscardis = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblxd
@@ -74,13 +76,37 @@ namespace CUMple
             this.botcrearus.UseVisualStyleBackColor = false;
             this.botcrearus.Click += new System.EventHandler(this.botcrearus_Click);
             // 
+            // txbdiscipulo
+            // 
+            this.txbdiscipulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbdiscipulo.Location = new System.Drawing.Point(178, 216);
+            this.txbdiscipulo.Name = "txbdiscipulo";
+            this.txbdiscipulo.Size = new System.Drawing.Size(129, 29);
+            this.txbdiscipulo.TabIndex = 3;
+            // 
+            // btnbuscardis
+            // 
+            this.btnbuscardis.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnbuscardis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnbuscardis.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscardis.ForeColor = System.Drawing.Color.White;
+            this.btnbuscardis.Location = new System.Drawing.Point(119, 251);
+            this.btnbuscardis.Name = "btnbuscardis";
+            this.btnbuscardis.Size = new System.Drawing.Size(245, 41);
+            this.btnbuscardis.TabIndex = 4;
+            this.btnbuscardis.Text = "Buscar usuarios";
+            this.btnbuscardis.UseVisualStyleBackColor = false;
+            this.btnbuscardis.Click += new System.EventHandler(this.btnbuscardis_Click);
+            // 
             // formadmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CUMple.Properties.Resources.logo_de_Academia_DO_difuminado_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(484, 272);
+            this.ClientSize = new System.Drawing.Size(484, 327);
+            this.Controls.Add(this.btnbuscardis);
+            this.Controls.Add(this.txbdiscipulo);
             this.Controls.Add(this.botcrearus);
             this.Controls.Add(this.botingprog);
             this.Controls.Add(this.lblxd);
@@ -99,5 +125,7 @@ namespace CUMple
         private System.Windows.Forms.Label lblxd;
         private System.Windows.Forms.Button botingprog;
         private System.Windows.Forms.Button botcrearus;
+        private System.Windows.Forms.TextBox txbdiscipulo;
+        private System.Windows.Forms.Button btnbuscardis;
     }
 }

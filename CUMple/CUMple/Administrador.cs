@@ -33,5 +33,11 @@ namespace CUMple
             this.Dispose();
             
         }
+
+        private void btnbuscardis_Click(object sender, EventArgs e)
+        {
+            new Userprofile(txbdiscipulo.Text).Show();
+            this.Dispose();
+        }
     }
 }
