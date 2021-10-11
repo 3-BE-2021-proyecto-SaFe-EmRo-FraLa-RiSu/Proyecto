@@ -18,11 +18,11 @@ namespace CUMple
         {
             InitializeComponent();
         }
-
+      
 
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
         MySqlCommand comandoparamysql = new MySqlCommand();
-        MySqlDataAdapter datosparamysql = new MySqlDataAdapter();
+        
         
         public class Detallesusarios
         {
@@ -52,57 +52,57 @@ private void textBox2_TextChanged(object sender, EventArgs e)
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
 
             conexionprograma.Open();
             string logIn = "SELECT * FROM usuarios WHERE usuario= '" + txbuserb.Text + "' and contraseña= '" + txbconb.Text + "'";
             comandoparamysql = new MySqlCommand(logIn, conexionprograma);
             MySqlDataReader lectordedatos = comandoparamysql.ExecuteReader();
-
+           
             if (lectordedatos.Read() == true && lectordedatos.GetString("tipo") == "Adm")
             {
 
                 new formadmin().Show();
                 this.Hide();
-                conexionprograma.Close();
+                
             }
             else if (lectordedatos.Read() == true && lectordedatos.GetString("tipo") == "Alm")
             {
 
                 new Principal().Show();
                 this.Hide();
-                conexionprograma.Close();
+                
             }
 
             else 
             {
 
                 MessageBox.Show("Usuario o contraseña incorrecta");
-                conexionprograma.Close();
+               
             }
          
 
             if (txbuserb.Text == "" && txbconb.Text == "")
             {
                 MessageBox.Show("Los campos no pueden estar vacios");
-                conexionprograma.Close();
+                
             }
 
             else if (txbuserb.Text == "")
             {
                 MessageBox.Show("El campo de usuario esta vacio");
                 txbuserb.Focus();
-                conexionprograma.Close();
+                
             }
             else if (txbconb.Text == "")
             {
                 MessageBox.Show("El campo de la contraseña esta vacio");
                 txbconb.Focus();
-                conexionprograma.Close();
+               
             }
 
+            conexionprograma.Close();
 
-            
 
         }
 

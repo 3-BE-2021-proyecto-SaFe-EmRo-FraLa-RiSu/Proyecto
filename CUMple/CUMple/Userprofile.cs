@@ -29,14 +29,15 @@ namespace CUMple
             try
             {
                 comandoeditarusuario.ExecuteNonQuery();
+            
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 throw;
             }
-            
             MessageBox.Show("El usuario se ha editado correctamente");
+
             conexionprograma.Close();
         }
         
@@ -44,11 +45,11 @@ namespace CUMple
         {
             conexionprograma.Open();
             string dato;
-            string reloco= "select * from discipulos where nomcompleto='"+lblnombreuser.Text+"'";
-            MySqlCommand comandolabel = new MySqlCommand(reloco,conexionprograma);
+            string mostrardiscipulos= "select * from discipulos where nomcompleto='"+lblnombreuser.Text+"'";
+            MySqlCommand comandolabel = new MySqlCommand(mostrardiscipulos,conexionprograma);
             MySqlDataReader lectordecomando = comandolabel.ExecuteReader();
             if (lectordecomando.Read())
-            {
+            {                                   //tabla
                 dato=lectordecomando.GetString(agarrardato);
                 conexionprograma.Close();
                 return dato;

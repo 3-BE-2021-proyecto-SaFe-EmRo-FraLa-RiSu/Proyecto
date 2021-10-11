@@ -72,7 +72,7 @@ namespace CUMple
                     string comandocrearusuariostring = "insert into usuarios(usuario,contraseña,tipo)values('" + txbusucre.Text + "','" + txtbcontra.Text + "','Alm');";
                     MySqlCommand comandoparacrearusuarios = new MySqlCommand(comandocrearusuariostring, conexionprograma);
                     comandoparacrearusuarios.ExecuteNonQuery();
-                    comandoparacrearusuarios.Dispose();
+            
                     MessageBox.Show("El usuario se creo correctamente");
                         txbusucre.Text = "";
                         txtbcontra.Text = "";
