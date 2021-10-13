@@ -90,7 +90,7 @@ namespace CUMple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 522);
+            this.ClientSize = new System.Drawing.Size(658, 518);
             this.Controls.Add(this.cmbmeses);
             this.Controls.Add(this.Graficadealumnos);
             this.Name = "Pruebadeconexiom";

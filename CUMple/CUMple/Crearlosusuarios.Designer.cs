@@ -42,7 +42,7 @@ namespace CUMple
             this.txbcontraconf = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnborrarusuario = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btneditarusuario = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -181,18 +181,19 @@ namespace CUMple
             this.btnborrarusuario.UseVisualStyleBackColor = false;
             this.btnborrarusuario.Click += new System.EventHandler(this.btnborrarusuario_Click);
             // 
-            // button2
+            // btneditarusuario
             // 
-            this.button2.BackColor = System.Drawing.Color.LimeGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(274, 399);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(160, 36);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Crear usuario";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btneditarusuario.BackColor = System.Drawing.Color.Olive;
+            this.btneditarusuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btneditarusuario.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditarusuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btneditarusuario.Location = new System.Drawing.Point(274, 399);
+            this.btneditarusuario.Name = "btneditarusuario";
+            this.btneditarusuario.Size = new System.Drawing.Size(160, 36);
+            this.btneditarusuario.TabIndex = 13;
+            this.btneditarusuario.Text = "Editar usuario";
+            this.btneditarusuario.UseVisualStyleBackColor = false;
+            this.btneditarusuario.Click += new System.EventHandler(this.button2_Click);
             // 
             // Editarusuarios
             // 
@@ -201,7 +202,7 @@ namespace CUMple
             this.BackgroundImage = global::CUMple.Properties.Resources.logo_de_Academia_DO_difuminado_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(609, 457);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btneditarusuario);
             this.Controls.Add(this.btnborrarusuario);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txbcontraconf);
@@ -238,6 +239,6 @@ namespace CUMple
         private System.Windows.Forms.TextBox txbcontraconf;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnborrarusuario;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btneditarusuario;
     }
 }

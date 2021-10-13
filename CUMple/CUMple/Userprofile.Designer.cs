@@ -31,7 +31,7 @@ namespace CUMple
         {
             this.components = new System.ComponentModel.Container();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.lblnombreuser = new System.Windows.Forms.Label();
+            this.lblceduladisc = new System.Windows.Forms.Label();
             this.btnedit = new System.Windows.Forms.Button();
             this.lblmostnom = new System.Windows.Forms.Label();
             this.lblnomperf = new System.Windows.Forms.Label();
@@ -69,14 +69,14 @@ namespace CUMple
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // lblnombreuser
+            // lblceduladisc
             // 
-            this.lblnombreuser.AutoSize = true;
-            this.lblnombreuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombreuser.Location = new System.Drawing.Point(23, 19);
-            this.lblnombreuser.Name = "lblnombreuser";
-            this.lblnombreuser.Size = new System.Drawing.Size(0, 20);
-            this.lblnombreuser.TabIndex = 1;
+            this.lblceduladisc.AutoSize = true;
+            this.lblceduladisc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblceduladisc.Location = new System.Drawing.Point(23, 19);
+            this.lblceduladisc.Name = "lblceduladisc";
+            this.lblceduladisc.Size = new System.Drawing.Size(0, 20);
+            this.lblceduladisc.TabIndex = 1;
             // 
             // btnedit
             // 
@@ -388,7 +388,7 @@ namespace CUMple
             this.Controls.Add(this.lblnomperf);
             this.Controls.Add(this.lblmostnom);
             this.Controls.Add(this.btnedit);
-            this.Controls.Add(this.lblnombreuser);
+            this.Controls.Add(this.lblceduladisc);
             this.Name = "Userprofile";
             this.Text = "Perfil de usuario";
             this.Load += new System.EventHandler(this.Userprofile_Load);
@@ -400,7 +400,7 @@ namespace CUMple
         #endregion
 
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Label lblnombreuser;
+        private System.Windows.Forms.Label lblceduladisc;
         private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Label lblmostnom;
         private System.Windows.Forms.Label lblnomperf;

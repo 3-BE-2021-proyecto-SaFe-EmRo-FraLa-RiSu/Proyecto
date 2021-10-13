@@ -16,15 +16,15 @@ namespace CUMple
         public Userprofile(string nombrebuscado)
         {
             InitializeComponent();
-            lblnombreuser.Text = nombrebuscado;
+            lblceduladisc.Text = nombrebuscado;
         }
   
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
 
-        public void editarusuario(string columna,string datoacambiar,string datonuevo)
+        public void editarusuario(string columna,string datonuevo, string datoacambiar)
         {
             conexionprograma.Open();
-            string comando = "update discipulos set "+columna+"='"+datonuevo+"' where "+ columna +"='"+datoacambiar+"';";
+            string comando = "update discipulos set "+columna+"='"+ datonuevo + "' where "+ columna +"='"+ datoacambiar + "';";
             MySqlCommand comandoeditarusuario = new MySqlCommand(comando,conexionprograma);
             try
             {
@@ -45,25 +45,26 @@ namespace CUMple
         {
             conexionprograma.Open();
             string dato;
-            string mostrardiscipulos= "select * from discipulos where nomcompleto='"+lblnombreuser.Text+"'";
+            string mostrardiscipulos= "select * from discipulos where cedula='"+lblceduladisc.Text+"'";
             MySqlCommand comandolabel = new MySqlCommand(mostrardiscipulos,conexionprograma);
             MySqlDataReader lectordecomando = comandolabel.ExecuteReader();
-            if (lectordecomando.Read())
-            {                                   //tabla
+           if (lectordecomando.Read())
+            { 
+                                             //tabla
                 dato=lectordecomando.GetString(agarrardato);
                 conexionprograma.Close();
-                return dato;
+                return dato;         
             }
-            else
+           else
             {
-                MessageBox.Show("El usuario indicado no existe.");
-                conexionprograma.Close();
-                return dato="";
+                return dato = "";
+
             }
-           
 
 
-           
+
+
+
         }
         private void Userprofile_Load(object sender, EventArgs e)
         {
@@ -110,6 +111,7 @@ namespace CUMple
             else 
             {
                 editarusuario("profesiones",txbprofedit.Text,lblprofperf.Text);
+                lblprofperf.Text = mostrarlabel("profesiones");
             }
 
             if (txbnomedit.Text == "")
@@ -118,6 +120,7 @@ namespace CUMple
             else
             {
                 editarusuario("nomcompleto", txbnomedit.Text, lblnomperf.Text);
+                lblnomperf.Text = mostrarlabel("nomcompleto");
             }
             if (txbceddit.Text == "")
             {
@@ -125,6 +128,7 @@ namespace CUMple
             else
             {
                 editarusuario("cedula", txbceddit.Text, lblcedperf.Text);
+                lblcedperf.Text = mostrarlabel("cedula");
             }
             if (txbceledit.Text == "")
             {
@@ -132,6 +136,7 @@ namespace CUMple
             else
             {
                 editarusuario("celular", txbceledit.Text, lblcelpref.Text);
+                lblcelpref.Text = mostrarlabel("celular");
             }
             if (txbemailedit.Text == "")
             {              
@@ -139,6 +144,7 @@ namespace CUMple
             else
             {
                 editarusuario("emails", txbemailedit.Text, lblemailpref.Text);
+                lblemailpref.Text = mostrarlabel("emails");
             }
           
             if (txbfecdeingdit.Text == "")
@@ -148,6 +154,7 @@ namespace CUMple
             else
             {
                 editarusuario("fecha_de_ing", txbfecdeingdit.Text, txbfecdeingdit.Text);
+                lblfecingpref.Text = mostrarlabel("fecha_de_ing");
             }
             if (txbfecdenacedit.Text == "")
             {
@@ -156,8 +163,16 @@ namespace CUMple
             else
             {
                 editarusuario("fecha_de_nac", txbfecdenacedit.Text, lblfecnacpref.Text);
+                lblfecnacpref.Text = mostrarlabel("fecha_de_nac");
             }
             //}
+            
+         
+          
+         
+           
+           
+           
         }
 
         private void lblmostnom_Click(object sender, EventArgs e)

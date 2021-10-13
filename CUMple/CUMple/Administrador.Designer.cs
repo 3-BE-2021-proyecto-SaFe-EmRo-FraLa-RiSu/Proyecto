@@ -79,9 +79,9 @@ namespace CUMple
             // txbdiscipulo
             // 
             this.txbdiscipulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbdiscipulo.Location = new System.Drawing.Point(178, 216);
+            this.txbdiscipulo.Location = new System.Drawing.Point(119, 216);
             this.txbdiscipulo.Name = "txbdiscipulo";
-            this.txbdiscipulo.Size = new System.Drawing.Size(129, 29);
+            this.txbdiscipulo.Size = new System.Drawing.Size(245, 29);
             this.txbdiscipulo.TabIndex = 3;
             // 
             // btnbuscardis
@@ -94,7 +94,7 @@ namespace CUMple
             this.btnbuscardis.Name = "btnbuscardis";
             this.btnbuscardis.Size = new System.Drawing.Size(245, 41);
             this.btnbuscardis.TabIndex = 4;
-            this.btnbuscardis.Text = "Buscar usuarios";
+            this.btnbuscardis.Text = "Buscar Alumnos";
             this.btnbuscardis.UseVisualStyleBackColor = false;
             this.btnbuscardis.Click += new System.EventHandler(this.btnbuscardis_Click);
             // 
