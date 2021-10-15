@@ -105,66 +105,52 @@ namespace CUMple
 
             //if ( hay un usuario seleccionado   ) { pedir que se seleccione uno }
             //else {
-            if (txbprofedit.Text == "") 
+            if (txbprofedit.Text != "") 
             {
-            }
-            else 
-            {
-                editarusuario("profesiones",txbprofedit.Text,lblprofperf.Text);
+                editarusuario("profesiones", txbprofedit.Text, lblprofperf.Text);
                 lblprofperf.Text = mostrarlabel("profesiones");
             }
+           
 
-            if (txbnomedit.Text == "")
-            {
-            }
-            else
+            if (txbnomedit.Text != "")
             {
                 editarusuario("nomcompleto", txbnomedit.Text, lblnomperf.Text);
                 lblnomperf.Text = mostrarlabel("nomcompleto");
             }
-            if (txbceddit.Text == "")
-            {
-            }
-            else
+           
+            if (txbceddit.Text != "")
             {
                 editarusuario("cedula", txbceddit.Text, lblcedperf.Text);
                 lblcedperf.Text = mostrarlabel("cedula");
             }
-            if (txbceledit.Text == "")
-            {
-            }
-            else
+           
+            if (txbceledit.Text != "")
             {
                 editarusuario("celular", txbceledit.Text, lblcelpref.Text);
                 lblcelpref.Text = mostrarlabel("celular");
             }
-            if (txbemailedit.Text == "")
-            {              
-            }
-            else
+           
+            if (txbemailedit.Text != "")
             {
                 editarusuario("emails", txbemailedit.Text, lblemailpref.Text);
                 lblemailpref.Text = mostrarlabel("emails");
             }
+         
           
-            if (txbfecdeingdit.Text == "")
-            {
-
-            }
-            else
+            if (txbfecdeingdit.Text != "")
             {
                 editarusuario("fecha_de_ing", txbfecdeingdit.Text, txbfecdeingdit.Text);
                 lblfecingpref.Text = mostrarlabel("fecha_de_ing");
-            }
-            if (txbfecdenacedit.Text == "")
-            {
 
             }
-            else
+            
+            if (txbfecdenacedit.Text != "")
             {
                 editarusuario("fecha_de_nac", txbfecdenacedit.Text, lblfecnacpref.Text);
                 lblfecnacpref.Text = mostrarlabel("fecha_de_nac");
+
             }
+          
             //}
             
          
