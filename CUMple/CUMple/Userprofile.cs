@@ -16,7 +16,7 @@ namespace CUMple
         public Userprofile(string nombrebuscado)
         {
             InitializeComponent();
-            lblceduladisc.Text = nombrebuscado;
+            lblcedperf.Text = nombrebuscado;
         }
   
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
@@ -45,7 +45,7 @@ namespace CUMple
         {
             conexionprograma.Open();
             string dato;
-            string mostrardiscipulos= "select * from discipulos where cedula='"+lblceduladisc.Text+"'";
+            string mostrardiscipulos= "select * from discipulos where cedula='"+ lblcedperf.Text+"'";
             MySqlCommand comandolabel = new MySqlCommand(mostrardiscipulos,conexionprograma);
             MySqlDataReader lectordecomando = comandolabel.ExecuteReader();
            if (lectordecomando.Read())
