@@ -13,6 +13,9 @@ namespace CUMple
 {
     public partial class formadmin : Form
     {
+        MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
+        MySqlDataReader lectordedatos;
+        
         public formadmin()
         {
             InitializeComponent();
@@ -20,7 +23,7 @@ namespace CUMple
       
         private void formadmin_Load(object sender, EventArgs e)
         {
-
+         
         }
 
         private void botingprog_Click(object sender, EventArgs e)
@@ -37,6 +40,10 @@ namespace CUMple
 
         private void btnbuscardis_Click(object sender, EventArgs e)
         {
+            conexionprograma.Open();
+            string comandostring = "select * from discipulos where nomcompleto='"+txbdiscipulo.Text+"'";
+            MySqlCommand comandoparalabd = new MySqlCommand(comandostring,conexionprograma);
+            lectordedatos = comandoparalabd.ExecuteReader();
             new Userprofile(txbdiscipulo.Text).Show();
             this.Dispose();
         }
