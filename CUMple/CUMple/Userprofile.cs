@@ -111,7 +111,7 @@ namespace CUMple
         private void btnedit_Click(object sender, EventArgs e)
         {
            
-            
+            //Agregar que la fecha de ingreso se genere automaticamente
 
             //if ( hay un usuario seleccionado   ) { pedir que se seleccione uno }
             //else {
@@ -144,16 +144,8 @@ namespace CUMple
             {
                 editarusuario("emails", txbemailedit.Text, lblemailpref.Text);
                 lblemailpref.Text = mostrarlabel("emails");
-            }
-         
-          
-            if (txbfecdeingdit.Text != "")
-            {
-                editarusuario("fecha_de_ing", txbfecdeingdit.Text, txbfecdeingdit.Text);
-                lblfecingpref.Text = mostrarlabel("fecha_de_ing");
-
-            }
-            
+            }                   
+                        
             if (txbfecdenacedit.Text != "")
             {
                 editarusuario("fecha_de_nac", txbfecdenacedit.Text, lblfecnacpref.Text);
