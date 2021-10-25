@@ -17,15 +17,16 @@ namespace CUMple
         {
             InitializeComponent();
             lblnomperf.Text = nombrebuscado;
+            
         }
 
+            string nombreactualizado;
      
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
         public void editarusuario(string columna,string datonuevo, string datoacambiar)
-        {
-            
+        {      
             conexionprograma.Open();
-            string comando = "update discipulos set "+ columna + "='"+ datonuevo + "' where "+ columna +"='"+ datoacambiar + "' and nomcompleto='"+fortiputa+"';";
+            string comando = "update discipulos set "+ columna + "='"+ datonuevo + "' where "+ columna +"='"+ datoacambiar + "';";
             MySqlCommand comandoeditarusuario = new MySqlCommand(comando,conexionprograma);
             try
             {
@@ -40,6 +41,12 @@ namespace CUMple
             MessageBox.Show("El usuario se ha editado correctamente");
 
             conexionprograma.Close();
+            
+            if (columna == "nomcompleto") 
+            {
+                new Userprofile(datonuevo).Show();
+                this.Dispose();
+            }
         }
         
         public string mostrarlabel(string agarrardato)
@@ -117,10 +124,8 @@ namespace CUMple
 
             if (txbnomedit.Text != "")
             {
-                string nombrenuevo = lblnomperf.Text;
                 editarusuario("nomcompleto", txbnomedit.Text, lblnomperf.Text);
-                lblnomperf.Text = mostrarlabel("nomcompleto");
-                
+                lblnomperf.Text = mostrarlabel("nomcompleto");                
             }
            
             if (txbceddit.Text != "")
