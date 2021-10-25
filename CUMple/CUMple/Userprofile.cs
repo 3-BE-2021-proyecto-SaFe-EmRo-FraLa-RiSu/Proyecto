@@ -16,15 +16,16 @@ namespace CUMple
         public Userprofile(string nombrebuscado)
         {
             InitializeComponent();
-            lblcedperf.Text = nombrebuscado;
+            lblnomperf.Text = nombrebuscado;
         }
-  
-        MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
 
+     
+        MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
         public void editarusuario(string columna,string datonuevo, string datoacambiar)
         {
+            
             conexionprograma.Open();
-            string comando = "update discipulos set "+columna+"='"+ datonuevo + "' where "+ columna +"='"+ datoacambiar + "';";
+            string comando = "update discipulos set "+ columna + "='"+ datonuevo + "' where "+ columna +"='"+ datoacambiar + "' and nomcompleto='"+fortiputa+"';";
             MySqlCommand comandoeditarusuario = new MySqlCommand(comando,conexionprograma);
             try
             {
@@ -43,9 +44,10 @@ namespace CUMple
         
         public string mostrarlabel(string agarrardato)
         {
+          
             conexionprograma.Open();
             string dato;
-            string mostrardiscipulos= "select * from discipulos where cedula='"+ lblcedperf.Text+"'";
+            string mostrardiscipulos= "select * from discipulos where nomcompleto='"+ lblnomperf.Text +"'";
             MySqlCommand comandolabel = new MySqlCommand(mostrardiscipulos,conexionprograma);
             MySqlDataReader lectordecomando = comandolabel.ExecuteReader();
            if (lectordecomando.Read())
@@ -57,6 +59,7 @@ namespace CUMple
             }
            else
             {
+                conexionprograma.Close();
                 return dato = "";
 
             }
@@ -114,8 +117,10 @@ namespace CUMple
 
             if (txbnomedit.Text != "")
             {
+                string nombrenuevo = lblnomperf.Text;
                 editarusuario("nomcompleto", txbnomedit.Text, lblnomperf.Text);
                 lblnomperf.Text = mostrarlabel("nomcompleto");
+                
             }
            
             if (txbceddit.Text != "")
@@ -167,6 +172,11 @@ namespace CUMple
         }
 
         private void txbfecdenacedit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblnomperf_Click(object sender, EventArgs e)
         {
 
         }

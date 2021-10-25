@@ -83,7 +83,7 @@ namespace CUMple
             // 
             this.lblmostnom.AutoSize = true;
             this.lblmostnom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmostnom.Location = new System.Drawing.Point(23, 64);
+            this.lblmostnom.Location = new System.Drawing.Point(-3, 56);
             this.lblmostnom.Name = "lblmostnom";
             this.lblmostnom.Size = new System.Drawing.Size(138, 20);
             this.lblmostnom.TabIndex = 3;
@@ -94,10 +94,11 @@ namespace CUMple
             // 
             this.lblnomperf.AutoSize = true;
             this.lblnomperf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnomperf.Location = new System.Drawing.Point(156, 64);
+            this.lblnomperf.Location = new System.Drawing.Point(141, 56);
             this.lblnomperf.Name = "lblnomperf";
             this.lblnomperf.Size = new System.Drawing.Size(0, 20);
             this.lblnomperf.TabIndex = 5;
+            this.lblnomperf.Click += new System.EventHandler(this.lblnomperf_Click);
             // 
             // txbnomedit
             // 
