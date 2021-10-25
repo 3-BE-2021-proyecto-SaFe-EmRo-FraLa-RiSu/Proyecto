@@ -365,7 +365,7 @@ namespace CUMple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1160, 749);
+            this.ClientSize = new System.Drawing.Size(799, 514);
             this.Controls.Add(this.btnvolveruserprofile);
             this.Controls.Add(this.lblcelpref);
             this.Controls.Add(this.lblemailpref);

@@ -18,15 +18,13 @@ namespace CUMple
             InitializeComponent();
             lblnomperf.Text = nombrebuscado;
             
-        }
-
-            string nombreactualizado;
+        }            
      
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
-        public void editarusuario(string columna,string datonuevo, string datoacambiar)
+        public void editarusuario(string columna,string datonuevo, string datoacambiar, string cedula)
         {      
             conexionprograma.Open();
-            string comando = "update discipulos set "+ columna + "='"+ datonuevo + "' where "+ columna +"='"+ datoacambiar + "';";
+            string comando = "update discipulos set "+ columna + "='"+ datonuevo + "' where "+ columna +"='"+ datoacambiar + "' and cedula ='" + cedula + "';";
             MySqlCommand comandoeditarusuario = new MySqlCommand(comando,conexionprograma);
             try
             {
@@ -117,38 +115,38 @@ namespace CUMple
             //else {
             if (txbprofedit.Text != "") 
             {
-                editarusuario("profesiones", txbprofedit.Text, lblprofperf.Text);
+                editarusuario("profesiones", txbprofedit.Text, lblprofperf.Text, lblcedperf.Text);
                 lblprofperf.Text = mostrarlabel("profesiones");
             }
            
 
             if (txbnomedit.Text != "")
             {
-                editarusuario("nomcompleto", txbnomedit.Text, lblnomperf.Text);
+                editarusuario("nomcompleto", txbnomedit.Text, lblnomperf.Text, lblcedperf.Text);
                 lblnomperf.Text = mostrarlabel("nomcompleto");                
             }
            
             if (txbceddit.Text != "")
             {
-                editarusuario("cedula", txbceddit.Text, lblcedperf.Text);
+                editarusuario("cedula", txbceddit.Text, lblcedperf.Text, lblcedperf.Text);
                 lblcedperf.Text = mostrarlabel("cedula");
             }
            
             if (txbceledit.Text != "")
             {
-                editarusuario("celular", txbceledit.Text, lblcelpref.Text);
+                editarusuario("celular", txbceledit.Text, lblcelpref.Text, lblcedperf.Text);
                 lblcelpref.Text = mostrarlabel("celular");
             }
            
             if (txbemailedit.Text != "")
             {
-                editarusuario("emails", txbemailedit.Text, lblemailpref.Text);
+                editarusuario("emails", txbemailedit.Text, lblemailpref.Text, lblcedperf.Text);
                 lblemailpref.Text = mostrarlabel("emails");
             }                   
                         
             if (txbfecdenacedit.Text != "")
             {
-                editarusuario("fecha_de_nac", txbfecdenacedit.Text, lblfecnacpref.Text);
+                editarusuario("fecha_de_nac", txbfecdenacedit.Text, lblfecnacpref.Text, lblcedperf.Text);
                 lblfecnacpref.Text = mostrarlabel("fecha_de_nac");
 
             }
