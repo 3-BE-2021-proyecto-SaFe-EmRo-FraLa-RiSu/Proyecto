@@ -34,7 +34,7 @@ namespace CUMple
             this.botingprog = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnentrarexamenes = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,18 +91,19 @@ namespace CUMple
             this.button2.Text = "Ayuda";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnentrarexamenes
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(12, 318);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(172, 37);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "boton4";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnentrarexamenes.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnentrarexamenes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnentrarexamenes.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnentrarexamenes.ForeColor = System.Drawing.Color.White;
+            this.btnentrarexamenes.Location = new System.Drawing.Point(12, 318);
+            this.btnentrarexamenes.Name = "btnentrarexamenes";
+            this.btnentrarexamenes.Size = new System.Drawing.Size(172, 37);
+            this.btnentrarexamenes.TabIndex = 9;
+            this.btnentrarexamenes.Text = "Examenes";
+            this.btnentrarexamenes.UseVisualStyleBackColor = false;
+            this.btnentrarexamenes.Click += new System.EventHandler(this.btnentrarexamenes_Click);
             // 
             // button4
             // 
@@ -134,7 +135,7 @@ namespace CUMple
             this.ClientSize = new System.Drawing.Size(757, 471);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnentrarexamenes);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.botingprog);
@@ -155,7 +156,7 @@ namespace CUMple
         private System.Windows.Forms.Button botingprog;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnentrarexamenes;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox1;
     }

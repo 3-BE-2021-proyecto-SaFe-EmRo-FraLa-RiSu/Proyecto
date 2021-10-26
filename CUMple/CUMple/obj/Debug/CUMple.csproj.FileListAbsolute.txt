@@ -124,3 +124,4 @@ C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMpl
 C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.csproj.CopyComplete
 C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.exe
 C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.pdb
+D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Examenesfrm.resources

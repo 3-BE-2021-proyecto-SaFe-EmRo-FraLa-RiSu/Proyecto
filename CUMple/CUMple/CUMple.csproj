@@ -103,6 +103,12 @@
     <Compile Include="Crearlosusuarios.Designer.cs">
       <DependentUpon>Crearlosusuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Examenesfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examenesfrm.Designer.cs">
+      <DependentUpon>Examenesfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Iniciodesesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Crearlosusuarios.resx">
       <DependentUpon>Crearlosusuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examenesfrm.resx">
+      <DependentUpon>Examenesfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Iniciodesesion.resx">
       <DependentUpon>Iniciodesesion.cs</DependentUpon>

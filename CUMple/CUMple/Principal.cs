@@ -32,5 +32,11 @@ namespace CUMple
             new Pruebadeconexiom().Show();
             this.Hide();
         }
+
+        private void btnentrarexamenes_Click(object sender, EventArgs e)
+        {
+            new Examenesfrm().Show();
+            this.Dispose();
+        }
     }
 }
