@@ -18,11 +18,20 @@ namespace CUMple
         {
             InitializeComponent();
         }
-      
-        private void formadmin_Load(object sender, EventArgs e)
+        MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
+         private void formadmin_Load(object sender, EventArgs e)
         {
-         
-        }
+            MySqlDataReader lectordedatos;
+            string comand = "Select nomcompleto from discipulos;";
+            conexionprograma.Open();
+            MySqlCommand comando = new MySqlCommand(comand, conexionprograma);
+            lectordedatos = comando.ExecuteReader();
+            while (lectordedatos.Read())
+            {
+                cmbalumnosexistentes.Items.Add(lectordedatos["nomcompleto"].ToString());
+            }
+            conexionprograma.Close();
+        } 
 
         private void botingprog_Click(object sender, EventArgs e)
         {
@@ -39,8 +48,13 @@ namespace CUMple
         private void btnbuscardis_Click(object sender, EventArgs e)
         {
          
-            new Userprofile(txbdiscipulo.Text).Show();
+            new Userprofile(cmbalumnosexistentes.SelectedItem.ToString()).Show();
             this.Dispose();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

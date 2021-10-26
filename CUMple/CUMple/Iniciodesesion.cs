@@ -26,6 +26,7 @@ namespace CUMple
         
         public class Detallesusarios
         {
+            
             private static string nombreusuario;
             public static string nombreusuario_;
 
@@ -46,7 +47,7 @@ private void textBox2_TextChanged(object sender, EventArgs e)
 
         private void Marcoin_Load(object sender, EventArgs e)
         {
-          
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
