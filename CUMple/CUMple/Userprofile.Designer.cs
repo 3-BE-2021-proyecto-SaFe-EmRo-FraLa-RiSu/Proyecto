@@ -360,6 +360,7 @@ namespace CUMple
             this.btnvolveruserprofile.Size = new System.Drawing.Size(394, 38);
             this.btnvolveruserprofile.TabIndex = 36;
             this.btnvolveruserprofile.UseVisualStyleBackColor = true;
+            this.btnvolveruserprofile.Click += new System.EventHandler(this.btnvolveruserprofile_Click);
             // 
             // Userprofile
             // 

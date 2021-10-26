@@ -29,7 +29,6 @@ namespace CUMple
             private static string nombreusuario;
             public static string nombreusuario_;
 
-
         }
 
      
@@ -52,58 +51,7 @@ private void textBox2_TextChanged(object sender, EventArgs e)
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-
-            conexionprograma.Open();
-            string logIn = "SELECT * FROM usuarios WHERE usuario= '" + txbuserb.Text + "' and contraseña= '" + txbconb.Text + "'";
-            comandoparamysql = new MySqlCommand(logIn, conexionprograma);
-            MySqlDataReader lectordedatos = comandoparamysql.ExecuteReader();
-           
-            if (lectordedatos.Read() == true && lectordedatos.GetString("tipo") == "Adm")
-            {
-
-                new formadmin().Show();
-                this.Hide();
-                
-            }
-            else if (lectordedatos.Read() == true && lectordedatos.GetString("tipo") == "Alm")
-            {
-
-                new Principal().Show();
-                this.Hide();
-                
-            }
-
-            else 
-            {
-
-                MessageBox.Show("Usuario o contraseña incorrecta");
-               
-            }
-         
-
-            if (txbuserb.Text == "" && txbconb.Text == "")
-            {
-                MessageBox.Show("Los campos no pueden estar vacios");
-                
-            }
-
-            else if (txbuserb.Text == "")
-            {
-                MessageBox.Show("El campo de usuario esta vacio");
-                txbuserb.Focus();
-                
-            }
-            else if (txbconb.Text == "")
-            {
-                MessageBox.Show("El campo de la contraseña esta vacio");
-                txbconb.Focus();
-               
-            }
-
-            conexionprograma.Close();
-
-
+            iniciarsesion();
         }
 
         private void txbconb_TextChanged(object sender, EventArgs e)
@@ -119,6 +67,73 @@ private void textBox2_TextChanged(object sender, EventArgs e)
         private void lblcontraseña_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txbuserb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter)) 
+            {
+                txbconb.Focus();
+            }
+        }
+        public void iniciarsesion() 
+        {
+            conexionprograma.Open();
+            string logIn = "SELECT * FROM usuarios WHERE usuario= '" + txbuserb.Text + "' and contraseña= '" + txbconb.Text + "'";
+            comandoparamysql = new MySqlCommand(logIn, conexionprograma);
+            MySqlDataReader lectordedatos = comandoparamysql.ExecuteReader();
+
+            if (lectordedatos.Read() == true && lectordedatos.GetString("tipo") == "Adm")
+            {
+
+                new formadmin().Show();
+                this.Hide();
+
+            }
+            else if (lectordedatos.Read() == true && lectordedatos.GetString("tipo") == "Alm")
+            {
+
+                new Principal().Show();
+                this.Hide();
+
+            }
+
+            else
+            {
+
+                MessageBox.Show("Usuario o contraseña incorrecta");
+
+            }
+
+
+            if (txbuserb.Text == "" && txbconb.Text == "")
+            {
+                MessageBox.Show("Los campos no pueden estar vacios");
+
+            }
+
+            else if (txbuserb.Text == "")
+            {
+                MessageBox.Show("El campo de usuario esta vacio");
+                txbuserb.Focus();
+
+            }
+            else if (txbconb.Text == "")
+            {
+                MessageBox.Show("El campo de la contraseña esta vacio");
+                txbconb.Focus();
+
+            }
+
+            conexionprograma.Close();
+        }
+
+        private void txbconb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                iniciarsesion();
+            }
         }
     }
 }
