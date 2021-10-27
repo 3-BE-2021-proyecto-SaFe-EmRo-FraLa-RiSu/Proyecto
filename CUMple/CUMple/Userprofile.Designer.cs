@@ -354,12 +354,15 @@ namespace CUMple
             // 
             // btnvolveruserprofile
             // 
-            this.btnvolveruserprofile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnvolveruserprofile.Location = new System.Drawing.Point(360, 428);
+            this.btnvolveruserprofile.BackColor = System.Drawing.Color.DarkRed;
+            this.btnvolveruserprofile.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvolveruserprofile.ForeColor = System.Drawing.Color.Transparent;
+            this.btnvolveruserprofile.Location = new System.Drawing.Point(690, 428);
             this.btnvolveruserprofile.Name = "btnvolveruserprofile";
-            this.btnvolveruserprofile.Size = new System.Drawing.Size(394, 38);
+            this.btnvolveruserprofile.Size = new System.Drawing.Size(64, 64);
             this.btnvolveruserprofile.TabIndex = 36;
-            this.btnvolveruserprofile.UseVisualStyleBackColor = true;
+            this.btnvolveruserprofile.Text = "⮎";
+            this.btnvolveruserprofile.UseVisualStyleBackColor = false;
             this.btnvolveruserprofile.Click += new System.EventHandler(this.btnvolveruserprofile_Click);
             // 
             // Userprofile

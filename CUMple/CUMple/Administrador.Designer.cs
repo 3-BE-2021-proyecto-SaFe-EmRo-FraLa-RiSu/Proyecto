@@ -33,7 +33,6 @@ namespace CUMple
             this.lblxd = new System.Windows.Forms.Label();
             this.botingprog = new System.Windows.Forms.Button();
             this.botcrearus = new System.Windows.Forms.Button();
-            this.txbdiscipulo = new System.Windows.Forms.TextBox();
             this.btnbuscardis = new System.Windows.Forms.Button();
             this.cmbalumnosexistentes = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -56,7 +55,7 @@ namespace CUMple
             this.botingprog.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botingprog.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botingprog.ForeColor = System.Drawing.Color.White;
-            this.botingprog.Location = new System.Drawing.Point(178, 154);
+            this.botingprog.Location = new System.Drawing.Point(178, 146);
             this.botingprog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botingprog.Name = "botingprog";
             this.botingprog.Size = new System.Drawing.Size(368, 63);
@@ -71,7 +70,7 @@ namespace CUMple
             this.botcrearus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botcrearus.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botcrearus.ForeColor = System.Drawing.Color.White;
-            this.botcrearus.Location = new System.Drawing.Point(178, 252);
+            this.botcrearus.Location = new System.Drawing.Point(178, 239);
             this.botcrearus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botcrearus.Name = "botcrearus";
             this.botcrearus.Size = new System.Drawing.Size(368, 63);
@@ -79,15 +78,6 @@ namespace CUMple
             this.botcrearus.Text = "Editar usuarios";
             this.botcrearus.UseVisualStyleBackColor = false;
             this.botcrearus.Click += new System.EventHandler(this.botcrearus_Click);
-            // 
-            // txbdiscipulo
-            // 
-            this.txbdiscipulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbdiscipulo.Location = new System.Drawing.Point(178, 332);
-            this.txbdiscipulo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txbdiscipulo.Name = "txbdiscipulo";
-            this.txbdiscipulo.Size = new System.Drawing.Size(366, 40);
-            this.txbdiscipulo.TabIndex = 3;
             // 
             // btnbuscardis
             // 
@@ -100,17 +90,19 @@ namespace CUMple
             this.btnbuscardis.Name = "btnbuscardis";
             this.btnbuscardis.Size = new System.Drawing.Size(368, 63);
             this.btnbuscardis.TabIndex = 4;
-            this.btnbuscardis.Text = "Buscar Alumnos";
+            this.btnbuscardis.Text = "Buscar Discipulos";
             this.btnbuscardis.UseVisualStyleBackColor = false;
             this.btnbuscardis.Click += new System.EventHandler(this.btnbuscardis_Click);
             // 
             // cmbalumnosexistentes
             // 
+            this.cmbalumnosexistentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbalumnosexistentes.FormattingEnabled = true;
-            this.cmbalumnosexistentes.Location = new System.Drawing.Point(551, 343);
+            this.cmbalumnosexistentes.Location = new System.Drawing.Point(178, 322);
             this.cmbalumnosexistentes.Name = "cmbalumnosexistentes";
-            this.cmbalumnosexistentes.Size = new System.Drawing.Size(132, 28);
+            this.cmbalumnosexistentes.Size = new System.Drawing.Size(368, 45);
             this.cmbalumnosexistentes.TabIndex = 5;
+            this.cmbalumnosexistentes.Text = "Nombres:";
             this.cmbalumnosexistentes.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // formadmin
@@ -122,7 +114,6 @@ namespace CUMple
             this.ClientSize = new System.Drawing.Size(726, 503);
             this.Controls.Add(this.cmbalumnosexistentes);
             this.Controls.Add(this.btnbuscardis);
-            this.Controls.Add(this.txbdiscipulo);
             this.Controls.Add(this.botcrearus);
             this.Controls.Add(this.botingprog);
             this.Controls.Add(this.lblxd);
@@ -142,7 +133,6 @@ namespace CUMple
         private System.Windows.Forms.Label lblxd;
         private System.Windows.Forms.Button botingprog;
         private System.Windows.Forms.Button botcrearus;
-        private System.Windows.Forms.TextBox txbdiscipulo;
         private System.Windows.Forms.Button btnbuscardis;
         private System.Windows.Forms.ComboBox cmbalumnosexistentes;
     }

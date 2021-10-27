@@ -34,7 +34,7 @@ namespace CUMple
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                throw;
+                
             }
             MessageBox.Show("El usuario se ha editado correctamente");
 
@@ -178,7 +178,8 @@ namespace CUMple
 
         private void btnvolveruserprofile_Click(object sender, EventArgs e)
         {
-
+            new formadmin().Show();
+            this.Dispose();
         }
     }
 }

@@ -21,6 +21,27 @@ namespace CUMple
 
         }
 
+        public void editarusuario(string columna, string datonuevo, string datoacambiar, string idexamen)
+        {
+
+            conexionbd.Open();
+            string comando = "update examenes set " + columna + "='" + datonuevo + "' where " + columna + "='" + datoacambiar + "' and idexamen ='" + idexamen + "';";
+            MySqlCommand comandoeditarusuario = new MySqlCommand(comando, conexionbd);
+            try
+            {
+                comandoeditarusuario.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+         
+            }
+            MessageBox.Show("Se edito el exámen correctamente.");
+            cargarexamenes();
+            conexionbd.Close();
+        }
+
         private DataTable cargarexamenes()
         {
             DataTable dtexamenes = new DataTable();
@@ -49,6 +70,31 @@ namespace CUMple
         }
 
         private void dgvexamenes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+            if (txbdisciplina.Text!="" && cbidexamen.SelectedIndex!=null)
+            {
+
+            }
+            if (txbexaminadores.Text != "" && cbidexamen.SelectedIndex != null)
+            {
+
+            }
+            if (txbfecha.Text != "" && cbidexamen.SelectedIndex != null)
+            {
+
+            }
+            if (txbhora.Text != "" && cbidexamen.SelectedIndex != null)
+            {
+
+            }
+        }
+
+        private void cbidexamen_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
