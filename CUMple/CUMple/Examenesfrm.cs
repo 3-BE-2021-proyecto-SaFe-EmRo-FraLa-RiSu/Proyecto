@@ -27,11 +27,17 @@ namespace CUMple
             string comandostring = "select * from examenes;";
 
             MySqlDataAdapter comandotraerexamenes = new MySqlDataAdapter(comandostring,conexionbd);
-         
-          
+            try
+            {
                 conexionbd.Open();
-            comandotraerexamenes.Fill(dtexamenes);
-               
+                comandotraerexamenes.Fill(dtexamenes);
+            }
+            catch (Exception ex)
+            {
+                 MessageBox.Show(ex.ToString());
+            }
+          
+             
         
             conexionbd.Close();
             return dtexamenes;

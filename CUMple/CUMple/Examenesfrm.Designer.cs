@@ -30,11 +30,6 @@ namespace CUMple
         private void InitializeComponent()
         {
             this.dgvexamenes = new System.Windows.Forms.DataGridView();
-            this.colexaminadores = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colfecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coldisciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colhora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colidexamen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btneditar = new System.Windows.Forms.Button();
             this.txbexaminadores = new System.Windows.Forms.TextBox();
             this.txbdisciplina = new System.Windows.Forms.TextBox();
@@ -44,6 +39,11 @@ namespace CUMple
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.colexaminadores = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colfecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coldisciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colhora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colidexamen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,31 +62,6 @@ namespace CUMple
             this.dgvexamenes.Size = new System.Drawing.Size(543, 316);
             this.dgvexamenes.TabIndex = 0;
             this.dgvexamenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvexamenes_CellContentClick);
-            // 
-            // colexaminadores
-            // 
-            this.colexaminadores.HeaderText = "Examinadores";
-            this.colexaminadores.Name = "colexaminadores";
-            // 
-            // colfecha
-            // 
-            this.colfecha.HeaderText = "Fecha";
-            this.colfecha.Name = "colfecha";
-            // 
-            // coldisciplina
-            // 
-            this.coldisciplina.HeaderText = "Disciplina";
-            this.coldisciplina.Name = "coldisciplina";
-            // 
-            // colhora
-            // 
-            this.colhora.HeaderText = "Hora";
-            this.colhora.Name = "colhora";
-            // 
-            // colidexamen
-            // 
-            this.colidexamen.HeaderText = "ID del exámen";
-            this.colidexamen.Name = "colidexamen";
             // 
             // btneditar
             // 
@@ -170,6 +145,36 @@ namespace CUMple
             this.label4.TabIndex = 9;
             this.label4.Text = "Hora:";
             // 
+            // colexaminadores
+            // 
+            this.colexaminadores.DataPropertyName = "examinadores";
+            this.colexaminadores.HeaderText = "Examinadores";
+            this.colexaminadores.Name = "colexaminadores";
+            // 
+            // colfecha
+            // 
+            this.colfecha.DataPropertyName = "fecha";
+            this.colfecha.HeaderText = "Fecha";
+            this.colfecha.Name = "colfecha";
+            // 
+            // coldisciplina
+            // 
+            this.coldisciplina.DataPropertyName = "disciplina";
+            this.coldisciplina.HeaderText = "Disciplina";
+            this.coldisciplina.Name = "coldisciplina";
+            // 
+            // colhora
+            // 
+            this.colhora.DataPropertyName = "hora";
+            this.colhora.HeaderText = "Hora";
+            this.colhora.Name = "colhora";
+            // 
+            // colidexamen
+            // 
+            this.colidexamen.DataPropertyName = "idexamen";
+            this.colidexamen.HeaderText = "ID del exámen";
+            this.colidexamen.Name = "colidexamen";
+            // 
             // Examenesfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,11 +202,6 @@ namespace CUMple
         #endregion
 
         private System.Windows.Forms.DataGridView dgvexamenes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colexaminadores;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colfecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coldisciplina;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colhora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colidexamen;
         private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.TextBox txbexaminadores;
         private System.Windows.Forms.TextBox txbdisciplina;
@@ -211,5 +211,10 @@ namespace CUMple
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colexaminadores;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colfecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coldisciplina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colhora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colidexamen;
     }
 }
