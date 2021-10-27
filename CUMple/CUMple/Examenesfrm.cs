@@ -21,11 +21,11 @@ namespace CUMple
 
         }
 
-        public void editarusuario(string columna, string datonuevo, string datoacambiar, string idexamen)
+        public void editarexamen(string columna, string datonuevo, int idexamen)
         {
 
             conexionbd.Open();
-            string comando = "update examenes set " + columna + "='" + datonuevo + "' where " + columna + "='" + datoacambiar + "' and idexamen ='" + idexamen + "';";
+            string comando = "update examenes set " + columna + "='"+datonuevo+"' where idexamen="+idexamen+";";
             MySqlCommand comandoeditarusuario = new MySqlCommand(comando, conexionbd);
             try
             {
@@ -37,9 +37,11 @@ namespace CUMple
                 MessageBox.Show(ex.Message);
          
             }
-            MessageBox.Show("Se edito el exámen correctamente.");
-            cargarexamenes();
+           
             conexionbd.Close();
+            dgvexamenes.DataSource= cargarexamenes();
+
+
         }
 
         private DataTable cargarexamenes()
@@ -52,6 +54,7 @@ namespace CUMple
             {
                 conexionbd.Open();
                 comandotraerexamenes.Fill(dtexamenes);
+           
             }
             catch (Exception ex)
             {
@@ -64,9 +67,21 @@ namespace CUMple
             return dtexamenes;
         }
 
+      
+
         private void Examenesfrm_Load(object sender, EventArgs e)
         {
             dgvexamenes.DataSource=cargarexamenes();
+            MySqlDataReader lectordedatos;
+            string comand = "Select idexamen from examenes;";
+            conexionbd.Open();
+            MySqlCommand comando = new MySqlCommand(comand, conexionbd);
+            lectordedatos = comando.ExecuteReader();
+            while (lectordedatos.Read())
+            {
+                cbidexamen.Items.Add(lectordedatos["idexamen"].ToString());
+            }
+            conexionbd.Close();
         }
 
         private void dgvexamenes_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -76,27 +91,44 @@ namespace CUMple
 
         private void btneditar_Click(object sender, EventArgs e)
         {
-            if (txbdisciplina.Text!="" && cbidexamen.SelectedIndex!=null)
-            {
+          
 
+            if(cbidexamen.SelectedIndex !=-1 ) {
+                int idselecionado = Int32.Parse(cbidexamen.SelectedItem.ToString());
+                if (txbdisciplina.Text!="")
+            {
+                editarexamen("disciplina",txbdisciplina.Text, idselecionado);
             }
-            if (txbexaminadores.Text != "" && cbidexamen.SelectedIndex != null)
+            if (txbexaminadores.Text != "")
             {
-
+                editarexamen("examinadores", txbexaminadores.Text, idselecionado);
             }
-            if (txbfecha.Text != "" && cbidexamen.SelectedIndex != null)
+            if (txbfecha.Text != "")
             {
-
+                editarexamen("fecha", txbfecha.Text, idselecionado);
             }
-            if (txbhora.Text != "" && cbidexamen.SelectedIndex != null)
+            if (txbhora.Text != "")
             {
-
+                editarexamen("hora", txbhora.Text, idselecionado);
+            }
+            }
+            else
+            {
+                MessageBox.Show("Debe selecionar un id de examén");
             }
         }
-
+           
         private void cbidexamen_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+            if (txbdisciplina.Text!="" && txbexaminadores.Text!="" && txbfecha.Text!="" && txbhora.Text!="")
+            {
+                string comando = "insert into examenes (disciplina,examinadores,fecha,hora) values("+txbdisciplina.Text+","+txbexaminadores.Text+","+txbfecha.Text+","+txbhora.Text+")";
+            }
         }
     }
 }
