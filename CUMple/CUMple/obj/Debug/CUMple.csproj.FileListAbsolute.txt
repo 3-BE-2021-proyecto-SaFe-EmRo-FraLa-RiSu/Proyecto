@@ -164,3 +164,4 @@ C:\Users\rimas\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.csproj.C
 C:\Users\rimas\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.csproj.CopyComplete
 C:\Users\rimas\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.exe
 C:\Users\rimas\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.pdb
+C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Examenesfrm.resources

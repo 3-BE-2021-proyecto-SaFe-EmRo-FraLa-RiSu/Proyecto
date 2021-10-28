@@ -130,5 +130,11 @@ namespace CUMple
                 string comando = "insert into examenes (disciplina,examinadores,fecha,hora) values("+txbdisciplina.Text+","+txbexaminadores.Text+","+txbfecha.Text+","+txbhora.Text+")";
             }
         }
+
+        private void btnvolverexamenes_Click(object sender, EventArgs e)
+        {
+            new Principal().Show();
+            this.Dispose();
+        }
     }
 }
