@@ -181,5 +181,15 @@ namespace CUMple
             new formadmin().Show();
             this.Dispose();
         }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+            if (txbceddit.Text != "" && txbceledit.Text != "" && txbemailedit.Text != "" && txbfecdenacedit.Text != "" && txbnomedit.Text != "" && txbprofedit.Text != "")
+            {
+                string agregardiscipulocomandostring="insert into discipulos(cedular,cedula,nomcompleto,krav_maga,taekwondo,profesiones,fecha_de_nac,emails) values('"+txbceledit.Text+"','"+txbceddit.Text+"','"+txbnomedit.Text+"')";
+                MySqlCommand agregardiscipulos = new MySqlCommand(agregardiscipulocomandostring, conexionprograma);
+                agregardiscipulos.ExecuteNonQuery();
+            }
+        }
     }
 }

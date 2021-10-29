@@ -41,14 +41,14 @@ namespace CUMple
             conexionbd.Close();
             dgvexamenes.DataSource= cargarexamenes();
 
-
+          
         }
 
         private DataTable cargarexamenes()
         {
+            
             DataTable dtexamenes = new DataTable();
             string comandostring = "select * from examenes;";
-
             MySqlDataAdapter comandotraerexamenes = new MySqlDataAdapter(comandostring,conexionbd);
             try
             {
@@ -82,6 +82,20 @@ namespace CUMple
                 cbidexamen.Items.Add(lectordedatos["idexamen"].ToString());
             }
             conexionbd.Close();
+            if (cbidexamen.SelectedIndex == -1)
+            {
+
+                btnagregar.Enabled = true;
+                btneditar.Enabled = false;
+                btneliminar.Enabled = false;
+            }
+            else
+            {
+                btnagregar.Enabled = false;
+                btneditar.Enabled = true;
+                btneliminar.Enabled = true;
+
+            }
         }
 
         private void dgvexamenes_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -89,6 +103,14 @@ namespace CUMple
 
         }
 
+       public void limpiar()
+        {
+            cbidexamen.SelectedIndex = -1;
+            txbdisciplina.Text = "";
+            txbexaminadores.Text = "";
+            txbfecha.Text = "";
+            txbhora.Text = "";
+        }
         private void btneditar_Click(object sender, EventArgs e)
         {
           
@@ -111,30 +133,82 @@ namespace CUMple
             {
                 editarexamen("hora", txbhora.Text, idselecionado);
             }
+                MessageBox.Show("El examén se ha editado de manera correcta");
+                limpiar();
             }
-            else
-            {
-                MessageBox.Show("Debe selecionar un id de examén");
-            }
+          
         }
            
         private void cbidexamen_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cbidexamen.SelectedIndex==-1)
+            {
 
+                btnagregar.Enabled = true;
+                btneditar.Enabled = false;
+                btneliminar.Enabled = false;
+            }
+            else
+            {
+                btnagregar.Enabled = false;
+                btneditar.Enabled = true;
+                btneliminar.Enabled = true;
+
+            }
         }
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            if (txbdisciplina.Text!="" && txbexaminadores.Text!="" && txbfecha.Text!="" && txbhora.Text!="")
+            
+            if (txbdisciplina.Text!="" && txbexaminadores.Text!="" && txbfecha.Text!="" && txbhora.Text!="" && cbidexamen.SelectedIndex==-1)
             {
-                string comando = "insert into examenes (disciplina,examinadores,fecha,hora) values("+txbdisciplina.Text+","+txbexaminadores.Text+","+txbfecha.Text+","+txbhora.Text+")";
+                conexionbd.Open();
+                string comando = "insert into examenes (disciplina,examinadores,fecha,hora) values('"+txbdisciplina.Text+"','"+txbexaminadores.Text+"','"+txbfecha.Text+"','"+txbhora.Text+"')";
+                MySqlCommand comandoingresarexamenes = new MySqlCommand(comando,conexionbd);
+                comandoingresarexamenes.ExecuteNonQuery();
+                MessageBox.Show("Se agrego correctamente el examen");
+                limpiar();
+                conexionbd.Close();
+                dgvexamenes.DataSource = cargarexamenes();
             }
+
+            else
+            {
+                MessageBox.Show("Los datos no se han podido ingresar correctamente."+"\nAsegurese que todas las casillas estan con datos ingresados y que ningún id este seleccionado");
+            }
+           
         }
 
         private void btnvolverexamenes_Click(object sender, EventArgs e)
         {
             new Principal().Show();
             this.Dispose();
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+           
+            if (cbidexamen.SelectedIndex != -1)
+            {
+                conexionbd.Open();
+                int id = Int32.Parse(cbidexamen.SelectedItem.ToString());
+                string comandostring = "delete from examenes where idexamen=" + id + "";
+                MySqlCommand comandoborrarexamenes = new MySqlCommand(comandostring, conexionbd);
+                comandoborrarexamenes.ExecuteNonQuery();
+                MessageBox.Show("Se elimino correctamente el examen");
+                limpiar();
+                conexionbd.Close();
+                dgvexamenes.DataSource = cargarexamenes();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una id a la cual borrar");
+            }
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }
