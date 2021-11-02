@@ -37,10 +37,7 @@ namespace CUMple
             this.colidexamen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btneditar = new System.Windows.Forms.Button();
             this.txbexaminadores = new System.Windows.Forms.TextBox();
-            this.txbdisciplina = new System.Windows.Forms.TextBox();
-            this.txbfecha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txbhora = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,6 +47,11 @@ namespace CUMple
             this.btnvolverexamenes = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnlimpiar = new System.Windows.Forms.Button();
+            this.cbdisciplina = new System.Windows.Forms.ComboBox();
+            this.Fechadatatimer = new System.Windows.Forms.DateTimePicker();
+            this.horadatatimer = new System.Windows.Forms.DateTimePicker();
+            this.cbhabfe = new System.Windows.Forms.CheckBox();
+            this.cbhabhora = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,50 +126,26 @@ namespace CUMple
             // txbexaminadores
             // 
             this.txbexaminadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbexaminadores.Location = new System.Drawing.Point(106, 30);
+            this.txbexaminadores.Location = new System.Drawing.Point(106, 36);
             this.txbexaminadores.Name = "txbexaminadores";
             this.txbexaminadores.Size = new System.Drawing.Size(100, 26);
             this.txbexaminadores.TabIndex = 2;
-            // 
-            // txbdisciplina
-            // 
-            this.txbdisciplina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbdisciplina.Location = new System.Drawing.Point(310, 30);
-            this.txbdisciplina.Name = "txbdisciplina";
-            this.txbdisciplina.Size = new System.Drawing.Size(100, 26);
-            this.txbdisciplina.TabIndex = 3;
-            // 
-            // txbfecha
-            // 
-            this.txbfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbfecha.Location = new System.Drawing.Point(106, 76);
-            this.txbfecha.Name = "txbfecha";
-            this.txbfecha.Size = new System.Drawing.Size(100, 26);
-            this.txbfecha.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 36);
+            this.label1.Location = new System.Drawing.Point(2, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = "Examinadores:";
             // 
-            // txbhora
-            // 
-            this.txbhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbhora.Location = new System.Drawing.Point(310, 72);
-            this.txbhora.Name = "txbhora";
-            this.txbhora.Size = new System.Drawing.Size(100, 26);
-            this.txbhora.TabIndex = 6;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 82);
+            this.label2.Location = new System.Drawing.Point(5, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 16);
             this.label2.TabIndex = 7;
@@ -187,7 +165,7 @@ namespace CUMple
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(247, 78);
+            this.label4.Location = new System.Drawing.Point(234, 86);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 16);
             this.label4.TabIndex = 9;
@@ -195,11 +173,12 @@ namespace CUMple
             // 
             // cbidexamen
             // 
+            this.cbidexamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbidexamen.FormattingEnabled = true;
-            this.cbidexamen.Location = new System.Drawing.Point(605, 55);
-            this.cbidexamen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbidexamen.Location = new System.Drawing.Point(605, 52);
+            this.cbidexamen.Margin = new System.Windows.Forms.Padding(2);
             this.cbidexamen.Name = "cbidexamen";
-            this.cbidexamen.Size = new System.Drawing.Size(100, 21);
+            this.cbidexamen.Size = new System.Drawing.Size(100, 28);
             this.cbidexamen.TabIndex = 11;
             this.cbidexamen.SelectedIndexChanged += new System.EventHandler(this.cbidexamen_SelectedIndexChanged);
             // 
@@ -261,11 +240,73 @@ namespace CUMple
             this.btnlimpiar.UseVisualStyleBackColor = true;
             this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
             // 
+            // cbdisciplina
+            // 
+            this.cbdisciplina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbdisciplina.FormattingEnabled = true;
+            this.cbdisciplina.Items.AddRange(new object[] {
+            "Taekwondo",
+            "Krav Maga"});
+            this.cbdisciplina.Location = new System.Drawing.Point(309, 36);
+            this.cbdisciplina.Margin = new System.Windows.Forms.Padding(2);
+            this.cbdisciplina.Name = "cbdisciplina";
+            this.cbdisciplina.Size = new System.Drawing.Size(100, 28);
+            this.cbdisciplina.TabIndex = 17;
+            this.cbdisciplina.SelectedIndexChanged += new System.EventHandler(this.cbdisciplina_SelectedIndexChanged);
+            // 
+            // Fechadatatimer
+            // 
+            this.Fechadatatimer.CustomFormat = "yyyy-MM-dd";
+            this.Fechadatatimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fechadatatimer.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Fechadatatimer.Location = new System.Drawing.Point(106, 78);
+            this.Fechadatatimer.Name = "Fechadatatimer";
+            this.Fechadatatimer.Size = new System.Drawing.Size(100, 26);
+            this.Fechadatatimer.TabIndex = 18;
+            // 
+            // horadatatimer
+            // 
+            this.horadatatimer.CustomFormat = "H:mm";
+            this.horadatatimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.horadatatimer.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.horadatatimer.Location = new System.Drawing.Point(309, 78);
+            this.horadatatimer.Name = "horadatatimer";
+            this.horadatatimer.Size = new System.Drawing.Size(66, 26);
+            this.horadatatimer.TabIndex = 19;
+            this.horadatatimer.ValueChanged += new System.EventHandler(this.horadatatimer_ValueChanged);
+            // 
+            // cbhabfe
+            // 
+            this.cbhabfe.AutoSize = true;
+            this.cbhabfe.Location = new System.Drawing.Point(106, 119);
+            this.cbhabfe.Name = "cbhabfe";
+            this.cbhabfe.Size = new System.Drawing.Size(94, 17);
+            this.cbhabfe.TabIndex = 20;
+            this.cbhabfe.Text = "Habilitar fecha";
+            this.cbhabfe.UseVisualStyleBackColor = true;
+            this.cbhabfe.CheckedChanged += new System.EventHandler(this.cbhabfe_CheckedChanged);
+            // 
+            // cbhabhora
+            // 
+            this.cbhabhora.AutoSize = true;
+            this.cbhabhora.Location = new System.Drawing.Point(309, 119);
+            this.cbhabhora.Name = "cbhabhora";
+            this.cbhabhora.Size = new System.Drawing.Size(88, 17);
+            this.cbhabhora.TabIndex = 21;
+            this.cbhabhora.Text = "Habilitar hora";
+            this.cbhabhora.UseVisualStyleBackColor = true;
+            this.cbhabhora.CheckedChanged += new System.EventHandler(this.cbhabhora_CheckedChanged);
+            // 
             // Examenesfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 500);
+            this.Controls.Add(this.cbhabhora);
+            this.Controls.Add(this.cbhabfe);
+            this.Controls.Add(this.horadatatimer);
+            this.Controls.Add(this.Fechadatatimer);
+            this.Controls.Add(this.cbdisciplina);
             this.Controls.Add(this.btnlimpiar);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnvolverexamenes);
@@ -275,10 +316,7 @@ namespace CUMple
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txbhora);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txbfecha);
-            this.Controls.Add(this.txbdisciplina);
             this.Controls.Add(this.txbexaminadores);
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.dgvexamenes);
@@ -296,10 +334,7 @@ namespace CUMple
         private System.Windows.Forms.DataGridView dgvexamenes;
         private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.TextBox txbexaminadores;
-        private System.Windows.Forms.TextBox txbdisciplina;
-        private System.Windows.Forms.TextBox txbfecha;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txbhora;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -314,5 +349,10 @@ namespace CUMple
         private System.Windows.Forms.Button btnvolverexamenes;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnlimpiar;
+        private System.Windows.Forms.ComboBox cbdisciplina;
+        private System.Windows.Forms.DateTimePicker Fechadatatimer;
+        private System.Windows.Forms.DateTimePicker horadatatimer;
+        private System.Windows.Forms.CheckBox cbhabfe;
+        private System.Windows.Forms.CheckBox cbhabhora;
     }
 }
