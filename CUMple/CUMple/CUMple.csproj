@@ -109,6 +109,12 @@
     <Compile Include="Examenesfrm.Designer.cs">
       <DependentUpon>Examenesfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="examenesnotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="examenesnotas.Designer.cs">
+      <DependentUpon>examenesnotas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Iniciodesesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Examenesfrm.resx">
       <DependentUpon>Examenesfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="examenesnotas.resx">
+      <DependentUpon>examenesnotas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Iniciodesesion.resx">
       <DependentUpon>Iniciodesesion.cs</DependentUpon>

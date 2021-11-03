@@ -52,6 +52,7 @@ namespace CUMple
             this.horadatatimer = new System.Windows.Forms.DateTimePicker();
             this.cbhabfe = new System.Windows.Forms.CheckBox();
             this.cbhabhora = new System.Windows.Forms.CheckBox();
+            this.rata = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,9 @@ namespace CUMple
             this.colhora,
             this.colidexamen});
             this.dgvexamenes.Location = new System.Drawing.Point(8, 142);
+            this.dgvexamenes.MultiSelect = false;
             this.dgvexamenes.Name = "dgvexamenes";
+            this.dgvexamenes.ReadOnly = true;
             this.dgvexamenes.RowHeadersWidth = 62;
             this.dgvexamenes.Size = new System.Drawing.Size(814, 346);
             this.dgvexamenes.TabIndex = 0;
@@ -78,6 +81,7 @@ namespace CUMple
             this.colexaminadores.HeaderText = "Examinadores";
             this.colexaminadores.MinimumWidth = 8;
             this.colexaminadores.Name = "colexaminadores";
+            this.colexaminadores.ReadOnly = true;
             this.colexaminadores.Width = 150;
             // 
             // colfecha
@@ -86,6 +90,7 @@ namespace CUMple
             this.colfecha.HeaderText = "Fecha";
             this.colfecha.MinimumWidth = 8;
             this.colfecha.Name = "colfecha";
+            this.colfecha.ReadOnly = true;
             this.colfecha.Width = 150;
             // 
             // coldisciplina
@@ -94,6 +99,7 @@ namespace CUMple
             this.coldisciplina.HeaderText = "Disciplina";
             this.coldisciplina.MinimumWidth = 8;
             this.coldisciplina.Name = "coldisciplina";
+            this.coldisciplina.ReadOnly = true;
             this.coldisciplina.Width = 150;
             // 
             // colhora
@@ -102,6 +108,7 @@ namespace CUMple
             this.colhora.HeaderText = "Hora";
             this.colhora.MinimumWidth = 8;
             this.colhora.Name = "colhora";
+            this.colhora.ReadOnly = true;
             this.colhora.Width = 150;
             // 
             // colidexamen
@@ -110,6 +117,7 @@ namespace CUMple
             this.colidexamen.HeaderText = "ID del exámen";
             this.colidexamen.MinimumWidth = 8;
             this.colidexamen.Name = "colidexamen";
+            this.colidexamen.ReadOnly = true;
             this.colidexamen.Width = 150;
             // 
             // btneditar
@@ -175,7 +183,7 @@ namespace CUMple
             // 
             this.cbidexamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbidexamen.FormattingEnabled = true;
-            this.cbidexamen.Location = new System.Drawing.Point(605, 52);
+            this.cbidexamen.Location = new System.Drawing.Point(614, 50);
             this.cbidexamen.Margin = new System.Windows.Forms.Padding(2);
             this.cbidexamen.Name = "cbidexamen";
             this.cbidexamen.Size = new System.Drawing.Size(100, 28);
@@ -297,11 +305,20 @@ namespace CUMple
             this.cbhabhora.UseVisualStyleBackColor = true;
             this.cbhabhora.CheckedChanged += new System.EventHandler(this.cbhabhora_CheckedChanged);
             // 
+            // rata
+            // 
+            this.rata.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rata.Location = new System.Drawing.Point(614, 108);
+            this.rata.Name = "rata";
+            this.rata.Size = new System.Drawing.Size(100, 26);
+            this.rata.TabIndex = 22;
+            // 
             // Examenesfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 500);
+            this.Controls.Add(this.rata);
             this.Controls.Add(this.cbhabhora);
             this.Controls.Add(this.cbhabfe);
             this.Controls.Add(this.horadatatimer);
@@ -354,5 +371,6 @@ namespace CUMple
         private System.Windows.Forms.DateTimePicker horadatatimer;
         private System.Windows.Forms.CheckBox cbhabfe;
         private System.Windows.Forms.CheckBox cbhabhora;
+        private System.Windows.Forms.TextBox rata;
     }
 }

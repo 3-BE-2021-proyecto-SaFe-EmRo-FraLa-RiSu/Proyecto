@@ -106,7 +106,12 @@ namespace CUMple
 
         private void dgvexamenes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int row = e.RowIndex;
+            if (row!=-1)
+            {
+                string idexamenparanotas=(dgvexamenes.Rows[row].Cells[4].Value).ToString();
+                new examenesnotas(idexamenparanotas).Show();
+            }
         }
 
        public void limpiar()
