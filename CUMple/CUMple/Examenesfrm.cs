@@ -267,5 +267,10 @@ namespace CUMple
                 horadatatimer.Enabled = false;
             }
         }
+
+        private void rata_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

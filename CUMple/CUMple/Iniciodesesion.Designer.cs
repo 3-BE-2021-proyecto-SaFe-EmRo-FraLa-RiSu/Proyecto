@@ -46,7 +46,7 @@ namespace CUMple
             this.txbconb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbconb.Name = "txbconb";
             this.txbconb.Size = new System.Drawing.Size(342, 49);
-            this.txbconb.TabIndex = 0;
+            this.txbconb.TabIndex = 1;
             this.txbconb.UseSystemPasswordChar = true;
             this.txbconb.TextChanged += new System.EventHandler(this.txbconb_TextChanged);
             this.txbconb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbconb_KeyPress);
@@ -61,7 +61,7 @@ namespace CUMple
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(218, 52);
-            this.button1.TabIndex = 1;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Inciar Sesión";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -74,7 +74,7 @@ namespace CUMple
             this.txbuserb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbuserb.Name = "txbuserb";
             this.txbuserb.Size = new System.Drawing.Size(342, 49);
-            this.txbuserb.TabIndex = 2;
+            this.txbuserb.TabIndex = 0;
             this.txbuserb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.txbuserb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbuserb_KeyPress);
             // 
