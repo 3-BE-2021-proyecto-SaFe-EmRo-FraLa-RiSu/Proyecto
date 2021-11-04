@@ -141,6 +141,12 @@
     <Compile Include="Userprofile.Designer.cs">
       <DependentUpon>Userprofile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Userprofileadd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Userprofileadd.Designer.cs">
+      <DependentUpon>Userprofileadd.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Userprofile.resx">
       <DependentUpon>Userprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Userprofileadd.resx">
+      <DependentUpon>Userprofileadd.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
