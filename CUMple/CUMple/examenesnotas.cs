@@ -68,5 +68,37 @@ namespace CUMple
         {
 
         }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+            if (cbcedula.SelectedIndex != -1 && txbnota.Text != "" && cbrango.SelectedIndex != -1 && cbidexamen.SelectedIndex==-1)
+            {
+                string rango=cbrango.SelectedItem.ToString();
+                string cedula = cbcedula.SelectedItem.ToString();
+
+             
+
+
+                conexionbd.Open();
+                string comando = "insert into rango_obtenido (notas,nuevo_rango,cedula) values('" + txbnota.Text + "','" + rango + "','"+ cedula+ "');";
+                MySqlCommand comandoingresarexamenes = new MySqlCommand(comando, conexionbd);
+                comandoingresarexamenes.ExecuteNonQuery();
+                MessageBox.Show("Se agrego correctamente el examen");               
+                conexionbd.Close();
+                cbidexamen.Items.Clear();
+                comboboxidactualizado();
+               
+            }
+
+            else
+            {
+                MessageBox.Show("Los datos no se han podido ingresar correctamente." + "\nAsegurese que todas las casillas estan con datos ingresados y que ningún id este seleccionado");
+            }
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
