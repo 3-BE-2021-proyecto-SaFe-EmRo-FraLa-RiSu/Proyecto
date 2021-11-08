@@ -48,11 +48,11 @@ namespace CUMple
             this.cbcedula = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.restaurar = new System.Windows.Forms.PictureBox();
             this.minimizar = new System.Windows.Forms.PictureBox();
             this.cerrarclic = new System.Windows.Forms.PictureBox();
             this.maximizar = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
@@ -140,6 +140,7 @@ namespace CUMple
             this.btneditar.TabIndex = 17;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // cbidexamen
             // 
@@ -155,10 +156,11 @@ namespace CUMple
             // txbnota
             // 
             this.txbnota.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbnota.Location = new System.Drawing.Point(421, 219);
+            this.txbnota.Location = new System.Drawing.Point(421, 221);
             this.txbnota.Name = "txbnota";
             this.txbnota.Size = new System.Drawing.Size(100, 24);
             this.txbnota.TabIndex = 37;
+            this.txbnota.TextChanged += new System.EventHandler(this.txbnota_TextChanged);
             // 
             // lblid
             // 
@@ -185,8 +187,32 @@ namespace CUMple
             this.cbrango.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbrango.FormattingEnabled = true;
             this.cbrango.Items.AddRange(new object[] {
-            "Taekwondo",
-            "Krav Maga"});
+            "Blanco",
+            "Blanco confirmado",
+            "Naranja  ",
+            "Naranja confirmado",
+            "Amarillo ",
+            "Amarillo confirmado",
+            "Camuflado",
+            "Camuflado confirmado",
+            "Verde",
+            "Verde confirmado",
+            "Violeta",
+            "Violeta confirmado",
+            "Azul ",
+            "Azul confirmado",
+            "Marron",
+            "Marron confirmado",
+            "Rojo ",
+            "Rojo confirmado",
+            "Rojo Negro",
+            "Rojo Negro confirmado",
+            "Negro",
+            "1mer DAN",
+            "2ndo DAN",
+            "3er DAN ",
+            "4to DAN",
+            ""});
             this.cbrango.Location = new System.Drawing.Point(619, 168);
             this.cbrango.Margin = new System.Windows.Forms.Padding(2);
             this.cbrango.Name = "cbrango";
@@ -239,15 +265,6 @@ namespace CUMple
             this.panel1.Size = new System.Drawing.Size(1100, 112);
             this.panel1.TabIndex = 46;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(49)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 112);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 488);
-            this.panel2.TabIndex = 47;
-            // 
             // restaurar
             // 
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -296,6 +313,15 @@ namespace CUMple
             this.maximizar.TabIndex = 16;
             this.maximizar.TabStop = false;
             this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(49)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 112);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 488);
+            this.panel2.TabIndex = 47;
             // 
             // examenesnotas
             // 

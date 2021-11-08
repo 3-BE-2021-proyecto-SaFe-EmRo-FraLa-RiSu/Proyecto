@@ -19,6 +19,8 @@ namespace CUMple
             idexamen1 = idexamenobtenido;
         }
         string idexamen1;
+
+      
         MySqlConnection conexionbd = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
         private DataTable cargarexamenes(string idexamenx)
         {
@@ -39,19 +41,21 @@ namespace CUMple
              conexionbd.Close();
              return dtexamenes;
         }
-        private void comboboxidactualizado()
+  
+        private void comboboxidactualizadocedula()
         {
             MySqlDataReader lectordedatos;
-            string comand = "Select idexamen from rango_obtenido;";
+            string comand = "Select cedula from discipulos;";
             conexionbd.Open();
             MySqlCommand comando = new MySqlCommand(comand, conexionbd);
             lectordedatos = comando.ExecuteReader();
             while (lectordedatos.Read())
             {
-                cbidexamen.Items.Add(lectordedatos["idexamen"].ToString());
+                cbcedula.Items.Add(lectordedatos["cedula"].ToString());
             }
             conexionbd.Close();
         }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -59,11 +63,34 @@ namespace CUMple
 
         private void examenesnotas_Load(object sender, EventArgs e)
         {
-            comboboxidactualizado();
+          
+            comboboxidactualizadocedula();
             dgvexamenes.DataSource=cargarexamenes(idexamen1);
         
         }
 
+        public void editarexamen(string columna, string datonuevo,string datoacambiar, int idexamen)
+        {
+
+            conexionbd.Open();
+            string comando = "update rango_obtenido set " + columna + "='" + datonuevo + "' where idexamen=" + idexamen + " and "+columna+"='"+datoacambiar+"';";
+            MySqlCommand comandoeditarusuario = new MySqlCommand(comando, conexionbd);
+            try
+            {
+                comandoeditarusuario.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+           
+            conexionbd.Close();
+            dgvexamenes.DataSource = cargarexamenes(idexamen.ToString());
+
+
+        }
         private void cbidexamen_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -86,19 +113,36 @@ namespace CUMple
                 MessageBox.Show("Se agrego correctamente el examen");               
                 conexionbd.Close();
                 cbidexamen.Items.Clear();
-                comboboxidactualizado();
+             
                
             }
 
             else
             {
-                MessageBox.Show("Los datos no se han podido ingresar correctamente." + "\nAsegurese que todas las casillas estan con datos ingresados y que ningún id este seleccionado");
+                MessageBox.Show("Los datos no se han podido ingresar correctamente." + "\nAsegurese que todas las casillas estan con datos ingresados o que los datos sean validos y que ningún id este seleccionado");
             }
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
 
+            if (cbidexamen.SelectedIndex != -1)
+            {
+                conexionbd.Open();
+                int id = Int32.Parse(cbidexamen.SelectedItem.ToString());
+                string comandostring = "delete from examenes where idexamen=" + id + "";
+                MySqlCommand comandoborrarexamenes = new MySqlCommand(comandostring, conexionbd);
+                comandoborrarexamenes.ExecuteNonQuery();
+                MessageBox.Show("Se elimino correctamente el examen");
+                conexionbd.Close();
+                cbidexamen.Items.Clear();
+             
+                dgvexamenes.Rows.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una id a la cual borrar");
+            }
         }
 
         private void cerrarclic_Click(object sender, EventArgs e)
@@ -123,6 +167,41 @@ namespace CUMple
             WindowState = FormWindowState.Normal;
             restaurar.Visible = false;
             maximizar.Visible = true;
+        }
+
+        private void txbnota_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+
+            if (cbidexamen.SelectedIndex != -1)
+            {
+                int idselecionado = Int32.Parse(cbidexamen.SelectedItem.ToString());
+              
+               
+                if (cbcedula.SelectedIndex!=1)
+                {
+                    string cedula = cbidexamen.SelectedItem.ToString();
+                    editarexamen("cedula", cedula,"",idselecionado);
+                
+                }
+
+                if (cbrango.SelectedIndex!=1)
+                {
+                    string rango = cbrango.SelectedItem.ToString();
+                    editarexamen("nuevo_rango", rango, "", idselecionado);
+                }
+
+                if(txbnota.Text!="")
+                {
+
+                    editarexamen("notas", txbnota.Text, "", idselecionado);
+                }
+                MessageBox.Show("El examén se ha editado de manera correcta");
+            }
         }
     }
 }

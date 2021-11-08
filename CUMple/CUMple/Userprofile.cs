@@ -208,7 +208,7 @@ namespace CUMple
         {
             WindowState = FormWindowState.Normal;
             restaurar.Visible = false;
-            maximizar.Visible.true;
+            maximizar.Visible = true;
         }
 
         private void maximizar_Click(object sender, EventArgs e)
