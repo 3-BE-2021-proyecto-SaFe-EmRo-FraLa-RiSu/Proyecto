@@ -44,9 +44,9 @@ namespace CUMple
             // 
             this.pictureBox1.BackgroundImage = global::CUMple.Properties.Resources.logo_de_Academia_DO;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(42, 68);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(216, 154);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -57,9 +57,9 @@ namespace CUMple
             this.botingprog.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botingprog.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botingprog.ForeColor = System.Drawing.Color.White;
-            this.botingprog.Location = new System.Drawing.Point(12, 189);
+            this.botingprog.Location = new System.Drawing.Point(42, 296);
             this.botingprog.Name = "botingprog";
-            this.botingprog.Size = new System.Drawing.Size(172, 37);
+            this.botingprog.Size = new System.Drawing.Size(191, 37);
             this.botingprog.TabIndex = 6;
             this.botingprog.Text = "Grafica alumnos";
             this.botingprog.UseVisualStyleBackColor = false;
@@ -71,9 +71,9 @@ namespace CUMple
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(12, 232);
+            this.button1.Location = new System.Drawing.Point(42, 339);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 37);
+            this.button1.Size = new System.Drawing.Size(191, 37);
             this.button1.TabIndex = 7;
             this.button1.Text = "Opciones";
             this.button1.UseVisualStyleBackColor = false;
@@ -84,9 +84,9 @@ namespace CUMple
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(12, 275);
+            this.button2.Location = new System.Drawing.Point(42, 382);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 37);
+            this.button2.Size = new System.Drawing.Size(191, 37);
             this.button2.TabIndex = 8;
             this.button2.Text = "Ayuda";
             this.button2.UseVisualStyleBackColor = false;
@@ -97,9 +97,9 @@ namespace CUMple
             this.btnentrarexamenes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnentrarexamenes.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnentrarexamenes.ForeColor = System.Drawing.Color.White;
-            this.btnentrarexamenes.Location = new System.Drawing.Point(12, 318);
+            this.btnentrarexamenes.Location = new System.Drawing.Point(42, 425);
             this.btnentrarexamenes.Name = "btnentrarexamenes";
-            this.btnentrarexamenes.Size = new System.Drawing.Size(172, 37);
+            this.btnentrarexamenes.Size = new System.Drawing.Size(191, 37);
             this.btnentrarexamenes.TabIndex = 9;
             this.btnentrarexamenes.Text = "Examenes";
             this.btnentrarexamenes.UseVisualStyleBackColor = false;
@@ -111,9 +111,9 @@ namespace CUMple
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(12, 361);
+            this.button4.Location = new System.Drawing.Point(42, 468);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(172, 37);
+            this.button4.Size = new System.Drawing.Size(191, 37);
             this.button4.TabIndex = 10;
             this.button4.Text = "boton5";
             this.button4.UseVisualStyleBackColor = false;
@@ -121,7 +121,7 @@ namespace CUMple
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(239, 191);
+            this.textBox1.Location = new System.Drawing.Point(404, 275);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(285, 31);
             this.textBox1.TabIndex = 11;
@@ -130,9 +130,10 @@ namespace CUMple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::CUMple.Properties.Resources.logo_de_Academia_DO_difuminado_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(757, 471);
+            this.ClientSize = new System.Drawing.Size(1084, 561);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnentrarexamenes);

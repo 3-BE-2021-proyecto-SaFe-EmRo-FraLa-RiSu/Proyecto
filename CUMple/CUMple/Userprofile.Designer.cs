@@ -30,6 +30,7 @@ namespace CUMple
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Userprofile));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnedit = new System.Windows.Forms.Button();
             this.lblmostnom = new System.Windows.Forms.Label();
@@ -62,6 +63,21 @@ namespace CUMple
             this.label5 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnvolveruserprofileadd = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.restaurar = new System.Windows.Forms.PictureBox();
+            this.minimizar = new System.Windows.Forms.PictureBox();
+            this.cerrarclic = new System.Windows.Forms.PictureBox();
+            this.maximizar = new System.Windows.Forms.PictureBox();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -73,10 +89,9 @@ namespace CUMple
             // btnedit
             // 
             this.btnedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnedit.Location = new System.Drawing.Point(360, 382);
-            this.btnedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnedit.Location = new System.Drawing.Point(601, 394);
             this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(394, 38);
+            this.btnedit.Size = new System.Drawing.Size(263, 25);
             this.btnedit.TabIndex = 2;
             this.btnedit.Text = "Editar";
             this.btnedit.UseVisualStyleBackColor = true;
@@ -86,10 +101,9 @@ namespace CUMple
             // 
             this.lblmostnom.AutoSize = true;
             this.lblmostnom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmostnom.Location = new System.Drawing.Point(14, 9);
-            this.lblmostnom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblmostnom.Location = new System.Drawing.Point(370, 152);
             this.lblmostnom.Name = "lblmostnom";
-            this.lblmostnom.Size = new System.Drawing.Size(246, 32);
+            this.lblmostnom.Size = new System.Drawing.Size(167, 24);
             this.lblmostnom.TabIndex = 3;
             this.lblmostnom.Text = "Nombre completo:";
             this.lblmostnom.Click += new System.EventHandler(this.lblmostnom_Click);
@@ -98,30 +112,27 @@ namespace CUMple
             // 
             this.lblnomperf.AutoSize = true;
             this.lblnomperf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnomperf.Location = new System.Drawing.Point(267, 12);
-            this.lblnomperf.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblnomperf.Location = new System.Drawing.Point(539, 154);
             this.lblnomperf.Name = "lblnomperf";
-            this.lblnomperf.Size = new System.Drawing.Size(0, 29);
+            this.lblnomperf.Size = new System.Drawing.Size(0, 20);
             this.lblnomperf.TabIndex = 5;
             this.lblnomperf.Click += new System.EventHandler(this.lblnomperf_Click);
             // 
             // txbnomedit
             // 
             this.txbnomedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbnomedit.Location = new System.Drawing.Point(606, 328);
-            this.txbnomedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbnomedit.Location = new System.Drawing.Point(765, 359);
             this.txbnomedit.Name = "txbnomedit";
-            this.txbnomedit.Size = new System.Drawing.Size(148, 33);
+            this.txbnomedit.Size = new System.Drawing.Size(100, 24);
             this.txbnomedit.TabIndex = 7;
             // 
             // lblmostnom2
             // 
             this.lblmostnom2.AutoSize = true;
             this.lblmostnom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmostnom2.Location = new System.Drawing.Point(356, 331);
-            this.lblmostnom2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblmostnom2.Location = new System.Drawing.Point(598, 361);
             this.lblmostnom2.Name = "lblmostnom2";
-            this.lblmostnom2.Size = new System.Drawing.Size(213, 29);
+            this.lblmostnom2.Size = new System.Drawing.Size(138, 20);
             this.lblmostnom2.TabIndex = 8;
             this.lblmostnom2.Text = "Nombre completo:";
             // 
@@ -129,49 +140,44 @@ namespace CUMple
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 269);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(370, 321);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 29);
+            this.label1.Size = new System.Drawing.Size(80, 20);
             this.label1.TabIndex = 12;
             this.label1.Text = "Profesión:";
             // 
             // txbprofedit
             // 
             this.txbprofedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbprofedit.Location = new System.Drawing.Point(144, 269);
-            this.txbprofedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbprofedit.Location = new System.Drawing.Point(457, 321);
             this.txbprofedit.Name = "txbprofedit";
-            this.txbprofedit.Size = new System.Drawing.Size(148, 33);
+            this.txbprofedit.Size = new System.Drawing.Size(100, 24);
             this.txbprofedit.TabIndex = 11;
             // 
             // txbceddit
             // 
             this.txbceddit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbceddit.Location = new System.Drawing.Point(144, 328);
-            this.txbceddit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbceddit.Location = new System.Drawing.Point(457, 359);
             this.txbceddit.Name = "txbceddit";
-            this.txbceddit.Size = new System.Drawing.Size(148, 33);
+            this.txbceddit.Size = new System.Drawing.Size(100, 24);
             this.txbceddit.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 328);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(370, 359);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 29);
+            this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 13;
             this.label2.Text = "Cédula:";
             // 
             // txbfecdenacedit
             // 
             this.txbfecdenacedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbfecdenacedit.Location = new System.Drawing.Point(606, 269);
-            this.txbfecdenacedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbfecdenacedit.Location = new System.Drawing.Point(765, 321);
             this.txbfecdenacedit.Name = "txbfecdenacedit";
-            this.txbfecdenacedit.Size = new System.Drawing.Size(148, 33);
+            this.txbfecdenacedit.Size = new System.Drawing.Size(100, 24);
             this.txbfecdenacedit.TabIndex = 18;
             this.txbfecdenacedit.TextChanged += new System.EventHandler(this.txbfecdenacedit_TextChanged);
             // 
@@ -179,10 +185,9 @@ namespace CUMple
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 448);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(370, 437);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 29);
+            this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 17;
             this.label3.Text = "Email:";
             // 
@@ -190,20 +195,18 @@ namespace CUMple
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(356, 269);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(598, 321);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(243, 29);
+            this.label4.Size = new System.Drawing.Size(161, 20);
             this.label4.TabIndex = 16;
             this.label4.Text = "Fecha de nacimiento:";
             // 
             // txbemailedit
             // 
             this.txbemailedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbemailedit.Location = new System.Drawing.Point(144, 445);
-            this.txbemailedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbemailedit.Location = new System.Drawing.Point(457, 435);
             this.txbemailedit.Name = "txbemailedit";
-            this.txbemailedit.Size = new System.Drawing.Size(148, 33);
+            this.txbemailedit.Size = new System.Drawing.Size(100, 24);
             this.txbemailedit.TabIndex = 22;
             this.txbemailedit.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
@@ -211,20 +214,18 @@ namespace CUMple
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 388);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(370, 398);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 29);
+            this.label6.Size = new System.Drawing.Size(62, 20);
             this.label6.TabIndex = 20;
             this.label6.Text = "Celular:";
             // 
             // txbceledit
             // 
             this.txbceledit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbceledit.Location = new System.Drawing.Point(144, 388);
-            this.txbceledit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbceledit.Location = new System.Drawing.Point(457, 398);
             this.txbceledit.Name = "txbceledit";
-            this.txbceledit.Size = new System.Drawing.Size(148, 33);
+            this.txbceledit.Size = new System.Drawing.Size(100, 24);
             this.txbceledit.TabIndex = 19;
             this.txbceledit.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
@@ -232,10 +233,9 @@ namespace CUMple
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(14, 72);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(370, 193);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 29);
+            this.label7.Size = new System.Drawing.Size(80, 20);
             this.label7.TabIndex = 23;
             this.label7.Text = "Profesión:";
             // 
@@ -243,10 +243,9 @@ namespace CUMple
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(14, 126);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(370, 228);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 29);
+            this.label8.Size = new System.Drawing.Size(63, 20);
             this.label8.TabIndex = 24;
             this.label8.Text = "Cédula:";
             // 
@@ -254,10 +253,9 @@ namespace CUMple
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(14, 182);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(370, 264);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(96, 29);
+            this.label9.Size = new System.Drawing.Size(62, 20);
             this.label9.TabIndex = 25;
             this.label9.Text = "Celular:";
             // 
@@ -265,10 +263,9 @@ namespace CUMple
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(356, 182);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(598, 264);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 29);
+            this.label10.Size = new System.Drawing.Size(52, 20);
             this.label10.TabIndex = 26;
             this.label10.Text = "Email:";
             // 
@@ -276,10 +273,9 @@ namespace CUMple
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(356, 72);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(598, 193);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(243, 29);
+            this.label11.Size = new System.Drawing.Size(161, 20);
             this.label11.TabIndex = 27;
             this.label11.Text = "Fecha de nacimiento:";
             this.label11.Click += new System.EventHandler(this.label11_Click);
@@ -288,10 +284,9 @@ namespace CUMple
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(356, 126);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(598, 228);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(207, 29);
+            this.label12.Size = new System.Drawing.Size(136, 20);
             this.label12.TabIndex = 28;
             this.label12.Text = "Fecha de ingreso:";
             // 
@@ -299,60 +294,54 @@ namespace CUMple
             // 
             this.lblprofperf.AutoSize = true;
             this.lblprofperf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprofperf.Location = new System.Drawing.Point(144, 72);
-            this.lblprofperf.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblprofperf.Location = new System.Drawing.Point(457, 193);
             this.lblprofperf.Name = "lblprofperf";
-            this.lblprofperf.Size = new System.Drawing.Size(0, 29);
+            this.lblprofperf.Size = new System.Drawing.Size(0, 20);
             this.lblprofperf.TabIndex = 30;
             // 
             // lblcedperf
             // 
             this.lblcedperf.AutoSize = true;
             this.lblcedperf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcedperf.Location = new System.Drawing.Point(118, 126);
-            this.lblcedperf.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcedperf.Location = new System.Drawing.Point(440, 228);
             this.lblcedperf.Name = "lblcedperf";
-            this.lblcedperf.Size = new System.Drawing.Size(0, 29);
+            this.lblcedperf.Size = new System.Drawing.Size(0, 20);
             this.lblcedperf.TabIndex = 31;
             // 
             // lblfecnacpref
             // 
             this.lblfecnacpref.AutoSize = true;
             this.lblfecnacpref.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecnacpref.Location = new System.Drawing.Point(606, 72);
-            this.lblfecnacpref.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblfecnacpref.Location = new System.Drawing.Point(765, 193);
             this.lblfecnacpref.Name = "lblfecnacpref";
-            this.lblfecnacpref.Size = new System.Drawing.Size(0, 29);
+            this.lblfecnacpref.Size = new System.Drawing.Size(0, 20);
             this.lblfecnacpref.TabIndex = 32;
             // 
             // lblfecingpref
             // 
             this.lblfecingpref.AutoSize = true;
             this.lblfecingpref.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecingpref.Location = new System.Drawing.Point(570, 126);
-            this.lblfecingpref.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblfecingpref.Location = new System.Drawing.Point(741, 228);
             this.lblfecingpref.Name = "lblfecingpref";
-            this.lblfecingpref.Size = new System.Drawing.Size(0, 29);
+            this.lblfecingpref.Size = new System.Drawing.Size(0, 20);
             this.lblfecingpref.TabIndex = 33;
             // 
             // lblemailpref
             // 
             this.lblemailpref.AutoSize = true;
             this.lblemailpref.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblemailpref.Location = new System.Drawing.Point(442, 182);
-            this.lblemailpref.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblemailpref.Location = new System.Drawing.Point(656, 264);
             this.lblemailpref.Name = "lblemailpref";
-            this.lblemailpref.Size = new System.Drawing.Size(0, 29);
+            this.lblemailpref.Size = new System.Drawing.Size(0, 20);
             this.lblemailpref.TabIndex = 34;
             // 
             // lblcelpref
             // 
             this.lblcelpref.AutoSize = true;
             this.lblcelpref.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcelpref.Location = new System.Drawing.Point(118, 182);
-            this.lblcelpref.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcelpref.Location = new System.Drawing.Point(440, 264);
             this.lblcelpref.Name = "lblcelpref";
-            this.lblcelpref.Size = new System.Drawing.Size(0, 29);
+            this.lblcelpref.Size = new System.Drawing.Size(0, 20);
             this.lblcelpref.TabIndex = 35;
             // 
             // btnvolveruserprofile
@@ -360,9 +349,10 @@ namespace CUMple
             this.btnvolveruserprofile.BackColor = System.Drawing.Color.DarkRed;
             this.btnvolveruserprofile.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolveruserprofile.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolveruserprofile.Location = new System.Drawing.Point(831, 400);
+            this.btnvolveruserprofile.Location = new System.Drawing.Point(220, 521);
+            this.btnvolveruserprofile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnvolveruserprofile.Name = "btnvolveruserprofile";
-            this.btnvolveruserprofile.Size = new System.Drawing.Size(64, 65);
+            this.btnvolveruserprofile.Size = new System.Drawing.Size(43, 42);
             this.btnvolveruserprofile.TabIndex = 36;
             this.btnvolveruserprofile.Text = "⮎";
             this.btnvolveruserprofile.UseVisualStyleBackColor = false;
@@ -372,10 +362,9 @@ namespace CUMple
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(762, 72);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(869, 193);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 29);
+            this.label5.Size = new System.Drawing.Size(95, 20);
             this.label5.TabIndex = 38;
             this.label5.Text = "Taekwondo:";
             // 
@@ -383,33 +372,128 @@ namespace CUMple
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(762, 126);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(869, 228);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(133, 29);
+            this.label13.Size = new System.Drawing.Size(88, 20);
             this.label13.TabIndex = 39;
             this.label13.Text = "Krav Maga:";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(361, 439);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(602, 431);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(394, 38);
+            this.button1.Size = new System.Drawing.Size(263, 25);
             this.button1.TabIndex = 40;
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // btnvolveruserprofileadd
+            // 
+            this.btnvolveruserprofileadd.BackColor = System.Drawing.Color.DarkRed;
+            this.btnvolveruserprofileadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvolveruserprofileadd.ForeColor = System.Drawing.Color.Transparent;
+            this.btnvolveruserprofileadd.Location = new System.Drawing.Point(13, 738);
+            this.btnvolveruserprofileadd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnvolveruserprofileadd.Name = "btnvolveruserprofileadd";
+            this.btnvolveruserprofileadd.Size = new System.Drawing.Size(43, 42);
+            this.btnvolveruserprofileadd.TabIndex = 38;
+            this.btnvolveruserprofileadd.Text = "⮎";
+            this.btnvolveruserprofileadd.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.panel3.Controls.Add(this.btnvolveruserprofileadd);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 600);
+            this.panel3.TabIndex = 42;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1102, 104);
+            this.panel1.TabIndex = 41;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.panel2.Controls.Add(this.restaurar);
+            this.panel2.Controls.Add(this.minimizar);
+            this.panel2.Controls.Add(this.cerrarclic);
+            this.panel2.Controls.Add(this.maximizar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1102, 112);
+            this.panel2.TabIndex = 40;
+            // 
+            // restaurar
+            // 
+            this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
+            this.restaurar.Location = new System.Drawing.Point(989, 30);
+            this.restaurar.Name = "restaurar";
+            this.restaurar.Size = new System.Drawing.Size(41, 42);
+            this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.restaurar.TabIndex = 13;
+            this.restaurar.TabStop = false;
+            this.restaurar.Visible = false;
+            this.restaurar.Click += new System.EventHandler(this.restaurar_Click);
+            // 
+            // minimizar
+            // 
+            this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
+            this.minimizar.Location = new System.Drawing.Point(942, 30);
+            this.minimizar.Name = "minimizar";
+            this.minimizar.Size = new System.Drawing.Size(41, 42);
+            this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.minimizar.TabIndex = 12;
+            this.minimizar.TabStop = false;
+            this.minimizar.Click += new System.EventHandler(this.minimizar_Click);
+            // 
+            // cerrarclic
+            // 
+            this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
+            this.cerrarclic.Location = new System.Drawing.Point(1036, 30);
+            this.cerrarclic.Name = "cerrarclic";
+            this.cerrarclic.Size = new System.Drawing.Size(41, 42);
+            this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cerrarclic.TabIndex = 11;
+            this.cerrarclic.TabStop = false;
+            this.cerrarclic.Click += new System.EventHandler(this.cerrarclic_Click);
+            // 
+            // maximizar
+            // 
+            this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
+            this.maximizar.Location = new System.Drawing.Point(989, 30);
+            this.maximizar.Name = "maximizar";
+            this.maximizar.Size = new System.Drawing.Size(41, 42);
+            this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.maximizar.TabIndex = 10;
+            this.maximizar.TabStop = false;
+            this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
+            // 
             // Userprofile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(951, 512);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1100, 600);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.btnvolveruserprofile);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnvolveruserprofile);
             this.Controls.Add(this.lblcelpref);
             this.Controls.Add(this.lblemailpref);
             this.Controls.Add(this.lblfecingpref);
@@ -437,10 +521,18 @@ namespace CUMple
             this.Controls.Add(this.lblnomperf);
             this.Controls.Add(this.lblmostnom);
             this.Controls.Add(this.btnedit);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Userprofile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Perfil de usuario";
             this.Load += new System.EventHandler(this.Userprofile_Load);
+            this.panel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,5 +572,13 @@ namespace CUMple
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnvolveruserprofileadd;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox restaurar;
+        private System.Windows.Forms.PictureBox minimizar;
+        private System.Windows.Forms.PictureBox cerrarclic;
+        private System.Windows.Forms.PictureBox maximizar;
     }
 }

@@ -184,12 +184,38 @@ namespace CUMple
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            if (txbceddit.Text != "" && txbceledit.Text != "" && txbemailedit.Text != "" && txbfecdenacedit.Text != "" && txbnomedit.Text != "" && txbprofedit.Text != "")
-            {
-                string agregardiscipulocomandostring="insert into discipulos(cedular,cedula,nomcompleto,krav_maga,taekwondo,profesiones,fecha_de_nac,emails) values('"+txbceledit.Text+"','"+txbceddit.Text+"','"+txbnomedit.Text+"')";
-                MySqlCommand agregardiscipulos = new MySqlCommand(agregardiscipulocomandostring, conexionprograma);
-                agregardiscipulos.ExecuteNonQuery();
-            }
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+     
+
+        private void cerrarclic_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void minimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void restaurar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+            restaurar.Visible = false;
+            maximizar.Visible.true;
+        }
+
+        private void maximizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            maximizar.Visible = false;
+            restaurar.Visible = true;
         }
     }
 }
