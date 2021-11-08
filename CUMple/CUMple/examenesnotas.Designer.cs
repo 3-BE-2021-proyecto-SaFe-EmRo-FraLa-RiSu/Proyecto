@@ -31,10 +31,6 @@ namespace CUMple
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(examenesnotas));
             this.dgvexamenes = new System.Windows.Forms.DataGridView();
-            this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idexamen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nuevo_rango = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnlimpiar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
@@ -53,6 +49,10 @@ namespace CUMple
             this.cerrarclic = new System.Windows.Forms.PictureBox();
             this.maximizar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idexamen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nuevo_rango = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
@@ -69,35 +69,11 @@ namespace CUMple
             this.idexamen,
             this.notas,
             this.nuevo_rango});
-            this.dgvexamenes.Location = new System.Drawing.Point(338, 281);
+            this.dgvexamenes.Location = new System.Drawing.Point(338, 317);
             this.dgvexamenes.Name = "dgvexamenes";
             this.dgvexamenes.Size = new System.Drawing.Size(444, 213);
             this.dgvexamenes.TabIndex = 0;
             this.dgvexamenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // cedula
-            // 
-            this.cedula.DataPropertyName = "cedula";
-            this.cedula.HeaderText = "Cédula";
-            this.cedula.Name = "cedula";
-            // 
-            // idexamen
-            // 
-            this.idexamen.DataPropertyName = "idexamen";
-            this.idexamen.HeaderText = "ID del exámen";
-            this.idexamen.Name = "idexamen";
-            // 
-            // notas
-            // 
-            this.notas.DataPropertyName = "notas";
-            this.notas.HeaderText = "Nota";
-            this.notas.Name = "notas";
-            // 
-            // nuevo_rango
-            // 
-            this.nuevo_rango.DataPropertyName = "nuevo_rango";
-            this.nuevo_rango.HeaderText = "Rango nuevo";
-            this.nuevo_rango.Name = "nuevo_rango";
             // 
             // btnlimpiar
             // 
@@ -233,9 +209,6 @@ namespace CUMple
             // 
             this.cbcedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbcedula.FormattingEnabled = true;
-            this.cbcedula.Items.AddRange(new object[] {
-            "Taekwondo",
-            "Krav Maga"});
             this.cbcedula.Location = new System.Drawing.Point(421, 171);
             this.cbcedula.Margin = new System.Windows.Forms.Padding(2);
             this.cbcedula.Name = "cbcedula";
@@ -323,6 +296,31 @@ namespace CUMple
             this.panel2.Size = new System.Drawing.Size(200, 488);
             this.panel2.TabIndex = 47;
             // 
+            // cedula
+            // 
+            this.cedula.DataPropertyName = "cedula";
+            this.cedula.HeaderText = "Cédula";
+            this.cedula.Name = "cedula";
+            // 
+            // idexamen
+            // 
+            this.idexamen.DataPropertyName = "idexamen";
+            this.idexamen.HeaderText = "ID del exámen";
+            this.idexamen.Name = "idexamen";
+            // 
+            // notas
+            // 
+            this.notas.DataPropertyName = "notas";
+            this.notas.HeaderText = "Nota";
+            this.notas.Name = "notas";
+            // 
+            // nuevo_rango
+            // 
+            this.nuevo_rango.DataPropertyName = "nuevo_rango";
+            this.nuevo_rango.HeaderText = "Rango nuevo";
+            this.nuevo_rango.Name = "nuevo_rango";
+            this.nuevo_rango.ReadOnly = true;
+            // 
             // examenesnotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,10 +370,6 @@ namespace CUMple
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbrango;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cedula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idexamen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn notas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nuevo_rango;
         private System.Windows.Forms.ComboBox cbcedula;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
@@ -384,5 +378,9 @@ namespace CUMple
         private System.Windows.Forms.PictureBox minimizar;
         private System.Windows.Forms.PictureBox cerrarclic;
         private System.Windows.Forms.PictureBox maximizar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cedula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idexamen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nuevo_rango;
     }
 }
