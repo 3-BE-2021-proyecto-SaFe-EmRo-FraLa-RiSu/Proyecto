@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace CUMple
 {
@@ -17,9 +18,27 @@ namespace CUMple
             InitializeComponent();
         }
 
+        MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
+
         private void btnagregar_Click(object sender, EventArgs e)
         {
-
+            conexionprograma.Open();
+            string comando = "";
+            MySqlCommand comandoeditarusuario = new MySqlCommand(comando, conexionprograma);
+            try
+            {
+                comandoeditarusuario.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            MessageBox.Show("El usuario se ha creado correctamente");
+            conexionprograma.Close();
+        }
+        public void agregarusuario(string nombrecompleto, string cedula , string celular, string profesion, string fech_nac, string email, string taekwondo, string krav)
+        { 
+        
         }
 
         private void cerrar_Click(object sender, EventArgs e)
@@ -43,7 +62,6 @@ namespace CUMple
             WindowState = FormWindowState.Maximized;
             maximizar.Visible = false;
             restaurar.Visible = true;
-
         }
 
         private void minimizar_Click(object sender, EventArgs e)
@@ -56,7 +74,6 @@ namespace CUMple
             WindowState = FormWindowState.Normal;
             restaurar.Visible = false;
             maximizar.Visible = true;
-
         }
     }
 }

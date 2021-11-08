@@ -35,6 +35,7 @@ namespace CUMple
             this.botcrearus = new System.Windows.Forms.Button();
             this.btnbuscardis = new System.Windows.Forms.Button();
             this.cmbalumnosexistentes = new System.Windows.Forms.ComboBox();
+            this.btnagregarusuarios = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblxd
@@ -42,9 +43,10 @@ namespace CUMple
             this.lblxd.AutoSize = true;
             this.lblxd.BackColor = System.Drawing.Color.Transparent;
             this.lblxd.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblxd.Location = new System.Drawing.Point(411, 160);
+            this.lblxd.Location = new System.Drawing.Point(445, 109);
+            this.lblxd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblxd.Name = "lblxd";
-            this.lblxd.Size = new System.Drawing.Size(289, 26);
+            this.lblxd.Size = new System.Drawing.Size(428, 41);
             this.lblxd.TabIndex = 0;
             this.lblxd.Text = "Bienvenido, administrador.";
             // 
@@ -54,9 +56,10 @@ namespace CUMple
             this.botingprog.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botingprog.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botingprog.ForeColor = System.Drawing.Color.White;
-            this.botingprog.Location = new System.Drawing.Point(430, 219);
+            this.botingprog.Location = new System.Drawing.Point(464, 200);
+            this.botingprog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botingprog.Name = "botingprog";
-            this.botingprog.Size = new System.Drawing.Size(245, 41);
+            this.botingprog.Size = new System.Drawing.Size(378, 63);
             this.botingprog.TabIndex = 1;
             this.botingprog.Text = "Ingresar al programa";
             this.botingprog.UseVisualStyleBackColor = false;
@@ -68,11 +71,12 @@ namespace CUMple
             this.botcrearus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botcrearus.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botcrearus.ForeColor = System.Drawing.Color.White;
-            this.botcrearus.Location = new System.Drawing.Point(430, 279);
+            this.botcrearus.Location = new System.Drawing.Point(464, 324);
+            this.botcrearus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botcrearus.Name = "botcrearus";
-            this.botcrearus.Size = new System.Drawing.Size(245, 41);
-            this.botcrearus.TabIndex = 2;
-            this.botcrearus.Text = "Editar usuarios";
+            this.botcrearus.Size = new System.Drawing.Size(378, 63);
+            this.botcrearus.TabIndex = 3;
+            this.botcrearus.Text = "Editar/Eliminar usuarios";
             this.botcrearus.UseVisualStyleBackColor = false;
             this.botcrearus.Click += new System.EventHandler(this.botcrearus_Click);
             // 
@@ -82,10 +86,11 @@ namespace CUMple
             this.btnbuscardis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnbuscardis.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuscardis.ForeColor = System.Drawing.Color.White;
-            this.btnbuscardis.Location = new System.Drawing.Point(430, 375);
+            this.btnbuscardis.Location = new System.Drawing.Point(464, 470);
+            this.btnbuscardis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnbuscardis.Name = "btnbuscardis";
-            this.btnbuscardis.Size = new System.Drawing.Size(245, 41);
-            this.btnbuscardis.TabIndex = 4;
+            this.btnbuscardis.Size = new System.Drawing.Size(378, 63);
+            this.btnbuscardis.TabIndex = 5;
             this.btnbuscardis.Text = "Buscar Discipulos";
             this.btnbuscardis.UseVisualStyleBackColor = false;
             this.btnbuscardis.Click += new System.EventHandler(this.btnbuscardis_Click);
@@ -94,22 +99,37 @@ namespace CUMple
             // 
             this.cmbalumnosexistentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbalumnosexistentes.FormattingEnabled = true;
-            this.cmbalumnosexistentes.Location = new System.Drawing.Point(430, 333);
-            this.cmbalumnosexistentes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbalumnosexistentes.Location = new System.Drawing.Point(464, 271);
             this.cmbalumnosexistentes.Name = "cmbalumnosexistentes";
-            this.cmbalumnosexistentes.Size = new System.Drawing.Size(247, 33);
-            this.cmbalumnosexistentes.TabIndex = 5;
+            this.cmbalumnosexistentes.Size = new System.Drawing.Size(378, 45);
+            this.cmbalumnosexistentes.TabIndex = 2;
             this.cmbalumnosexistentes.Text = "Nombres:";
             this.cmbalumnosexistentes.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // btnagregarusuarios
+            // 
+            this.btnagregarusuarios.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnagregarusuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnagregarusuarios.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregarusuarios.ForeColor = System.Drawing.Color.White;
+            this.btnagregarusuarios.Location = new System.Drawing.Point(464, 397);
+            this.btnagregarusuarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnagregarusuarios.Name = "btnagregarusuarios";
+            this.btnagregarusuarios.Size = new System.Drawing.Size(378, 63);
+            this.btnagregarusuarios.TabIndex = 4;
+            this.btnagregarusuarios.Text = "Agregar usuarios";
+            this.btnagregarusuarios.UseVisualStyleBackColor = false;
+            this.btnagregarusuarios.Click += new System.EventHandler(this.btnagregarusuarios_Click);
+            // 
             // formadmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::CUMple.Properties.Resources.logo_de_Academia_DO_difuminado_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1084, 561);
+            this.ClientSize = new System.Drawing.Size(1306, 715);
+            this.Controls.Add(this.btnagregarusuarios);
             this.Controls.Add(this.cmbalumnosexistentes);
             this.Controls.Add(this.btnbuscardis);
             this.Controls.Add(this.botcrearus);
@@ -117,6 +137,7 @@ namespace CUMple
             this.Controls.Add(this.lblxd);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "formadmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrador";
@@ -133,5 +154,6 @@ namespace CUMple
         private System.Windows.Forms.Button botcrearus;
         private System.Windows.Forms.Button btnbuscardis;
         private System.Windows.Forms.ComboBox cmbalumnosexistentes;
+        private System.Windows.Forms.Button btnagregarusuarios;
     }
 }

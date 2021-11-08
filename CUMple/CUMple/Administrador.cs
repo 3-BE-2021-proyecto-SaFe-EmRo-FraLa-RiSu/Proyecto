@@ -20,7 +20,7 @@ namespace CUMple
         }
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
          private void formadmin_Load(object sender, EventArgs e)
-        {
+         {
             MySqlDataReader lectordedatos;
             string comand = "Select nomcompleto from discipulos;";
             conexionprograma.Open();
@@ -31,7 +31,7 @@ namespace CUMple
                 cmbalumnosexistentes.Items.Add(lectordedatos["nomcompleto"].ToString());
             }
             conexionprograma.Close();
-        } 
+         } 
 
         private void botingprog_Click(object sender, EventArgs e)
         {
@@ -41,13 +41,11 @@ namespace CUMple
         private void botcrearus_Click(object sender, EventArgs e)
         {
             new Editarusuarios().Show();
-            this.Dispose();
-            
+            this.Dispose();           
         }
 
         private void btnbuscardis_Click(object sender, EventArgs e)
-        {
-         
+        {         
             new Userprofile(cmbalumnosexistentes.SelectedItem.ToString()).Show();
             this.Dispose();
         }
@@ -65,6 +63,12 @@ namespace CUMple
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnagregarusuarios_Click(object sender, EventArgs e)
+        {
+            new Userprofileadd().Show();
+            this.Dispose();
         }
     }
 }

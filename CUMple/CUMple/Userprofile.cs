@@ -16,8 +16,7 @@ namespace CUMple
         public Userprofile(string nombrebuscado)
         {
             InitializeComponent();
-            lblnomperf.Text = nombrebuscado;
-            
+            lblnomperf.Text = nombrebuscado;           
         }            
      
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
@@ -28,13 +27,11 @@ namespace CUMple
             MySqlCommand comandoeditarusuario = new MySqlCommand(comando,conexionprograma);
             try
             {
-                comandoeditarusuario.ExecuteNonQuery();
-            
+                comandoeditarusuario.ExecuteNonQuery();            
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                
+                MessageBox.Show(ex.Message);                
             }
             MessageBox.Show("El usuario se ha editado correctamente");
 
@@ -48,16 +45,15 @@ namespace CUMple
         }
         
         public string mostrarlabel(string agarrardato)
-        {
-          
+        {          
             conexionprograma.Open();
             string dato;
             string mostrardiscipulos= "select * from discipulos where nomcompleto='"+ lblnomperf.Text +"'";
             MySqlCommand comandolabel = new MySqlCommand(mostrardiscipulos,conexionprograma);
             MySqlDataReader lectordecomando = comandolabel.ExecuteReader();
            if (lectordecomando.Read())
-            { 
-                                             //tabla
+            {                                             
+                //tabla
                 dato=lectordecomando.GetString(agarrardato);
                 conexionprograma.Close();
                 return dato;         
@@ -66,17 +62,10 @@ namespace CUMple
             {
                 conexionprograma.Close();
                 return dato = "";
-
             }
-
-
-
-
-
         }
         private void Userprofile_Load(object sender, EventArgs e)
-        {
-           
+        {           
             lblcedperf.Text = mostrarlabel("cedula");
             lblcelpref.Text = mostrarlabel("celular");
             lblemailpref.Text = mostrarlabel("emails");
@@ -107,10 +96,8 @@ namespace CUMple
         }
 
         private void btnedit_Click(object sender, EventArgs e)
-        {
-           
+        {           
             //Agregar que la fecha de ingreso se genere automaticamente
-
             //if ( hay un usuario seleccionado   ) { pedir que se seleccione uno }
             //else {
             if (txbprofedit.Text != "") 
@@ -148,17 +135,8 @@ namespace CUMple
             {
                 editarusuario("fecha_de_nac", txbfecdenacedit.Text, lblfecnacpref.Text, lblcedperf.Text);
                 lblfecnacpref.Text = mostrarlabel("fecha_de_nac");
-
-            }
-          
-            //}
-            
-         
-          
-         
-           
-           
-           
+            }          
+            //}                      
         }
 
         private void lblmostnom_Click(object sender, EventArgs e)
@@ -191,9 +169,7 @@ namespace CUMple
         {
 
         }
-
      
-
         private void cerrarclic_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -216,6 +192,11 @@ namespace CUMple
             WindowState = FormWindowState.Maximized;
             maximizar.Visible = false;
             restaurar.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
