@@ -22,6 +22,10 @@ namespace CUMple
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
+            agregarusuario(txbtxbnombrecompleto.ToString(), txbcedula.ToString(), txbcelular.ToString(), txbprofesion.ToString(), txbfecnac, txbemail, chbtaekwondo, chbkrav);
+        }
+        public void agregarusuario(string nombrecompleto, string cedula , string celular, string profesion, string fech_nac, string email, string taekwondo, string krav)
+        { 
             conexionprograma.Open();
             string comando = "";
             MySqlCommand comandoeditarusuario = new MySqlCommand(comando, conexionprograma);
@@ -35,10 +39,6 @@ namespace CUMple
             }
             MessageBox.Show("El usuario se ha creado correctamente");
             conexionprograma.Close();
-        }
-        public void agregarusuario(string nombrecompleto, string cedula , string celular, string profesion, string fech_nac, string email, string taekwondo, string krav)
-        { 
-        
         }
 
         private void cerrar_Click(object sender, EventArgs e)
