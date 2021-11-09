@@ -79,8 +79,7 @@ namespace CUMple
             conexionbd.Close();
             return dtexamenes;
         }
-
-      
+     
 
         private void Examenesfrm_Load(object sender, EventArgs e)
         {
@@ -275,5 +274,45 @@ namespace CUMple
         {
 
         }
+
+        private void txbbuscar_Click(object sender, EventArgs e)
+        {                
+            DataTable dtexamenes = new DataTable();
+
+            if (cbidexamen.SelectedIndex != -1 && cbdisciplina.SelectedIndex!=-1 && Fechadatatimer.Enabled==true && horadatatimer.Enabled==true && txbexaminadores.Text!="")
+            {
+                string comandostring = "select * from examenes where idexamen="+cbidexamen.SelectedItem+" and disciplina='"+cbdisciplina.SelectedItem+"' and fecha='"+Fechadatatimer.Text+"' and hora='"+horadatatimer.Text+"' and examinadores='"+txbexaminadores.Text+"';";
+                MySqlDataAdapter comandotraerexamenes = new MySqlDataAdapter(comandostring, conexionbd);
+              
+                try
+                {
+                   conexionbd.Open();
+                    dgvexamenes.DataSource = null;
+                    comandotraerexamenes.Fill(dtexamenes);
+                    dgvexamenes.DataSource = dtexamenes;
+                    MessageBox.Show("Se encontro el exámen de manera correcta");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+              
+                limpiar();
+            }
+
+
+           
+        
+          
+            
+
+
+            conexionbd.Close();
+
+
+        }
+
     }
-}
+        }
+    
+

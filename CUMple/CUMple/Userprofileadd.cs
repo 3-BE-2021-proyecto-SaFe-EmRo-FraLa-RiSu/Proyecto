@@ -22,7 +22,7 @@ namespace CUMple
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            agregarusuario(txbtxbnombrecompleto.ToString(), txbcedula.ToString(), txbcelular.ToString(), txbprofesion.ToString(), txbfecnac, txbemail, chbtaekwondo, chbkrav);
+           // agregarusuario(txbtxbnombrecompleto.ToString(), txbcedula.ToString(), txbcelular.ToString(), txbprofesion.ToString(), , txbemail, chbtaekwondo, chbkrav);
         }
         public void agregarusuario(string nombrecompleto, string cedula , string celular, string profesion, string fech_nac, string email, string taekwondo, string krav)
         { 

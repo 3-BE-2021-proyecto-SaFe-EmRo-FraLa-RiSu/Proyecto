@@ -31,6 +31,10 @@ namespace CUMple
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(examenesnotas));
             this.dgvexamenes = new System.Windows.Forms.DataGridView();
+            this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idexamen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nuevo_rango = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnlimpiar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
@@ -49,10 +53,7 @@ namespace CUMple
             this.cerrarclic = new System.Windows.Forms.PictureBox();
             this.maximizar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idexamen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nuevo_rango = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnbuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
@@ -75,6 +76,31 @@ namespace CUMple
             this.dgvexamenes.TabIndex = 0;
             this.dgvexamenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // cedula
+            // 
+            this.cedula.DataPropertyName = "cedula";
+            this.cedula.HeaderText = "Cédula";
+            this.cedula.Name = "cedula";
+            // 
+            // idexamen
+            // 
+            this.idexamen.DataPropertyName = "idexamen";
+            this.idexamen.HeaderText = "ID del exámen";
+            this.idexamen.Name = "idexamen";
+            // 
+            // notas
+            // 
+            this.notas.DataPropertyName = "notas";
+            this.notas.HeaderText = "Nota";
+            this.notas.Name = "notas";
+            // 
+            // nuevo_rango
+            // 
+            this.nuevo_rango.DataPropertyName = "nuevo_rango";
+            this.nuevo_rango.HeaderText = "Rango nuevo";
+            this.nuevo_rango.Name = "nuevo_rango";
+            this.nuevo_rango.ReadOnly = true;
+            // 
             // btnlimpiar
             // 
             this.btnlimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -88,7 +114,7 @@ namespace CUMple
             // btneliminar
             // 
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Location = new System.Drawing.Point(813, 317);
+            this.btneliminar.Location = new System.Drawing.Point(813, 371);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(72, 35);
             this.btneliminar.TabIndex = 19;
@@ -296,30 +322,16 @@ namespace CUMple
             this.panel2.Size = new System.Drawing.Size(200, 488);
             this.panel2.TabIndex = 47;
             // 
-            // cedula
+            // btnbuscar
             // 
-            this.cedula.DataPropertyName = "cedula";
-            this.cedula.HeaderText = "Cédula";
-            this.cedula.Name = "cedula";
-            // 
-            // idexamen
-            // 
-            this.idexamen.DataPropertyName = "idexamen";
-            this.idexamen.HeaderText = "ID del exámen";
-            this.idexamen.Name = "idexamen";
-            // 
-            // notas
-            // 
-            this.notas.DataPropertyName = "notas";
-            this.notas.HeaderText = "Nota";
-            this.notas.Name = "notas";
-            // 
-            // nuevo_rango
-            // 
-            this.nuevo_rango.DataPropertyName = "nuevo_rango";
-            this.nuevo_rango.HeaderText = "Rango nuevo";
-            this.nuevo_rango.Name = "nuevo_rango";
-            this.nuevo_rango.ReadOnly = true;
+            this.btnbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscar.Location = new System.Drawing.Point(813, 317);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(72, 35);
+            this.btnbuscar.TabIndex = 48;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // examenesnotas
             // 
@@ -327,6 +339,7 @@ namespace CUMple
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1100, 600);
+            this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cbcedula);
@@ -382,5 +395,6 @@ namespace CUMple
         private System.Windows.Forms.DataGridViewTextBoxColumn idexamen;
         private System.Windows.Forms.DataGridViewTextBoxColumn notas;
         private System.Windows.Forms.DataGridViewTextBoxColumn nuevo_rango;
+        private System.Windows.Forms.Button btnbuscar;
     }
 }

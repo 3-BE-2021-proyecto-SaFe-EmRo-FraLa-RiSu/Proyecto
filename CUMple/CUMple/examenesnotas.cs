@@ -234,8 +234,8 @@ namespace CUMple
                 if(nota>0 && nota<=90)
                 {
                     string cedula = cbidexamen.SelectedItem.ToString();
-                       
-                           
+
+                        MessageBox.Show(nota.ToString());              
                 editarexamen("notas", txbnota.Text,idselecionado, cedula, "cedula");                                                     
                   
                 }
@@ -245,5 +245,41 @@ namespace CUMple
                 dgvexamenes.DataSource = cargarexamenes(idselecionado.ToString());
             }
     }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+
+            DataTable dtexamenes = new DataTable();
+
+            if (cbidexamen.SelectedIndex != -1 && cbrango.SelectedIndex != -1 && txbnota.Text != "" && cbcedula.SelectedIndex!=-1)
+            {
+                string comandostring = "select * from rango_obtenido where idexamen=" + cbidexamen.SelectedItem.ToString() + " and cedula='"+cbcedula.SelectedItem.ToString()+"' and nuevo_rango='"+cbrango.SelectedItem.ToString()+"'";
+                MySqlDataAdapter comandotraerexamenes = new MySqlDataAdapter(comandostring, conexionbd);
+
+                try
+                {
+                    conexionbd.Open();
+                    dgvexamenes.DataSource = null;
+                    comandotraerexamenes.Fill(dtexamenes);
+                    dgvexamenes.DataSource = dtexamenes;
+                    MessageBox.Show("Se encontro el exámen de manera correcta");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+                
+            }
+
+
+
+
+
+
+
+
+            conexionbd.Close();
+        }
     }
 }
