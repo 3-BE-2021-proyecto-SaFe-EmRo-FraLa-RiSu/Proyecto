@@ -54,6 +54,8 @@ namespace CUMple
             this.maximizar = new System.Windows.Forms.PictureBox();
             this.btnvolveruserprofile = new System.Windows.Forms.Button();
             this.dtpfec_nac = new System.Windows.Forms.DateTimePicker();
+            this.lblfechadeingreso = new System.Windows.Forms.Label();
+            this.dtpfechadeingreso = new System.Windows.Forms.DateTimePicker();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
@@ -64,7 +66,7 @@ namespace CUMple
             // 
             // btnagregar
             // 
-            this.btnagregar.Location = new System.Drawing.Point(1275, 723);
+            this.btnagregar.Location = new System.Drawing.Point(1058, 617);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(224, 42);
             this.btnagregar.TabIndex = 0;
@@ -75,17 +77,17 @@ namespace CUMple
             // txbemail
             // 
             this.txbemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbemail.Location = new System.Drawing.Point(1275, 498);
+            this.txbemail.Location = new System.Drawing.Point(1067, 409);
             this.txbemail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbemail.Name = "txbemail";
-            this.txbemail.Size = new System.Drawing.Size(142, 33);
+            this.txbemail.Size = new System.Drawing.Size(215, 33);
             this.txbemail.TabIndex = 30;
             // 
             // lblcelular
             // 
             this.lblcelular.AutoSize = true;
             this.lblcelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcelular.Location = new System.Drawing.Point(626, 502);
+            this.lblcelular.Location = new System.Drawing.Point(351, 413);
             this.lblcelular.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcelular.Name = "lblcelular";
             this.lblcelular.Size = new System.Drawing.Size(96, 29);
@@ -95,17 +97,17 @@ namespace CUMple
             // txbcedula
             // 
             this.txbcedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbcedula.Location = new System.Drawing.Point(846, 425);
+            this.txbcedula.Location = new System.Drawing.Point(571, 336);
             this.txbcedula.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbcedula.Name = "txbcedula";
-            this.txbcedula.Size = new System.Drawing.Size(142, 33);
+            this.txbcedula.Size = new System.Drawing.Size(215, 33);
             this.txbcedula.TabIndex = 28;
             // 
             // lblemail
             // 
             this.lblemail.AutoSize = true;
             this.lblemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblemail.Location = new System.Drawing.Point(1024, 502);
+            this.lblemail.Location = new System.Drawing.Point(816, 413);
             this.lblemail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblemail.Name = "lblemail";
             this.lblemail.Size = new System.Drawing.Size(80, 29);
@@ -115,17 +117,17 @@ namespace CUMple
             // txbnombrecompleto
             // 
             this.txbnombrecompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbnombrecompleto.Location = new System.Drawing.Point(846, 362);
+            this.txbnombrecompleto.Location = new System.Drawing.Point(571, 270);
             this.txbnombrecompleto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbnombrecompleto.Name = "txbnombrecompleto";
-            this.txbnombrecompleto.Size = new System.Drawing.Size(142, 33);
+            this.txbnombrecompleto.Size = new System.Drawing.Size(215, 33);
             this.txbnombrecompleto.TabIndex = 26;
             // 
             // lblcedula
             // 
             this.lblcedula.AutoSize = true;
             this.lblcedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcedula.Location = new System.Drawing.Point(626, 431);
+            this.lblcedula.Location = new System.Drawing.Point(351, 342);
             this.lblcedula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcedula.Name = "lblcedula";
             this.lblcedula.Size = new System.Drawing.Size(96, 29);
@@ -136,7 +138,7 @@ namespace CUMple
             // 
             this.lblprofesion.AutoSize = true;
             this.lblprofesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprofesion.Location = new System.Drawing.Point(1024, 365);
+            this.lblprofesion.Location = new System.Drawing.Point(816, 276);
             this.lblprofesion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblprofesion.Name = "lblprofesion";
             this.lblprofesion.Size = new System.Drawing.Size(122, 29);
@@ -146,17 +148,17 @@ namespace CUMple
             // txbprofesion
             // 
             this.txbprofesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbprofesion.Location = new System.Drawing.Point(1275, 362);
+            this.txbprofesion.Location = new System.Drawing.Point(1067, 273);
             this.txbprofesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbprofesion.Name = "txbprofesion";
-            this.txbprofesion.Size = new System.Drawing.Size(142, 33);
+            this.txbprofesion.Size = new System.Drawing.Size(215, 33);
             this.txbprofesion.TabIndex = 34;
             // 
             // lblfechnac
             // 
             this.lblfechnac.AutoSize = true;
             this.lblfechnac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfechnac.Location = new System.Drawing.Point(1024, 428);
+            this.lblfechnac.Location = new System.Drawing.Point(816, 339);
             this.lblfechnac.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblfechnac.Name = "lblfechnac";
             this.lblfechnac.Size = new System.Drawing.Size(243, 29);
@@ -167,7 +169,7 @@ namespace CUMple
             // 
             this.lblnombrecompleto.AutoSize = true;
             this.lblnombrecompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombrecompleto.Location = new System.Drawing.Point(626, 362);
+            this.lblnombrecompleto.Location = new System.Drawing.Point(351, 273);
             this.lblnombrecompleto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombrecompleto.Name = "lblnombrecompleto";
             this.lblnombrecompleto.Size = new System.Drawing.Size(213, 29);
@@ -177,17 +179,17 @@ namespace CUMple
             // txbcelular
             // 
             this.txbcelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbcelular.Location = new System.Drawing.Point(846, 498);
+            this.txbcelular.Location = new System.Drawing.Point(571, 409);
             this.txbcelular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbcelular.Name = "txbcelular";
-            this.txbcelular.Size = new System.Drawing.Size(142, 33);
+            this.txbcelular.Size = new System.Drawing.Size(215, 33);
             this.txbcelular.TabIndex = 31;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(626, 583);
+            this.label5.Location = new System.Drawing.Point(351, 494);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 29);
@@ -197,7 +199,7 @@ namespace CUMple
             // chbtaekwondo
             // 
             this.chbtaekwondo.AutoSize = true;
-            this.chbtaekwondo.Location = new System.Drawing.Point(846, 589);
+            this.chbtaekwondo.Location = new System.Drawing.Point(571, 500);
             this.chbtaekwondo.Name = "chbtaekwondo";
             this.chbtaekwondo.Size = new System.Drawing.Size(117, 24);
             this.chbtaekwondo.TabIndex = 36;
@@ -207,7 +209,7 @@ namespace CUMple
             // chbkrav
             // 
             this.chbkrav.AutoSize = true;
-            this.chbkrav.Location = new System.Drawing.Point(846, 620);
+            this.chbkrav.Location = new System.Drawing.Point(571, 531);
             this.chbkrav.Name = "chbkrav";
             this.chbkrav.Size = new System.Drawing.Size(110, 24);
             this.chbkrav.TabIndex = 37;
@@ -234,7 +236,7 @@ namespace CUMple
             this.panel3.Location = new System.Drawing.Point(0, 172);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 751);
+            this.panel3.Size = new System.Drawing.Size(300, 584);
             this.panel3.TabIndex = 40;
             // 
             // panel1
@@ -248,14 +250,14 @@ namespace CUMple
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1650, 172);
+            this.panel1.Size = new System.Drawing.Size(1359, 172);
             this.panel1.TabIndex = 39;
             // 
             // restaurar
             // 
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(1474, 46);
+            this.restaurar.Location = new System.Drawing.Point(1191, 48);
             this.restaurar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.restaurar.Name = "restaurar";
             this.restaurar.Size = new System.Drawing.Size(62, 65);
@@ -269,7 +271,7 @@ namespace CUMple
             // 
             this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(1404, 46);
+            this.minimizar.Location = new System.Drawing.Point(1121, 48);
             this.minimizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.minimizar.Name = "minimizar";
             this.minimizar.Size = new System.Drawing.Size(62, 65);
@@ -282,7 +284,7 @@ namespace CUMple
             // 
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(1545, 46);
+            this.cerrarclic.Location = new System.Drawing.Point(1262, 48);
             this.cerrarclic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cerrarclic.Name = "cerrarclic";
             this.cerrarclic.Size = new System.Drawing.Size(62, 65);
@@ -295,7 +297,7 @@ namespace CUMple
             // 
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(1474, 46);
+            this.maximizar.Location = new System.Drawing.Point(1191, 48);
             this.maximizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.maximizar.Name = "maximizar";
             this.maximizar.Size = new System.Drawing.Size(62, 65);
@@ -309,7 +311,7 @@ namespace CUMple
             this.btnvolveruserprofile.BackColor = System.Drawing.Color.DarkRed;
             this.btnvolveruserprofile.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolveruserprofile.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolveruserprofile.Location = new System.Drawing.Point(327, 805);
+            this.btnvolveruserprofile.Location = new System.Drawing.Point(356, 594);
             this.btnvolveruserprofile.Name = "btnvolveruserprofile";
             this.btnvolveruserprofile.Size = new System.Drawing.Size(64, 65);
             this.btnvolveruserprofile.TabIndex = 41;
@@ -321,17 +323,40 @@ namespace CUMple
             // 
             this.dtpfec_nac.CustomFormat = "yyyy-MM-dd";
             this.dtpfec_nac.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpfec_nac.Location = new System.Drawing.Point(1275, 432);
+            this.dtpfec_nac.Location = new System.Drawing.Point(1067, 343);
             this.dtpfec_nac.Name = "dtpfec_nac";
             this.dtpfec_nac.Size = new System.Drawing.Size(142, 26);
             this.dtpfec_nac.TabIndex = 42;
+            // 
+            // lblfechadeingreso
+            // 
+            this.lblfechadeingreso.AutoSize = true;
+            this.lblfechadeingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfechadeingreso.Location = new System.Drawing.Point(816, 494);
+            this.lblfechadeingreso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblfechadeingreso.Name = "lblfechadeingreso";
+            this.lblfechadeingreso.Size = new System.Drawing.Size(195, 29);
+            this.lblfechadeingreso.TabIndex = 43;
+            this.lblfechadeingreso.Text = "Feha de ingreso:";
+            // 
+            // dtpfechadeingreso
+            // 
+            this.dtpfechadeingreso.CustomFormat = "yyyy-MM-dd";
+            this.dtpfechadeingreso.Enabled = false;
+            this.dtpfechadeingreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpfechadeingreso.Location = new System.Drawing.Point(1067, 496);
+            this.dtpfechadeingreso.Name = "dtpfechadeingreso";
+            this.dtpfechadeingreso.Size = new System.Drawing.Size(142, 26);
+            this.dtpfechadeingreso.TabIndex = 44;
             // 
             // Userprofileadd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1650, 923);
+            this.ClientSize = new System.Drawing.Size(1359, 756);
+            this.Controls.Add(this.dtpfechadeingreso);
+            this.Controls.Add(this.lblfechadeingreso);
             this.Controls.Add(this.dtpfec_nac);
             this.Controls.Add(this.btnvolveruserprofile);
             this.Controls.Add(this.panel3);
@@ -392,5 +417,7 @@ namespace CUMple
         private System.Windows.Forms.PictureBox cerrarclic;
         private System.Windows.Forms.PictureBox maximizar;
         private System.Windows.Forms.DateTimePicker dtpfec_nac;
+        private System.Windows.Forms.Label lblfechadeingreso;
+        private System.Windows.Forms.DateTimePicker dtpfechadeingreso;
     }
 }

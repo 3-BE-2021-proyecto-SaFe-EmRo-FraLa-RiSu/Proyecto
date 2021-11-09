@@ -22,8 +22,8 @@ namespace CUMple
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            int taekwondobool, krav_magabool; 
-
+            string aviso = "Es necesario rellenar los siguientes campos:";
+            int taekwondobool, krav_magabool, camposincompletos = 0;            
             if (chbtaekwondo.Checked == true){
                 taekwondobool = 1;
             }else{
@@ -34,30 +34,71 @@ namespace CUMple
             }else{
                 krav_magabool = 0;
             }
-
-            //agregarusuario(txbtxbnombrecompleto.ToString(), txbcedula.ToString(), txbcelular.ToString(), txbprofesion.ToString(), dtpfec_nac.ToString() , txbemail.ToString(), taekwondobool.ToString(), krav_magabool.ToString());
-
-            conexionprograma.Open();
-            string comando = "insert into discipulos values ("+txbcelular.ToString()+", "/* fecha actual */+""+txbnombrecompleto.ToString()+", "+krav_magabool.ToString()+", "+taekwondobool.ToString()+", "+txbprofesion.ToString()+", "+dtpfec_nac.ToString()+", "+txbemail.ToString()+");";
-            MySqlCommand comandoeditarusuario = new MySqlCommand(comando, conexionprograma);
-            try
+            if (txbnombrecompleto.Text == "")
             {
-                comandoeditarusuario.ExecuteNonQuery();
-            }
-            catch (Exception ex)
+                aviso = aviso + "\n-Nombre completo";
+                camposincompletos++;
+            }          
+            if (txbcedula.Text == "")
             {
-                MessageBox.Show(ex.Message);
+                aviso = aviso + "\n-Cedula";
+                camposincompletos++;
             }
-            MessageBox.Show("El usuario se ha creado correctamente");
-            conexionprograma.Close();
-
+            if (txbcelular.Text == "")
+            {
+                aviso = aviso + "\n-Celular";
+                camposincompletos++;
+            }
+            if (krav_magabool == 0 && taekwondobool == 0)
+            {
+                aviso = aviso + "\n-Disciplina";
+                camposincompletos++;
+            }
+            if (txbprofesion.Text == "")
+            {
+                aviso = aviso + "\n-Profesion";
+                camposincompletos++;
+            }
+            if (dtpfec_nac.ToString() == dtpfechadeingreso.ToString())
+            {
+                aviso = aviso + "\n-Fecha de nacimiento";
+                camposincompletos++;
+            }
+            if (txbemail.Text == "")
+            {
+                aviso = aviso + "\n-Email";
+                camposincompletos++;
+            }
+            if (camposincompletos == 0)
+            {
+                agregarusuario(txbnombrecompleto.Text, txbcedula.ToString(), txbcelular.ToString(), txbprofesion.Text, dtpfec_nac.ToString(), txbemail.Text, taekwondobool, krav_magabool, dtpfechadeingreso.ToString());
+                /*
+                conexionprograma.Open();
+                string comando = "insert into discipulos values ('" + txbcelular.ToString()+ "', '" + dtpfechadeingreso.ToString()+ "', '" + txbnombrecompleto.ToString()+ "', '" + krav_magabool+ "', '" + taekwondobool+ "', '" + txbprofesion.ToString()+ "', '" + dtpfec_nac.ToString()+ "', '" + txbemail.ToString()+ "');";
+                MySqlCommand comandoeditarusuario = new MySqlCommand(comando, conexionprograma);
+                try
+                {
+                    comandoeditarusuario.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                MessageBox.Show("El usuario se ha creado correctamente");
+                conexionprograma.Close();
+                */
+            }
+            else 
+            {
+                MessageBox.Show(""+aviso);
+            }
         }
-        /*
-        public void agregarusuario(string nombrecompleto, string cedula , string celular, string profesion, string fech_nac, string email, string taekwondo, string krav)
+        
+        public void agregarusuario(string nombrecompleto, string cedula , string celular, string profesion, string fech_nac, string email, int taekwondo, int krav, string fech_ingreso)
         { 
             
             conexionprograma.Open();
-            string comando = "";
+            string comando = "insert into discipulos values ('" + celular + "', '" + fech_ingreso + "', '" + nombrecompleto + "', '" + krav + "', '" + taekwondo + "', '" + profesion + "', '" + fech_nac + "', '" + email + "');";
             MySqlCommand comandoeditarusuario = new MySqlCommand(comando, conexionprograma);
             try
             {
@@ -70,7 +111,7 @@ namespace CUMple
             MessageBox.Show("El usuario se ha creado correctamente");
             conexionprograma.Close();
         }
-        */
+        
         
 
         private void cerrar_Click(object sender, EventArgs e)
