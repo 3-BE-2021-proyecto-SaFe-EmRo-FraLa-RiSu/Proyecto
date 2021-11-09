@@ -35,7 +35,7 @@ namespace CUMple
             this.lblcelular = new System.Windows.Forms.Label();
             this.txbcedula = new System.Windows.Forms.TextBox();
             this.lblemail = new System.Windows.Forms.Label();
-            this.txbtxbnombrecompleto = new System.Windows.Forms.TextBox();
+            this.txbnombrecompleto = new System.Windows.Forms.TextBox();
             this.lblcedula = new System.Windows.Forms.Label();
             this.lblprofesion = new System.Windows.Forms.Label();
             this.txbprofesion = new System.Windows.Forms.TextBox();
@@ -112,14 +112,14 @@ namespace CUMple
             this.lblemail.TabIndex = 27;
             this.lblemail.Text = "Email:";
             // 
-            // txbtxbnombrecompleto
+            // txbnombrecompleto
             // 
-            this.txbtxbnombrecompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbtxbnombrecompleto.Location = new System.Drawing.Point(846, 362);
-            this.txbtxbnombrecompleto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txbtxbnombrecompleto.Name = "txbtxbnombrecompleto";
-            this.txbtxbnombrecompleto.Size = new System.Drawing.Size(142, 33);
-            this.txbtxbnombrecompleto.TabIndex = 26;
+            this.txbnombrecompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbnombrecompleto.Location = new System.Drawing.Point(846, 362);
+            this.txbnombrecompleto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbnombrecompleto.Name = "txbnombrecompleto";
+            this.txbnombrecompleto.Size = new System.Drawing.Size(142, 33);
+            this.txbnombrecompleto.TabIndex = 26;
             // 
             // lblcedula
             // 
@@ -348,7 +348,7 @@ namespace CUMple
             this.Controls.Add(this.lblcelular);
             this.Controls.Add(this.txbcedula);
             this.Controls.Add(this.lblemail);
-            this.Controls.Add(this.txbtxbnombrecompleto);
+            this.Controls.Add(this.txbnombrecompleto);
             this.Controls.Add(this.lblcedula);
             this.Controls.Add(this.lblprofesion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -373,7 +373,7 @@ namespace CUMple
         private System.Windows.Forms.Label lblcelular;
         private System.Windows.Forms.TextBox txbcedula;
         private System.Windows.Forms.Label lblemail;
-        private System.Windows.Forms.TextBox txbtxbnombrecompleto;
+        private System.Windows.Forms.TextBox txbnombrecompleto;
         private System.Windows.Forms.Label lblcedula;
         private System.Windows.Forms.Label lblprofesion;
         private System.Windows.Forms.TextBox txbprofesion;

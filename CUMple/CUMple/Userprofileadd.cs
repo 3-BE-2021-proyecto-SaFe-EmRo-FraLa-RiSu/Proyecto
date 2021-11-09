@@ -22,10 +22,40 @@ namespace CUMple
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-           // agregarusuario(txbtxbnombrecompleto.ToString(), txbcedula.ToString(), txbcelular.ToString(), txbprofesion.ToString(), , txbemail, chbtaekwondo, chbkrav);
+            int taekwondobool, krav_magabool; 
+
+            if (chbtaekwondo.Checked == true){
+                taekwondobool = 1;
+            }else{
+                taekwondobool = 0;
+            }
+            if (chbkrav.Checked == true){
+                krav_magabool = 1;
+            }else{
+                krav_magabool = 0;
+            }
+
+            //agregarusuario(txbtxbnombrecompleto.ToString(), txbcedula.ToString(), txbcelular.ToString(), txbprofesion.ToString(), dtpfec_nac.ToString() , txbemail.ToString(), taekwondobool.ToString(), krav_magabool.ToString());
+
+            conexionprograma.Open();
+            string comando = "insert into discipulos values ("+txbcelular.ToString()+", "/* fecha actual */+""+txbnombrecompleto.ToString()+", "+krav_magabool.ToString()+", "+taekwondobool.ToString()+", "+txbprofesion.ToString()+", "+dtpfec_nac.ToString()+", "+txbemail.ToString()+");";
+            MySqlCommand comandoeditarusuario = new MySqlCommand(comando, conexionprograma);
+            try
+            {
+                comandoeditarusuario.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            MessageBox.Show("El usuario se ha creado correctamente");
+            conexionprograma.Close();
+
         }
+        /*
         public void agregarusuario(string nombrecompleto, string cedula , string celular, string profesion, string fech_nac, string email, string taekwondo, string krav)
         { 
+            
             conexionprograma.Open();
             string comando = "";
             MySqlCommand comandoeditarusuario = new MySqlCommand(comando, conexionprograma);
@@ -40,6 +70,8 @@ namespace CUMple
             MessageBox.Show("El usuario se ha creado correctamente");
             conexionprograma.Close();
         }
+        */
+        
 
         private void cerrar_Click(object sender, EventArgs e)
         {

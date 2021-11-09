@@ -41,7 +41,7 @@ namespace CUMple
             // lblxd
             // 
             this.lblxd.AutoSize = true;
-            this.lblxd.BackColor = System.Drawing.Color.Transparent;
+            this.lblxd.BackColor = System.Drawing.Color.Lavender;
             this.lblxd.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblxd.Location = new System.Drawing.Point(445, 109);
             this.lblxd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -56,7 +56,7 @@ namespace CUMple
             this.botingprog.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botingprog.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botingprog.ForeColor = System.Drawing.Color.White;
-            this.botingprog.Location = new System.Drawing.Point(464, 200);
+            this.botingprog.Location = new System.Drawing.Point(690, 271);
             this.botingprog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botingprog.Name = "botingprog";
             this.botingprog.Size = new System.Drawing.Size(378, 63);
@@ -71,12 +71,12 @@ namespace CUMple
             this.botcrearus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botcrearus.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botcrearus.ForeColor = System.Drawing.Color.White;
-            this.botcrearus.Location = new System.Drawing.Point(464, 324);
+            this.botcrearus.Location = new System.Drawing.Point(690, 344);
             this.botcrearus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botcrearus.Name = "botcrearus";
             this.botcrearus.Size = new System.Drawing.Size(378, 63);
             this.botcrearus.TabIndex = 3;
-            this.botcrearus.Text = "Editar/Eliminar usuarios";
+            this.botcrearus.Text = "Editar usuarios";
             this.botcrearus.UseVisualStyleBackColor = false;
             this.botcrearus.Click += new System.EventHandler(this.botcrearus_Click);
             // 
@@ -86,12 +86,12 @@ namespace CUMple
             this.btnbuscardis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnbuscardis.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuscardis.ForeColor = System.Drawing.Color.White;
-            this.btnbuscardis.Location = new System.Drawing.Point(464, 470);
+            this.btnbuscardis.Location = new System.Drawing.Point(210, 271);
             this.btnbuscardis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnbuscardis.Name = "btnbuscardis";
             this.btnbuscardis.Size = new System.Drawing.Size(378, 63);
             this.btnbuscardis.TabIndex = 5;
-            this.btnbuscardis.Text = "Buscar Discipulos";
+            this.btnbuscardis.Text = "Administrar Discipulo";
             this.btnbuscardis.UseVisualStyleBackColor = false;
             this.btnbuscardis.Click += new System.EventHandler(this.btnbuscardis_Click);
             // 
@@ -99,11 +99,11 @@ namespace CUMple
             // 
             this.cmbalumnosexistentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbalumnosexistentes.FormattingEnabled = true;
-            this.cmbalumnosexistentes.Location = new System.Drawing.Point(464, 271);
+            this.cmbalumnosexistentes.Location = new System.Drawing.Point(210, 218);
             this.cmbalumnosexistentes.Name = "cmbalumnosexistentes";
             this.cmbalumnosexistentes.Size = new System.Drawing.Size(378, 45);
             this.cmbalumnosexistentes.TabIndex = 2;
-            this.cmbalumnosexistentes.Text = "Nombres:";
+            this.cmbalumnosexistentes.Text = "Seleccionar Discipulo:";
             this.cmbalumnosexistentes.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // btnagregarusuarios
@@ -112,12 +112,12 @@ namespace CUMple
             this.btnagregarusuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnagregarusuarios.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnagregarusuarios.ForeColor = System.Drawing.Color.White;
-            this.btnagregarusuarios.Location = new System.Drawing.Point(464, 397);
+            this.btnagregarusuarios.Location = new System.Drawing.Point(210, 344);
             this.btnagregarusuarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnagregarusuarios.Name = "btnagregarusuarios";
             this.btnagregarusuarios.Size = new System.Drawing.Size(378, 63);
             this.btnagregarusuarios.TabIndex = 4;
-            this.btnagregarusuarios.Text = "Agregar usuarios";
+            this.btnagregarusuarios.Text = "Agregar Discipulos";
             this.btnagregarusuarios.UseVisualStyleBackColor = false;
             this.btnagregarusuarios.Click += new System.EventHandler(this.btnagregarusuarios_Click);
             // 

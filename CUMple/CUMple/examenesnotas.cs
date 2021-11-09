@@ -218,7 +218,7 @@ namespace CUMple
                 if (cbrango.SelectedIndex!=1 && cbcedula.SelectedIndex != 1 )
                 {
                     string rango = cbrango.SelectedItem.ToString();
-                    string cedula = cbcedula.SelectedItem.ToString();
+                                                                                                                                                                                                                            string cedula = cbcedula.SelectedItem.ToString();
 
 
                 
