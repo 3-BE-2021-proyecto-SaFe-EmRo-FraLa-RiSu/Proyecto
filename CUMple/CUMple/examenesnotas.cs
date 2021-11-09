@@ -211,8 +211,10 @@ namespace CUMple
                 if (cbcedula.SelectedIndex!=1)
                 {
                     string cedula = cbidexamen.SelectedItem.ToString();
-                    
-                
+                    conexionbd.Open();
+                    MySqlCommand comandoparacedula = new MySqlCommand("update rango_obtenido set cedula='"+cedula+" where idexamen="+idselecionado.ToString()+" and cedula=",conexionbd);
+
+                    conexionbd.Close();
                 }
 
                 if (cbrango.SelectedIndex!=1 && cbcedula.SelectedIndex != 1 )
