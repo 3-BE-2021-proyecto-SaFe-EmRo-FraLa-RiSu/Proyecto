@@ -41,18 +41,11 @@ namespace CUMple
             // txbconb
             // 
             this.txbconb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-<<<<<<< HEAD
             this.txbconb.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbconb.Location = new System.Drawing.Point(131, 164);
+            this.txbconb.Location = new System.Drawing.Point(159, 127);
+            this.txbconb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbconb.Name = "txbconb";
-            this.txbconb.Size = new System.Drawing.Size(229, 31);
-=======
-            this.txbconb.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbconb.Location = new System.Drawing.Point(711, 408);
-            this.txbconb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txbconb.Name = "txbconb";
-            this.txbconb.Size = new System.Drawing.Size(342, 49);
->>>>>>> 7f4f5b518673caa6c983657563bfe90735fa90ae
+            this.txbconb.Size = new System.Drawing.Size(153, 31);
             this.txbconb.TabIndex = 1;
             this.txbconb.UseSystemPasswordChar = true;
             this.txbconb.TextChanged += new System.EventHandler(this.txbconb_TextChanged);
@@ -64,14 +57,10 @@ namespace CUMple
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-<<<<<<< HEAD
-            this.button1.Location = new System.Drawing.Point(131, 315);
-=======
-            this.button1.Location = new System.Drawing.Point(751, 471);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
->>>>>>> 7f4f5b518673caa6c983657563bfe90735fa90ae
+            this.button1.Location = new System.Drawing.Point(87, 205);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(218, 52);
+            this.button1.Size = new System.Drawing.Size(145, 34);
             this.button1.TabIndex = 2;
             this.button1.Text = "Inciar Sesión";
             this.button1.UseVisualStyleBackColor = false;
@@ -80,18 +69,11 @@ namespace CUMple
             // txbuserb
             // 
             this.txbuserb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-<<<<<<< HEAD
             this.txbuserb.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbuserb.Location = new System.Drawing.Point(131, 119);
+            this.txbuserb.Location = new System.Drawing.Point(159, 69);
+            this.txbuserb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbuserb.Name = "txbuserb";
-            this.txbuserb.Size = new System.Drawing.Size(229, 31);
-=======
-            this.txbuserb.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbuserb.Location = new System.Drawing.Point(711, 339);
-            this.txbuserb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txbuserb.Name = "txbuserb";
-            this.txbuserb.Size = new System.Drawing.Size(342, 49);
->>>>>>> 7f4f5b518673caa6c983657563bfe90735fa90ae
+            this.txbuserb.Size = new System.Drawing.Size(153, 31);
             this.txbuserb.TabIndex = 0;
             this.txbuserb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.txbuserb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbuserb_KeyPress);
@@ -100,18 +82,11 @@ namespace CUMple
             // 
             this.lblemail.AutoSize = true;
             this.lblemail.BackColor = System.Drawing.Color.Transparent;
-<<<<<<< HEAD
             this.lblemail.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblemail.Location = new System.Drawing.Point(26, 119);
+            this.lblemail.Location = new System.Drawing.Point(17, 77);
+            this.lblemail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblemail.Name = "lblemail";
             this.lblemail.Size = new System.Drawing.Size(83, 23);
-=======
-            this.lblemail.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblemail.Location = new System.Drawing.Point(553, 339);
-            this.lblemail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(129, 41);
->>>>>>> 7f4f5b518673caa6c983657563bfe90735fa90ae
             this.lblemail.TabIndex = 3;
             this.lblemail.Text = "Usuario";
             this.lblemail.Click += new System.EventHandler(this.label1_Click);
@@ -120,18 +95,11 @@ namespace CUMple
             // 
             this.lblcontraseña.AutoSize = true;
             this.lblcontraseña.BackColor = System.Drawing.Color.Transparent;
-<<<<<<< HEAD
             this.lblcontraseña.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcontraseña.Location = new System.Drawing.Point(4, 164);
+            this.lblcontraseña.Location = new System.Drawing.Point(11, 135);
+            this.lblcontraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblcontraseña.Name = "lblcontraseña";
             this.lblcontraseña.Size = new System.Drawing.Size(117, 23);
-=======
-            this.lblcontraseña.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcontraseña.Location = new System.Drawing.Point(520, 408);
-            this.lblcontraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblcontraseña.Name = "lblcontraseña";
-            this.lblcontraseña.Size = new System.Drawing.Size(178, 41);
->>>>>>> 7f4f5b518673caa6c983657563bfe90735fa90ae
             this.lblcontraseña.TabIndex = 4;
             this.lblcontraseña.Text = "Contraseña";
             this.lblcontraseña.Click += new System.EventHandler(this.lblcontraseña_Click);
@@ -140,36 +108,23 @@ namespace CUMple
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-<<<<<<< HEAD
             this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(136, 47);
+            this.label1.Location = new System.Drawing.Point(91, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 23);
-=======
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(703, 273);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 41);
->>>>>>> 7f4f5b518673caa6c983657563bfe90735fa90ae
             this.label1.TabIndex = 6;
             this.label1.Text = "¡Bienvenido!";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // forming
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-<<<<<<< HEAD
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(484, 361);
-=======
-            this.BackgroundImage = global::CUMple.Properties.Resources.logo_de_Academia_DO_difuminado_;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1626, 863);
->>>>>>> 7f4f5b518673caa6c983657563bfe90735fa90ae
+            this.ClientSize = new System.Drawing.Size(323, 235);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblcontraseña);
             this.Controls.Add(this.lblemail);
@@ -179,7 +134,6 @@ namespace CUMple
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "forming";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de sesión";
