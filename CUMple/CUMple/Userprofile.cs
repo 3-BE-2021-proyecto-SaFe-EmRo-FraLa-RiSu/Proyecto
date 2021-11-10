@@ -217,5 +217,10 @@ namespace CUMple
             maximizar.Visible = false;
             restaurar.Visible = true;
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

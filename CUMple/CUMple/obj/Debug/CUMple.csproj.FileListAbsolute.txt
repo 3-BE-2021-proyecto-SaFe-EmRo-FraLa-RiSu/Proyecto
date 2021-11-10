@@ -207,3 +207,7 @@ C:\Users\Santiago\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.cspro
 C:\Users\Santiago\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.csproj.CopyComplete
 C:\Users\Santiago\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.exe
 C:\Users\Santiago\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.pdb
+D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.examenesnotas.resources
+D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Userprofileadd.resources
+C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.examenesnotas.resources
+C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Userprofileadd.resources

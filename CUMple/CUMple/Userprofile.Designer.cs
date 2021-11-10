@@ -88,10 +88,10 @@ namespace CUMple
             // 
             // btnedit
             // 
-            this.btnedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnedit.Location = new System.Drawing.Point(601, 394);
+            this.btnedit.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnedit.Location = new System.Drawing.Point(825, 470);
             this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(263, 25);
+            this.btnedit.Size = new System.Drawing.Size(263, 32);
             this.btnedit.TabIndex = 2;
             this.btnedit.Text = "Editar";
             this.btnedit.UseVisualStyleBackColor = true;
@@ -100,10 +100,11 @@ namespace CUMple
             // lblmostnom
             // 
             this.lblmostnom.AutoSize = true;
-            this.lblmostnom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmostnom.Location = new System.Drawing.Point(370, 152);
+            this.lblmostnom.BackColor = System.Drawing.Color.Transparent;
+            this.lblmostnom.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmostnom.Location = new System.Drawing.Point(204, 126);
             this.lblmostnom.Name = "lblmostnom";
-            this.lblmostnom.Size = new System.Drawing.Size(167, 24);
+            this.lblmostnom.Size = new System.Drawing.Size(189, 23);
             this.lblmostnom.TabIndex = 3;
             this.lblmostnom.Text = "Nombre completo:";
             this.lblmostnom.Click += new System.EventHandler(this.lblmostnom_Click);
@@ -111,171 +112,183 @@ namespace CUMple
             // lblnomperf
             // 
             this.lblnomperf.AutoSize = true;
-            this.lblnomperf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnomperf.Location = new System.Drawing.Point(539, 154);
+            this.lblnomperf.BackColor = System.Drawing.Color.Transparent;
+            this.lblnomperf.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnomperf.Location = new System.Drawing.Point(373, 128);
             this.lblnomperf.Name = "lblnomperf";
-            this.lblnomperf.Size = new System.Drawing.Size(0, 20);
+            this.lblnomperf.Size = new System.Drawing.Size(0, 23);
             this.lblnomperf.TabIndex = 5;
             this.lblnomperf.Click += new System.EventHandler(this.lblnomperf_Click);
             // 
             // txbnomedit
             // 
-            this.txbnomedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbnomedit.Location = new System.Drawing.Point(765, 359);
+            this.txbnomedit.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbnomedit.Location = new System.Drawing.Point(856, 358);
             this.txbnomedit.Name = "txbnomedit";
-            this.txbnomedit.Size = new System.Drawing.Size(100, 24);
+            this.txbnomedit.Size = new System.Drawing.Size(100, 31);
             this.txbnomedit.TabIndex = 7;
             // 
             // lblmostnom2
             // 
             this.lblmostnom2.AutoSize = true;
-            this.lblmostnom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmostnom2.BackColor = System.Drawing.Color.Transparent;
+            this.lblmostnom2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblmostnom2.Location = new System.Drawing.Point(598, 361);
             this.lblmostnom2.Name = "lblmostnom2";
-            this.lblmostnom2.Size = new System.Drawing.Size(138, 20);
+            this.lblmostnom2.Size = new System.Drawing.Size(189, 23);
             this.lblmostnom2.TabIndex = 8;
             this.lblmostnom2.Text = "Nombre completo:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(370, 321);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(208, 315);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 20);
+            this.label1.Size = new System.Drawing.Size(108, 23);
             this.label1.TabIndex = 12;
             this.label1.Text = "Profesión:";
             // 
             // txbprofedit
             // 
-            this.txbprofedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbprofedit.Location = new System.Drawing.Point(457, 321);
+            this.txbprofedit.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbprofedit.Location = new System.Drawing.Point(364, 316);
             this.txbprofedit.Name = "txbprofedit";
-            this.txbprofedit.Size = new System.Drawing.Size(100, 24);
+            this.txbprofedit.Size = new System.Drawing.Size(100, 31);
             this.txbprofedit.TabIndex = 11;
             // 
             // txbceddit
             // 
-            this.txbceddit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbceddit.Location = new System.Drawing.Point(457, 359);
+            this.txbceddit.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbceddit.Location = new System.Drawing.Point(364, 353);
             this.txbceddit.Name = "txbceddit";
-            this.txbceddit.Size = new System.Drawing.Size(100, 24);
+            this.txbceddit.Size = new System.Drawing.Size(100, 31);
             this.txbceddit.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(370, 359);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(208, 353);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
+            this.label2.Size = new System.Drawing.Size(84, 23);
             this.label2.TabIndex = 13;
             this.label2.Text = "Cédula:";
             // 
             // txbfecdenacedit
             // 
-            this.txbfecdenacedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbfecdenacedit.Location = new System.Drawing.Point(765, 321);
+            this.txbfecdenacedit.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbfecdenacedit.Location = new System.Drawing.Point(856, 315);
             this.txbfecdenacedit.Name = "txbfecdenacedit";
-            this.txbfecdenacedit.Size = new System.Drawing.Size(100, 24);
+            this.txbfecdenacedit.Size = new System.Drawing.Size(100, 31);
             this.txbfecdenacedit.TabIndex = 18;
             this.txbfecdenacedit.TextChanged += new System.EventHandler(this.txbfecdenacedit_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(370, 437);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(595, 400);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 20);
+            this.label3.Size = new System.Drawing.Size(72, 23);
             this.label3.TabIndex = 17;
             this.label3.Text = "Email:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(598, 321);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 20);
+            this.label4.Size = new System.Drawing.Size(216, 23);
             this.label4.TabIndex = 16;
             this.label4.Text = "Fecha de nacimiento:";
             // 
             // txbemailedit
             // 
-            this.txbemailedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbemailedit.Location = new System.Drawing.Point(457, 435);
+            this.txbemailedit.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbemailedit.Location = new System.Drawing.Point(856, 397);
             this.txbemailedit.Name = "txbemailedit";
-            this.txbemailedit.Size = new System.Drawing.Size(100, 24);
+            this.txbemailedit.Size = new System.Drawing.Size(100, 31);
             this.txbemailedit.TabIndex = 22;
             this.txbemailedit.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(370, 398);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(208, 392);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 20);
+            this.label6.Size = new System.Drawing.Size(86, 23);
             this.label6.TabIndex = 20;
             this.label6.Text = "Celular:";
             // 
             // txbceledit
             // 
-            this.txbceledit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbceledit.Location = new System.Drawing.Point(457, 398);
+            this.txbceledit.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbceledit.Location = new System.Drawing.Point(364, 392);
             this.txbceledit.Name = "txbceledit";
-            this.txbceledit.Size = new System.Drawing.Size(100, 24);
+            this.txbceledit.Size = new System.Drawing.Size(100, 31);
             this.txbceledit.TabIndex = 19;
             this.txbceledit.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(370, 193);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(204, 167);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 20);
+            this.label7.Size = new System.Drawing.Size(108, 23);
             this.label7.TabIndex = 23;
             this.label7.Text = "Profesión:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(370, 228);
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(204, 202);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 20);
+            this.label8.Size = new System.Drawing.Size(84, 23);
             this.label8.TabIndex = 24;
             this.label8.Text = "Cédula:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(370, 264);
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(204, 238);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 20);
+            this.label9.Size = new System.Drawing.Size(86, 23);
             this.label9.TabIndex = 25;
             this.label9.Text = "Celular:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(598, 264);
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(475, 238);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 20);
+            this.label10.Size = new System.Drawing.Size(72, 23);
             this.label10.TabIndex = 26;
             this.label10.Text = "Email:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(598, 193);
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(475, 167);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(161, 20);
+            this.label11.Size = new System.Drawing.Size(216, 23);
             this.label11.TabIndex = 27;
             this.label11.Text = "Fecha de nacimiento:";
             this.label11.Click += new System.EventHandler(this.label11_Click);
@@ -283,65 +296,72 @@ namespace CUMple
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(598, 228);
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(475, 202);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(136, 20);
+            this.label12.Size = new System.Drawing.Size(182, 23);
             this.label12.TabIndex = 28;
             this.label12.Text = "Fecha de ingreso:";
             // 
             // lblprofperf
             // 
             this.lblprofperf.AutoSize = true;
-            this.lblprofperf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprofperf.Location = new System.Drawing.Point(457, 193);
+            this.lblprofperf.BackColor = System.Drawing.Color.Transparent;
+            this.lblprofperf.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblprofperf.Location = new System.Drawing.Point(291, 167);
             this.lblprofperf.Name = "lblprofperf";
-            this.lblprofperf.Size = new System.Drawing.Size(0, 20);
+            this.lblprofperf.Size = new System.Drawing.Size(0, 23);
             this.lblprofperf.TabIndex = 30;
             // 
             // lblcedperf
             // 
             this.lblcedperf.AutoSize = true;
-            this.lblcedperf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcedperf.Location = new System.Drawing.Point(440, 228);
+            this.lblcedperf.BackColor = System.Drawing.Color.Transparent;
+            this.lblcedperf.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcedperf.Location = new System.Drawing.Point(274, 202);
             this.lblcedperf.Name = "lblcedperf";
-            this.lblcedperf.Size = new System.Drawing.Size(0, 20);
+            this.lblcedperf.Size = new System.Drawing.Size(0, 23);
             this.lblcedperf.TabIndex = 31;
             // 
             // lblfecnacpref
             // 
             this.lblfecnacpref.AutoSize = true;
-            this.lblfecnacpref.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecnacpref.Location = new System.Drawing.Point(765, 193);
+            this.lblfecnacpref.BackColor = System.Drawing.Color.Transparent;
+            this.lblfecnacpref.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfecnacpref.Location = new System.Drawing.Point(642, 167);
             this.lblfecnacpref.Name = "lblfecnacpref";
-            this.lblfecnacpref.Size = new System.Drawing.Size(0, 20);
+            this.lblfecnacpref.Size = new System.Drawing.Size(0, 23);
             this.lblfecnacpref.TabIndex = 32;
             // 
             // lblfecingpref
             // 
             this.lblfecingpref.AutoSize = true;
-            this.lblfecingpref.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecingpref.Location = new System.Drawing.Point(741, 228);
+            this.lblfecingpref.BackColor = System.Drawing.Color.Transparent;
+            this.lblfecingpref.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfecingpref.Location = new System.Drawing.Point(618, 202);
             this.lblfecingpref.Name = "lblfecingpref";
-            this.lblfecingpref.Size = new System.Drawing.Size(0, 20);
+            this.lblfecingpref.Size = new System.Drawing.Size(0, 23);
             this.lblfecingpref.TabIndex = 33;
             // 
             // lblemailpref
             // 
             this.lblemailpref.AutoSize = true;
-            this.lblemailpref.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblemailpref.Location = new System.Drawing.Point(656, 264);
+            this.lblemailpref.BackColor = System.Drawing.Color.Transparent;
+            this.lblemailpref.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblemailpref.Location = new System.Drawing.Point(533, 238);
             this.lblemailpref.Name = "lblemailpref";
-            this.lblemailpref.Size = new System.Drawing.Size(0, 20);
+            this.lblemailpref.Size = new System.Drawing.Size(0, 23);
             this.lblemailpref.TabIndex = 34;
             // 
             // lblcelpref
             // 
             this.lblcelpref.AutoSize = true;
-            this.lblcelpref.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcelpref.Location = new System.Drawing.Point(440, 264);
+            this.lblcelpref.BackColor = System.Drawing.Color.Transparent;
+            this.lblcelpref.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcelpref.Location = new System.Drawing.Point(274, 238);
             this.lblcelpref.Name = "lblcelpref";
-            this.lblcelpref.Size = new System.Drawing.Size(0, 20);
+            this.lblcelpref.Size = new System.Drawing.Size(0, 23);
             this.lblcelpref.TabIndex = 35;
             // 
             // btnvolveruserprofile
@@ -350,7 +370,7 @@ namespace CUMple
             this.btnvolveruserprofile.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolveruserprofile.ForeColor = System.Drawing.Color.Transparent;
             this.btnvolveruserprofile.Location = new System.Drawing.Point(220, 521);
-            this.btnvolveruserprofile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnvolveruserprofile.Margin = new System.Windows.Forms.Padding(2);
             this.btnvolveruserprofile.Name = "btnvolveruserprofile";
             this.btnvolveruserprofile.Size = new System.Drawing.Size(43, 42);
             this.btnvolveruserprofile.TabIndex = 36;
@@ -361,29 +381,31 @@ namespace CUMple
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(869, 193);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(821, 193);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 20);
+            this.label5.Size = new System.Drawing.Size(126, 23);
             this.label5.TabIndex = 38;
             this.label5.Text = "Taekwondo:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(869, 228);
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(821, 228);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(88, 20);
+            this.label13.Size = new System.Drawing.Size(119, 23);
             this.label13.TabIndex = 39;
             this.label13.Text = "Krav Maga:";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(602, 431);
+            this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(825, 530);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(263, 25);
+            this.button1.Size = new System.Drawing.Size(263, 29);
             this.button1.TabIndex = 40;
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = true;
@@ -408,7 +430,7 @@ namespace CUMple
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 600);
+            this.panel3.Size = new System.Drawing.Size(130, 600);
             this.panel3.TabIndex = 42;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -417,7 +439,7 @@ namespace CUMple
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1102, 104);
+            this.panel1.Size = new System.Drawing.Size(1102, 50);
             this.panel1.TabIndex = 41;
             // 
             // panel2
@@ -430,14 +452,15 @@ namespace CUMple
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1102, 112);
+            this.panel2.Size = new System.Drawing.Size(1102, 50);
             this.panel2.TabIndex = 40;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // restaurar
             // 
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(989, 30);
+            this.restaurar.Location = new System.Drawing.Point(989, 8);
             this.restaurar.Name = "restaurar";
             this.restaurar.Size = new System.Drawing.Size(41, 42);
             this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -450,7 +473,7 @@ namespace CUMple
             // 
             this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(942, 30);
+            this.minimizar.Location = new System.Drawing.Point(942, 8);
             this.minimizar.Name = "minimizar";
             this.minimizar.Size = new System.Drawing.Size(41, 42);
             this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -462,7 +485,7 @@ namespace CUMple
             // 
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(1036, 30);
+            this.cerrarclic.Location = new System.Drawing.Point(1036, 8);
             this.cerrarclic.Name = "cerrarclic";
             this.cerrarclic.Size = new System.Drawing.Size(41, 42);
             this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -474,7 +497,7 @@ namespace CUMple
             // 
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(989, 30);
+            this.maximizar.Location = new System.Drawing.Point(989, 8);
             this.maximizar.Name = "maximizar";
             this.maximizar.Size = new System.Drawing.Size(41, 42);
             this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -487,6 +510,8 @@ namespace CUMple
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1100, 600);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnvolveruserprofile);

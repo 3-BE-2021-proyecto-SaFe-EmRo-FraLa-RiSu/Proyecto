@@ -49,11 +49,11 @@ namespace CUMple
             this.btnvolveruserprofileadd = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnvolveruserprofile = new System.Windows.Forms.Button();
             this.restaurar = new System.Windows.Forms.PictureBox();
             this.minimizar = new System.Windows.Forms.PictureBox();
             this.cerrarclic = new System.Windows.Forms.PictureBox();
             this.maximizar = new System.Windows.Forms.PictureBox();
+            this.btnvolveruserprofile = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
@@ -231,9 +231,9 @@ namespace CUMple
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.panel3.Controls.Add(this.btnvolveruserprofileadd);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 112);
+            this.panel3.Location = new System.Drawing.Point(0, 50);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 488);
+            this.panel3.Size = new System.Drawing.Size(130, 550);
             this.panel3.TabIndex = 40;
             // 
             // panel1
@@ -246,8 +246,58 @@ namespace CUMple
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1100, 112);
+            this.panel1.Size = new System.Drawing.Size(1100, 50);
             this.panel1.TabIndex = 39;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // restaurar
+            // 
+            this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
+            this.restaurar.Location = new System.Drawing.Point(1000, 8);
+            this.restaurar.Name = "restaurar";
+            this.restaurar.Size = new System.Drawing.Size(41, 42);
+            this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.restaurar.TabIndex = 13;
+            this.restaurar.TabStop = false;
+            this.restaurar.Visible = false;
+            this.restaurar.Click += new System.EventHandler(this.restaurar_Click);
+            // 
+            // minimizar
+            // 
+            this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
+            this.minimizar.Location = new System.Drawing.Point(953, 8);
+            this.minimizar.Name = "minimizar";
+            this.minimizar.Size = new System.Drawing.Size(41, 42);
+            this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.minimizar.TabIndex = 12;
+            this.minimizar.TabStop = false;
+            this.minimizar.Click += new System.EventHandler(this.minimizar_Click);
+            // 
+            // cerrarclic
+            // 
+            this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
+            this.cerrarclic.Location = new System.Drawing.Point(1047, 8);
+            this.cerrarclic.Name = "cerrarclic";
+            this.cerrarclic.Size = new System.Drawing.Size(41, 42);
+            this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cerrarclic.TabIndex = 11;
+            this.cerrarclic.TabStop = false;
+            this.cerrarclic.Click += new System.EventHandler(this.cerrarclic_Click);
+            // 
+            // maximizar
+            // 
+            this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
+            this.maximizar.Location = new System.Drawing.Point(1000, 8);
+            this.maximizar.Name = "maximizar";
+            this.maximizar.Size = new System.Drawing.Size(41, 42);
+            this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.maximizar.TabIndex = 10;
+            this.maximizar.TabStop = false;
+            this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
             // 
             // btnvolveruserprofile
             // 
@@ -262,55 +312,6 @@ namespace CUMple
             this.btnvolveruserprofile.Text = "⮎";
             this.btnvolveruserprofile.UseVisualStyleBackColor = false;
             this.btnvolveruserprofile.Click += new System.EventHandler(this.btnvolveruserprofile_Click);
-            // 
-            // restaurar
-            // 
-            this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(983, 30);
-            this.restaurar.Name = "restaurar";
-            this.restaurar.Size = new System.Drawing.Size(41, 42);
-            this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.restaurar.TabIndex = 13;
-            this.restaurar.TabStop = false;
-            this.restaurar.Visible = false;
-            this.restaurar.Click += new System.EventHandler(this.restaurar_Click);
-            // 
-            // minimizar
-            // 
-            this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(936, 30);
-            this.minimizar.Name = "minimizar";
-            this.minimizar.Size = new System.Drawing.Size(41, 42);
-            this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.minimizar.TabIndex = 12;
-            this.minimizar.TabStop = false;
-            this.minimizar.Click += new System.EventHandler(this.minimizar_Click);
-            // 
-            // cerrarclic
-            // 
-            this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(1030, 30);
-            this.cerrarclic.Name = "cerrarclic";
-            this.cerrarclic.Size = new System.Drawing.Size(41, 42);
-            this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cerrarclic.TabIndex = 11;
-            this.cerrarclic.TabStop = false;
-            this.cerrarclic.Click += new System.EventHandler(this.cerrarclic_Click);
-            // 
-            // maximizar
-            // 
-            this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(983, 30);
-            this.maximizar.Name = "maximizar";
-            this.maximizar.Size = new System.Drawing.Size(41, 42);
-            this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.maximizar.TabIndex = 10;
-            this.maximizar.TabStop = false;
-            this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
             // 
             // Userprofileadd
             // 

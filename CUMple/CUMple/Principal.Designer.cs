@@ -30,34 +30,21 @@ namespace CUMple
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.botingprog = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnentrarexamenes = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::CUMple.Properties.Resources.logo_de_Academia_DO;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(42, 68);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(216, 154);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // botingprog
             // 
             this.botingprog.BackColor = System.Drawing.Color.DarkSlateGray;
             this.botingprog.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.botingprog.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botingprog.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botingprog.ForeColor = System.Drawing.Color.White;
-            this.botingprog.Location = new System.Drawing.Point(42, 296);
+            this.botingprog.Location = new System.Drawing.Point(42, 226);
             this.botingprog.Name = "botingprog";
             this.botingprog.Size = new System.Drawing.Size(191, 37);
             this.botingprog.TabIndex = 6;
@@ -69,9 +56,9 @@ namespace CUMple
             // 
             this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(42, 339);
+            this.button1.Location = new System.Drawing.Point(42, 424);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(191, 37);
             this.button1.TabIndex = 7;
@@ -82,9 +69,9 @@ namespace CUMple
             // 
             this.button2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(42, 382);
+            this.button2.Location = new System.Drawing.Point(565, 449);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(191, 37);
             this.button2.TabIndex = 8;
@@ -95,9 +82,9 @@ namespace CUMple
             // 
             this.btnentrarexamenes.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnentrarexamenes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnentrarexamenes.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnentrarexamenes.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnentrarexamenes.ForeColor = System.Drawing.Color.White;
-            this.btnentrarexamenes.Location = new System.Drawing.Point(42, 425);
+            this.btnentrarexamenes.Location = new System.Drawing.Point(42, 319);
             this.btnentrarexamenes.Name = "btnentrarexamenes";
             this.btnentrarexamenes.Size = new System.Drawing.Size(191, 37);
             this.btnentrarexamenes.TabIndex = 9;
@@ -109,9 +96,9 @@ namespace CUMple
             // 
             this.button4.BackColor = System.Drawing.Color.DarkSlateGray;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(42, 468);
+            this.button4.Location = new System.Drawing.Point(565, 508);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(191, 37);
             this.button4.TabIndex = 10;
@@ -120,10 +107,10 @@ namespace CUMple
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(404, 275);
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(302, 187);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(285, 31);
+            this.textBox1.Size = new System.Drawing.Size(285, 40);
             this.textBox1.TabIndex = 11;
             // 
             // Principal
@@ -131,29 +118,26 @@ namespace CUMple
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = global::CUMple.Properties.Resources.logo_de_Academia_DO_difuminado_;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1084, 561);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnentrarexamenes);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.botingprog);
-            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Principal";
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.Principal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button botingprog;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

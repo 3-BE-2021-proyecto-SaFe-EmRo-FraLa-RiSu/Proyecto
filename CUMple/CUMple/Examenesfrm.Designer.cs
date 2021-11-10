@@ -52,7 +52,7 @@ namespace CUMple
             this.horadatatimer = new System.Windows.Forms.DateTimePicker();
             this.cbhabfe = new System.Windows.Forms.CheckBox();
             this.cbhabhora = new System.Windows.Forms.CheckBox();
-            this.rata = new System.Windows.Forms.TextBox();
+            this.txbbuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,7 +125,7 @@ namespace CUMple
             this.btneditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneditar.Location = new System.Drawing.Point(438, 36);
             this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(61, 30);
+            this.btneditar.Size = new System.Drawing.Size(72, 30);
             this.btneditar.TabIndex = 1;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = true;
@@ -183,8 +183,8 @@ namespace CUMple
             // 
             this.cbidexamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbidexamen.FormattingEnabled = true;
-            this.cbidexamen.Location = new System.Drawing.Point(614, 50);
-            this.cbidexamen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbidexamen.Location = new System.Drawing.Point(612, 24);
+            this.cbidexamen.Margin = new System.Windows.Forms.Padding(2);
             this.cbidexamen.Name = "cbidexamen";
             this.cbidexamen.Size = new System.Drawing.Size(100, 28);
             this.cbidexamen.TabIndex = 11;
@@ -194,7 +194,7 @@ namespace CUMple
             // 
             this.lblid.AutoSize = true;
             this.lblid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblid.Location = new System.Drawing.Point(528, 56);
+            this.lblid.Location = new System.Drawing.Point(525, 30);
             this.lblid.Name = "lblid";
             this.lblid.Size = new System.Drawing.Size(72, 16);
             this.lblid.TabIndex = 12;
@@ -256,7 +256,7 @@ namespace CUMple
             "Taekwondo",
             "Krav Maga"});
             this.cbdisciplina.Location = new System.Drawing.Point(309, 36);
-            this.cbdisciplina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbdisciplina.Margin = new System.Windows.Forms.Padding(2);
             this.cbdisciplina.Name = "cbdisciplina";
             this.cbdisciplina.Size = new System.Drawing.Size(100, 28);
             this.cbdisciplina.TabIndex = 17;
@@ -305,21 +305,23 @@ namespace CUMple
             this.cbhabhora.UseVisualStyleBackColor = true;
             this.cbhabhora.CheckedChanged += new System.EventHandler(this.cbhabhora_CheckedChanged);
             // 
-            // rata
+            // txbbuscar
             // 
-            this.rata.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rata.Location = new System.Drawing.Point(614, 108);
-            this.rata.Name = "rata";
-            this.rata.Size = new System.Drawing.Size(100, 26);
-            this.rata.TabIndex = 22;
-            this.rata.TextChanged += new System.EventHandler(this.rata_TextChanged);
+            this.txbbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbbuscar.Location = new System.Drawing.Point(516, 70);
+            this.txbbuscar.Name = "txbbuscar";
+            this.txbbuscar.Size = new System.Drawing.Size(72, 30);
+            this.txbbuscar.TabIndex = 23;
+            this.txbbuscar.Text = "Buscar";
+            this.txbbuscar.UseVisualStyleBackColor = true;
+            this.txbbuscar.Click += new System.EventHandler(this.txbbuscar_Click);
             // 
             // Examenesfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 561);
-            this.Controls.Add(this.rata);
+            this.ClientSize = new System.Drawing.Size(957, 561);
+            this.Controls.Add(this.txbbuscar);
             this.Controls.Add(this.cbhabhora);
             this.Controls.Add(this.cbhabfe);
             this.Controls.Add(this.horadatatimer);
@@ -372,6 +374,6 @@ namespace CUMple
         private System.Windows.Forms.DateTimePicker horadatatimer;
         private System.Windows.Forms.CheckBox cbhabfe;
         private System.Windows.Forms.CheckBox cbhabhora;
-        private System.Windows.Forms.TextBox rata;
+        private System.Windows.Forms.Button txbbuscar;
     }
 }

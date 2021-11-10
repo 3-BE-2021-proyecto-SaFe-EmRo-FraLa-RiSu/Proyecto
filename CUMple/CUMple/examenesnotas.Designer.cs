@@ -48,11 +48,11 @@ namespace CUMple
             this.cbcedula = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.restaurar = new System.Windows.Forms.PictureBox();
             this.minimizar = new System.Windows.Forms.PictureBox();
             this.cerrarclic = new System.Windows.Forms.PictureBox();
             this.maximizar = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
@@ -69,9 +69,9 @@ namespace CUMple
             this.idexamen,
             this.notas,
             this.nuevo_rango});
-            this.dgvexamenes.Location = new System.Drawing.Point(338, 281);
+            this.dgvexamenes.Location = new System.Drawing.Point(178, 224);
             this.dgvexamenes.Name = "dgvexamenes";
-            this.dgvexamenes.Size = new System.Drawing.Size(444, 213);
+            this.dgvexamenes.Size = new System.Drawing.Size(768, 300);
             this.dgvexamenes.TabIndex = 0;
             this.dgvexamenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -101,20 +101,20 @@ namespace CUMple
             // 
             // btnlimpiar
             // 
-            this.btnlimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlimpiar.Location = new System.Drawing.Point(813, 214);
+            this.btnlimpiar.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlimpiar.Location = new System.Drawing.Point(958, 139);
             this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Size = new System.Drawing.Size(72, 35);
+            this.btnlimpiar.Size = new System.Drawing.Size(101, 43);
             this.btnlimpiar.TabIndex = 20;
             this.btnlimpiar.Text = "Limpiar";
             this.btnlimpiar.UseVisualStyleBackColor = true;
             // 
             // btneliminar
             // 
-            this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Location = new System.Drawing.Point(813, 317);
+            this.btneliminar.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Location = new System.Drawing.Point(958, 87);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(72, 35);
+            this.btneliminar.Size = new System.Drawing.Size(101, 43);
             this.btneliminar.TabIndex = 19;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
@@ -122,10 +122,10 @@ namespace CUMple
             // 
             // btnagregar
             // 
-            this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnagregar.Location = new System.Drawing.Point(813, 264);
+            this.btnagregar.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregar.Location = new System.Drawing.Point(725, 84);
             this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(72, 35);
+            this.btnagregar.Size = new System.Drawing.Size(101, 43);
             this.btnagregar.TabIndex = 18;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
@@ -133,96 +133,100 @@ namespace CUMple
             // 
             // btneditar
             // 
-            this.btneditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneditar.Location = new System.Drawing.Point(813, 167);
+            this.btneditar.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditar.Location = new System.Drawing.Point(725, 139);
             this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(72, 35);
+            this.btneditar.Size = new System.Drawing.Size(101, 43);
             this.btneditar.TabIndex = 17;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = true;
             // 
             // cbidexamen
             // 
-            this.cbidexamen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbidexamen.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbidexamen.FormattingEnabled = true;
-            this.cbidexamen.Location = new System.Drawing.Point(619, 218);
+            this.cbidexamen.Location = new System.Drawing.Point(550, 132);
             this.cbidexamen.Margin = new System.Windows.Forms.Padding(2);
             this.cbidexamen.Name = "cbidexamen";
-            this.cbidexamen.Size = new System.Drawing.Size(100, 28);
+            this.cbidexamen.Size = new System.Drawing.Size(129, 31);
             this.cbidexamen.TabIndex = 21;
             this.cbidexamen.SelectedIndexChanged += new System.EventHandler(this.cbidexamen_SelectedIndexChanged);
             // 
             // txbnota
             // 
-            this.txbnota.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbnota.Location = new System.Drawing.Point(421, 219);
+            this.txbnota.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbnota.Location = new System.Drawing.Point(272, 133);
             this.txbnota.Name = "txbnota";
-            this.txbnota.Size = new System.Drawing.Size(100, 24);
+            this.txbnota.Size = new System.Drawing.Size(129, 31);
             this.txbnota.TabIndex = 37;
             // 
             // lblid
             // 
             this.lblid.AutoSize = true;
-            this.lblid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblid.Location = new System.Drawing.Point(334, 223);
+            this.lblid.BackColor = System.Drawing.Color.Transparent;
+            this.lblid.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblid.Location = new System.Drawing.Point(174, 136);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(43, 20);
+            this.lblid.Size = new System.Drawing.Size(54, 23);
             this.lblid.TabIndex = 36;
             this.lblid.Text = "Nota";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(541, 226);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(465, 140);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 20);
+            this.label1.Size = new System.Drawing.Size(42, 23);
             this.label1.TabIndex = 39;
             this.label1.Text = "ID:";
             // 
             // cbrango
             // 
-            this.cbrango.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbrango.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbrango.FormattingEnabled = true;
             this.cbrango.Items.AddRange(new object[] {
             "Taekwondo",
             "Krav Maga"});
-            this.cbrango.Location = new System.Drawing.Point(619, 168);
+            this.cbrango.Location = new System.Drawing.Point(550, 81);
             this.cbrango.Margin = new System.Windows.Forms.Padding(2);
             this.cbrango.Name = "cbrango";
-            this.cbrango.Size = new System.Drawing.Size(100, 28);
+            this.cbrango.Size = new System.Drawing.Size(129, 31);
             this.cbrango.TabIndex = 43;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(541, 171);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(454, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 20);
+            this.label2.Size = new System.Drawing.Size(79, 23);
             this.label2.TabIndex = 42;
             this.label2.Text = "Rango:";
             // 
             // cbcedula
             // 
-            this.cbcedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbcedula.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbcedula.FormattingEnabled = true;
             this.cbcedula.Items.AddRange(new object[] {
             "Taekwondo",
             "Krav Maga"});
-            this.cbcedula.Location = new System.Drawing.Point(421, 171);
+            this.cbcedula.Location = new System.Drawing.Point(272, 81);
             this.cbcedula.Margin = new System.Windows.Forms.Padding(2);
             this.cbcedula.Name = "cbcedula";
-            this.cbcedula.Size = new System.Drawing.Size(100, 28);
+            this.cbcedula.Size = new System.Drawing.Size(129, 31);
             this.cbcedula.TabIndex = 45;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(334, 171);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(174, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 20);
+            this.label3.Size = new System.Drawing.Size(75, 23);
             this.label3.TabIndex = 44;
             this.label3.Text = "Cédula";
             // 
@@ -236,23 +240,15 @@ namespace CUMple
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1100, 112);
+            this.panel1.Size = new System.Drawing.Size(1100, 50);
             this.panel1.TabIndex = 46;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(49)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 112);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 488);
-            this.panel2.TabIndex = 47;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // restaurar
             // 
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(979, 30);
+            this.restaurar.Location = new System.Drawing.Point(1000, 8);
             this.restaurar.Name = "restaurar";
             this.restaurar.Size = new System.Drawing.Size(41, 42);
             this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -265,7 +261,7 @@ namespace CUMple
             // 
             this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(932, 30);
+            this.minimizar.Location = new System.Drawing.Point(953, 8);
             this.minimizar.Name = "minimizar";
             this.minimizar.Size = new System.Drawing.Size(41, 42);
             this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -277,7 +273,7 @@ namespace CUMple
             // 
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(1026, 30);
+            this.cerrarclic.Location = new System.Drawing.Point(1047, 8);
             this.cerrarclic.Name = "cerrarclic";
             this.cerrarclic.Size = new System.Drawing.Size(41, 42);
             this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -289,7 +285,7 @@ namespace CUMple
             // 
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(979, 30);
+            this.maximizar.Location = new System.Drawing.Point(1000, 8);
             this.maximizar.Name = "maximizar";
             this.maximizar.Size = new System.Drawing.Size(41, 42);
             this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -297,11 +293,22 @@ namespace CUMple
             this.maximizar.TabStop = false;
             this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(49)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(130, 550);
+            this.panel2.TabIndex = 47;
+            // 
             // examenesnotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1100, 600);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

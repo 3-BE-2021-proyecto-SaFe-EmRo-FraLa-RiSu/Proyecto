@@ -41,10 +41,10 @@ namespace CUMple
             // 
             this.lblxd.AutoSize = true;
             this.lblxd.BackColor = System.Drawing.Color.Transparent;
-            this.lblxd.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblxd.Location = new System.Drawing.Point(411, 160);
+            this.lblxd.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblxd.Location = new System.Drawing.Point(27, 34);
             this.lblxd.Name = "lblxd";
-            this.lblxd.Size = new System.Drawing.Size(289, 26);
+            this.lblxd.Size = new System.Drawing.Size(267, 23);
             this.lblxd.TabIndex = 0;
             this.lblxd.Text = "Bienvenido, administrador.";
             // 
@@ -52,11 +52,11 @@ namespace CUMple
             // 
             this.botingprog.BackColor = System.Drawing.Color.DarkSlateGray;
             this.botingprog.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.botingprog.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botingprog.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botingprog.ForeColor = System.Drawing.Color.White;
-            this.botingprog.Location = new System.Drawing.Point(430, 219);
+            this.botingprog.Location = new System.Drawing.Point(327, 291);
             this.botingprog.Name = "botingprog";
-            this.botingprog.Size = new System.Drawing.Size(245, 41);
+            this.botingprog.Size = new System.Drawing.Size(247, 41);
             this.botingprog.TabIndex = 1;
             this.botingprog.Text = "Ingresar al programa";
             this.botingprog.UseVisualStyleBackColor = false;
@@ -66,9 +66,9 @@ namespace CUMple
             // 
             this.botcrearus.BackColor = System.Drawing.Color.DarkSlateGray;
             this.botcrearus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.botcrearus.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botcrearus.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botcrearus.ForeColor = System.Drawing.Color.White;
-            this.botcrearus.Location = new System.Drawing.Point(430, 279);
+            this.botcrearus.Location = new System.Drawing.Point(32, 199);
             this.botcrearus.Name = "botcrearus";
             this.botcrearus.Size = new System.Drawing.Size(245, 41);
             this.botcrearus.TabIndex = 2;
@@ -80,9 +80,9 @@ namespace CUMple
             // 
             this.btnbuscardis.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnbuscardis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnbuscardis.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscardis.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuscardis.ForeColor = System.Drawing.Color.White;
-            this.btnbuscardis.Location = new System.Drawing.Point(430, 375);
+            this.btnbuscardis.Location = new System.Drawing.Point(32, 374);
             this.btnbuscardis.Name = "btnbuscardis";
             this.btnbuscardis.Size = new System.Drawing.Size(245, 41);
             this.btnbuscardis.TabIndex = 4;
@@ -92,12 +92,12 @@ namespace CUMple
             // 
             // cmbalumnosexistentes
             // 
-            this.cmbalumnosexistentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbalumnosexistentes.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbalumnosexistentes.FormattingEnabled = true;
-            this.cmbalumnosexistentes.Location = new System.Drawing.Point(430, 333);
-            this.cmbalumnosexistentes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbalumnosexistentes.Location = new System.Drawing.Point(327, 137);
+            this.cmbalumnosexistentes.Margin = new System.Windows.Forms.Padding(2);
             this.cmbalumnosexistentes.Name = "cmbalumnosexistentes";
-            this.cmbalumnosexistentes.Size = new System.Drawing.Size(247, 33);
+            this.cmbalumnosexistentes.Size = new System.Drawing.Size(247, 31);
             this.cmbalumnosexistentes.TabIndex = 5;
             this.cmbalumnosexistentes.Text = "Nombres:";
             this.cmbalumnosexistentes.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -107,9 +107,9 @@ namespace CUMple
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = global::CUMple.Properties.Resources.logo_de_Academia_DO_difuminado_;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1084, 561);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.cmbalumnosexistentes);
             this.Controls.Add(this.btnbuscardis);
             this.Controls.Add(this.botcrearus);
