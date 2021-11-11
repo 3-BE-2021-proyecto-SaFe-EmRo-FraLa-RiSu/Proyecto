@@ -49,9 +49,10 @@ namespace CUMple
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(91, 175);
+            this.label1.Location = new System.Drawing.Point(136, 269);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 29);
+            this.label1.Size = new System.Drawing.Size(156, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario";
             // 
@@ -59,9 +60,10 @@ namespace CUMple
             // 
             this.txbusucre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbusucre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbusucre.Location = new System.Drawing.Point(420, 167);
+            this.txbusucre.Location = new System.Drawing.Point(630, 257);
+            this.txbusucre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbusucre.Name = "txbusucre";
-            this.txbusucre.Size = new System.Drawing.Size(245, 35);
+            this.txbusucre.Size = new System.Drawing.Size(366, 48);
             this.txbusucre.TabIndex = 1;
             this.txbusucre.TextChanged += new System.EventHandler(this.txbusucre_TextChanged);
             // 
@@ -69,9 +71,10 @@ namespace CUMple
             // 
             this.txtbcontra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbcontra.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbcontra.Location = new System.Drawing.Point(420, 218);
+            this.txtbcontra.Location = new System.Drawing.Point(630, 335);
+            this.txtbcontra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbcontra.Name = "txtbcontra";
-            this.txtbcontra.Size = new System.Drawing.Size(245, 35);
+            this.txtbcontra.Size = new System.Drawing.Size(366, 48);
             this.txtbcontra.TabIndex = 2;
             // 
             // label2
@@ -79,9 +82,10 @@ namespace CUMple
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(92, 218);
+            this.label2.Location = new System.Drawing.Point(138, 335);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 29);
+            this.label2.Size = new System.Drawing.Size(225, 44);
             this.label2.TabIndex = 3;
             this.label2.Text = "Contraseña";
             // 
@@ -91,9 +95,10 @@ namespace CUMple
             this.btnvolvercrearlosusuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnvolvercrearlosusuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolvercrearlosusuarios.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolvercrearlosusuarios.Location = new System.Drawing.Point(999, 497);
+            this.btnvolvercrearlosusuarios.Location = new System.Drawing.Point(1498, 765);
+            this.btnvolvercrearlosusuarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnvolvercrearlosusuarios.Name = "btnvolvercrearlosusuarios";
-            this.btnvolvercrearlosusuarios.Size = new System.Drawing.Size(43, 42);
+            this.btnvolvercrearlosusuarios.Size = new System.Drawing.Size(64, 65);
             this.btnvolvercrearlosusuarios.TabIndex = 4;
             this.btnvolvercrearlosusuarios.Text = "⮎";
             this.btnvolvercrearlosusuarios.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -106,9 +111,10 @@ namespace CUMple
             this.btcrearusuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btcrearusuario.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btcrearusuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btcrearusuario.Location = new System.Drawing.Point(788, 357);
+            this.btcrearusuario.Location = new System.Drawing.Point(1182, 549);
+            this.btcrearusuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btcrearusuario.Name = "btcrearusuario";
-            this.btcrearusuario.Size = new System.Drawing.Size(162, 36);
+            this.btcrearusuario.Size = new System.Drawing.Size(243, 55);
             this.btcrearusuario.TabIndex = 5;
             this.btcrearusuario.Text = "Crear usuario";
             this.btcrearusuario.UseVisualStyleBackColor = false;
@@ -119,9 +125,10 @@ namespace CUMple
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(49, 53);
+            this.label3.Location = new System.Drawing.Point(74, 82);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(289, 38);
+            this.label3.Size = new System.Drawing.Size(431, 59);
             this.label3.TabIndex = 6;
             this.label3.Text = "Editar usuarios";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -131,9 +138,10 @@ namespace CUMple
             this.chkboxadmin.AutoSize = true;
             this.chkboxadmin.BackColor = System.Drawing.Color.Transparent;
             this.chkboxadmin.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkboxadmin.Location = new System.Drawing.Point(775, 307);
+            this.chkboxadmin.Location = new System.Drawing.Point(1162, 472);
+            this.chkboxadmin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkboxadmin.Name = "chkboxadmin";
-            this.chkboxadmin.Size = new System.Drawing.Size(199, 33);
+            this.chkboxadmin.Size = new System.Drawing.Size(297, 48);
             this.chkboxadmin.TabIndex = 9;
             this.chkboxadmin.Text = "Administrador";
             this.chkboxadmin.UseVisualStyleBackColor = false;
@@ -143,9 +151,10 @@ namespace CUMple
             // 
             this.txbcontraconf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbcontraconf.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbcontraconf.Location = new System.Drawing.Point(420, 259);
+            this.txbcontraconf.Location = new System.Drawing.Point(630, 398);
+            this.txbcontraconf.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbcontraconf.Name = "txbcontraconf";
-            this.txbcontraconf.Size = new System.Drawing.Size(245, 35);
+            this.txbcontraconf.Size = new System.Drawing.Size(366, 48);
             this.txbcontraconf.TabIndex = 10;
             // 
             // label5
@@ -153,9 +162,10 @@ namespace CUMple
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(91, 263);
+            this.label5.Location = new System.Drawing.Point(136, 405);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(271, 29);
+            this.label5.Size = new System.Drawing.Size(411, 44);
             this.label5.TabIndex = 11;
             this.label5.Text = "Confirmar contraseña";
             // 
@@ -165,9 +175,10 @@ namespace CUMple
             this.btnborrarusuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnborrarusuario.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnborrarusuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnborrarusuario.Location = new System.Drawing.Point(79, 474);
+            this.btnborrarusuario.Location = new System.Drawing.Point(118, 729);
+            this.btnborrarusuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnborrarusuario.Name = "btnborrarusuario";
-            this.btnborrarusuario.Size = new System.Drawing.Size(162, 36);
+            this.btnborrarusuario.Size = new System.Drawing.Size(243, 55);
             this.btnborrarusuario.TabIndex = 12;
             this.btnborrarusuario.Text = "Borrar usuario";
             this.btnborrarusuario.UseVisualStyleBackColor = false;
@@ -179,9 +190,10 @@ namespace CUMple
             this.btneditarusuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btneditarusuario.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneditarusuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btneditarusuario.Location = new System.Drawing.Point(79, 357);
+            this.btneditarusuario.Location = new System.Drawing.Point(120, 664);
+            this.btneditarusuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btneditarusuario.Name = "btneditarusuario";
-            this.btneditarusuario.Size = new System.Drawing.Size(162, 36);
+            this.btneditarusuario.Size = new System.Drawing.Size(243, 55);
             this.btneditarusuario.TabIndex = 13;
             this.btneditarusuario.Text = "Editar usuario";
             this.btneditarusuario.UseVisualStyleBackColor = false;
@@ -189,12 +201,12 @@ namespace CUMple
             // 
             // Editarusuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1084, 561);
+            this.ClientSize = new System.Drawing.Size(1626, 863);
             this.Controls.Add(this.btneditarusuario);
             this.Controls.Add(this.btnborrarusuario);
             this.Controls.Add(this.label5);
@@ -209,6 +221,7 @@ namespace CUMple
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Editarusuarios";
             this.Text = "Editar usuarios";
             this.Load += new System.EventHandler(this.Crearlosusuarios_Load);

@@ -40,9 +40,14 @@ namespace CUMple
         }
         private void botcrearus_Click(object sender, EventArgs e)
         {
-            new Editarusuarios().Show();
-            this.Dispose();
-            
+            if (cmbalumnosexistentes.SelectedItem != null) {
+                new Editarusuarios().Show();
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un discipulo primero");
+            }
         }
 
         private void btnbuscardis_Click(object sender, EventArgs e)
