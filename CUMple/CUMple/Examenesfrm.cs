@@ -517,7 +517,7 @@ namespace CUMple
             }
             else
             {
-                MessageBox.Show("Solo puede seleccionar un elemento o"+"\n buscar un examinador y una fecha. O una fecha y una hora");
+                MessageBox.Show("Solo puede seleccionar un elemento, buscar un examinador y una fecha o una fecha y una hora");
             }
 
 

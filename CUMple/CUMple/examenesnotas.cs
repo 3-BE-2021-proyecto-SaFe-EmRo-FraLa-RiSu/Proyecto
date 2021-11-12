@@ -42,13 +42,26 @@ namespace CUMple
         private void comboboxidactualizado()
         {
             MySqlDataReader lectordedatos;
-            string comand = "Select idexamen from rango_obtenido;";
+            string comand = "Select idexamen from examenes;";
             conexionbd.Open();
             MySqlCommand comando = new MySqlCommand(comand, conexionbd);
             lectordedatos = comando.ExecuteReader();
             while (lectordedatos.Read())
             {
                 cbidexamen.Items.Add(lectordedatos["idexamen"].ToString());
+            }
+            conexionbd.Close();
+        }
+        private void comboboxcedula()
+        {
+            MySqlDataReader lectordedatos;
+            string comand = "Select cedula from discipulos;";
+            conexionbd.Open();
+            MySqlCommand comando = new MySqlCommand(comand, conexionbd);
+            lectordedatos = comando.ExecuteReader();
+            while (lectordedatos.Read())
+            {
+                cbcedula.Items.Add(lectordedatos["cedula"].ToString());
             }
             conexionbd.Close();
         }
@@ -59,6 +72,7 @@ namespace CUMple
 
         private void examenesnotas_Load(object sender, EventArgs e)
         {
+            comboboxcedula();
             comboboxidactualizado();
             dgvexamenes.DataSource=cargarexamenes(idexamen1);
         
@@ -67,32 +81,66 @@ namespace CUMple
         private void cbidexamen_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            dgvexamenes.Refresh();
+            dgvexamenes.DataSource = cargarexamenes(cbidexamen.SelectedItem.ToString());
+         
         }
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            if (cbcedula.SelectedIndex != -1 && txbnota.Text != "" && cbrango.SelectedIndex != -1 && cbidexamen.SelectedIndex==-1)
+            if (cbcedula.SelectedIndex != -1 && txbnota.Text != "" && cbrango.SelectedIndex != -1 && cbidexamen.SelectedIndex!=-1)
             {
                 string rango=cbrango.SelectedItem.ToString();
                 string cedula = cbcedula.SelectedItem.ToString();
+                int nota = Int32.Parse(txbnota.Text);
+             
+             
+
+                foreach (DataGridViewRow filas in dgvexamenes.Rows)
+                {
+                              
+                    if (cedula == Convert.ToString(filas.Cells["cedula"].Value))
+                    {
+                        MessageBox.Show("El alumno ya fue creado");
+                        break;
+                    }
+                    else
+                    {
+
+                      
+                        if ((nota > 0 && nota<=90))
+                        {
+                            conexionbd.Open();
+                            string comando = "insert into rango_obtenido values(" + nota + ",'" + rango + "'," + cbidexamen.SelectedItem.ToString() + ",'" + cedula + "');";
+                            MySqlCommand comandoingresarexamenes = new MySqlCommand(comando, conexionbd);
+                            comandoingresarexamenes.ExecuteNonQuery();
+                            MessageBox.Show("Se agrego correctamente el examen");
+                            conexionbd.Close();                           
+                            dgvexamenes.Refresh();
+                        }
+                        else
+                        {
+                            MessageBox.Show("La nota debe estar entre 90 y 0");
+                        }
+                        break;
+                    }
+                }
+                
+                    
+               
+              
+              
+             
+              
 
              
 
-
-                conexionbd.Open();
-                string comando = "insert into rango_obtenido (notas,nuevo_rango,cedula) values('" + txbnota.Text + "','" + rango + "','"+ cedula+ "');";
-                MySqlCommand comandoingresarexamenes = new MySqlCommand(comando, conexionbd);
-                comandoingresarexamenes.ExecuteNonQuery();
-                MessageBox.Show("Se agrego correctamente el examen");               
-                conexionbd.Close();
-                cbidexamen.Items.Clear();
-                comboboxidactualizado();
-               
             }
 
             else
             {
-                MessageBox.Show("Los datos no se han podido ingresar correctamente." + "\nAsegurese que todas las casillas estan con datos ingresados y que ningún id este seleccionado");
+                MessageBox.Show("Los datos no se han podido ingresar correctamente." +
+                    "Asegurese que todas las casillas estan con datos ingresados y que ningún id este seleccionado.");
             }
         }
 
@@ -128,6 +176,11 @@ namespace CUMple
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

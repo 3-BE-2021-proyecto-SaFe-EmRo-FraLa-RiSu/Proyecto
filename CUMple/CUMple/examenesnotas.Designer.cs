@@ -112,7 +112,7 @@ namespace CUMple
             // btneliminar
             // 
             this.btneliminar.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Location = new System.Drawing.Point(958, 87);
+            this.btneliminar.Location = new System.Drawing.Point(958, 81);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(101, 43);
             this.btneliminar.TabIndex = 19;
@@ -140,6 +140,7 @@ namespace CUMple
             this.btneditar.TabIndex = 17;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // cbidexamen
             // 
@@ -187,8 +188,30 @@ namespace CUMple
             this.cbrango.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbrango.FormattingEnabled = true;
             this.cbrango.Items.AddRange(new object[] {
-            "Taekwondo",
-            "Krav Maga"});
+            "Blanco",
+            "Blanco confirmado",
+            "Naranja",
+            "Naranja confirmado",
+            "Amarillo",
+            "Amarillo confirmado",
+            "Camuflado",
+            "Camuflado confirmado",
+            "Verde",
+            "Verde confirmado",
+            "Violeta",
+            "Violeta confirmado",
+            "Marrón",
+            "Marrón cornfirmado",
+            "Rojo ",
+            "Rojo confirmado",
+            "Rojo negro",
+            "Rojo negro confirmado",
+            "Negro",
+            "Negro confirmado",
+            "1mer DAN",
+            "2ndo DAN",
+            "3er DAN",
+            "4to DAN"});
             this.cbrango.Location = new System.Drawing.Point(550, 81);
             this.cbrango.Margin = new System.Windows.Forms.Padding(2);
             this.cbrango.Name = "cbrango";
@@ -210,9 +233,6 @@ namespace CUMple
             // 
             this.cbcedula.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbcedula.FormattingEnabled = true;
-            this.cbcedula.Items.AddRange(new object[] {
-            "Taekwondo",
-            "Krav Maga"});
             this.cbcedula.Location = new System.Drawing.Point(272, 81);
             this.cbcedula.Margin = new System.Windows.Forms.Padding(2);
             this.cbcedula.Name = "cbcedula";
