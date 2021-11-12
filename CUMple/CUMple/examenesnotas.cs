@@ -88,53 +88,36 @@ namespace CUMple
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            if (cbcedula.SelectedIndex != -1 && txbnota.Text != "" && cbrango.SelectedIndex != -1 && cbidexamen.SelectedIndex!=-1)
+            if (cbcedula.SelectedIndex != -1 && txbnota.Text != "" && cbrango.SelectedIndex != -1 && cbidexamen.SelectedIndex != -1)
             {
-                string rango=cbrango.SelectedItem.ToString();
+                string rango = cbrango.SelectedItem.ToString();
                 string cedula = cbcedula.SelectedItem.ToString();
                 int nota = Int32.Parse(txbnota.Text);
-             
-             
 
-                foreach (DataGridViewRow filas in dgvexamenes.Rows)
+                for (int i = 0; i < dgvexamenes.RowCount-1; i++)
                 {
-                              
-                    if (cedula == Convert.ToString(filas.Cells["cedula"].Value))
+                    if (cedula == dgvexamenes.Rows[i].Cells["cedula"].Value.ToString())
                     {
-                        MessageBox.Show("El alumno ya fue creado");
-                        break;
-                    }
-                    else
-                    {
-
-                      
-                        if ((nota > 0 && nota<=90))
-                        {
-                            conexionbd.Open();
-                            string comando = "insert into rango_obtenido values(" + nota + ",'" + rango + "'," + cbidexamen.SelectedItem.ToString() + ",'" + cedula + "');";
-                            MySqlCommand comandoingresarexamenes = new MySqlCommand(comando, conexionbd);
-                            comandoingresarexamenes.ExecuteNonQuery();
-                            MessageBox.Show("Se agrego correctamente el examen");
-                            conexionbd.Close();                           
-                            dgvexamenes.Refresh();
-                        }
-                        else
-                        {
-                            MessageBox.Show("La nota debe estar entre 90 y 0");
-                        }
-                        break;
+                       
+                        MessageBox.Show("El alumno ya fue ingresado");
+                        return;                       
                     }
                 }
-                
-                    
-               
-              
-              
-             
-              
+                if (nota>0 && nota<=90)
+                {
+                    conexionbd.Open();
+                    MySqlCommand crearusuario = new MySqlCommand("insert into rango_obtenido values(" + nota + ",'" + rango + "'," + cbidexamen.SelectedItem.ToString() + ",'" + cedula + "')", conexionbd);
+                    crearusuario.ExecuteNonQuery();
+                    conexionbd.Close();
+                    dgvexamenes.DataSource =cargarexamenes(cbidexamen.SelectedItem.ToString());
+                    MessageBox.Show("El alumno fue ingresado de manera correcta");
+                }
+                else
+                {
+                    MessageBox.Show("La nota debe estar entre 1 y 90");
+                }
 
-             
-
+        
             }
 
             else

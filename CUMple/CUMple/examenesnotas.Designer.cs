@@ -69,9 +69,9 @@ namespace CUMple
             this.idexamen,
             this.notas,
             this.nuevo_rango});
-            this.dgvexamenes.Location = new System.Drawing.Point(178, 224);
+            this.dgvexamenes.Location = new System.Drawing.Point(317, 224);
             this.dgvexamenes.Name = "dgvexamenes";
-            this.dgvexamenes.Size = new System.Drawing.Size(768, 300);
+            this.dgvexamenes.Size = new System.Drawing.Size(443, 300);
             this.dgvexamenes.TabIndex = 0;
             this.dgvexamenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

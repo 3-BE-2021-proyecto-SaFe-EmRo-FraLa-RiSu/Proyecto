@@ -40,7 +40,7 @@ namespace CUMple
         }
         private void botcrearus_Click(object sender, EventArgs e)
         {
-            if (cmbalumnosexistentes.SelectedItem != null) {
+            if (cmbalumnosexistentes.SelectedIndex != -1) {
                 new Editarusuarios().Show();
                 this.Dispose();
             }

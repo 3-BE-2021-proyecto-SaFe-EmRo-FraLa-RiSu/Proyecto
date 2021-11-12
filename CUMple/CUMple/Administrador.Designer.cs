@@ -42,10 +42,9 @@ namespace CUMple
             this.lblxd.AutoSize = true;
             this.lblxd.BackColor = System.Drawing.Color.Transparent;
             this.lblxd.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblxd.Location = new System.Drawing.Point(427, 115);
-            this.lblxd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblxd.Location = new System.Drawing.Point(285, 75);
             this.lblxd.Name = "lblxd";
-            this.lblxd.Size = new System.Drawing.Size(405, 35);
+            this.lblxd.Size = new System.Drawing.Size(267, 23);
             this.lblxd.TabIndex = 0;
             this.lblxd.Text = "Bienvenido, administrador.";
             // 
@@ -55,10 +54,9 @@ namespace CUMple
             this.botingprog.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botingprog.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botingprog.ForeColor = System.Drawing.Color.White;
-            this.botingprog.Location = new System.Drawing.Point(431, 352);
-            this.botingprog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.botingprog.Location = new System.Drawing.Point(287, 229);
             this.botingprog.Name = "botingprog";
-            this.botingprog.Size = new System.Drawing.Size(370, 63);
+            this.botingprog.Size = new System.Drawing.Size(247, 41);
             this.botingprog.TabIndex = 1;
             this.botingprog.Text = "Ingresar al programa";
             this.botingprog.UseVisualStyleBackColor = false;
@@ -70,10 +68,9 @@ namespace CUMple
             this.botcrearus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botcrearus.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botcrearus.ForeColor = System.Drawing.Color.White;
-            this.botcrearus.Location = new System.Drawing.Point(433, 249);
-            this.botcrearus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.botcrearus.Location = new System.Drawing.Point(289, 162);
             this.botcrearus.Name = "botcrearus";
-            this.botcrearus.Size = new System.Drawing.Size(368, 63);
+            this.botcrearus.Size = new System.Drawing.Size(245, 41);
             this.botcrearus.TabIndex = 2;
             this.botcrearus.Text = "Editar usuarios";
             this.botcrearus.UseVisualStyleBackColor = false;
@@ -85,10 +82,9 @@ namespace CUMple
             this.btnbuscardis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnbuscardis.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuscardis.ForeColor = System.Drawing.Color.White;
-            this.btnbuscardis.Location = new System.Drawing.Point(433, 457);
-            this.btnbuscardis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnbuscardis.Location = new System.Drawing.Point(289, 297);
             this.btnbuscardis.Name = "btnbuscardis";
-            this.btnbuscardis.Size = new System.Drawing.Size(368, 63);
+            this.btnbuscardis.Size = new System.Drawing.Size(245, 41);
             this.btnbuscardis.TabIndex = 4;
             this.btnbuscardis.Text = "Buscar Discipulos";
             this.btnbuscardis.UseVisualStyleBackColor = false;
@@ -98,21 +94,22 @@ namespace CUMple
             // 
             this.cmbalumnosexistentes.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbalumnosexistentes.FormattingEnabled = true;
-            this.cmbalumnosexistentes.Location = new System.Drawing.Point(433, 181);
+            this.cmbalumnosexistentes.Location = new System.Drawing.Point(289, 118);
+            this.cmbalumnosexistentes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbalumnosexistentes.Name = "cmbalumnosexistentes";
-            this.cmbalumnosexistentes.Size = new System.Drawing.Size(368, 43);
+            this.cmbalumnosexistentes.Size = new System.Drawing.Size(247, 31);
             this.cmbalumnosexistentes.TabIndex = 5;
-            this.cmbalumnosexistentes.Text = "Nombres:";
+            this.cmbalumnosexistentes.Text = "Discipulos:";
             this.cmbalumnosexistentes.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // formadmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1227, 774);
+            this.ClientSize = new System.Drawing.Size(818, 503);
             this.Controls.Add(this.cmbalumnosexistentes);
             this.Controls.Add(this.btnbuscardis);
             this.Controls.Add(this.botcrearus);
@@ -120,7 +117,6 @@ namespace CUMple
             this.Controls.Add(this.lblxd);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "formadmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrador";
