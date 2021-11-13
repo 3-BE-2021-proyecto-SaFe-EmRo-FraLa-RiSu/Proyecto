@@ -506,7 +506,17 @@ namespace CUMple
             restaurar.Visible = false;
             maximizar.Visible = true;
         }
-    }
+
+        private void txbexaminadores_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 225))
+            {
+                MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
+    }
+}
     
 
