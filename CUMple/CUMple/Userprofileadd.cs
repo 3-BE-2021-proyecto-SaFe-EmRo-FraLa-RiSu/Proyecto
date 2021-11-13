@@ -71,7 +71,7 @@ namespace CUMple
             }
             if (camposincompletos == 0)
             {
-                agregarusuario(txbnombrecompleto.Text, txbcedula.ToString(), txbcelular.ToString(), txbprofesion.Text, dtpfec_nac.ToString(), txbemail.Text, taekwondobool, krav_magabool, dtpfechadeingreso.ToString());
+                agregarusuario(txbnombrecompleto.Text, txbcedula.Text, txbcelular.Text, txbprofesion.Text, dtpfec_nac.Text, txbemail.Text, taekwondobool, krav_magabool, dtpfechadeingreso.Text);
                 /*
                 conexionprograma.Open();
                 string comando = "insert into discipulos values ('" + txbcelular.ToString()+ "', '" + dtpfechadeingreso.ToString()+ "', '" + txbnombrecompleto.ToString()+ "', '" + krav_magabool+ "', '" + taekwondobool+ "', '" + txbprofesion.ToString()+ "', '" + dtpfec_nac.ToString()+ "', '" + txbemail.ToString()+ "');";
@@ -98,7 +98,7 @@ namespace CUMple
         { 
             
             conexionprograma.Open();
-            string comando = "insert into discipulos values ('" + celular + "', '" + fech_ingreso + "', '" + nombrecompleto + "', '" + krav + "', '" + taekwondo + "', '" + profesion + "', '" + fech_nac + "', '" + email + "');";
+            string comando = "insert into discipulos values ('" + celular + "', '"+ cedula +"', '" + fech_ingreso + "', '" + nombrecompleto + "', " + krav + ", " + taekwondo + ", '" + profesion + "', '" + fech_nac + "', '" + email + "');";
             MySqlCommand comandoeditarusuario = new MySqlCommand(comando, conexionprograma);
             try
             {
@@ -147,6 +147,11 @@ namespace CUMple
             WindowState = FormWindowState.Normal;
             restaurar.Visible = false;
             maximizar.Visible = true;
+        }
+
+        private void dtpfechadeingreso_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

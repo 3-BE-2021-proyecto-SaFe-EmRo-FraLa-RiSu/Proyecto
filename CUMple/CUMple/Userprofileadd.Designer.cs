@@ -66,9 +66,10 @@ namespace CUMple
             // 
             // btnagregar
             // 
-            this.btnagregar.Location = new System.Drawing.Point(1058, 617);
+            this.btnagregar.Location = new System.Drawing.Point(705, 401);
+            this.btnagregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(224, 42);
+            this.btnagregar.Size = new System.Drawing.Size(149, 27);
             this.btnagregar.TabIndex = 0;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
@@ -77,60 +78,54 @@ namespace CUMple
             // txbemail
             // 
             this.txbemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbemail.Location = new System.Drawing.Point(1067, 409);
-            this.txbemail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbemail.Location = new System.Drawing.Point(711, 266);
             this.txbemail.Name = "txbemail";
-            this.txbemail.Size = new System.Drawing.Size(215, 33);
+            this.txbemail.Size = new System.Drawing.Size(145, 24);
             this.txbemail.TabIndex = 30;
             // 
             // lblcelular
             // 
             this.lblcelular.AutoSize = true;
             this.lblcelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcelular.Location = new System.Drawing.Point(351, 413);
-            this.lblcelular.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcelular.Location = new System.Drawing.Point(234, 268);
             this.lblcelular.Name = "lblcelular";
-            this.lblcelular.Size = new System.Drawing.Size(96, 29);
+            this.lblcelular.Size = new System.Drawing.Size(62, 20);
             this.lblcelular.TabIndex = 29;
             this.lblcelular.Text = "Celular:";
             // 
             // txbcedula
             // 
             this.txbcedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbcedula.Location = new System.Drawing.Point(571, 336);
-            this.txbcedula.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbcedula.Location = new System.Drawing.Point(381, 218);
             this.txbcedula.Name = "txbcedula";
-            this.txbcedula.Size = new System.Drawing.Size(215, 33);
+            this.txbcedula.Size = new System.Drawing.Size(145, 24);
             this.txbcedula.TabIndex = 28;
             // 
             // lblemail
             // 
             this.lblemail.AutoSize = true;
             this.lblemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblemail.Location = new System.Drawing.Point(816, 413);
-            this.lblemail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblemail.Location = new System.Drawing.Point(544, 268);
             this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(80, 29);
+            this.lblemail.Size = new System.Drawing.Size(52, 20);
             this.lblemail.TabIndex = 27;
             this.lblemail.Text = "Email:";
             // 
             // txbnombrecompleto
             // 
             this.txbnombrecompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbnombrecompleto.Location = new System.Drawing.Point(571, 270);
-            this.txbnombrecompleto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbnombrecompleto.Location = new System.Drawing.Point(381, 175);
             this.txbnombrecompleto.Name = "txbnombrecompleto";
-            this.txbnombrecompleto.Size = new System.Drawing.Size(215, 33);
+            this.txbnombrecompleto.Size = new System.Drawing.Size(145, 24);
             this.txbnombrecompleto.TabIndex = 26;
             // 
             // lblcedula
             // 
             this.lblcedula.AutoSize = true;
             this.lblcedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcedula.Location = new System.Drawing.Point(351, 342);
-            this.lblcedula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcedula.Location = new System.Drawing.Point(234, 222);
             this.lblcedula.Name = "lblcedula";
-            this.lblcedula.Size = new System.Drawing.Size(96, 29);
+            this.lblcedula.Size = new System.Drawing.Size(63, 20);
             this.lblcedula.TabIndex = 25;
             this.lblcedula.Text = "Cédula:";
             // 
@@ -138,30 +133,27 @@ namespace CUMple
             // 
             this.lblprofesion.AutoSize = true;
             this.lblprofesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprofesion.Location = new System.Drawing.Point(816, 276);
-            this.lblprofesion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblprofesion.Location = new System.Drawing.Point(544, 179);
             this.lblprofesion.Name = "lblprofesion";
-            this.lblprofesion.Size = new System.Drawing.Size(122, 29);
+            this.lblprofesion.Size = new System.Drawing.Size(80, 20);
             this.lblprofesion.TabIndex = 24;
             this.lblprofesion.Text = "Profesión:";
             // 
             // txbprofesion
             // 
             this.txbprofesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbprofesion.Location = new System.Drawing.Point(1067, 273);
-            this.txbprofesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbprofesion.Location = new System.Drawing.Point(711, 177);
             this.txbprofesion.Name = "txbprofesion";
-            this.txbprofesion.Size = new System.Drawing.Size(215, 33);
+            this.txbprofesion.Size = new System.Drawing.Size(145, 24);
             this.txbprofesion.TabIndex = 34;
             // 
             // lblfechnac
             // 
             this.lblfechnac.AutoSize = true;
             this.lblfechnac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfechnac.Location = new System.Drawing.Point(816, 339);
-            this.lblfechnac.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblfechnac.Location = new System.Drawing.Point(544, 220);
             this.lblfechnac.Name = "lblfechnac";
-            this.lblfechnac.Size = new System.Drawing.Size(243, 29);
+            this.lblfechnac.Size = new System.Drawing.Size(161, 20);
             this.lblfechnac.TabIndex = 33;
             this.lblfechnac.Text = "Fecha de nacimiento:";
             // 
@@ -169,39 +161,37 @@ namespace CUMple
             // 
             this.lblnombrecompleto.AutoSize = true;
             this.lblnombrecompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombrecompleto.Location = new System.Drawing.Point(351, 273);
-            this.lblnombrecompleto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblnombrecompleto.Location = new System.Drawing.Point(234, 177);
             this.lblnombrecompleto.Name = "lblnombrecompleto";
-            this.lblnombrecompleto.Size = new System.Drawing.Size(213, 29);
+            this.lblnombrecompleto.Size = new System.Drawing.Size(138, 20);
             this.lblnombrecompleto.TabIndex = 32;
             this.lblnombrecompleto.Text = "Nombre completo:";
             // 
             // txbcelular
             // 
             this.txbcelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbcelular.Location = new System.Drawing.Point(571, 409);
-            this.txbcelular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbcelular.Location = new System.Drawing.Point(381, 266);
             this.txbcelular.Name = "txbcelular";
-            this.txbcelular.Size = new System.Drawing.Size(215, 33);
+            this.txbcelular.Size = new System.Drawing.Size(145, 24);
             this.txbcelular.TabIndex = 31;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(351, 494);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(234, 321);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 29);
+            this.label5.Size = new System.Drawing.Size(80, 20);
             this.label5.TabIndex = 35;
             this.label5.Text = "Disciplina:";
             // 
             // chbtaekwondo
             // 
             this.chbtaekwondo.AutoSize = true;
-            this.chbtaekwondo.Location = new System.Drawing.Point(571, 500);
+            this.chbtaekwondo.Location = new System.Drawing.Point(381, 325);
+            this.chbtaekwondo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chbtaekwondo.Name = "chbtaekwondo";
-            this.chbtaekwondo.Size = new System.Drawing.Size(117, 24);
+            this.chbtaekwondo.Size = new System.Drawing.Size(83, 17);
             this.chbtaekwondo.TabIndex = 36;
             this.chbtaekwondo.Text = "Taekwondo";
             this.chbtaekwondo.UseVisualStyleBackColor = true;
@@ -209,9 +199,10 @@ namespace CUMple
             // chbkrav
             // 
             this.chbkrav.AutoSize = true;
-            this.chbkrav.Location = new System.Drawing.Point(571, 531);
+            this.chbkrav.Location = new System.Drawing.Point(381, 345);
+            this.chbkrav.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chbkrav.Name = "chbkrav";
-            this.chbkrav.Size = new System.Drawing.Size(110, 24);
+            this.chbkrav.Size = new System.Drawing.Size(78, 17);
             this.chbkrav.TabIndex = 37;
             this.chbkrav.Text = "Krav Maga";
             this.chbkrav.UseVisualStyleBackColor = true;
@@ -221,9 +212,10 @@ namespace CUMple
             this.btnvolveruserprofileadd.BackColor = System.Drawing.Color.DarkRed;
             this.btnvolveruserprofileadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolveruserprofileadd.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolveruserprofileadd.Location = new System.Drawing.Point(20, 1135);
+            this.btnvolveruserprofileadd.Location = new System.Drawing.Point(13, 738);
+            this.btnvolveruserprofileadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnvolveruserprofileadd.Name = "btnvolveruserprofileadd";
-            this.btnvolveruserprofileadd.Size = new System.Drawing.Size(64, 65);
+            this.btnvolveruserprofileadd.Size = new System.Drawing.Size(43, 42);
             this.btnvolveruserprofileadd.TabIndex = 38;
             this.btnvolveruserprofileadd.Text = "⮎";
             this.btnvolveruserprofileadd.UseVisualStyleBackColor = false;
@@ -233,10 +225,9 @@ namespace CUMple
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.panel3.Controls.Add(this.btnvolveruserprofileadd);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 172);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Location = new System.Drawing.Point(0, 112);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 584);
+            this.panel3.Size = new System.Drawing.Size(200, 379);
             this.panel3.TabIndex = 40;
             // 
             // panel1
@@ -248,19 +239,17 @@ namespace CUMple
             this.panel1.Controls.Add(this.maximizar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1359, 172);
+            this.panel1.Size = new System.Drawing.Size(906, 112);
             this.panel1.TabIndex = 39;
             // 
             // restaurar
             // 
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(1191, 48);
-            this.restaurar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.restaurar.Location = new System.Drawing.Point(794, 31);
             this.restaurar.Name = "restaurar";
-            this.restaurar.Size = new System.Drawing.Size(62, 65);
+            this.restaurar.Size = new System.Drawing.Size(41, 42);
             this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.restaurar.TabIndex = 13;
             this.restaurar.TabStop = false;
@@ -271,10 +260,9 @@ namespace CUMple
             // 
             this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(1121, 48);
-            this.minimizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.minimizar.Location = new System.Drawing.Point(747, 31);
             this.minimizar.Name = "minimizar";
-            this.minimizar.Size = new System.Drawing.Size(62, 65);
+            this.minimizar.Size = new System.Drawing.Size(41, 42);
             this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.minimizar.TabIndex = 12;
             this.minimizar.TabStop = false;
@@ -284,10 +272,9 @@ namespace CUMple
             // 
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(1262, 48);
-            this.cerrarclic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cerrarclic.Location = new System.Drawing.Point(841, 31);
             this.cerrarclic.Name = "cerrarclic";
-            this.cerrarclic.Size = new System.Drawing.Size(62, 65);
+            this.cerrarclic.Size = new System.Drawing.Size(41, 42);
             this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cerrarclic.TabIndex = 11;
             this.cerrarclic.TabStop = false;
@@ -297,10 +284,9 @@ namespace CUMple
             // 
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(1191, 48);
-            this.maximizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.maximizar.Location = new System.Drawing.Point(794, 31);
             this.maximizar.Name = "maximizar";
-            this.maximizar.Size = new System.Drawing.Size(62, 65);
+            this.maximizar.Size = new System.Drawing.Size(41, 42);
             this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.maximizar.TabIndex = 10;
             this.maximizar.TabStop = false;
@@ -311,9 +297,10 @@ namespace CUMple
             this.btnvolveruserprofile.BackColor = System.Drawing.Color.DarkRed;
             this.btnvolveruserprofile.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolveruserprofile.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolveruserprofile.Location = new System.Drawing.Point(356, 594);
+            this.btnvolveruserprofile.Location = new System.Drawing.Point(237, 386);
+            this.btnvolveruserprofile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnvolveruserprofile.Name = "btnvolveruserprofile";
-            this.btnvolveruserprofile.Size = new System.Drawing.Size(64, 65);
+            this.btnvolveruserprofile.Size = new System.Drawing.Size(43, 42);
             this.btnvolveruserprofile.TabIndex = 41;
             this.btnvolveruserprofile.Text = "⮎";
             this.btnvolveruserprofile.UseVisualStyleBackColor = false;
@@ -323,19 +310,19 @@ namespace CUMple
             // 
             this.dtpfec_nac.CustomFormat = "yyyy-MM-dd";
             this.dtpfec_nac.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpfec_nac.Location = new System.Drawing.Point(1067, 343);
+            this.dtpfec_nac.Location = new System.Drawing.Point(711, 223);
+            this.dtpfec_nac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpfec_nac.Name = "dtpfec_nac";
-            this.dtpfec_nac.Size = new System.Drawing.Size(142, 26);
+            this.dtpfec_nac.Size = new System.Drawing.Size(96, 20);
             this.dtpfec_nac.TabIndex = 42;
             // 
             // lblfechadeingreso
             // 
             this.lblfechadeingreso.AutoSize = true;
             this.lblfechadeingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfechadeingreso.Location = new System.Drawing.Point(816, 494);
-            this.lblfechadeingreso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblfechadeingreso.Location = new System.Drawing.Point(544, 321);
             this.lblfechadeingreso.Name = "lblfechadeingreso";
-            this.lblfechadeingreso.Size = new System.Drawing.Size(195, 29);
+            this.lblfechadeingreso.Size = new System.Drawing.Size(128, 20);
             this.lblfechadeingreso.TabIndex = 43;
             this.lblfechadeingreso.Text = "Feha de ingreso:";
             // 
@@ -344,17 +331,19 @@ namespace CUMple
             this.dtpfechadeingreso.CustomFormat = "yyyy-MM-dd";
             this.dtpfechadeingreso.Enabled = false;
             this.dtpfechadeingreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpfechadeingreso.Location = new System.Drawing.Point(1067, 496);
+            this.dtpfechadeingreso.Location = new System.Drawing.Point(711, 322);
+            this.dtpfechadeingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpfechadeingreso.Name = "dtpfechadeingreso";
-            this.dtpfechadeingreso.Size = new System.Drawing.Size(142, 26);
+            this.dtpfechadeingreso.Size = new System.Drawing.Size(96, 20);
             this.dtpfechadeingreso.TabIndex = 44;
+            this.dtpfechadeingreso.ValueChanged += new System.EventHandler(this.dtpfechadeingreso_ValueChanged);
             // 
             // Userprofileadd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1359, 756);
+            this.ClientSize = new System.Drawing.Size(906, 491);
             this.Controls.Add(this.dtpfechadeingreso);
             this.Controls.Add(this.lblfechadeingreso);
             this.Controls.Add(this.dtpfec_nac);
@@ -377,6 +366,7 @@ namespace CUMple
             this.Controls.Add(this.lblcedula);
             this.Controls.Add(this.lblprofesion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Userprofileadd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Userprofileadd";

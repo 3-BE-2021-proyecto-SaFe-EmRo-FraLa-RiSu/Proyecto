@@ -35,6 +35,7 @@ namespace CUMple
             this.botcrearus = new System.Windows.Forms.Button();
             this.btnbuscardis = new System.Windows.Forms.Button();
             this.cmbalumnosexistentes = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblxd
@@ -72,7 +73,7 @@ namespace CUMple
             this.botcrearus.Name = "botcrearus";
             this.botcrearus.Size = new System.Drawing.Size(245, 41);
             this.botcrearus.TabIndex = 2;
-            this.botcrearus.Text = "Editar usuarios";
+            this.botcrearus.Text = "Editar Discipulos";
             this.botcrearus.UseVisualStyleBackColor = false;
             this.botcrearus.Click += new System.EventHandler(this.botcrearus_Click);
             // 
@@ -102,6 +103,20 @@ namespace CUMple
             this.cmbalumnosexistentes.Text = "Discipulos:";
             this.cmbalumnosexistentes.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(287, 361);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(245, 41);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Agregar Discipulos";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // formadmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,6 +125,7 @@ namespace CUMple
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(818, 503);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbalumnosexistentes);
             this.Controls.Add(this.btnbuscardis);
             this.Controls.Add(this.botcrearus);
@@ -133,5 +149,6 @@ namespace CUMple
         private System.Windows.Forms.Button botcrearus;
         private System.Windows.Forms.Button btnbuscardis;
         private System.Windows.Forms.ComboBox cmbalumnosexistentes;
+        private System.Windows.Forms.Button button1;
     }
 }
