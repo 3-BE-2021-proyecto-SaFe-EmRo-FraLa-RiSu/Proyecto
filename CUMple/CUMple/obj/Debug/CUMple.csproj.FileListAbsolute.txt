@@ -211,3 +211,4 @@ D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.examene
 D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Userprofileadd.resources
 C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.examenesnotas.resources
 C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Userprofileadd.resources
+C:\Users\rimas\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Userprofileadd.resources

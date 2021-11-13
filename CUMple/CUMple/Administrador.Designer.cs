@@ -33,9 +33,10 @@ namespace CUMple
             this.lblxd = new System.Windows.Forms.Label();
             this.botingprog = new System.Windows.Forms.Button();
             this.botcrearus = new System.Windows.Forms.Button();
-            this.btnbuscardis = new System.Windows.Forms.Button();
             this.cmbalumnosexistentes = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnfiltrar = new System.Windows.Forms.Button();
+            this.txbapellidofiltrar = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblxd
@@ -55,7 +56,7 @@ namespace CUMple
             this.botingprog.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botingprog.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botingprog.ForeColor = System.Drawing.Color.White;
-            this.botingprog.Location = new System.Drawing.Point(287, 229);
+            this.botingprog.Location = new System.Drawing.Point(158, 226);
             this.botingprog.Name = "botingprog";
             this.botingprog.Size = new System.Drawing.Size(247, 41);
             this.botingprog.TabIndex = 1;
@@ -69,7 +70,7 @@ namespace CUMple
             this.botcrearus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.botcrearus.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botcrearus.ForeColor = System.Drawing.Color.White;
-            this.botcrearus.Location = new System.Drawing.Point(289, 162);
+            this.botcrearus.Location = new System.Drawing.Point(160, 159);
             this.botcrearus.Name = "botcrearus";
             this.botcrearus.Size = new System.Drawing.Size(245, 41);
             this.botcrearus.TabIndex = 2;
@@ -77,26 +78,12 @@ namespace CUMple
             this.botcrearus.UseVisualStyleBackColor = false;
             this.botcrearus.Click += new System.EventHandler(this.botcrearus_Click);
             // 
-            // btnbuscardis
-            // 
-            this.btnbuscardis.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnbuscardis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnbuscardis.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbuscardis.ForeColor = System.Drawing.Color.White;
-            this.btnbuscardis.Location = new System.Drawing.Point(289, 297);
-            this.btnbuscardis.Name = "btnbuscardis";
-            this.btnbuscardis.Size = new System.Drawing.Size(245, 41);
-            this.btnbuscardis.TabIndex = 4;
-            this.btnbuscardis.Text = "Buscar Discipulos";
-            this.btnbuscardis.UseVisualStyleBackColor = false;
-            this.btnbuscardis.Click += new System.EventHandler(this.btnbuscardis_Click);
-            // 
             // cmbalumnosexistentes
             // 
             this.cmbalumnosexistentes.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbalumnosexistentes.FormattingEnabled = true;
-            this.cmbalumnosexistentes.Location = new System.Drawing.Point(289, 118);
-            this.cmbalumnosexistentes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbalumnosexistentes.Location = new System.Drawing.Point(160, 115);
+            this.cmbalumnosexistentes.Margin = new System.Windows.Forms.Padding(2);
             this.cmbalumnosexistentes.Name = "cmbalumnosexistentes";
             this.cmbalumnosexistentes.Size = new System.Drawing.Size(247, 31);
             this.cmbalumnosexistentes.TabIndex = 5;
@@ -109,13 +96,33 @@ namespace CUMple
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(287, 361);
+            this.button1.Location = new System.Drawing.Point(158, 296);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(245, 41);
             this.button1.TabIndex = 6;
             this.button1.Text = "Agregar Discipulos";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnfiltrar
+            // 
+            this.btnfiltrar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnfiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnfiltrar.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfiltrar.ForeColor = System.Drawing.Color.White;
+            this.btnfiltrar.Location = new System.Drawing.Point(424, 159);
+            this.btnfiltrar.Name = "btnfiltrar";
+            this.btnfiltrar.Size = new System.Drawing.Size(245, 41);
+            this.btnfiltrar.TabIndex = 7;
+            this.btnfiltrar.Text = "Filtrar Discipulos";
+            this.btnfiltrar.UseVisualStyleBackColor = false;
+            // 
+            // txbapellidofiltrar
+            // 
+            this.txbapellidofiltrar.Location = new System.Drawing.Point(424, 123);
+            this.txbapellidofiltrar.Name = "txbapellidofiltrar";
+            this.txbapellidofiltrar.Size = new System.Drawing.Size(245, 20);
+            this.txbapellidofiltrar.TabIndex = 8;
             // 
             // formadmin
             // 
@@ -125,9 +132,10 @@ namespace CUMple
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(818, 503);
+            this.Controls.Add(this.txbapellidofiltrar);
+            this.Controls.Add(this.btnfiltrar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbalumnosexistentes);
-            this.Controls.Add(this.btnbuscardis);
             this.Controls.Add(this.botcrearus);
             this.Controls.Add(this.botingprog);
             this.Controls.Add(this.lblxd);
@@ -147,8 +155,9 @@ namespace CUMple
         private System.Windows.Forms.Label lblxd;
         private System.Windows.Forms.Button botingprog;
         private System.Windows.Forms.Button botcrearus;
-        private System.Windows.Forms.Button btnbuscardis;
         private System.Windows.Forms.ComboBox cmbalumnosexistentes;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnfiltrar;
+        private System.Windows.Forms.TextBox txbapellidofiltrar;
     }
 }

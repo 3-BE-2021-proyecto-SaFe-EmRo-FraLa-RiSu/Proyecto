@@ -223,6 +223,7 @@ namespace CUMple
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Editarusuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar usuarios";
             this.Load += new System.EventHandler(this.Crearlosusuarios_Load);
             this.ResumeLayout(false);
