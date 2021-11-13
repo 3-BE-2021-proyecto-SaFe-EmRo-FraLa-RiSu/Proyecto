@@ -288,8 +288,8 @@ namespace CUMple
               
                 try
                 {
-                   conexionbd.Open();
-                    dgvexamenes.DataSource = null;
+                    conexionbd.Open();
+                    dgvexamenes.Refresh();
                     comandotraerexamenes.Fill(dtexamenes);
                     dgvexamenes.DataSource = dtexamenes;
                     if (dgvexamenes.Rows[0].Cells[0].Value == null)
@@ -299,13 +299,7 @@ namespace CUMple
                         dgvexamenes.DataSource = cargarexamenes();
                         limpiar();
                     }
-                    else
-                    {
-
-                        MessageBox.Show("Se encontro el exámen de manera correcta");
-
-
-                    }
+               
                 }
                 catch (Exception ex)
                 {
@@ -323,7 +317,7 @@ namespace CUMple
                 try
                 {
                     conexionbd.Open();
-                    dgvexamenes.DataSource = null;
+                    dgvexamenes.Refresh();
                     comandotraerexamenes.Fill(dtexamenes);
                     dgvexamenes.DataSource = dtexamenes;
 
@@ -334,13 +328,7 @@ namespace CUMple
                         dgvexamenes.DataSource = cargarexamenes();
                         limpiar();
                     }
-                    else
-                    {
-
-                        MessageBox.Show("Se encontro el exámen de manera correcta");
-
-
-                    }
+                  
                 }
                 catch (Exception ex)
                 {
@@ -358,7 +346,7 @@ namespace CUMple
                 try
                 {
                     conexionbd.Open();
-                    dgvexamenes.DataSource = null;
+                    dgvexamenes.Refresh();
                     comandotraerexamenes.Fill(dtexamenes);
                     dgvexamenes.DataSource = dtexamenes;
                     if (dgvexamenes.Rows[0].Cells[0].Value == null)
@@ -368,13 +356,7 @@ namespace CUMple
                         dgvexamenes.DataSource = cargarexamenes();
                         limpiar();
                     }
-                    else
-                    {
-
-                        MessageBox.Show("Se encontro el exámen de manera correcta");
-
-
-                    }
+                   
                 }
                 catch (Exception ex)
                 {
@@ -392,7 +374,7 @@ namespace CUMple
                 try
                 {
                     conexionbd.Open();
-                    dgvexamenes.DataSource = null;
+                    dgvexamenes.Refresh();
                     comandotraerexamenes.Fill(dtexamenes);
                     dgvexamenes.DataSource = dtexamenes;
                     if (dgvexamenes.Rows[0].Cells[0].Value == null)
@@ -401,11 +383,7 @@ namespace CUMple
                         dgvexamenes.DataSource = cargarexamenes();
                         limpiar();
                     }
-                    else
-                    {                 
-                        MessageBox.Show("Se encontro el exámen de manera correcta");
-
-                    }
+                   
                 }
                 catch (Exception ex)
                 {
@@ -432,13 +410,7 @@ namespace CUMple
                         dgvexamenes.DataSource = cargarexamenes();
                         limpiar();
                     }
-                    else
-                    {
-
-                        MessageBox.Show("Se encontro el exámen de manera correcta");
-
-
-                    }
+                   
                 }
                 catch (Exception ex)
                 {
@@ -464,15 +436,9 @@ namespace CUMple
                         conexionbd.Close();
                         dgvexamenes.DataSource = cargarexamenes();
                         limpiar();
-                    }
-                    else
-                    {
-
-                        MessageBox.Show("Se encontro el exámen de manera correcta");
 
 
                     }
-                   
                 }
                 catch (Exception ex)
                 {
@@ -500,13 +466,7 @@ namespace CUMple
                         dgvexamenes.DataSource = cargarexamenes();
                         limpiar();
                     }
-                    else
-                    {
-
-                        MessageBox.Show("Se encontro el exámen de manera correcta");
-
-
-                    }
+                
                 }
                 catch (Exception ex)
                 {

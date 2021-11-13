@@ -106,11 +106,10 @@ namespace CUMple
                 if (nota>0 && nota<=90)
                 {
                     conexionbd.Open();
-                    MySqlCommand crearusuario = new MySqlCommand("insert into rango_obtenido values(" + nota + ",'" + rango + "'," + cbidexamen.SelectedItem.ToString() + ",'" + cedula + "')", conexionbd);
-                    crearusuario.ExecuteNonQuery();
+                    MySqlCommand añadiralumno = new MySqlCommand("insert into rango_obtenido values(" + nota + ",'" + rango + "'," + cbidexamen.SelectedItem.ToString() + ",'" + cedula + "')", conexionbd);
+                    añadiralumno.ExecuteNonQuery();
                     conexionbd.Close();
-                    dgvexamenes.DataSource =cargarexamenes(cbidexamen.SelectedItem.ToString());
-                    MessageBox.Show("El alumno fue ingresado de manera correcta");
+                    dgvexamenes.DataSource = cargarexamenes(cbidexamen.SelectedItem.ToString());                
                 }
                 else
                 {
@@ -129,9 +128,33 @@ namespace CUMple
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
+            
+            
+            if (cbcedula.SelectedIndex!=-1 && cbidexamen.SelectedIndex!=-1)
+            {
+                string cedula = cbcedula.SelectedItem.ToString();
+                for (int i = 0; i < dgvexamenes.RowCount - 1; i++)
+                {
+                  if (cedula == dgvexamenes.Rows[i].Cells["cedula"].Value.ToString())
+                    {
+                        MySqlCommand borraralumndo = new MySqlCommand("delete from rango_obtenido where cedula='" + cedula + "' AND idexamen='" + cbidexamen.SelectedItem.ToString() + "'", conexionbd);
+                        conexionbd.Open();
+                        borraralumndo.ExecuteNonQuery();
+                        conexionbd.Close();
+                        dgvexamenes.DataSource = cargarexamenes(cbidexamen.SelectedItem.ToString());
+                        return;
+                    }
 
+                }
+                MessageBox.Show("El alumno no existe");
+
+            }
+            else
+            {
+                MessageBox.Show("Para borrar al alumno del examen debe estar seleccionado la id del exámen y la cédula");
+            }
         }
-
+        
         private void cerrarclic_Click(object sender, EventArgs e)
         {
             Application.Exit();
