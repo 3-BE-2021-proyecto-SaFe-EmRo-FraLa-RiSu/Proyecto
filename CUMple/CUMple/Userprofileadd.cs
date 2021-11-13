@@ -17,29 +17,29 @@ namespace CUMple
         {
             InitializeComponent();
         }
-
+    
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
             string aviso = "Es necesario rellenar los siguientes campos:";
-            int taekwondobool, krav_magabool, camposincompletos = 0;            
-            if (chbtaekwondo.Checked == true){
+            int taekwondobool, krav_magabool, camposincompletos = 0;
+            if (chbtaekwondo.Checked == true) {
                 taekwondobool = 1;
-            }else{
+            } else {
                 taekwondobool = 0;
             }
-            if (chbkrav.Checked == true){
+            if (chbkrav.Checked == true) {
                 krav_magabool = 1;
-            }else{
+            } else {
                 krav_magabool = 0;
             }
             if (txbnombrecompleto.Text == "")
             {
                 aviso = aviso + "\n-Nombre completo";
                 camposincompletos++;
-            }          
-            if (txbcedula.Text == "")
+            }
+            if (mskcedula.Text == "")
             {
                 aviso = aviso + "\n-Cedula";
                 camposincompletos++;
@@ -64,14 +64,14 @@ namespace CUMple
                 aviso = aviso + "\n-Fecha de nacimiento";
                 camposincompletos++;
             }
-            if (txbemail.Text == "")
+            if (txbemail.Text == "" || txbemail.Text =="ejemplo@dominio.com")
             {
                 aviso = aviso + "\n-Email";
                 camposincompletos++;
             }
             if (camposincompletos == 0)
             {
-                agregarusuario(txbnombrecompleto.Text, txbcedula.Text, txbcelular.Text, txbprofesion.Text, dtpfec_nac.Text, txbemail.Text, taekwondobool, krav_magabool, dtpfechadeingreso.Text);
+                agregarusuario(txbnombrecompleto.Text, mskcedula.Text, txbcelular.Text, txbprofesion.Text, dtpfec_nac.Text, txbemail.Text, taekwondobool, krav_magabool, dtpfechadeingreso.Text);
                 /*
                 conexionprograma.Open();
                 string comando = "insert into discipulos values ('" + txbcelular.ToString()+ "', '" + dtpfechadeingreso.ToString()+ "', '" + txbnombrecompleto.ToString()+ "', '" + krav_magabool+ "', '" + taekwondobool+ "', '" + txbprofesion.ToString()+ "', '" + dtpfec_nac.ToString()+ "', '" + txbemail.ToString()+ "');";
@@ -174,13 +174,67 @@ namespace CUMple
             }
         }
 
-        private void txbcedula_KeyPress(object sender, KeyPressEventArgs e)
+       
+        private void mskcedula_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 225))
+
+        }
+
+        private void mskcedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar >= 48 && e.KeyChar <= 57)
             {
-                MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+
+                MessageBox.Show("Solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
+            }
+        }
+
+        private void txbcelular_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbcelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar >= 48 && e.KeyChar <= 57)
+            {
+
+            }
+            else
+            {
+
+                MessageBox.Show("Solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txbemail_Enter(object sender, EventArgs e)
+        {
+            if (txbemail.Text=="ejemplo@dominio.com")
+            {
+                txbemail.Text = "";
+                txbemail.ForeColor = Color.Black;
+            }
+        }
+
+        private void txbemail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbemail_Leave(object sender, EventArgs e)
+        {
+            if (txbemail.Text == "")
+            {
+                txbemail.Text = "ejemplo@dominio.com";
+                txbemail.ForeColor = Color.Silver;
             }
         }
     }

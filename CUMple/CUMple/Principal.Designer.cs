@@ -34,7 +34,7 @@ namespace CUMple
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnentrarexamenes = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnnotas = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -92,18 +92,19 @@ namespace CUMple
             this.btnentrarexamenes.UseVisualStyleBackColor = false;
             this.btnentrarexamenes.Click += new System.EventHandler(this.btnentrarexamenes_Click);
             // 
-            // button4
+            // btnnotas
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(565, 508);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(191, 37);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "boton5";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnnotas.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnnotas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnnotas.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnnotas.ForeColor = System.Drawing.Color.White;
+            this.btnnotas.Location = new System.Drawing.Point(42, 101);
+            this.btnnotas.Name = "btnnotas";
+            this.btnnotas.Size = new System.Drawing.Size(191, 72);
+            this.btnnotas.TabIndex = 10;
+            this.btnnotas.Text = "Notas exámenes";
+            this.btnnotas.UseVisualStyleBackColor = false;
+            this.btnnotas.Click += new System.EventHandler(this.btnnotas_Click);
             // 
             // textBox1
             // 
@@ -122,7 +123,7 @@ namespace CUMple
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnnotas);
             this.Controls.Add(this.btnentrarexamenes);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -142,7 +143,7 @@ namespace CUMple
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnentrarexamenes;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnnotas;
         private System.Windows.Forms.TextBox textBox1;
     }
 }

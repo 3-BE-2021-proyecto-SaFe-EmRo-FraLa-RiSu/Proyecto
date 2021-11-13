@@ -13,10 +13,10 @@ namespace CUMple
 {
     public partial class examenesnotas : Form
     {
-        public examenesnotas(string idexamenobtenido)
+        public examenesnotas()
         {
             InitializeComponent();
-            idexamen1 = idexamenobtenido;
+            
         }
         string idexamen1;
         MySqlConnection conexionbd = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
@@ -74,8 +74,7 @@ namespace CUMple
         {
             comboboxcedula();
             comboboxidactualizado();
-            dgvexamenes.DataSource=cargarexamenes(idexamen1);
-        
+                 
         }
 
         private void cbidexamen_SelectedIndexChanged(object sender, EventArgs e)
@@ -187,6 +186,19 @@ namespace CUMple
         private void btneditar_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void dgvexamenes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow filas = dgvexamenes.Rows[e.RowIndex];
+
+                txbnota.Text = filas.Cells["notas"].Value.ToString();
+                cbcedula.SelectedItem = filas.Cells["cedula"].Value.ToString();
+                cbrango.SelectedItem = filas.Cells["nuevo_rango"].Value.ToString();
+                cbidexamen.SelectedItem = filas.Cells["idexamen"].Value.ToString();
+            }
         }
     }
 }

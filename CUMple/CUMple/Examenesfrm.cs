@@ -20,7 +20,7 @@ namespace CUMple
             InitializeComponent();
 
         }
-
+        int id;
         public void editarexamen(string columna, string datonuevo, int idexamen)
         {
 
@@ -100,28 +100,27 @@ namespace CUMple
         }
         private void btneditar_Click(object sender, EventArgs e)
         {
-          
-
-                if (cbdisciplina.SelectedIndex!=-1)
+           
+            if (cbdisciplina.SelectedIndex!=-1)
             {
-                editarexamen("disciplina", cbdisciplina.SelectedItem.ToString(), 4);
+                editarexamen("disciplina", cbdisciplina.SelectedItem.ToString(), id);
             }
             if (txbexaminadores.Text != "")
             {
-                editarexamen("examinadores", txbexaminadores.Text, 3);
+                editarexamen("examinadores", txbexaminadores.Text, id);
             }
             if (Fechadatatimer.Enabled == true)
                 {
-                editarexamen("fecha", Fechadatatimer.Text, 2);
+                editarexamen("fecha", Fechadatatimer.Text, id);
             }
             if (horadatatimer.Enabled == true )
             {
-                editarexamen("hora", horadatatimer.Text, 1);
+                editarexamen("hora", horadatatimer.Text, id);
             }
                 MessageBox.Show("El examén se ha editado de manera correcta");
                 limpiar();
             
-          
+
         }
                
         private void btnagregar_Click(object sender, EventArgs e)
@@ -134,13 +133,11 @@ namespace CUMple
                 conexionbd.Open();
                 for (int i = 0; i < dgvexamenes.RowCount-1; i++)
                 {
-                    TimeSpan diferenciahorario = DateTime.Parse(dgvexamenes.Rows[i].Cells["colhora"].Value.ToString())- horadatatimer.Value;
-                    double difrenciahorariodouble = diferenciahorario.TotalHours;
-                    MessageBox.Show(difrenciahorariodouble.ToString());
+               
+                   
+                   
                     if (horadatatimer.Value != DateTime.Parse(dgvexamenes.Rows[i].Cells["colhora"].Value.ToString()))
                     {
-                        if (Fechadatatimer.Value == DateTime.Parse(dgvexamenes.Rows[i].Cells["colfecha"].Value.ToString()) && (difrenciahorariodouble <= -1 || difrenciahorariodouble >= 1))
-                        {
                             string comando = "insert into examenes (disciplina,examinadores,fecha,hora) values('" + disciplina + "','" + txbexaminadores.Text + "','" + Fechadatatimer.Text + "','" + horadatatimer.Text + "');";
                             MySqlCommand comandoingresarexamenes = new MySqlCommand(comando, conexionbd);
                             comandoingresarexamenes.ExecuteNonQuery();
@@ -148,10 +145,8 @@ namespace CUMple
                           
                             conexionbd.Close();
                             dgvexamenes.DataSource = cargarexamenes();
-                            return;
-                        }
-                        MessageBox.Show("El exámen debe de tener al menos una hora de diferencia");
-                        conexionbd.Close();
+                     
+                      
                         return;
 
                     }
@@ -375,7 +370,7 @@ namespace CUMple
                 try
                 {
                     conexionbd.Open();
-                    dgvexamenes.DataSource = null;
+                    dgvexamenes.Refresh();
                     comandotraerexamenes.Fill(dtexamenes);
                     dgvexamenes.DataSource = dtexamenes;
                     if (dgvexamenes.Rows[0].Cells[0].Value == null)
@@ -404,7 +399,7 @@ namespace CUMple
                 try
                 {
                     conexionbd.Open();
-                    dgvexamenes.DataSource = null;
+                    dgvexamenes.Refresh();
                     comandotraerexamenes.Fill(dtexamenes);
                     dgvexamenes.DataSource = dtexamenes;
                     if (dgvexamenes.Rows[0].Cells[0].Value == null)
@@ -475,9 +470,9 @@ namespace CUMple
                 cbdisciplina.SelectedItem = filas.Cells["coldisciplina"].Value.ToString();          
                 cbhabfe.Checked = true;
                 cbhabhora.Checked = true;
-                
-                Fechadatatimer.Value = Convert.ToDateTime(filas.Cells["colfecha"].Value.ToString());
-                horadatatimer.Value = Convert.ToDateTime(filas.Cells["colhora"].Value.ToString());
+                id= Int32.Parse(filas.Cells["colidexamen"].Value.ToString());
+                Fechadatatimer.Value = Convert.ToDateTime(Convert.ToString(filas.Cells["colfecha"].Value));
+                horadatatimer.Value = Convert.ToDateTime(Convert.ToString(filas.Cells["colhora"].Value));
 
             }
         }

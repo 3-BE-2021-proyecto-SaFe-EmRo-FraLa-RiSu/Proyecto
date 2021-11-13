@@ -73,6 +73,7 @@ namespace CUMple
             this.dgvexamenes.Name = "dgvexamenes";
             this.dgvexamenes.Size = new System.Drawing.Size(443, 300);
             this.dgvexamenes.TabIndex = 0;
+            this.dgvexamenes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvexamenes_CellClick);
             this.dgvexamenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // cedula
@@ -102,7 +103,7 @@ namespace CUMple
             // btnlimpiar
             // 
             this.btnlimpiar.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlimpiar.Location = new System.Drawing.Point(958, 139);
+            this.btnlimpiar.Location = new System.Drawing.Point(857, 140);
             this.btnlimpiar.Name = "btnlimpiar";
             this.btnlimpiar.Size = new System.Drawing.Size(101, 43);
             this.btnlimpiar.TabIndex = 20;
@@ -112,7 +113,7 @@ namespace CUMple
             // btneliminar
             // 
             this.btneliminar.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Location = new System.Drawing.Point(958, 81);
+            this.btneliminar.Location = new System.Drawing.Point(857, 69);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(101, 43);
             this.btneliminar.TabIndex = 19;
@@ -123,7 +124,7 @@ namespace CUMple
             // btnagregar
             // 
             this.btnagregar.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnagregar.Location = new System.Drawing.Point(725, 84);
+            this.btnagregar.Location = new System.Drawing.Point(725, 69);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(101, 43);
             this.btnagregar.TabIndex = 18;
@@ -134,7 +135,7 @@ namespace CUMple
             // btneditar
             // 
             this.btneditar.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneditar.Location = new System.Drawing.Point(725, 139);
+            this.btneditar.Location = new System.Drawing.Point(725, 133);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(101, 43);
             this.btneditar.TabIndex = 17;

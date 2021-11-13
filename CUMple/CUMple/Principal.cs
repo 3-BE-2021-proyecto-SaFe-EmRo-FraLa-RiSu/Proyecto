@@ -38,5 +38,12 @@ namespace CUMple
             new Examenesfrm().Show();
             this.Dispose();
         }
-    }
+
+        private void btnnotas_Click(object sender, EventArgs e)
+        {
+            new examenesnotas().Show();
+            this.Dispose();
+        }
+
+        }
 }

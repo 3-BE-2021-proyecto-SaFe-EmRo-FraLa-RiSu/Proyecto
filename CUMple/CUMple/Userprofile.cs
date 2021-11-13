@@ -77,7 +77,7 @@ namespace CUMple
         private void Userprofile_Load(object sender, EventArgs e)
         {
            
-            txbceddit.Text = mostrarlabel("cedula");
+            mskcedula.Text = mostrarlabel("cedula");
             txbceledit.Text = mostrarlabel("celular");
             txbemailedit.Text = mostrarlabel("emails");
             lblfecingpref.Text = mostrarlabel("fecha_de_ing");
@@ -124,9 +124,9 @@ namespace CUMple
                 editarusuario("nomcompleto", txbnomedit.Text, mostrarlabel("nomcompleto"), mostrarlabel("cedula"));             
             }
            
-            if (txbceddit.Text != mostrarlabel("cedula"))
+            if (mskcedula.Text != mostrarlabel("cedula"))
             {
-                editarusuario("cedula", txbceddit.Text, mostrarlabel("cedula"), mostrarlabel("cedula"));
+                editarusuario("cedula", mskcedula.Text, mostrarlabel("cedula"), mostrarlabel("cedula"));
             }
            
             if (txbceledit.Text != mostrarlabel("celular"))
@@ -270,6 +270,22 @@ namespace CUMple
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void mskcédula_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void mskcedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 225))
+            {
+                MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+           
         }
     }
 }

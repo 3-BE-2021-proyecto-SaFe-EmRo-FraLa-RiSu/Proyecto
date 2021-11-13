@@ -75,7 +75,7 @@ namespace CUMple
             this.coldisciplina,
             this.colhora,
             this.colidexamen});
-            this.dgvexamenes.Location = new System.Drawing.Point(84, 223);
+            this.dgvexamenes.Location = new System.Drawing.Point(75, 217);
             this.dgvexamenes.MultiSelect = false;
             this.dgvexamenes.Name = "dgvexamenes";
             this.dgvexamenes.ReadOnly = true;
@@ -133,9 +133,9 @@ namespace CUMple
             // btneditar
             // 
             this.btneditar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneditar.Location = new System.Drawing.Point(366, 517);
+            this.btneditar.Location = new System.Drawing.Point(690, 93);
             this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(72, 30);
+            this.btneditar.Size = new System.Drawing.Size(80, 30);
             this.btneditar.TabIndex = 1;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = true;
@@ -197,7 +197,7 @@ namespace CUMple
             // btnagregar
             // 
             this.btnagregar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnagregar.Location = new System.Drawing.Point(246, 517);
+            this.btnagregar.Location = new System.Drawing.Point(601, 93);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(83, 30);
             this.btnagregar.TabIndex = 13;
@@ -223,7 +223,7 @@ namespace CUMple
             // btneliminar
             // 
             this.btneliminar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Location = new System.Drawing.Point(583, 517);
+            this.btneliminar.Location = new System.Drawing.Point(601, 166);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(82, 30);
             this.btneliminar.TabIndex = 15;
@@ -234,7 +234,7 @@ namespace CUMple
             // btnlimpiar
             // 
             this.btnlimpiar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlimpiar.Location = new System.Drawing.Point(473, 517);
+            this.btnlimpiar.Location = new System.Drawing.Point(690, 132);
             this.btnlimpiar.Name = "btnlimpiar";
             this.btnlimpiar.Size = new System.Drawing.Size(80, 30);
             this.btnlimpiar.TabIndex = 16;
@@ -250,7 +250,7 @@ namespace CUMple
             "Taekwondo",
             "Krav Maga"});
             this.cbdisciplina.Location = new System.Drawing.Point(429, 93);
-            this.cbdisciplina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbdisciplina.Margin = new System.Windows.Forms.Padding(2);
             this.cbdisciplina.Name = "cbdisciplina";
             this.cbdisciplina.Size = new System.Drawing.Size(124, 26);
             this.cbdisciplina.TabIndex = 17;
@@ -307,9 +307,9 @@ namespace CUMple
             // txbbuscar
             // 
             this.txbbuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbbuscar.Location = new System.Drawing.Point(659, 96);
+            this.txbbuscar.Location = new System.Drawing.Point(601, 132);
             this.txbbuscar.Name = "txbbuscar";
-            this.txbbuscar.Size = new System.Drawing.Size(72, 30);
+            this.txbbuscar.Size = new System.Drawing.Size(83, 30);
             this.txbbuscar.TabIndex = 23;
             this.txbbuscar.Text = "Buscar";
             this.txbbuscar.UseVisualStyleBackColor = true;

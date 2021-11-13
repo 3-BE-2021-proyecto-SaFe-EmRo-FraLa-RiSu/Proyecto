@@ -37,7 +37,6 @@ namespace CUMple
             this.lblmostnom2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txbprofedit = new System.Windows.Forms.TextBox();
-            this.txbceddit = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txbfecdenacedit = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@ namespace CUMple
             this.maximizar = new System.Windows.Forms.PictureBox();
             this.lbldiscselec = new System.Windows.Forms.Label();
             this.llblnombrediscelec = new System.Windows.Forms.Label();
+            this.mskcedula = new System.Windows.Forms.MaskedTextBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,10 +77,9 @@ namespace CUMple
             // btnedit
             // 
             this.btnedit.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnedit.Location = new System.Drawing.Point(1170, 613);
-            this.btnedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnedit.Location = new System.Drawing.Point(780, 398);
             this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(394, 49);
+            this.btnedit.Size = new System.Drawing.Size(263, 32);
             this.btnedit.TabIndex = 2;
             this.btnedit.Text = "Editar";
             this.btnedit.UseVisualStyleBackColor = true;
@@ -89,10 +88,9 @@ namespace CUMple
             // txbnomedit
             // 
             this.txbnomedit.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbnomedit.Location = new System.Drawing.Point(531, 275);
-            this.txbnomedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbnomedit.Location = new System.Drawing.Point(354, 179);
             this.txbnomedit.Name = "txbnomedit";
-            this.txbnomedit.Size = new System.Drawing.Size(312, 42);
+            this.txbnomedit.Size = new System.Drawing.Size(209, 31);
             this.txbnomedit.TabIndex = 7;
             this.txbnomedit.TextChanged += new System.EventHandler(this.txbnomedit_TextChanged);
             this.txbnomedit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbnomedit_KeyPress);
@@ -102,10 +100,9 @@ namespace CUMple
             this.lblmostnom2.AutoSize = true;
             this.lblmostnom2.BackColor = System.Drawing.Color.Transparent;
             this.lblmostnom2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmostnom2.Location = new System.Drawing.Point(243, 278);
-            this.lblmostnom2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblmostnom2.Location = new System.Drawing.Point(162, 181);
             this.lblmostnom2.Name = "lblmostnom2";
-            this.lblmostnom2.Size = new System.Drawing.Size(287, 35);
+            this.lblmostnom2.Size = new System.Drawing.Size(189, 23);
             this.lblmostnom2.TabIndex = 8;
             this.lblmostnom2.Text = "Nombre completo:";
             // 
@@ -114,54 +111,39 @@ namespace CUMple
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(920, 398);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(613, 259);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 35);
+            this.label1.Size = new System.Drawing.Size(108, 23);
             this.label1.TabIndex = 12;
             this.label1.Text = "Profesión:";
             // 
             // txbprofedit
             // 
             this.txbprofedit.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbprofedit.Location = new System.Drawing.Point(1252, 391);
-            this.txbprofedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbprofedit.Location = new System.Drawing.Point(835, 254);
             this.txbprofedit.Name = "txbprofedit";
-            this.txbprofedit.Size = new System.Drawing.Size(312, 42);
+            this.txbprofedit.Size = new System.Drawing.Size(209, 31);
             this.txbprofedit.TabIndex = 11;
             this.txbprofedit.TextChanged += new System.EventHandler(this.txbprofedit_TextChanged);
             this.txbprofedit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbprofedit_KeyPress);
-            // 
-            // txbceddit
-            // 
-            this.txbceddit.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbceddit.Location = new System.Drawing.Point(531, 332);
-            this.txbceddit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txbceddit.Name = "txbceddit";
-            this.txbceddit.Size = new System.Drawing.Size(312, 42);
-            this.txbceddit.TabIndex = 14;
-            this.txbceddit.TextChanged += new System.EventHandler(this.txbceddit_TextChanged);
-            this.txbceddit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbceddit_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(243, 336);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(162, 218);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 35);
+            this.label2.Size = new System.Drawing.Size(84, 23);
             this.label2.TabIndex = 13;
             this.label2.Text = "Cédula:";
             // 
             // txbfecdenacedit
             // 
             this.txbfecdenacedit.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbfecdenacedit.Location = new System.Drawing.Point(1252, 275);
-            this.txbfecdenacedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbfecdenacedit.Location = new System.Drawing.Point(835, 179);
             this.txbfecdenacedit.Name = "txbfecdenacedit";
-            this.txbfecdenacedit.Size = new System.Drawing.Size(312, 42);
+            this.txbfecdenacedit.Size = new System.Drawing.Size(209, 31);
             this.txbfecdenacedit.TabIndex = 18;
             this.txbfecdenacedit.TextChanged += new System.EventHandler(this.txbfecdenacedit_TextChanged);
             // 
@@ -170,10 +152,9 @@ namespace CUMple
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(920, 338);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(613, 220);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 35);
+            this.label3.Size = new System.Drawing.Size(72, 23);
             this.label3.TabIndex = 17;
             this.label3.Text = "Email:";
             // 
@@ -182,20 +163,18 @@ namespace CUMple
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(920, 280);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(613, 182);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(326, 35);
+            this.label4.Size = new System.Drawing.Size(216, 23);
             this.label4.TabIndex = 16;
             this.label4.Text = "Fecha de nacimiento:";
             // 
             // txbemailedit
             // 
             this.txbemailedit.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbemailedit.Location = new System.Drawing.Point(1252, 334);
-            this.txbemailedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbemailedit.Location = new System.Drawing.Point(835, 217);
             this.txbemailedit.Name = "txbemailedit";
-            this.txbemailedit.Size = new System.Drawing.Size(312, 42);
+            this.txbemailedit.Size = new System.Drawing.Size(209, 31);
             this.txbemailedit.TabIndex = 22;
             this.txbemailedit.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
@@ -204,20 +183,18 @@ namespace CUMple
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(243, 396);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(162, 257);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 35);
+            this.label6.Size = new System.Drawing.Size(86, 23);
             this.label6.TabIndex = 20;
             this.label6.Text = "Celular:";
             // 
             // txbceledit
             // 
             this.txbceledit.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbceledit.Location = new System.Drawing.Point(531, 392);
-            this.txbceledit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbceledit.Location = new System.Drawing.Point(354, 255);
             this.txbceledit.Name = "txbceledit";
-            this.txbceledit.Size = new System.Drawing.Size(312, 42);
+            this.txbceledit.Size = new System.Drawing.Size(209, 31);
             this.txbceledit.TabIndex = 19;
             this.txbceledit.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             this.txbceledit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbceledit_KeyPress);
@@ -227,10 +204,9 @@ namespace CUMple
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(243, 463);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(162, 301);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(273, 35);
+            this.label12.Size = new System.Drawing.Size(182, 23);
             this.label12.TabIndex = 28;
             this.label12.Text = "Fecha de ingreso:";
             // 
@@ -239,10 +215,9 @@ namespace CUMple
             this.lblfecingpref.AutoSize = true;
             this.lblfecingpref.BackColor = System.Drawing.Color.Transparent;
             this.lblfecingpref.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecingpref.Location = new System.Drawing.Point(525, 463);
-            this.lblfecingpref.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblfecingpref.Location = new System.Drawing.Point(350, 301);
             this.lblfecingpref.Name = "lblfecingpref";
-            this.lblfecingpref.Size = new System.Drawing.Size(0, 35);
+            this.lblfecingpref.Size = new System.Drawing.Size(0, 23);
             this.lblfecingpref.TabIndex = 33;
             // 
             // btnvolveruserprofile
@@ -250,9 +225,10 @@ namespace CUMple
             this.btnvolveruserprofile.BackColor = System.Drawing.Color.DarkRed;
             this.btnvolveruserprofile.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolveruserprofile.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolveruserprofile.Location = new System.Drawing.Point(306, 635);
+            this.btnvolveruserprofile.Location = new System.Drawing.Point(204, 413);
+            this.btnvolveruserprofile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnvolveruserprofile.Name = "btnvolveruserprofile";
-            this.btnvolveruserprofile.Size = new System.Drawing.Size(64, 65);
+            this.btnvolveruserprofile.Size = new System.Drawing.Size(43, 42);
             this.btnvolveruserprofile.TabIndex = 36;
             this.btnvolveruserprofile.Text = "⮎";
             this.btnvolveruserprofile.UseVisualStyleBackColor = false;
@@ -261,10 +237,9 @@ namespace CUMple
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1170, 672);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(780, 437);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(394, 45);
+            this.button1.Size = new System.Drawing.Size(263, 29);
             this.button1.TabIndex = 40;
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = true;
@@ -274,9 +249,10 @@ namespace CUMple
             this.btnvolveruserprofileadd.BackColor = System.Drawing.Color.DarkRed;
             this.btnvolveruserprofileadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolveruserprofileadd.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolveruserprofileadd.Location = new System.Drawing.Point(20, 1135);
+            this.btnvolveruserprofileadd.Location = new System.Drawing.Point(13, 738);
+            this.btnvolveruserprofileadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnvolveruserprofileadd.Name = "btnvolveruserprofileadd";
-            this.btnvolveruserprofileadd.Size = new System.Drawing.Size(64, 65);
+            this.btnvolveruserprofileadd.Size = new System.Drawing.Size(43, 42);
             this.btnvolveruserprofileadd.TabIndex = 38;
             this.btnvolveruserprofileadd.Text = "⮎";
             this.btnvolveruserprofileadd.UseVisualStyleBackColor = false;
@@ -287,9 +263,8 @@ namespace CUMple
             this.panel3.Controls.Add(this.btnvolveruserprofileadd);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(195, 814);
+            this.panel3.Size = new System.Drawing.Size(130, 529);
             this.panel3.TabIndex = 42;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -297,9 +272,8 @@ namespace CUMple
             // 
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1653, 77);
+            this.panel1.Size = new System.Drawing.Size(1102, 50);
             this.panel1.TabIndex = 41;
             // 
             // panel2
@@ -311,9 +285,8 @@ namespace CUMple
             this.panel2.Controls.Add(this.maximizar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1653, 77);
+            this.panel2.Size = new System.Drawing.Size(1102, 50);
             this.panel2.TabIndex = 40;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -321,10 +294,9 @@ namespace CUMple
             // 
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(1484, 12);
-            this.restaurar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.restaurar.Location = new System.Drawing.Point(989, 8);
             this.restaurar.Name = "restaurar";
-            this.restaurar.Size = new System.Drawing.Size(62, 65);
+            this.restaurar.Size = new System.Drawing.Size(41, 42);
             this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.restaurar.TabIndex = 13;
             this.restaurar.TabStop = false;
@@ -335,10 +307,9 @@ namespace CUMple
             // 
             this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(1413, 12);
-            this.minimizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.minimizar.Location = new System.Drawing.Point(942, 8);
             this.minimizar.Name = "minimizar";
-            this.minimizar.Size = new System.Drawing.Size(62, 65);
+            this.minimizar.Size = new System.Drawing.Size(41, 42);
             this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.minimizar.TabIndex = 12;
             this.minimizar.TabStop = false;
@@ -348,10 +319,9 @@ namespace CUMple
             // 
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(1554, 12);
-            this.cerrarclic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cerrarclic.Location = new System.Drawing.Point(1036, 8);
             this.cerrarclic.Name = "cerrarclic";
-            this.cerrarclic.Size = new System.Drawing.Size(62, 65);
+            this.cerrarclic.Size = new System.Drawing.Size(41, 42);
             this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cerrarclic.TabIndex = 11;
             this.cerrarclic.TabStop = false;
@@ -361,10 +331,9 @@ namespace CUMple
             // 
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(1484, 12);
-            this.maximizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.maximizar.Location = new System.Drawing.Point(989, 8);
             this.maximizar.Name = "maximizar";
-            this.maximizar.Size = new System.Drawing.Size(62, 65);
+            this.maximizar.Size = new System.Drawing.Size(41, 42);
             this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.maximizar.TabIndex = 10;
             this.maximizar.TabStop = false;
@@ -375,10 +344,9 @@ namespace CUMple
             this.lbldiscselec.AutoSize = true;
             this.lbldiscselec.BackColor = System.Drawing.Color.Transparent;
             this.lbldiscselec.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldiscselec.Location = new System.Drawing.Point(243, 134);
-            this.lbldiscselec.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbldiscselec.Location = new System.Drawing.Point(162, 87);
             this.lbldiscselec.Name = "lbldiscselec";
-            this.lbldiscselec.Size = new System.Drawing.Size(357, 35);
+            this.lbldiscselec.Size = new System.Drawing.Size(238, 23);
             this.lbldiscselec.TabIndex = 43;
             this.lbldiscselec.Text = "Discipulo seleccionado:";
             // 
@@ -387,20 +355,31 @@ namespace CUMple
             this.llblnombrediscelec.AutoSize = true;
             this.llblnombrediscelec.BackColor = System.Drawing.Color.Transparent;
             this.llblnombrediscelec.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llblnombrediscelec.Location = new System.Drawing.Point(609, 134);
-            this.llblnombrediscelec.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.llblnombrediscelec.Location = new System.Drawing.Point(406, 87);
             this.llblnombrediscelec.Name = "llblnombrediscelec";
-            this.llblnombrediscelec.Size = new System.Drawing.Size(0, 35);
+            this.llblnombrediscelec.Size = new System.Drawing.Size(0, 23);
             this.llblnombrediscelec.TabIndex = 44;
+            // 
+            // mskcedula
+            // 
+            this.mskcedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskcedula.Location = new System.Drawing.Point(354, 220);
+            this.mskcedula.Mask = "0000000-0";
+            this.mskcedula.Name = "mskcedula";
+            this.mskcedula.Size = new System.Drawing.Size(94, 29);
+            this.mskcedula.TabIndex = 45;
+            this.mskcedula.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskcédula_MaskInputRejected);
+            this.mskcedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskcedula_KeyPress);
             // 
             // Userprofile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1650, 814);
+            this.ClientSize = new System.Drawing.Size(1100, 529);
+            this.Controls.Add(this.mskcedula);
             this.Controls.Add(this.llblnombrediscelec);
             this.Controls.Add(this.lbldiscselec);
             this.Controls.Add(this.panel3);
@@ -415,7 +394,6 @@ namespace CUMple
             this.Controls.Add(this.txbfecdenacedit);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txbceddit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbprofedit);
@@ -423,7 +401,6 @@ namespace CUMple
             this.Controls.Add(this.txbnomedit);
             this.Controls.Add(this.btnedit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Userprofile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Perfil de usuario";
@@ -448,7 +425,6 @@ namespace CUMple
         private System.Windows.Forms.Label lblmostnom2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbprofedit;
-        private System.Windows.Forms.TextBox txbceddit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbfecdenacedit;
         private System.Windows.Forms.Label label3;
@@ -470,5 +446,6 @@ namespace CUMple
         private System.Windows.Forms.PictureBox maximizar;
         private System.Windows.Forms.Label lbldiscselec;
         private System.Windows.Forms.Label llblnombrediscelec;
+        private System.Windows.Forms.MaskedTextBox mskcedula;
     }
 }
