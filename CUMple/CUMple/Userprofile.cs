@@ -16,7 +16,7 @@ namespace CUMple
         public Userprofile(string nombrebuscado)
         {
             InitializeComponent();
-            lblnomperf.Text = nombrebuscado;
+            llblnombrediscelec.Text = nombrebuscado;
             
         }            
      
@@ -52,7 +52,7 @@ namespace CUMple
           
             conexionprograma.Open();
             string dato;
-            string mostrardiscipulos= "select * from discipulos where nomcompleto='"+ lblnomperf.Text +"'";
+            string mostrardiscipulos= "select * from discipulos where nomcompleto='"+ llblnombrediscelec.Text +"'";
             MySqlCommand comandolabel = new MySqlCommand(mostrardiscipulos,conexionprograma);
             MySqlDataReader lectordecomando = comandolabel.ExecuteReader();
            if (lectordecomando.Read())
@@ -77,13 +77,13 @@ namespace CUMple
         private void Userprofile_Load(object sender, EventArgs e)
         {
            
-            lblcedperf.Text = mostrarlabel("cedula");
-            lblcelpref.Text = mostrarlabel("celular");
-            lblemailpref.Text = mostrarlabel("emails");
+            txbceddit.Text = mostrarlabel("cedula");
+            txbceledit.Text = mostrarlabel("celular");
+            txbemailedit.Text = mostrarlabel("emails");
             lblfecingpref.Text = mostrarlabel("fecha_de_ing");
-            lblfecnacpref.Text = mostrarlabel("fecha_de_nac");
-            lblnomperf.Text = mostrarlabel("nomcompleto");
-            lblprofperf .Text = mostrarlabel("profesiones");
+            txbfecdenacedit.Text = mostrarlabel("fecha_de_nac");
+            txbnomedit.Text = mostrarlabel("nomcompleto");
+            txbprofedit.Text = mostrarlabel("profesiones");
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -113,41 +113,35 @@ namespace CUMple
 
             //if ( hay un usuario seleccionado   ) { pedir que se seleccione uno }
             //else {
-            if (txbprofedit.Text != "") 
+            if (txbprofedit.Text != mostrarlabel("profesiones")) 
             {
-                editarusuario("profesiones", txbprofedit.Text, lblprofperf.Text, lblcedperf.Text);
-                lblprofperf.Text = mostrarlabel("profesiones");
+                editarusuario("profesiones", txbprofedit.Text, mostrarlabel("profesiones"), mostrarlabel("cedula"));
             }
            
 
-            if (txbnomedit.Text != "")
+            if (txbnomedit.Text != mostrarlabel("nomcompleto"))
             {
-                editarusuario("nomcompleto", txbnomedit.Text, lblnomperf.Text, lblcedperf.Text);
-                lblnomperf.Text = mostrarlabel("nomcompleto");                
+                editarusuario("nomcompleto", txbnomedit.Text, mostrarlabel("nomcompleto"), mostrarlabel("cedula"));             
             }
            
-            if (txbceddit.Text != "")
+            if (txbceddit.Text != mostrarlabel("cedula"))
             {
-                editarusuario("cedula", txbceddit.Text, lblcedperf.Text, lblcedperf.Text);
-                lblcedperf.Text = mostrarlabel("cedula");
+                editarusuario("cedula", txbceddit.Text, mostrarlabel("cedula"), mostrarlabel("cedula"));
             }
            
-            if (txbceledit.Text != "")
+            if (txbceledit.Text != mostrarlabel("celular"))
             {
-                editarusuario("celular", txbceledit.Text, lblcelpref.Text, lblcedperf.Text);
-                lblcelpref.Text = mostrarlabel("celular");
+                editarusuario("celular", txbceledit.Text, mostrarlabel("celular"), mostrarlabel("cedula"));
             }
            
-            if (txbemailedit.Text != "")
+            if (txbemailedit.Text != mostrarlabel("emails"))
             {
-                editarusuario("emails", txbemailedit.Text, lblemailpref.Text, lblcedperf.Text);
-                lblemailpref.Text = mostrarlabel("emails");
+                editarusuario("emails", txbemailedit.Text, mostrarlabel("emails"), mostrarlabel("cedula"));
             }                   
                         
-            if (txbfecdenacedit.Text != "")
+            if (txbfecdenacedit.Text != mostrarlabel("fecha_de_nac"))
             {
-                editarusuario("fecha_de_nac", txbfecdenacedit.Text, lblfecnacpref.Text, lblcedperf.Text);
-                lblfecnacpref.Text = mostrarlabel("fecha_de_nac");
+                editarusuario("fecha_de_nac", txbfecdenacedit.Text, mostrarlabel("fecha_de_nac"), mostrarlabel("cedula"));
 
             }
           
@@ -219,6 +213,11 @@ namespace CUMple
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txbceddit_TextChanged(object sender, EventArgs e)
         {
 
         }
