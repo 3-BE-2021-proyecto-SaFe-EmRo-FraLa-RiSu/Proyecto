@@ -85,7 +85,7 @@ namespace CUMple
             // 
             this.cmbalumnosexistentes.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbalumnosexistentes.FormattingEnabled = true;
-            this.cmbalumnosexistentes.Location = new System.Drawing.Point(237, 177);
+            this.cmbalumnosexistentes.Location = new System.Drawing.Point(237, 178);
             this.cmbalumnosexistentes.Name = "cmbalumnosexistentes";
             this.cmbalumnosexistentes.Size = new System.Drawing.Size(371, 43);
             this.cmbalumnosexistentes.TabIndex = 1;

@@ -74,7 +74,7 @@ namespace CUMple
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new Userprofile(cmbalumnosexistentes.SelectedItem.ToString()).Show();
+            new Userprofileadd().Show();
             this.Dispose();
         }
 
