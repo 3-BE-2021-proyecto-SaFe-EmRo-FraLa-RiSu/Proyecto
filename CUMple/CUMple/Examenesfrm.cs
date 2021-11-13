@@ -44,19 +44,7 @@ namespace CUMple
           
         }
 
-        private void comboboxidactualizado()
-        {
-            MySqlDataReader lectordedatos;
-            string comand = "Select idexamen from examenes;";
-            conexionbd.Open();
-            MySqlCommand comando = new MySqlCommand(comand, conexionbd);
-            lectordedatos = comando.ExecuteReader();
-            while (lectordedatos.Read())
-            {
-                cbidexamen.Items.Add(lectordedatos["idexamen"].ToString());
-            }
-            conexionbd.Close();
-        }
+     
         private DataTable cargarexamenes()
         {
             
@@ -86,32 +74,14 @@ namespace CUMple
             Fechadatatimer.Enabled = false;
             horadatatimer.Enabled = false;
             dgvexamenes.DataSource=cargarexamenes();
-            comboboxidactualizado();
-            if (cbidexamen.SelectedIndex == -1)
-            {
-
-                btnagregar.Enabled = true;
-                btneditar.Enabled = false;
-                btneliminar.Enabled = false;
-            }
-            else
-            {
-                btnagregar.Enabled = false;
-                btneditar.Enabled = true;
-                btneliminar.Enabled = true;
-
-            }
+          
         }
 
         private void dgvexamenes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
            
-            if (e.RowIndex>-1)
-            {
-                DataGridViewRow filas = this.dgvexamenes.Rows[e.RowIndex];
-                string id = filas.Cells[4].Value.ToString();
-                new examenesnotas(id).Show();
-            }
+          
+            
             
           
             
@@ -119,7 +89,7 @@ namespace CUMple
 
        public void limpiar()
         {
-            cbidexamen.SelectedIndex = -1;
+            
             cbdisciplina.SelectedIndex = -1;
             txbexaminadores.Text = "";
             Fechadatatimer.ResetText();
@@ -132,68 +102,67 @@ namespace CUMple
         {
           
 
-            if(cbidexamen.SelectedIndex !=-1 ) {
-                int idselecionado = Int32.Parse(cbidexamen.SelectedItem.ToString());
                 if (cbdisciplina.SelectedIndex!=-1)
             {
-                editarexamen("disciplina", cbdisciplina.SelectedItem.ToString(), idselecionado);
+                editarexamen("disciplina", cbdisciplina.SelectedItem.ToString(), 4);
             }
             if (txbexaminadores.Text != "")
             {
-                editarexamen("examinadores", txbexaminadores.Text, idselecionado);
+                editarexamen("examinadores", txbexaminadores.Text, 3);
             }
             if (Fechadatatimer.Enabled == true)
                 {
-                editarexamen("fecha", Fechadatatimer.Text, idselecionado);
+                editarexamen("fecha", Fechadatatimer.Text, 2);
             }
             if (horadatatimer.Enabled == true )
             {
-                editarexamen("hora", horadatatimer.Text, idselecionado);
+                editarexamen("hora", horadatatimer.Text, 1);
             }
                 MessageBox.Show("El examén se ha editado de manera correcta");
                 limpiar();
-            }
+            
           
         }
-           
-        private void cbidexamen_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbidexamen.SelectedIndex==-1)
-            {
-
-                btnagregar.Enabled = true;
-                btneditar.Enabled = false;
-                btneliminar.Enabled = false;
-            }
-            else
-            {
-                btnagregar.Enabled = false;
-                btneditar.Enabled = true;
-                btneliminar.Enabled = true;
-
-            }
-        }
-
+               
         private void btnagregar_Click(object sender, EventArgs e)
         {
             
-            if (cbdisciplina.SelectedIndex!=-1 && txbexaminadores.Text!="" && cbidexamen.SelectedIndex==-1)
+            if (cbdisciplina.SelectedIndex!=-1 && txbexaminadores.Text!="" && Fechadatatimer.Enabled==true && horadatatimer.Enabled==true)
             {
                 string disciplina = cbdisciplina.SelectedItem.ToString();
-               
-                MessageBox.Show(Fechadatatimer.Text);
-               
 
                 conexionbd.Open();
-                string comando = "insert into examenes (disciplina,examinadores,fecha,hora) values('"+disciplina+"','"+txbexaminadores.Text+"','"+Fechadatatimer.Text+"','"+horadatatimer.Text+"');";
-                MySqlCommand comandoingresarexamenes = new MySqlCommand(comando,conexionbd);
-                comandoingresarexamenes.ExecuteNonQuery();
-                MessageBox.Show("Se agrego correctamente el examen");
-                limpiar();
+                for (int i = 0; i < dgvexamenes.RowCount-1; i++)
+                {
+                    TimeSpan diferenciahorario = DateTime.Parse(dgvexamenes.Rows[i].Cells["colhora"].Value.ToString())- horadatatimer.Value;
+                    double difrenciahorariodouble = diferenciahorario.TotalHours;
+                    MessageBox.Show(difrenciahorariodouble.ToString());
+                    if (horadatatimer.Value != DateTime.Parse(dgvexamenes.Rows[i].Cells["colhora"].Value.ToString()))
+                    {
+                        if (Fechadatatimer.Value == DateTime.Parse(dgvexamenes.Rows[i].Cells["colfecha"].Value.ToString()) && (difrenciahorariodouble <= -1 || difrenciahorariodouble >= 1))
+                        {
+                            string comando = "insert into examenes (disciplina,examinadores,fecha,hora) values('" + disciplina + "','" + txbexaminadores.Text + "','" + Fechadatatimer.Text + "','" + horadatatimer.Text + "');";
+                            MySqlCommand comandoingresarexamenes = new MySqlCommand(comando, conexionbd);
+                            comandoingresarexamenes.ExecuteNonQuery();
+                            limpiar();
+                          
+                            conexionbd.Close();
+                            dgvexamenes.DataSource = cargarexamenes();
+                            return;
+                        }
+                        MessageBox.Show("El exámen debe de tener al menos una hora de diferencia");
+                        conexionbd.Close();
+                        return;
+
+                    }
+                  
+                }
+                MessageBox.Show("El exámen con los datos que quiere crear ya existe");
                 conexionbd.Close();
-                cbidexamen.Items.Clear();
-                comboboxidactualizado();
-                dgvexamenes.DataSource = cargarexamenes();
+
+
+
+
             }
 
             else
@@ -212,23 +181,31 @@ namespace CUMple
         private void btneliminar_Click(object sender, EventArgs e)
         {
            
-            if (cbidexamen.SelectedIndex != -1)
+            if (txbexaminadores.Text!="" && cbdisciplina.SelectedIndex!=-1 && Fechadatatimer.Enabled==true && horadatatimer.Enabled==true)
             {
                 conexionbd.Open();
-                int id = Int32.Parse(cbidexamen.SelectedItem.ToString());
-                string comandostring = "delete from examenes where idexamen=" + id + "";
-                MySqlCommand comandoborrarexamenes = new MySqlCommand(comandostring, conexionbd);
-                comandoborrarexamenes.ExecuteNonQuery();
-                MessageBox.Show("Se elimino correctamente el examen");
-                limpiar();
+          
+                
+                for (int i = 0; i < dgvexamenes.RowCount-1; i++)
+                {
+                    if (txbexaminadores.Text == dgvexamenes.Rows[i].Cells["colexaminadores"].Value.ToString() && cbdisciplina.SelectedItem.ToString()==dgvexamenes.Rows[i].Cells["coldisciplina"].Value.ToString() && Fechadatatimer.Value== DateTime.Parse(dgvexamenes.Rows[i].Cells["colfecha"].Value.ToString()) && horadatatimer.Value== DateTime.Parse(dgvexamenes.Rows[i].Cells["colhora"].Value.ToString()))
+                    {
+                        string comandostring = "delete from examenes where idexamen="+ dgvexamenes.Rows[i].Cells["colidexamen"].Value.ToString() + "";
+                        MySqlCommand comandoborrarexamenes = new MySqlCommand(comandostring, conexionbd);
+                        comandoborrarexamenes.ExecuteNonQuery();
+                        limpiar();
+                        conexionbd.Close();
+                        dgvexamenes.DataSource = cargarexamenes();
+                        return;
+                    }
+                }
                 conexionbd.Close();
-                cbidexamen.Items.Clear();
-                comboboxidactualizado();
-                dgvexamenes.DataSource = cargarexamenes();
+                MessageBox.Show("No se encontro el exámen el cual se quiere borrar");
+               
             }
             else
             {
-                MessageBox.Show("Debe seleccionar una id a la cual borrar");
+                MessageBox.Show("Todas las casillas deben de tener datos seleccionados");
             }
         }
 
@@ -280,36 +257,7 @@ namespace CUMple
         private void txbbuscar_Click(object sender, EventArgs e)
         {                
             DataTable dtexamenes = new DataTable();
-
-            if (cbidexamen.SelectedIndex != -1 && cbdisciplina.SelectedIndex==-1 && Fechadatatimer.Enabled==false && horadatatimer.Enabled==false && txbexaminadores.Text=="")
-            {
-                string comandostring = "select * from examenes where idexamen='"+cbidexamen.SelectedItem+"';";
-                MySqlDataAdapter comandotraerexamenes = new MySqlDataAdapter(comandostring, conexionbd);
-              
-                try
-                {
-                    conexionbd.Open();
-                    dgvexamenes.Refresh();
-                    comandotraerexamenes.Fill(dtexamenes);
-                    dgvexamenes.DataSource = dtexamenes;
-                    if (dgvexamenes.Rows[0].Cells[0].Value == null)
-                    {
-                        conexionbd.Close();
-                        MessageBox.Show("El exámen no se ha encontrado. Prueba utilizando otros parametros");
-                        dgvexamenes.DataSource = cargarexamenes();
-                        limpiar();
-                    }
-               
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
-              
-                limpiar();
-            }
-
-            else if(cbidexamen.SelectedIndex == -1 && cbdisciplina.SelectedIndex != -1 && Fechadatatimer.Enabled == false && horadatatimer.Enabled == false && txbexaminadores.Text == "")
+                if(cbdisciplina.SelectedIndex != -1 && Fechadatatimer.Enabled == false && horadatatimer.Enabled == false && txbexaminadores.Text == "")
             {
                 string comandostring = "select * from examenes where disciplina='" + cbdisciplina.SelectedItem.ToString() + "';";
                 MySqlDataAdapter comandotraerexamenes = new MySqlDataAdapter(comandostring, conexionbd);
@@ -338,7 +286,7 @@ namespace CUMple
                 limpiar();
             }
 
-            else if (cbidexamen.SelectedIndex == -1 && cbdisciplina.SelectedIndex == -1 && Fechadatatimer.Enabled == true && horadatatimer.Enabled == false && txbexaminadores.Text == "")
+            else if (cbdisciplina.SelectedIndex == -1 && Fechadatatimer.Enabled == true && horadatatimer.Enabled == false && txbexaminadores.Text == "")
             {
                 string comandostring = "select * from examenes where fecha='" + Fechadatatimer.Text + "';";
                 MySqlDataAdapter comandotraerexamenes = new MySqlDataAdapter(comandostring, conexionbd);
@@ -366,7 +314,7 @@ namespace CUMple
                 limpiar();
             }
 
-            else if (cbidexamen.SelectedIndex == -1 && cbdisciplina.SelectedIndex == -1 && Fechadatatimer.Enabled == false && horadatatimer.Enabled == true && txbexaminadores.Text == "")
+            else if (cbdisciplina.SelectedIndex == -1 && Fechadatatimer.Enabled == false && horadatatimer.Enabled == true && txbexaminadores.Text == "")
             {
                 string comandostring = "select * from examenes where hora='" + horadatatimer.Text + "';";
                 MySqlDataAdapter comandotraerexamenes = new MySqlDataAdapter(comandostring, conexionbd);
@@ -392,7 +340,7 @@ namespace CUMple
 
                 limpiar();
             }
-            else if (cbidexamen.SelectedIndex == -1 && cbdisciplina.SelectedIndex == -1 && Fechadatatimer.Enabled == false && horadatatimer.Enabled == false && txbexaminadores.Text != "")
+            else if (cbdisciplina.SelectedIndex == -1 && Fechadatatimer.Enabled == false && horadatatimer.Enabled == false && txbexaminadores.Text != "")
             {
                 string comandostring = "select * from examenes where examinadores='" + txbexaminadores.Text + "';";
                 MySqlDataAdapter comandotraerexamenes = new MySqlDataAdapter(comandostring, conexionbd);
@@ -419,7 +367,7 @@ namespace CUMple
 
                 limpiar();
             }
-            else if (cbidexamen.SelectedIndex == -1 && cbdisciplina.SelectedIndex == -1 && Fechadatatimer.Enabled == true && horadatatimer.Enabled == false && txbexaminadores.Text != "")
+            else if (cbdisciplina.SelectedIndex == -1 && Fechadatatimer.Enabled == true && horadatatimer.Enabled == false && txbexaminadores.Text != "")
             {
                 string comandostring = "select * from examenes where examinadores='" + txbexaminadores.Text + "' and fecha='"+Fechadatatimer.Text+"';";
                 MySqlDataAdapter comandotraerexamenes = new MySqlDataAdapter(comandostring, conexionbd);
@@ -448,7 +396,7 @@ namespace CUMple
                 limpiar();
             }
 
-            else if (cbidexamen.SelectedIndex == -1 && cbdisciplina.SelectedIndex == -1 && Fechadatatimer.Enabled == true && horadatatimer.Enabled == true && txbexaminadores.Text == "")
+            else if (cbdisciplina.SelectedIndex == -1 && Fechadatatimer.Enabled == true && horadatatimer.Enabled == true && txbexaminadores.Text == "")
             {
                 string comandostring = "select * from examenes where fecha='"+Fechadatatimer.Text+"' and hora='"+horadatatimer.Text+"';";
                 MySqlDataAdapter comandotraerexamenes = new MySqlDataAdapter(comandostring, conexionbd);
@@ -514,6 +462,23 @@ namespace CUMple
                 MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
+            }
+        }
+
+        private void dgvexamenes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex!=-1)
+            {
+                DataGridViewRow filas=dgvexamenes.Rows[e.RowIndex];
+
+                txbexaminadores.Text = filas.Cells["colexaminadores"].Value.ToString();
+                cbdisciplina.SelectedItem = filas.Cells["coldisciplina"].Value.ToString();          
+                cbhabfe.Checked = true;
+                cbhabhora.Checked = true;
+                
+                Fechadatatimer.Value = Convert.ToDateTime(filas.Cells["colfecha"].Value.ToString());
+                horadatatimer.Value = Convert.ToDateTime(filas.Cells["colhora"].Value.ToString());
+
             }
         }
     }

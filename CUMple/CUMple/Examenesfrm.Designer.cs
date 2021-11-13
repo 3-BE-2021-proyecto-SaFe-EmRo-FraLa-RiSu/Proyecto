@@ -42,8 +42,6 @@ namespace CUMple
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbidexamen = new System.Windows.Forms.ComboBox();
-            this.lblid = new System.Windows.Forms.Label();
             this.btnagregar = new System.Windows.Forms.Button();
             this.btnvolverexamenes = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
@@ -77,14 +75,14 @@ namespace CUMple
             this.coldisciplina,
             this.colhora,
             this.colidexamen});
-            this.dgvexamenes.Location = new System.Drawing.Point(126, 343);
-            this.dgvexamenes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvexamenes.Location = new System.Drawing.Point(84, 223);
             this.dgvexamenes.MultiSelect = false;
             this.dgvexamenes.Name = "dgvexamenes";
             this.dgvexamenes.ReadOnly = true;
             this.dgvexamenes.RowHeadersWidth = 62;
-            this.dgvexamenes.Size = new System.Drawing.Size(1208, 437);
+            this.dgvexamenes.Size = new System.Drawing.Size(814, 284);
             this.dgvexamenes.TabIndex = 0;
+            this.dgvexamenes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvexamenes_CellClick);
             this.dgvexamenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvexamenes_CellContentClick);
             // 
             // colexaminadores
@@ -135,10 +133,9 @@ namespace CUMple
             // btneditar
             // 
             this.btneditar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneditar.Location = new System.Drawing.Point(549, 795);
-            this.btneditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btneditar.Location = new System.Drawing.Point(366, 517);
             this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(108, 46);
+            this.btneditar.Size = new System.Drawing.Size(72, 30);
             this.btneditar.TabIndex = 1;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = true;
@@ -147,10 +144,9 @@ namespace CUMple
             // txbexaminadores
             // 
             this.txbexaminadores.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbexaminadores.Location = new System.Drawing.Point(252, 138);
-            this.txbexaminadores.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbexaminadores.Location = new System.Drawing.Point(153, 90);
             this.txbexaminadores.Name = "txbexaminadores";
-            this.txbexaminadores.Size = new System.Drawing.Size(148, 37);
+            this.txbexaminadores.Size = new System.Drawing.Size(127, 27);
             this.txbexaminadores.TabIndex = 2;
             this.txbexaminadores.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbexaminadores_KeyPress);
             // 
@@ -159,10 +155,9 @@ namespace CUMple
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 143);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(9, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 29);
+            this.label1.Size = new System.Drawing.Size(129, 18);
             this.label1.TabIndex = 5;
             this.label1.Text = "Examinadores:";
             // 
@@ -171,10 +166,9 @@ namespace CUMple
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(54, 211);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(12, 138);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 29);
+            this.label2.Size = new System.Drawing.Size(62, 18);
             this.label2.TabIndex = 7;
             this.label2.Text = "Fecha:";
             // 
@@ -183,10 +177,9 @@ namespace CUMple
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(464, 148);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(309, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 29);
+            this.label3.Size = new System.Drawing.Size(94, 18);
             this.label3.TabIndex = 8;
             this.label3.Text = "Disciplina:";
             // 
@@ -195,42 +188,18 @@ namespace CUMple
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(494, 212);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(329, 138);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 29);
+            this.label4.Size = new System.Drawing.Size(53, 18);
             this.label4.TabIndex = 9;
             this.label4.Text = "Hora:";
-            // 
-            // cbidexamen
-            // 
-            this.cbidexamen.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbidexamen.FormattingEnabled = true;
-            this.cbidexamen.Location = new System.Drawing.Point(1215, 134);
-            this.cbidexamen.Name = "cbidexamen";
-            this.cbidexamen.Size = new System.Drawing.Size(148, 37);
-            this.cbidexamen.TabIndex = 11;
-            this.cbidexamen.SelectedIndexChanged += new System.EventHandler(this.cbidexamen_SelectedIndexChanged);
-            // 
-            // lblid
-            // 
-            this.lblid.AutoSize = true;
-            this.lblid.BackColor = System.Drawing.Color.Transparent;
-            this.lblid.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblid.Location = new System.Drawing.Point(1040, 148);
-            this.lblid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(144, 29);
-            this.lblid.TabIndex = 12;
-            this.lblid.Text = "ID exámen";
             // 
             // btnagregar
             // 
             this.btnagregar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnagregar.Location = new System.Drawing.Point(369, 795);
-            this.btnagregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnagregar.Location = new System.Drawing.Point(246, 517);
             this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(124, 46);
+            this.btnagregar.Size = new System.Drawing.Size(83, 30);
             this.btnagregar.TabIndex = 13;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
@@ -242,10 +211,9 @@ namespace CUMple
             this.btnvolverexamenes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnvolverexamenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolverexamenes.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolverexamenes.Location = new System.Drawing.Point(18, 777);
-            this.btnvolverexamenes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnvolverexamenes.Location = new System.Drawing.Point(12, 505);
             this.btnvolverexamenes.Name = "btnvolverexamenes";
-            this.btnvolverexamenes.Size = new System.Drawing.Size(64, 65);
+            this.btnvolverexamenes.Size = new System.Drawing.Size(43, 42);
             this.btnvolverexamenes.TabIndex = 14;
             this.btnvolverexamenes.Text = "⮎";
             this.btnvolverexamenes.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -255,10 +223,9 @@ namespace CUMple
             // btneliminar
             // 
             this.btneliminar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Location = new System.Drawing.Point(1010, 795);
-            this.btneliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btneliminar.Location = new System.Drawing.Point(583, 517);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(123, 46);
+            this.btneliminar.Size = new System.Drawing.Size(82, 30);
             this.btneliminar.TabIndex = 15;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
@@ -267,10 +234,9 @@ namespace CUMple
             // btnlimpiar
             // 
             this.btnlimpiar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlimpiar.Location = new System.Drawing.Point(862, 795);
-            this.btnlimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnlimpiar.Location = new System.Drawing.Point(473, 517);
             this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Size = new System.Drawing.Size(120, 46);
+            this.btnlimpiar.Size = new System.Drawing.Size(80, 30);
             this.btnlimpiar.TabIndex = 16;
             this.btnlimpiar.Text = "Limpiar";
             this.btnlimpiar.UseVisualStyleBackColor = true;
@@ -283,9 +249,10 @@ namespace CUMple
             this.cbdisciplina.Items.AddRange(new object[] {
             "Taekwondo",
             "Krav Maga"});
-            this.cbdisciplina.Location = new System.Drawing.Point(700, 143);
+            this.cbdisciplina.Location = new System.Drawing.Point(429, 93);
+            this.cbdisciplina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbdisciplina.Name = "cbdisciplina";
-            this.cbdisciplina.Size = new System.Drawing.Size(148, 37);
+            this.cbdisciplina.Size = new System.Drawing.Size(124, 26);
             this.cbdisciplina.TabIndex = 17;
             this.cbdisciplina.SelectedIndexChanged += new System.EventHandler(this.cbdisciplina_SelectedIndexChanged);
             // 
@@ -294,10 +261,9 @@ namespace CUMple
             this.Fechadatatimer.CustomFormat = "yyyy-MM-dd";
             this.Fechadatatimer.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fechadatatimer.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Fechadatatimer.Location = new System.Drawing.Point(230, 198);
-            this.Fechadatatimer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Fechadatatimer.Location = new System.Drawing.Point(153, 129);
             this.Fechadatatimer.Name = "Fechadatatimer";
-            this.Fechadatatimer.Size = new System.Drawing.Size(194, 37);
+            this.Fechadatatimer.Size = new System.Drawing.Size(127, 27);
             this.Fechadatatimer.TabIndex = 18;
             // 
             // horadatatimer
@@ -306,10 +272,9 @@ namespace CUMple
             this.horadatatimer.CustomFormat = "H:mm";
             this.horadatatimer.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.horadatatimer.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.horadatatimer.Location = new System.Drawing.Point(710, 211);
-            this.horadatatimer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.horadatatimer.Location = new System.Drawing.Point(429, 138);
             this.horadatatimer.Name = "horadatatimer";
-            this.horadatatimer.Size = new System.Drawing.Size(97, 37);
+            this.horadatatimer.Size = new System.Drawing.Size(80, 27);
             this.horadatatimer.TabIndex = 19;
             this.horadatatimer.ValueChanged += new System.EventHandler(this.horadatatimer_ValueChanged);
             // 
@@ -318,10 +283,9 @@ namespace CUMple
             this.cbhabfe.AutoSize = true;
             this.cbhabfe.BackColor = System.Drawing.Color.Transparent;
             this.cbhabfe.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbhabfe.Location = new System.Drawing.Point(964, 240);
-            this.cbhabfe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbhabfe.Location = new System.Drawing.Point(153, 170);
             this.cbhabfe.Name = "cbhabfe";
-            this.cbhabfe.Size = new System.Drawing.Size(209, 33);
+            this.cbhabfe.Size = new System.Drawing.Size(147, 22);
             this.cbhabfe.TabIndex = 20;
             this.cbhabfe.Text = "Habilitar fecha";
             this.cbhabfe.UseVisualStyleBackColor = false;
@@ -332,10 +296,9 @@ namespace CUMple
             this.cbhabhora.AutoSize = true;
             this.cbhabhora.BackColor = System.Drawing.Color.Transparent;
             this.cbhabhora.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbhabhora.Location = new System.Drawing.Point(994, 283);
-            this.cbhabhora.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbhabhora.Location = new System.Drawing.Point(429, 171);
             this.cbhabhora.Name = "cbhabhora";
-            this.cbhabhora.Size = new System.Drawing.Size(199, 33);
+            this.cbhabhora.Size = new System.Drawing.Size(139, 22);
             this.cbhabhora.TabIndex = 21;
             this.cbhabhora.Text = "Habilitar hora";
             this.cbhabhora.UseVisualStyleBackColor = false;
@@ -344,10 +307,9 @@ namespace CUMple
             // txbbuscar
             // 
             this.txbbuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbbuscar.Location = new System.Drawing.Point(700, 795);
-            this.txbbuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbbuscar.Location = new System.Drawing.Point(659, 96);
             this.txbbuscar.Name = "txbbuscar";
-            this.txbbuscar.Size = new System.Drawing.Size(108, 46);
+            this.txbbuscar.Size = new System.Drawing.Size(72, 30);
             this.txbbuscar.TabIndex = 23;
             this.txbbuscar.Text = "Buscar";
             this.txbbuscar.UseVisualStyleBackColor = true;
@@ -362,19 +324,17 @@ namespace CUMple
             this.panel1.Controls.Add(this.maximizar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1492, 77);
+            this.panel1.Size = new System.Drawing.Size(995, 50);
             this.panel1.TabIndex = 47;
             // 
             // restaurar
             // 
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(1342, 8);
-            this.restaurar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.restaurar.Location = new System.Drawing.Point(895, 5);
             this.restaurar.Name = "restaurar";
-            this.restaurar.Size = new System.Drawing.Size(62, 65);
+            this.restaurar.Size = new System.Drawing.Size(41, 42);
             this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.restaurar.TabIndex = 19;
             this.restaurar.TabStop = false;
@@ -384,10 +344,9 @@ namespace CUMple
             // 
             this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(1272, 8);
-            this.minimizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.minimizar.Location = new System.Drawing.Point(848, 5);
             this.minimizar.Name = "minimizar";
-            this.minimizar.Size = new System.Drawing.Size(62, 65);
+            this.minimizar.Size = new System.Drawing.Size(41, 42);
             this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.minimizar.TabIndex = 18;
             this.minimizar.TabStop = false;
@@ -397,10 +356,9 @@ namespace CUMple
             // 
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(1413, 8);
-            this.cerrarclic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cerrarclic.Location = new System.Drawing.Point(942, 5);
             this.cerrarclic.Name = "cerrarclic";
-            this.cerrarclic.Size = new System.Drawing.Size(62, 65);
+            this.cerrarclic.Size = new System.Drawing.Size(41, 42);
             this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cerrarclic.TabIndex = 17;
             this.cerrarclic.TabStop = false;
@@ -410,10 +368,9 @@ namespace CUMple
             // 
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(1342, 8);
-            this.maximizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.maximizar.Location = new System.Drawing.Point(895, 5);
             this.maximizar.Name = "maximizar";
-            this.maximizar.Size = new System.Drawing.Size(62, 65);
+            this.maximizar.Size = new System.Drawing.Size(41, 42);
             this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.maximizar.TabIndex = 16;
             this.maximizar.TabStop = false;
@@ -421,10 +378,10 @@ namespace CUMple
             // 
             // Examenesfrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1492, 918);
+            this.ClientSize = new System.Drawing.Size(995, 597);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txbbuscar);
             this.Controls.Add(this.cbhabhora);
@@ -436,8 +393,6 @@ namespace CUMple
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnvolverexamenes);
             this.Controls.Add(this.btnagregar);
-            this.Controls.Add(this.lblid);
-            this.Controls.Add(this.cbidexamen);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -446,7 +401,6 @@ namespace CUMple
             this.Controls.Add(this.btneditar);
             this.Controls.Add(this.dgvexamenes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Examenesfrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Examenes";
@@ -476,8 +430,6 @@ namespace CUMple
         private System.Windows.Forms.DataGridViewTextBoxColumn coldisciplina;
         private System.Windows.Forms.DataGridViewTextBoxColumn colhora;
         private System.Windows.Forms.DataGridViewTextBoxColumn colidexamen;
-        private System.Windows.Forms.ComboBox cbidexamen;
-        private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.Button btnvolverexamenes;
         private System.Windows.Forms.Button btneliminar;
