@@ -193,5 +193,13 @@ private void textBox2_TextChanged(object sender, EventArgs e)
         {
            
         }
+
+        private void txbuserb_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter)) 
+            {
+                txbconb.Focus();
+            }
+        }
     }
 }
