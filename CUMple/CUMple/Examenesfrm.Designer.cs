@@ -332,7 +332,7 @@ namespace CUMple
             // 
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(895, 5);
+            this.restaurar.Location = new System.Drawing.Point(895, 8);
             this.restaurar.Name = "restaurar";
             this.restaurar.Size = new System.Drawing.Size(41, 42);
             this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -107,19 +107,19 @@ private void textBox2_TextChanged(object sender, EventArgs e)
             }
 
 
-            if (txbuserb.Text == "" && txbconb.Text == "")
+            if (txbuserb.Text == "" && txbconb.Text == "" || (txbuserb.Text == "Usuario" && txbconb.Text == "Contraseña"))
             {
                 MessageBox.Show("Los campos no pueden estar vacios");
 
             }
 
-            else if (txbuserb.Text == "")
+            else if (txbuserb.Text == "" || txbuserb.Text == "Usuario")
             {
                 MessageBox.Show("El campo de usuario esta vacio");
                 txbuserb.Focus();
 
             }
-            else if (txbconb.Text == "")
+            else if (txbconb.Text == "" || txbconb.Text == "Contraseña")
             {
                 MessageBox.Show("El campo de la contraseña esta vacio");
                 txbconb.Focus();
@@ -134,6 +134,57 @@ private void textBox2_TextChanged(object sender, EventArgs e)
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
                 iniciarsesion();
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cerrarclic_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void minimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void txbuserb_Enter(object sender, EventArgs e)
+        {
+            if (txbuserb.Text=="Usuario")
+            {
+                txbuserb.Text = "";
+                txbuserb.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void txbuserb_Leave(object sender, EventArgs e)
+        {
+            if (txbuserb.Text == "")
+            {
+                txbuserb.Text = "Usuario";
+                txbuserb.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txbconb_Enter(object sender, EventArgs e)
+        {
+            if (txbconb.Text == "Contraseña")
+            {
+                txbconb.Text = "";
+                txbconb.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void txbconb_Leave(object sender, EventArgs e)
+        {
+            if (txbconb.Text == "")
+            {
+                txbconb.Text = "Contraseña";
+                txbconb.ForeColor = Color.DimGray;
             }
         }
     }

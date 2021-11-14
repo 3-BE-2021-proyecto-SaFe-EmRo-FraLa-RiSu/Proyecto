@@ -254,7 +254,6 @@ namespace CUMple
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(49)))));
-            this.panel1.Controls.Add(this.restaurar);
             this.panel1.Controls.Add(this.minimizar);
             this.panel1.Controls.Add(this.cerrarclic);
             this.panel1.Controls.Add(this.maximizar);
@@ -269,7 +268,7 @@ namespace CUMple
             // 
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(1000, 8);
+            this.restaurar.Location = new System.Drawing.Point(1011, 56);
             this.restaurar.Name = "restaurar";
             this.restaurar.Size = new System.Drawing.Size(41, 42);
             this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -328,9 +327,9 @@ namespace CUMple
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1100, 600);
+            this.Controls.Add(this.restaurar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cbcedula);
