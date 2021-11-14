@@ -38,22 +38,22 @@ namespace CUMple
             this.btnfiltrar = new System.Windows.Forms.Button();
             this.txbapellidofiltrar = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelapoyo4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelapoyo3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelapoyo2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
             this.maximizar = new System.Windows.Forms.PictureBox();
             this.minimizar = new System.Windows.Forms.PictureBox();
-            this.restaurar = new System.Windows.Forms.PictureBox();
             this.cerrarclic = new System.Windows.Forms.PictureBox();
+            this.restaurar = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelapoyo2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelapoyo3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelapoyo4 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblxd
@@ -127,7 +127,7 @@ namespace CUMple
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 203);
+            this.button1.Location = new System.Drawing.Point(0, 204);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(220, 44);
             this.button1.TabIndex = 4;
@@ -143,7 +143,7 @@ namespace CUMple
             this.btnfiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnfiltrar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnfiltrar.ForeColor = System.Drawing.Color.White;
-            this.btnfiltrar.Location = new System.Drawing.Point(0, 280);
+            this.btnfiltrar.Location = new System.Drawing.Point(0, 278);
             this.btnfiltrar.Name = "btnfiltrar";
             this.btnfiltrar.Size = new System.Drawing.Size(220, 44);
             this.btnfiltrar.TabIndex = 6;
@@ -176,55 +176,6 @@ namespace CUMple
             this.panel2.Size = new System.Drawing.Size(1154, 35);
             this.panel2.TabIndex = 8;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.panel1.Controls.Add(this.panelapoyo1);
-            this.panel1.Controls.Add(this.panelapoyo2);
-            this.panel1.Controls.Add(this.panelapoyo3);
-            this.panel1.Controls.Add(this.panelapoyo4);
-            this.panel1.Controls.Add(this.botcrearus);
-            this.panel1.Controls.Add(this.botingprog);
-            this.panel1.Controls.Add(this.btnfiltrar);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 35);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 620);
-            this.panel1.TabIndex = 9;
-            // 
-            // panelapoyo4
-            // 
-            this.panelapoyo4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo4.Location = new System.Drawing.Point(1, 278);
-            this.panelapoyo4.Name = "panelapoyo4";
-            this.panelapoyo4.Size = new System.Drawing.Size(5, 44);
-            this.panelapoyo4.TabIndex = 17;
-            // 
-            // panelapoyo3
-            // 
-            this.panelapoyo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo3.Location = new System.Drawing.Point(1, 203);
-            this.panelapoyo3.Name = "panelapoyo3";
-            this.panelapoyo3.Size = new System.Drawing.Size(5, 44);
-            this.panelapoyo3.TabIndex = 18;
-            // 
-            // panelapoyo2
-            // 
-            this.panelapoyo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo2.Location = new System.Drawing.Point(0, 129);
-            this.panelapoyo2.Name = "panelapoyo2";
-            this.panelapoyo2.Size = new System.Drawing.Size(5, 44);
-            this.panelapoyo2.TabIndex = 18;
-            // 
-            // panelapoyo1
-            // 
-            this.panelapoyo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo1.Location = new System.Drawing.Point(0, 55);
-            this.panelapoyo1.Name = "panelapoyo1";
-            this.panelapoyo1.Size = new System.Drawing.Size(5, 44);
-            this.panelapoyo1.TabIndex = 19;
-            // 
             // maximizar
             // 
             this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -251,6 +202,19 @@ namespace CUMple
             this.minimizar.TabStop = false;
             this.minimizar.Click += new System.EventHandler(this.minimizar_Click);
             // 
+            // cerrarclic
+            // 
+            this.cerrarclic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
+            this.cerrarclic.Location = new System.Drawing.Point(1116, 2);
+            this.cerrarclic.Name = "cerrarclic";
+            this.cerrarclic.Size = new System.Drawing.Size(37, 30);
+            this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cerrarclic.TabIndex = 25;
+            this.cerrarclic.TabStop = false;
+            this.cerrarclic.Click += new System.EventHandler(this.cerrarclic_Click);
+            // 
             // restaurar
             // 
             this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -265,18 +229,54 @@ namespace CUMple
             this.restaurar.Visible = false;
             this.restaurar.Click += new System.EventHandler(this.restaurar_Click);
             // 
-            // cerrarclic
+            // panel1
             // 
-            this.cerrarclic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(1116, 2);
-            this.cerrarclic.Name = "cerrarclic";
-            this.cerrarclic.Size = new System.Drawing.Size(37, 30);
-            this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cerrarclic.TabIndex = 25;
-            this.cerrarclic.TabStop = false;
-            this.cerrarclic.Click += new System.EventHandler(this.cerrarclic_Click);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.panel1.Controls.Add(this.panelapoyo1);
+            this.panel1.Controls.Add(this.panelapoyo2);
+            this.panel1.Controls.Add(this.panelapoyo3);
+            this.panel1.Controls.Add(this.panelapoyo4);
+            this.panel1.Controls.Add(this.botcrearus);
+            this.panel1.Controls.Add(this.botingprog);
+            this.panel1.Controls.Add(this.btnfiltrar);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 35);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(220, 620);
+            this.panel1.TabIndex = 9;
+            // 
+            // panelapoyo1
+            // 
+            this.panelapoyo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.panelapoyo1.Location = new System.Drawing.Point(0, 55);
+            this.panelapoyo1.Name = "panelapoyo1";
+            this.panelapoyo1.Size = new System.Drawing.Size(5, 44);
+            this.panelapoyo1.TabIndex = 19;
+            // 
+            // panelapoyo2
+            // 
+            this.panelapoyo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.panelapoyo2.Location = new System.Drawing.Point(0, 129);
+            this.panelapoyo2.Name = "panelapoyo2";
+            this.panelapoyo2.Size = new System.Drawing.Size(5, 44);
+            this.panelapoyo2.TabIndex = 18;
+            // 
+            // panelapoyo3
+            // 
+            this.panelapoyo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.panelapoyo3.Location = new System.Drawing.Point(1, 204);
+            this.panelapoyo3.Name = "panelapoyo3";
+            this.panelapoyo3.Size = new System.Drawing.Size(5, 44);
+            this.panelapoyo3.TabIndex = 18;
+            // 
+            // panelapoyo4
+            // 
+            this.panelapoyo4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.panelapoyo4.Location = new System.Drawing.Point(1, 278);
+            this.panelapoyo4.Name = "panelapoyo4";
+            this.panelapoyo4.Size = new System.Drawing.Size(5, 44);
+            this.panelapoyo4.TabIndex = 17;
             // 
             // panel3
             // 
@@ -308,11 +308,11 @@ namespace CUMple
             this.Text = "Administrador";
             this.Load += new System.EventHandler(this.formadmin_Load);
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
