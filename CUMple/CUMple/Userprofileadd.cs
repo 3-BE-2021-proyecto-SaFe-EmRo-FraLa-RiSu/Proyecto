@@ -220,7 +220,7 @@ namespace CUMple
             if (txbemail.Text=="ejemplo@dominio.com")
             {
                 txbemail.Text = "";
-                txbemail.ForeColor = Color.Black;
+                txbemail.ForeColor = Color.White;
             }
         }
 
@@ -234,11 +234,26 @@ namespace CUMple
             if (txbemail.Text == "")
             {
                 txbemail.Text = "ejemplo@dominio.com";
-                txbemail.ForeColor = Color.Silver;
+                txbemail.ForeColor = Color.Gray;
             }
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cerrarclic_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Userprofileadd_Load(object sender, EventArgs e)
         {
 
         }

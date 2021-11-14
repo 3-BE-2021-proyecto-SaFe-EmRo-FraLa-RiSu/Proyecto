@@ -68,6 +68,7 @@ namespace CUMple
             this.panelapoyo2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
@@ -272,16 +273,17 @@ namespace CUMple
             // 
             // btnvolverexamenes
             // 
-            this.btnvolverexamenes.BackColor = System.Drawing.Color.DarkRed;
-            this.btnvolverexamenes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnvolverexamenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvolverexamenes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnvolverexamenes.FlatAppearance.BorderSize = 0;
+            this.btnvolverexamenes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.btnvolverexamenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnvolverexamenes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolverexamenes.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolverexamenes.Location = new System.Drawing.Point(29, 520);
+            this.btnvolverexamenes.Location = new System.Drawing.Point(0, 524);
             this.btnvolverexamenes.Name = "btnvolverexamenes";
-            this.btnvolverexamenes.Size = new System.Drawing.Size(43, 42);
+            this.btnvolverexamenes.Size = new System.Drawing.Size(176, 39);
             this.btnvolverexamenes.TabIndex = 14;
-            this.btnvolverexamenes.Text = "⮎";
-            this.btnvolverexamenes.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnvolverexamenes.Text = "Volver";
             this.btnvolverexamenes.UseVisualStyleBackColor = false;
             this.btnvolverexamenes.Click += new System.EventHandler(this.btnvolverexamenes_Click);
             // 
@@ -469,6 +471,7 @@ namespace CUMple
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel2.Controls.Add(this.flowLayoutPanel1);
             this.panel2.Controls.Add(this.panelapoyo5);
             this.panel2.Controls.Add(this.btnagregar);
             this.panel2.Controls.Add(this.panelapoyo4);
@@ -535,6 +538,14 @@ namespace CUMple
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(141, 1);
             this.panel3.TabIndex = 49;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 524);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(5, 39);
+            this.flowLayoutPanel1.TabIndex = 51;
             // 
             // Examenesfrm
             // 
@@ -610,5 +621,6 @@ namespace CUMple
         private System.Windows.Forms.FlowLayoutPanel panelapoyo1;
         private System.Windows.Forms.FlowLayoutPanel panelapoyo5;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
