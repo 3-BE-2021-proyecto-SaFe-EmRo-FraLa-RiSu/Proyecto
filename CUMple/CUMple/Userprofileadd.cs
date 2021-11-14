@@ -237,5 +237,10 @@ namespace CUMple
                 txbemail.ForeColor = Color.Silver;
             }
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

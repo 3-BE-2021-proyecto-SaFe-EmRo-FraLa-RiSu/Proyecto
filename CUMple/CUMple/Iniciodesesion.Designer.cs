@@ -52,9 +52,10 @@ namespace CUMple
             this.txbconb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbconb.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbconb.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txbconb.Location = new System.Drawing.Point(519, 311);
+            this.txbconb.Location = new System.Drawing.Point(346, 202);
+            this.txbconb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbconb.Name = "txbconb";
-            this.txbconb.Size = new System.Drawing.Size(600, 35);
+            this.txbconb.Size = new System.Drawing.Size(400, 24);
             this.txbconb.TabIndex = 2;
             this.txbconb.Text = "Contraseña";
             this.txbconb.UseSystemPasswordChar = true;
@@ -72,9 +73,10 @@ namespace CUMple
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.button1.Location = new System.Drawing.Point(666, 471);
+            this.button1.Location = new System.Drawing.Point(444, 306);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(351, 52);
+            this.button1.Size = new System.Drawing.Size(234, 34);
             this.button1.TabIndex = 3;
             this.button1.Text = "Inciar Sesión";
             this.button1.UseVisualStyleBackColor = false;
@@ -86,18 +88,16 @@ namespace CUMple
             this.panelogo.Controls.Add(this.logoescuela);
             this.panelogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelogo.Location = new System.Drawing.Point(0, 0);
-            this.panelogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelogo.Name = "panelogo";
-            this.panelogo.Size = new System.Drawing.Size(375, 618);
+            this.panelogo.Size = new System.Drawing.Size(250, 402);
             this.panelogo.TabIndex = 7;
             // 
             // logoescuela
             // 
             this.logoescuela.Image = global::CUMple.Properties.Resources.logo_de_Academia_DO_difuminado_;
-            this.logoescuela.Location = new System.Drawing.Point(0, -5);
-            this.logoescuela.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.logoescuela.Location = new System.Drawing.Point(0, -3);
             this.logoescuela.Name = "logoescuela";
-            this.logoescuela.Size = new System.Drawing.Size(375, 618);
+            this.logoescuela.Size = new System.Drawing.Size(250, 402);
             this.logoescuela.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoescuela.TabIndex = 12;
             this.logoescuela.TabStop = false;
@@ -106,10 +106,9 @@ namespace CUMple
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gray;
-            this.panel2.Location = new System.Drawing.Point(519, 226);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(346, 147);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(600, 2);
+            this.panel2.Size = new System.Drawing.Size(400, 1);
             this.panel2.TabIndex = 10;
             // 
             // txbuserb
@@ -118,9 +117,10 @@ namespace CUMple
             this.txbuserb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbuserb.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbuserb.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txbuserb.Location = new System.Drawing.Point(519, 191);
+            this.txbuserb.Location = new System.Drawing.Point(346, 123);
+            this.txbuserb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbuserb.Name = "txbuserb";
-            this.txbuserb.Size = new System.Drawing.Size(594, 35);
+            this.txbuserb.Size = new System.Drawing.Size(396, 24);
             this.txbuserb.TabIndex = 1;
             this.txbuserb.Text = "Usuario";
             this.txbuserb.Enter += new System.EventHandler(this.txbuserb_Enter);
@@ -130,10 +130,9 @@ namespace CUMple
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gray;
-            this.panel3.Location = new System.Drawing.Point(519, 351);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Location = new System.Drawing.Point(346, 228);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(600, 2);
+            this.panel3.Size = new System.Drawing.Size(400, 1);
             this.panel3.TabIndex = 10;
             // 
             // lbltextologin
@@ -143,10 +142,9 @@ namespace CUMple
             this.lbltextologin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.lbltextologin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltextologin.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lbltextologin.Location = new System.Drawing.Point(794, 48);
-            this.lbltextologin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbltextologin.Location = new System.Drawing.Point(529, 31);
             this.lbltextologin.Name = "lbltextologin";
-            this.lbltextologin.Size = new System.Drawing.Size(86, 33);
+            this.lbltextologin.Size = new System.Drawing.Size(57, 24);
             this.lbltextologin.TabIndex = 0;
             this.lbltextologin.Text = "Login";
             // 
@@ -154,10 +152,9 @@ namespace CUMple
             // 
             this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(1186, 18);
-            this.minimizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.minimizar.Location = new System.Drawing.Point(791, 12);
             this.minimizar.Name = "minimizar";
-            this.minimizar.Size = new System.Drawing.Size(56, 46);
+            this.minimizar.Size = new System.Drawing.Size(37, 30);
             this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.minimizar.TabIndex = 20;
             this.minimizar.TabStop = false;
@@ -167,10 +164,9 @@ namespace CUMple
             // 
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(1251, 18);
-            this.cerrarclic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cerrarclic.Location = new System.Drawing.Point(834, 12);
             this.cerrarclic.Name = "cerrarclic";
-            this.cerrarclic.Size = new System.Drawing.Size(56, 46);
+            this.cerrarclic.Size = new System.Drawing.Size(37, 30);
             this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cerrarclic.TabIndex = 19;
             this.cerrarclic.TabStop = false;
@@ -178,11 +174,11 @@ namespace CUMple
             // 
             // forming
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1324, 618);
+            this.ClientSize = new System.Drawing.Size(883, 402);
             this.Controls.Add(this.minimizar);
             this.Controls.Add(this.cerrarclic);
             this.Controls.Add(this.lbltextologin);
@@ -195,7 +191,6 @@ namespace CUMple
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "forming";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -29,10 +29,10 @@ namespace CUMple
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pruebadeconexiom));
             this.Graficadealumnos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cmbmeses = new System.Windows.Forms.ComboBox();
@@ -47,6 +47,10 @@ namespace CUMple
             this.cerrarclic = new System.Windows.Forms.PictureBox();
             this.maximizar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelapoyo2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelapoyo3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.Graficadealumnos)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
@@ -60,23 +64,23 @@ namespace CUMple
             // 
             this.Graficadealumnos.BackColor = System.Drawing.Color.Transparent;
             this.Graficadealumnos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            chartArea2.Name = "ChartArea1";
-            this.Graficadealumnos.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.Graficadealumnos.Legends.Add(legend2);
-            this.Graficadealumnos.Location = new System.Drawing.Point(265, 72);
+            chartArea1.Name = "ChartArea1";
+            this.Graficadealumnos.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.Graficadealumnos.Legends.Add(legend1);
+            this.Graficadealumnos.Location = new System.Drawing.Point(312, 72);
             this.Graficadealumnos.Name = "Graficadealumnos";
             this.Graficadealumnos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series3.ChartArea = "ChartArea1";
-            series3.Color = System.Drawing.Color.Red;
-            series3.Legend = "Legend1";
-            series3.Name = "Asistencias";
-            series4.ChartArea = "ChartArea1";
-            series4.Color = System.Drawing.Color.Black;
-            series4.Legend = "Legend1";
-            series4.Name = "Faltas";
-            this.Graficadealumnos.Series.Add(series3);
-            this.Graficadealumnos.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Color = System.Drawing.Color.Red;
+            series1.Legend = "Legend1";
+            series1.Name = "Asistencias";
+            series2.ChartArea = "ChartArea1";
+            series2.Color = System.Drawing.Color.Black;
+            series2.Legend = "Legend1";
+            series2.Name = "Faltas";
+            this.Graficadealumnos.Series.Add(series1);
+            this.Graficadealumnos.Series.Add(series2);
             this.Graficadealumnos.Size = new System.Drawing.Size(729, 501);
             this.Graficadealumnos.TabIndex = 0;
             this.Graficadealumnos.Text = "chart1";
@@ -84,6 +88,10 @@ namespace CUMple
             // 
             // cmbmeses
             // 
+            this.cmbmeses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.cmbmeses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbmeses.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbmeses.ForeColor = System.Drawing.Color.White;
             this.cmbmeses.FormattingEnabled = true;
             this.cmbmeses.Items.AddRange(new object[] {
             "Enero",
@@ -98,29 +106,36 @@ namespace CUMple
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.cmbmeses.Location = new System.Drawing.Point(22, 56);
+            this.cmbmeses.Location = new System.Drawing.Point(192, 72);
             this.cmbmeses.Name = "cmbmeses";
-            this.cmbmeses.Size = new System.Drawing.Size(86, 21);
+            this.cmbmeses.Size = new System.Drawing.Size(114, 26);
             this.cmbmeses.TabIndex = 4;
             this.cmbmeses.Text = "Mes:";
             this.cmbmeses.SelectedIndexChanged += new System.EventHandler(this.comboxmeses_SelectedIndexChanged);
             // 
             // cmbAño
             // 
+            this.cmbAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.cmbAño.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbAño.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAño.ForeColor = System.Drawing.Color.White;
             this.cmbAño.FormattingEnabled = true;
-            this.cmbAño.Location = new System.Drawing.Point(22, 95);
+            this.cmbAño.Location = new System.Drawing.Point(192, 190);
             this.cmbAño.Name = "cmbAño";
-            this.cmbAño.Size = new System.Drawing.Size(86, 21);
+            this.cmbAño.Size = new System.Drawing.Size(114, 26);
             this.cmbAño.TabIndex = 5;
             this.cmbAño.Text = "Año:";
             this.cmbAño.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // btncargardatos
             // 
-            this.btncargardatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncargardatos.Location = new System.Drawing.Point(22, 137);
+            this.btncargardatos.FlatAppearance.BorderSize = 0;
+            this.btncargardatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncargardatos.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncargardatos.ForeColor = System.Drawing.SystemColors.Window;
+            this.btncargardatos.Location = new System.Drawing.Point(3, 82);
             this.btncargardatos.Name = "btncargardatos";
-            this.btncargardatos.Size = new System.Drawing.Size(86, 25);
+            this.btncargardatos.Size = new System.Drawing.Size(165, 44);
             this.btncargardatos.TabIndex = 7;
             this.btncargardatos.Text = "Cargar";
             this.btncargardatos.UseVisualStyleBackColor = true;
@@ -128,10 +143,13 @@ namespace CUMple
             // 
             // btncargarmeses
             // 
-            this.btncargarmeses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncargarmeses.Location = new System.Drawing.Point(22, 186);
+            this.btncargarmeses.FlatAppearance.BorderSize = 0;
+            this.btncargarmeses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncargarmeses.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncargarmeses.ForeColor = System.Drawing.Color.White;
+            this.btncargarmeses.Location = new System.Drawing.Point(0, 288);
             this.btncargarmeses.Name = "btncargarmeses";
-            this.btncargarmeses.Size = new System.Drawing.Size(86, 39);
+            this.btncargarmeses.Size = new System.Drawing.Size(165, 44);
             this.btncargarmeses.TabIndex = 8;
             this.btncargarmeses.Text = "Cargar todos los meses";
             this.btncargarmeses.UseVisualStyleBackColor = true;
@@ -139,10 +157,13 @@ namespace CUMple
             // 
             // btncargaraños
             // 
-            this.btncargaraños.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncargaraños.Location = new System.Drawing.Point(22, 243);
+            this.btncargaraños.FlatAppearance.BorderSize = 0;
+            this.btncargaraños.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncargaraños.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncargaraños.ForeColor = System.Drawing.Color.White;
+            this.btncargaraños.Location = new System.Drawing.Point(0, 184);
             this.btncargaraños.Name = "btncargaraños";
-            this.btncargaraños.Size = new System.Drawing.Size(86, 39);
+            this.btncargaraños.Size = new System.Drawing.Size(165, 44);
             this.btncargaraños.TabIndex = 9;
             this.btncargaraños.Text = "Cargar todos los años";
             this.btncargaraños.UseVisualStyleBackColor = true;
@@ -150,22 +171,22 @@ namespace CUMple
             // 
             // btnvolverpruebaconexion
             // 
-            this.btnvolverpruebaconexion.BackColor = System.Drawing.Color.DarkRed;
-            this.btnvolverpruebaconexion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnvolverpruebaconexion.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvolverpruebaconexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnvolverpruebaconexion.FlatAppearance.BorderSize = 0;
+            this.btnvolverpruebaconexion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnvolverpruebaconexion.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolverpruebaconexion.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolverpruebaconexion.Location = new System.Drawing.Point(1000, 531);
+            this.btnvolverpruebaconexion.Location = new System.Drawing.Point(3, 388);
             this.btnvolverpruebaconexion.Name = "btnvolverpruebaconexion";
-            this.btnvolverpruebaconexion.Size = new System.Drawing.Size(43, 42);
+            this.btnvolverpruebaconexion.Size = new System.Drawing.Size(165, 42);
             this.btnvolverpruebaconexion.TabIndex = 10;
-            this.btnvolverpruebaconexion.Text = "⮎";
-            this.btnvolverpruebaconexion.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnvolverpruebaconexion.Text = "Volver";
             this.btnvolverpruebaconexion.UseVisualStyleBackColor = false;
             this.btnvolverpruebaconexion.Click += new System.EventHandler(this.btnvolvercrearlosusuarios_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(49)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
             this.panel1.Controls.Add(this.restaurar);
             this.panel1.Controls.Add(this.minimizar);
             this.panel1.Controls.Add(this.cerrarclic);
@@ -174,18 +195,19 @@ namespace CUMple
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1100, 50);
+            this.panel1.Size = new System.Drawing.Size(1100, 35);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // restaurar
             // 
+            this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(984, 5);
+            this.restaurar.Location = new System.Drawing.Point(1004, 2);
             this.restaurar.Name = "restaurar";
-            this.restaurar.Size = new System.Drawing.Size(41, 42);
-            this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.restaurar.Size = new System.Drawing.Size(37, 30);
+            this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.restaurar.TabIndex = 15;
             this.restaurar.TabStop = false;
             this.restaurar.Visible = false;
@@ -193,68 +215,107 @@ namespace CUMple
             // 
             // minimizar
             // 
+            this.minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(937, 5);
+            this.minimizar.Location = new System.Drawing.Point(957, 2);
             this.minimizar.Name = "minimizar";
-            this.minimizar.Size = new System.Drawing.Size(41, 42);
-            this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.minimizar.Size = new System.Drawing.Size(37, 30);
+            this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.minimizar.TabIndex = 14;
             this.minimizar.TabStop = false;
             this.minimizar.Click += new System.EventHandler(this.minimizar_Click);
             // 
             // cerrarclic
             // 
+            this.cerrarclic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(1031, 5);
+            this.cerrarclic.Location = new System.Drawing.Point(1051, 2);
             this.cerrarclic.Name = "cerrarclic";
-            this.cerrarclic.Size = new System.Drawing.Size(41, 42);
-            this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cerrarclic.Size = new System.Drawing.Size(37, 30);
+            this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cerrarclic.TabIndex = 13;
             this.cerrarclic.TabStop = false;
             this.cerrarclic.Click += new System.EventHandler(this.cerrarclic_Click);
             // 
             // maximizar
             // 
+            this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(984, 5);
+            this.maximizar.Location = new System.Drawing.Point(1004, 2);
             this.maximizar.Name = "maximizar";
-            this.maximizar.Size = new System.Drawing.Size(41, 42);
-            this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.maximizar.Size = new System.Drawing.Size(37, 30);
+            this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.maximizar.TabIndex = 12;
             this.maximizar.TabStop = false;
             this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(49)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.panel2.Controls.Add(this.flowLayoutPanel1);
+            this.panel2.Controls.Add(this.panelapoyo1);
+            this.panel2.Controls.Add(this.panelapoyo2);
+            this.panel2.Controls.Add(this.panelapoyo3);
             this.panel2.Controls.Add(this.btncargaraños);
-            this.panel2.Controls.Add(this.cmbmeses);
-            this.panel2.Controls.Add(this.cmbAño);
+            this.panel2.Controls.Add(this.btnvolverpruebaconexion);
             this.panel2.Controls.Add(this.btncargardatos);
             this.panel2.Controls.Add(this.btncargarmeses);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.ForeColor = System.Drawing.Color.Coral;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Location = new System.Drawing.Point(0, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(130, 550);
+            this.panel2.Size = new System.Drawing.Size(165, 565);
             this.panel2.TabIndex = 13;
+            // 
+            // panelapoyo1
+            // 
+            this.panelapoyo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.panelapoyo1.Location = new System.Drawing.Point(0, 82);
+            this.panelapoyo1.Name = "panelapoyo1";
+            this.panelapoyo1.Size = new System.Drawing.Size(5, 44);
+            this.panelapoyo1.TabIndex = 22;
+            // 
+            // panelapoyo2
+            // 
+            this.panelapoyo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.panelapoyo2.Location = new System.Drawing.Point(0, 184);
+            this.panelapoyo2.Name = "panelapoyo2";
+            this.panelapoyo2.Size = new System.Drawing.Size(5, 44);
+            this.panelapoyo2.TabIndex = 20;
+            // 
+            // panelapoyo3
+            // 
+            this.panelapoyo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.panelapoyo3.Location = new System.Drawing.Point(0, 288);
+            this.panelapoyo3.Name = "panelapoyo3";
+            this.panelapoyo3.Size = new System.Drawing.Size(5, 44);
+            this.panelapoyo3.TabIndex = 21;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 388);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(5, 44);
+            this.flowLayoutPanel1.TabIndex = 22;
             // 
             // Pruebadeconexiom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1100, 600);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.cmbmeses);
+            this.Controls.Add(this.cmbAño);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnvolverpruebaconexion);
             this.Controls.Add(this.Graficadealumnos);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Pruebadeconexiom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -286,5 +347,9 @@ namespace CUMple
         private System.Windows.Forms.PictureBox minimizar;
         private System.Windows.Forms.PictureBox cerrarclic;
         private System.Windows.Forms.PictureBox maximizar;
+        private System.Windows.Forms.FlowLayoutPanel panelapoyo1;
+        private System.Windows.Forms.FlowLayoutPanel panelapoyo2;
+        private System.Windows.Forms.FlowLayoutPanel panelapoyo3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

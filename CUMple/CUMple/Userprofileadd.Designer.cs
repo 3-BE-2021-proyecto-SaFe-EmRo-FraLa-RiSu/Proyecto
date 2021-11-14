@@ -67,7 +67,7 @@ namespace CUMple
             // btnagregar
             // 
             this.btnagregar.Location = new System.Drawing.Point(705, 401);
-            this.btnagregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnagregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(149, 27);
             this.btnagregar.TabIndex = 0;
@@ -190,7 +190,7 @@ namespace CUMple
             // 
             this.chbtaekwondo.AutoSize = true;
             this.chbtaekwondo.Location = new System.Drawing.Point(381, 325);
-            this.chbtaekwondo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbtaekwondo.Margin = new System.Windows.Forms.Padding(2);
             this.chbtaekwondo.Name = "chbtaekwondo";
             this.chbtaekwondo.Size = new System.Drawing.Size(83, 17);
             this.chbtaekwondo.TabIndex = 36;
@@ -201,7 +201,7 @@ namespace CUMple
             // 
             this.chbkrav.AutoSize = true;
             this.chbkrav.Location = new System.Drawing.Point(381, 345);
-            this.chbkrav.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbkrav.Margin = new System.Windows.Forms.Padding(2);
             this.chbkrav.Name = "chbkrav";
             this.chbkrav.Size = new System.Drawing.Size(78, 17);
             this.chbkrav.TabIndex = 37;
@@ -214,7 +214,7 @@ namespace CUMple
             this.btnvolveruserprofileadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolveruserprofileadd.ForeColor = System.Drawing.Color.Transparent;
             this.btnvolveruserprofileadd.Location = new System.Drawing.Point(13, 738);
-            this.btnvolveruserprofileadd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnvolveruserprofileadd.Margin = new System.Windows.Forms.Padding(2);
             this.btnvolveruserprofileadd.Name = "btnvolveruserprofileadd";
             this.btnvolveruserprofileadd.Size = new System.Drawing.Size(43, 42);
             this.btnvolveruserprofileadd.TabIndex = 38;
@@ -230,6 +230,7 @@ namespace CUMple
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 379);
             this.panel3.TabIndex = 40;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel1
             // 
@@ -299,7 +300,7 @@ namespace CUMple
             this.btnvolveruserprofile.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolveruserprofile.ForeColor = System.Drawing.Color.Transparent;
             this.btnvolveruserprofile.Location = new System.Drawing.Point(237, 386);
-            this.btnvolveruserprofile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnvolveruserprofile.Margin = new System.Windows.Forms.Padding(2);
             this.btnvolveruserprofile.Name = "btnvolveruserprofile";
             this.btnvolveruserprofile.Size = new System.Drawing.Size(43, 42);
             this.btnvolveruserprofile.TabIndex = 41;
@@ -313,7 +314,7 @@ namespace CUMple
             this.dtpfec_nac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpfec_nac.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpfec_nac.Location = new System.Drawing.Point(711, 223);
-            this.dtpfec_nac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpfec_nac.Margin = new System.Windows.Forms.Padding(2);
             this.dtpfec_nac.Name = "dtpfec_nac";
             this.dtpfec_nac.Size = new System.Drawing.Size(96, 24);
             this.dtpfec_nac.TabIndex = 42;
@@ -334,7 +335,7 @@ namespace CUMple
             this.dtpfechadeingreso.Enabled = false;
             this.dtpfechadeingreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpfechadeingreso.Location = new System.Drawing.Point(711, 322);
-            this.dtpfechadeingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpfechadeingreso.Margin = new System.Windows.Forms.Padding(2);
             this.dtpfechadeingreso.Name = "dtpfechadeingreso";
             this.dtpfechadeingreso.Size = new System.Drawing.Size(96, 20);
             this.dtpfechadeingreso.TabIndex = 44;
@@ -379,7 +380,7 @@ namespace CUMple
             this.Controls.Add(this.lblcedula);
             this.Controls.Add(this.lblprofesion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Userprofileadd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Userprofileadd";
