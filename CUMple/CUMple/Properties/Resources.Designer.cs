@@ -63,6 +63,26 @@ namespace CUMple.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ATAUlogo_3x {
+            get {
+                object obj = ResourceManager.GetObject("ATAUlogo@3x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ATAUruguay_Logo_3x {
+            get {
+                object obj = ResourceManager.GetObject("ATAUruguay-Logo@3x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_de_Academia_DO {
             get {
                 object obj = ResourceManager.GetObject("logo_de_Academia_DO", resourceCulture);

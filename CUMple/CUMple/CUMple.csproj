@@ -210,5 +210,14 @@
   <ItemGroup>
     <None Include="Resources\logo_de_Academia_DO.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ATAUruguay-Logo%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ATAUlogo%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,11 +33,11 @@ namespace CUMple
             this.txbconb = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panelogo = new System.Windows.Forms.Panel();
+            this.logoescuela = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txbuserb = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbltextologin = new System.Windows.Forms.Label();
-            this.logoescuela = new System.Windows.Forms.PictureBox();
             this.minimizar = new System.Windows.Forms.PictureBox();
             this.cerrarclic = new System.Windows.Forms.PictureBox();
             this.panelogo.SuspendLayout();
@@ -92,6 +92,17 @@ namespace CUMple
             this.panelogo.Size = new System.Drawing.Size(250, 402);
             this.panelogo.TabIndex = 7;
             // 
+            // logoescuela
+            // 
+            this.logoescuela.Image = global::CUMple.Properties.Resources.logo_de_Academia_DO_difuminado_;
+            this.logoescuela.Location = new System.Drawing.Point(0, -3);
+            this.logoescuela.Name = "logoescuela";
+            this.logoescuela.Size = new System.Drawing.Size(250, 402);
+            this.logoescuela.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logoescuela.TabIndex = 12;
+            this.logoescuela.TabStop = false;
+            this.logoescuela.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gray;
@@ -135,17 +146,6 @@ namespace CUMple
             this.lbltextologin.Size = new System.Drawing.Size(57, 24);
             this.lbltextologin.TabIndex = 11;
             this.lbltextologin.Text = "Login";
-            // 
-            // logoescuela
-            // 
-            this.logoescuela.Image = global::CUMple.Properties.Resources.logo_de_Academia_DO_difuminado_;
-            this.logoescuela.Location = new System.Drawing.Point(0, -3);
-            this.logoescuela.Name = "logoescuela";
-            this.logoescuela.Size = new System.Drawing.Size(250, 402);
-            this.logoescuela.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoescuela.TabIndex = 12;
-            this.logoescuela.TabStop = false;
-            this.logoescuela.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // minimizar
             // 
@@ -195,6 +195,7 @@ namespace CUMple
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de sesión";
             this.Load += new System.EventHandler(this.Marcoin_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.forming_MouseDown);
             this.panelogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoescuela)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();

@@ -97,5 +97,34 @@ namespace CUMple
                 return;
             }
         }
+
+        private void lblxd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cerrarclic_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void minimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void maximizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            maximizar.Visible = false;
+            restaurar.Visible = true;
+        }
+
+        private void restaurar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+            restaurar.Visible = false;
+            maximizar.Visible = true;
+        }
     }
 }

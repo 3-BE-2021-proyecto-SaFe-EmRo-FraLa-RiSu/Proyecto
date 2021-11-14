@@ -8,8 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace CUMple
 {
+
+
     public partial class Principal : Form
     {
         public Principal()
@@ -72,6 +75,11 @@ namespace CUMple
         private void minimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void barramenu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

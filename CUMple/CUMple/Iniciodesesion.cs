@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace CUMple
 {
     public partial class forming : Form
@@ -17,19 +18,19 @@ namespace CUMple
         public forming()
         {
             InitializeComponent();
-        }
-      
+           
+           
 
+        }
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
         MySqlCommand comandoparamysql = new MySqlCommand();
-        
-        
+       
+
+
         public class Detallesusarios
         {
             
-            private static string nombreusuario;
-            public static string nombreusuario_;
-
+       
         }
 
      
@@ -186,6 +187,11 @@ private void textBox2_TextChanged(object sender, EventArgs e)
                 txbconb.Text = "Contraseña";
                 txbconb.ForeColor = Color.DimGray;
             }
+        }
+
+        private void forming_MouseDown(object sender, MouseEventArgs e)
+        {
+           
         }
     }
 }
