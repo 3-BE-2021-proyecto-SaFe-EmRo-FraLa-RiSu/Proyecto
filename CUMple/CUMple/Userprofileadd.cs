@@ -235,7 +235,7 @@ namespace CUMple
 
         private void cerrarclic_Click_1(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -281,6 +281,25 @@ namespace CUMple
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void minimizar_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void restaurar_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+            restaurar.Visible = false;
+            maximizar.Visible = true;
+        }
+
+        private void maximizar_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            maximizar.Visible = false;
+            restaurar.Visible = true;
         }
     }
 }

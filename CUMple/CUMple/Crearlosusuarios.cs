@@ -184,5 +184,30 @@ namespace CUMple
         {
 
         }
+
+        private void maximizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            maximizar.Visible = false;
+            minimizarr.Visible = true;
+        }
+
+        private void cerrarclic_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void restaurar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+            minimizarr.Visible = false;
+            maximizar.Visible = true;
+        }
+
+        private void minimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+         
+        }
     }
 }

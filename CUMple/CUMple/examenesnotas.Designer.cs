@@ -48,8 +48,8 @@ namespace CUMple
             this.cbcedula = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.restaurar = new System.Windows.Forms.PictureBox();
             this.minimizar = new System.Windows.Forms.PictureBox();
+            this.restaurarr = new System.Windows.Forms.PictureBox();
             this.cerrarclic = new System.Windows.Forms.PictureBox();
             this.maximizar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -59,8 +59,8 @@ namespace CUMple
             this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurarr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
             this.panel2.SuspendLayout();
@@ -68,6 +68,7 @@ namespace CUMple
             // 
             // dgvexamenes
             // 
+            this.dgvexamenes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvexamenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvexamenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cedula,
@@ -108,6 +109,7 @@ namespace CUMple
             // btnlimpiar
             // 
             this.btnlimpiar.FlatAppearance.BorderSize = 0;
+            this.btnlimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
             this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlimpiar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlimpiar.ForeColor = System.Drawing.Color.White;
@@ -121,6 +123,7 @@ namespace CUMple
             // btneliminar
             // 
             this.btneliminar.FlatAppearance.BorderSize = 0;
+            this.btneliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
             this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneliminar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.ForeColor = System.Drawing.Color.White;
@@ -135,6 +138,7 @@ namespace CUMple
             // btnagregar
             // 
             this.btnagregar.FlatAppearance.BorderSize = 0;
+            this.btnagregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
             this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnagregar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnagregar.ForeColor = System.Drawing.Color.White;
@@ -149,6 +153,7 @@ namespace CUMple
             // btneditar
             // 
             this.btneditar.FlatAppearance.BorderSize = 0;
+            this.btneditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
             this.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneditar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneditar.ForeColor = System.Drawing.Color.White;
@@ -162,6 +167,7 @@ namespace CUMple
             // 
             // cbidexamen
             // 
+            this.cbidexamen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbidexamen.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbidexamen.FormattingEnabled = true;
             this.cbidexamen.Location = new System.Drawing.Point(699, 106);
@@ -173,6 +179,7 @@ namespace CUMple
             // 
             // txbnota
             // 
+            this.txbnota.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txbnota.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbnota.Location = new System.Drawing.Point(421, 107);
             this.txbnota.Name = "txbnota";
@@ -181,6 +188,7 @@ namespace CUMple
             // 
             // lblid
             // 
+            this.lblid.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblid.AutoSize = true;
             this.lblid.BackColor = System.Drawing.Color.Transparent;
             this.lblid.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -193,6 +201,7 @@ namespace CUMple
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -205,6 +214,7 @@ namespace CUMple
             // 
             // cbrango
             // 
+            this.cbrango.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbrango.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbrango.FormattingEnabled = true;
             this.cbrango.Items.AddRange(new object[] {
@@ -240,6 +250,7 @@ namespace CUMple
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -252,6 +263,7 @@ namespace CUMple
             // 
             // cbcedula
             // 
+            this.cbcedula.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbcedula.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbcedula.FormattingEnabled = true;
             this.cbcedula.Location = new System.Drawing.Point(421, 48);
@@ -262,6 +274,7 @@ namespace CUMple
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -275,8 +288,8 @@ namespace CUMple
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panel1.Controls.Add(this.restaurar);
             this.panel1.Controls.Add(this.minimizar);
+            this.panel1.Controls.Add(this.restaurarr);
             this.panel1.Controls.Add(this.cerrarclic);
             this.panel1.Controls.Add(this.maximizar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -287,33 +300,36 @@ namespace CUMple
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
-            // restaurar
-            // 
-            this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(1004, 3);
-            this.restaurar.Name = "restaurar";
-            this.restaurar.Size = new System.Drawing.Size(37, 30);
-            this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.restaurar.TabIndex = 19;
-            this.restaurar.TabStop = false;
-            this.restaurar.Visible = false;
-            this.restaurar.Click += new System.EventHandler(this.restaurar_Click);
-            // 
             // minimizar
             // 
+            this.minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(957, 3);
+            this.minimizar.Location = new System.Drawing.Point(1004, 3);
             this.minimizar.Name = "minimizar";
             this.minimizar.Size = new System.Drawing.Size(37, 30);
             this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.minimizar.TabIndex = 18;
+            this.minimizar.TabIndex = 19;
             this.minimizar.TabStop = false;
-            this.minimizar.Click += new System.EventHandler(this.minimizar_Click);
+            this.minimizar.Visible = false;
+            this.minimizar.Click += new System.EventHandler(this.restaurar_Click);
+            // 
+            // restaurarr
+            // 
+            this.restaurarr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.restaurarr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.restaurarr.Image = ((System.Drawing.Image)(resources.GetObject("restaurarr.Image")));
+            this.restaurarr.Location = new System.Drawing.Point(957, 3);
+            this.restaurarr.Name = "restaurarr";
+            this.restaurarr.Size = new System.Drawing.Size(37, 30);
+            this.restaurarr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.restaurarr.TabIndex = 18;
+            this.restaurarr.TabStop = false;
+            this.restaurarr.Click += new System.EventHandler(this.minimizar_Click);
             // 
             // cerrarclic
             // 
+            this.cerrarclic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
             this.cerrarclic.Location = new System.Drawing.Point(1051, 3);
@@ -326,12 +342,13 @@ namespace CUMple
             // 
             // maximizar
             // 
+            this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
             this.maximizar.Location = new System.Drawing.Point(1004, 3);
             this.maximizar.Name = "maximizar";
             this.maximizar.Size = new System.Drawing.Size(37, 30);
-            this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.maximizar.TabIndex = 16;
             this.maximizar.TabStop = false;
             this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
@@ -412,8 +429,8 @@ namespace CUMple
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.examenesnotas_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurarr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -443,8 +460,8 @@ namespace CUMple
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox restaurar;
         private System.Windows.Forms.PictureBox minimizar;
+        private System.Windows.Forms.PictureBox restaurarr;
         private System.Windows.Forms.PictureBox cerrarclic;
         private System.Windows.Forms.PictureBox maximizar;
         private System.Windows.Forms.FlowLayoutPanel panelapoyo4;

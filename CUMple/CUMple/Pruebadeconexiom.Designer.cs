@@ -62,6 +62,7 @@ namespace CUMple
             // 
             // Graficadealumnos
             // 
+            this.Graficadealumnos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Graficadealumnos.BackColor = System.Drawing.Color.Transparent;
             this.Graficadealumnos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Graficadealumnos.BorderlineColor = System.Drawing.Color.Transparent;
@@ -111,6 +112,7 @@ namespace CUMple
             // 
             // cmbmeses
             // 
+            this.cmbmeses.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbmeses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.cmbmeses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbmeses.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,6 +140,7 @@ namespace CUMple
             // 
             // cmbAño
             // 
+            this.cmbAño.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.cmbAño.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbAño.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -153,6 +156,7 @@ namespace CUMple
             // btncargardatos
             // 
             this.btncargardatos.FlatAppearance.BorderSize = 0;
+            this.btncargardatos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
             this.btncargardatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncargardatos.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncargardatos.ForeColor = System.Drawing.SystemColors.Window;
@@ -167,6 +171,7 @@ namespace CUMple
             // btncargarmeses
             // 
             this.btncargarmeses.FlatAppearance.BorderSize = 0;
+            this.btncargarmeses.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
             this.btncargarmeses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncargarmeses.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncargarmeses.ForeColor = System.Drawing.Color.White;
@@ -181,6 +186,7 @@ namespace CUMple
             // btncargaraños
             // 
             this.btncargaraños.FlatAppearance.BorderSize = 0;
+            this.btncargaraños.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
             this.btncargaraños.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncargaraños.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncargaraños.ForeColor = System.Drawing.Color.White;
@@ -196,6 +202,7 @@ namespace CUMple
             // 
             this.btnvolverpruebaconexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.btnvolverpruebaconexion.FlatAppearance.BorderSize = 0;
+            this.btnvolverpruebaconexion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
             this.btnvolverpruebaconexion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnvolverpruebaconexion.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolverpruebaconexion.ForeColor = System.Drawing.Color.Transparent;
@@ -228,7 +235,7 @@ namespace CUMple
             this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(1004, 2);
+            this.restaurar.Location = new System.Drawing.Point(1008, 2);
             this.restaurar.Name = "restaurar";
             this.restaurar.Size = new System.Drawing.Size(37, 30);
             this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -242,7 +249,7 @@ namespace CUMple
             this.minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(957, 2);
+            this.minimizar.Location = new System.Drawing.Point(961, 2);
             this.minimizar.Name = "minimizar";
             this.minimizar.Size = new System.Drawing.Size(37, 30);
             this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

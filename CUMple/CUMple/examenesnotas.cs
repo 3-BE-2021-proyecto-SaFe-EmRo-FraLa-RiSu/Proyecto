@@ -163,7 +163,7 @@ namespace CUMple
         {
             WindowState = FormWindowState.Maximized;
             maximizar.Visible = false;
-            restaurar.Visible = true;
+            minimizar.Visible = true;
         }
 
         private void minimizar_Click(object sender, EventArgs e)
@@ -174,7 +174,7 @@ namespace CUMple
         private void restaurar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Normal;
-            restaurar.Visible = false;
+            minimizar.Visible = false;
             maximizar.Visible = true;
         }
 

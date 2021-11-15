@@ -487,14 +487,13 @@ namespace CUMple
         {
             WindowState = FormWindowState.Maximized;
             maximizar.Visible = false;
-            restaurar.Visible = true;
+            minim.Visible = true;
         }
 
         private void minimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-            restaurar.Visible = false;
-            maximizar.Visible = true;
+            
         }
 
         private void txbexaminadores_KeyPress(object sender, KeyPressEventArgs e)
@@ -583,6 +582,13 @@ namespace CUMple
         private void txbexaminadores_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void restaurar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+            minim.Visible = false;
+            maximizar.Visible = true;
         }
     }
 }

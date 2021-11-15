@@ -53,7 +53,7 @@ namespace CUMple
         private void btnbuscardis_Click(object sender, EventArgs e)
         {
          
-            new Userprofile(cmbalumnosexistentes.SelectedItem.ToString()).Show();
+            new Userprofile(cmbalumnosexistentes.SelectedItem.ToString(),2).Show();
             this.Dispose();
         }
 
