@@ -276,10 +276,12 @@ namespace CUMple
                 comandoexamenes = " examinadores='"+examinadores+"'";
             }
 
-            if (Fechadatatimer.Enabled!=false)
+            if (Fechadatatimer.Enabled !=false)
             {
                 fecha = Fechadatatimer.Text;
-                comandoexamenes = " fecha='"+fecha+"'";
+
+               comandofecha = " fecha='" + fecha + "'";
+                
             }
 
             if (horadatatimer.Enabled != false)
@@ -328,6 +330,7 @@ namespace CUMple
                 }
               else  if (txbexaminadores.Text == "" && Fechadatatimer.Enabled != false && horadatatimer.Enabled == false && cbdisciplina.SelectedIndex == -1)
                 {
+             
                     MySqlDataAdapter comandobuscar = new MySqlDataAdapter("select * from examenes where" + comandofecha + "", conexionbd);
                     dgvexamenes.Refresh();
                     comandobuscar.Fill(dtexamenes);
