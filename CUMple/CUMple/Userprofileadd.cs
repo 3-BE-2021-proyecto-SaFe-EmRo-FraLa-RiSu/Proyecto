@@ -156,9 +156,9 @@ namespace CUMple
 
         private void txbnombrecompleto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < 65 && e.KeyChar != 8) || (e.KeyChar > 90 && e.KeyChar < 97) || (e.KeyChar > 122 && e.KeyChar != 130 && e.KeyChar < 160) || e.KeyChar > 165)
+            if (((e.KeyChar < 65 && e.KeyChar != 8) || (e.KeyChar > 90 && e.KeyChar < 97) || (e.KeyChar > 122 && e.KeyChar != 130 && e.KeyChar < 160) || e.KeyChar > 165) && e.KeyChar != Convert.ToChar(Keys.Space))
             {
-                MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo letras permitidas", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
@@ -166,9 +166,9 @@ namespace CUMple
 
         private void txbprofesion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ( (e.KeyChar < 65 && e.KeyChar != 8) || (e.KeyChar > 90 && e.KeyChar < 97) || (e.KeyChar > 122 && e.KeyChar != 130 && e.KeyChar < 160) || e.KeyChar > 165)
+            if (((e.KeyChar < 65 && e.KeyChar != 8) || (e.KeyChar > 90 && e.KeyChar < 97) || (e.KeyChar > 122 && e.KeyChar != 130 && e.KeyChar < 160) || e.KeyChar > 165) && e.KeyChar != Convert.ToChar(Keys.Space))
             {
-                MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo letras permitidas", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
@@ -184,7 +184,7 @@ namespace CUMple
         {
             if (e.KeyChar < 8 || (e.KeyChar > 8 && e.KeyChar < 48) || e.KeyChar > 57)
             {
-                MessageBox.Show("Solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo números permitidos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
@@ -199,7 +199,7 @@ namespace CUMple
         {
             if (e.KeyChar < 8 || (e.KeyChar > 8 && e.KeyChar < 48) || e.KeyChar > 57)
             {
-                MessageBox.Show("Solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo números permitidos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }

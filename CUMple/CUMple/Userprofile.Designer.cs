@@ -65,6 +65,7 @@ namespace CUMple
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.cmbdiscipuloseleccionado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).BeginInit();
@@ -495,6 +496,20 @@ namespace CUMple
             this.panel7.Size = new System.Drawing.Size(339, 2);
             this.panel7.TabIndex = 50;
             // 
+            // cmbdiscipuloseleccionado
+            // 
+            this.cmbdiscipuloseleccionado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbdiscipuloseleccionado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.cmbdiscipuloseleccionado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbdiscipuloseleccionado.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbdiscipuloseleccionado.ForeColor = System.Drawing.SystemColors.Control;
+            this.cmbdiscipuloseleccionado.Location = new System.Drawing.Point(330, 197);
+            this.cmbdiscipuloseleccionado.Name = "cmbdiscipuloseleccionado";
+            this.cmbdiscipuloseleccionado.Size = new System.Drawing.Size(448, 37);
+            this.cmbdiscipuloseleccionado.TabIndex = 51;
+            this.cmbdiscipuloseleccionado.Text = "Discipulos:";
+            this.cmbdiscipuloseleccionado.SelectedIndexChanged += new System.EventHandler(this.cmbdiscipuloseleccionado_SelectedIndexChanged);
+            // 
             // Userprofile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -502,6 +517,7 @@ namespace CUMple
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1650, 814);
+            this.Controls.Add(this.cmbdiscipuloseleccionado);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -580,5 +596,6 @@ namespace CUMple
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.ComboBox cmbdiscipuloseleccionado;
     }
 }

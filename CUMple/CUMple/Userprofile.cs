@@ -13,12 +13,22 @@ namespace CUMple
 {
     public partial class Userprofile : Form
     {
-        public Userprofile(string nombrebuscado)
+        public Userprofile(string nombrebuscado, int index)
         {
             InitializeComponent();
+            MySqlDataReader lectordedatos;
+            string comand = "Select nomcompleto from discipulos;";
+            conexionprograma.Open();
+            MySqlCommand comando = new MySqlCommand(comand, conexionprograma);
+            lectordedatos = comando.ExecuteReader();
+            while (lectordedatos.Read())
+            {
+                cmbdiscipuloseleccionado.Items.Add(lectordedatos["nomcompleto"].ToString());
+            }
+            conexionprograma.Close();
             llblnombrediscelec.Text = nombrebuscado;
-            
-        }            
+            cmbdiscipuloseleccionado.SelectedIndex = index;
+        }
      
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
         public void editarusuario(string columna,string datonuevo, string datoacambiar, string cedula)
@@ -29,20 +39,17 @@ namespace CUMple
             try
             {
                 comandoeditarusuario.ExecuteNonQuery();
-            
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                
             }
-            MessageBox.Show("El usuario se ha editado correctamente");
-
             conexionprograma.Close();
             
             if (columna == "nomcompleto") 
             {
-                new Userprofile(datonuevo).Show();
+                MessageBox.Show("El usuario se ha editado correctamente");
+                new Userprofile(datonuevo, cmbdiscipuloseleccionado.SelectedIndex).Show();
                 this.Dispose();
             }
         }
@@ -76,7 +83,6 @@ namespace CUMple
         }
         private void Userprofile_Load(object sender, EventArgs e)
         {
-           
             mskcedula.Text = mostrarlabel("cedula");
             txbceledit.Text = mostrarlabel("celular");
             txbemailedit.Text = mostrarlabel("emails");
@@ -108,51 +114,33 @@ namespace CUMple
 
         private void btnedit_Click(object sender, EventArgs e)
         {
-           
-            //Agregar que la fecha de ingreso se genere automaticamente
-
             //if ( hay un usuario seleccionado   ) { pedir que se seleccione uno }
             //else {
             if (txbprofedit.Text != mostrarlabel("profesiones")) 
             {
                 editarusuario("profesiones", txbprofedit.Text, mostrarlabel("profesiones"), mostrarlabel("cedula"));
-            }
-           
-
+            }          
             if (txbnomedit.Text != mostrarlabel("nomcompleto"))
             {
                 editarusuario("nomcompleto", txbnomedit.Text, mostrarlabel("nomcompleto"), mostrarlabel("cedula"));             
-            }
-           
+            }           
             if (mskcedula.Text != mostrarlabel("cedula"))
             {
                 editarusuario("cedula", mskcedula.Text, mostrarlabel("cedula"), mostrarlabel("cedula"));
-            }
-           
+            }           
             if (txbceledit.Text != mostrarlabel("celular"))
             {
                 editarusuario("celular", txbceledit.Text, mostrarlabel("celular"), mostrarlabel("cedula"));
-            }
-           
+            }           
             if (txbemailedit.Text != mostrarlabel("emails"))
             {
                 editarusuario("emails", txbemailedit.Text, mostrarlabel("emails"), mostrarlabel("cedula"));
-            }                   
-                        
+            }                                           
             if (txbfecdenacedit.Text != mostrarlabel("fecha_de_nac"))
             {
                 editarusuario("fecha_de_nac", txbfecdenacedit.Text, mostrarlabel("fecha_de_nac"), mostrarlabel("cedula"));
-
-            }
-          
-            //}
-            
-         
-          
-         
-           
-           
-           
+            }       
+            //}       
         }
 
         private void lblmostnom_Click(object sender, EventArgs e)
@@ -185,9 +173,7 @@ namespace CUMple
         {
 
         }
-
-     
-
+    
         private void cerrarclic_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -234,9 +220,9 @@ namespace CUMple
 
         private void txbnomedit_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 225))
+            if (((e.KeyChar < 65 && e.KeyChar != 8) || (e.KeyChar > 90 && e.KeyChar < 97) || (e.KeyChar > 122 && e.KeyChar != 130 && e.KeyChar < 160) || e.KeyChar > 165) && e.KeyChar != Convert.ToChar(Keys.Space))
             {
-                MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo letras permitidas", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
@@ -244,9 +230,9 @@ namespace CUMple
 
         private void txbprofedit_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 225))
+            if (((e.KeyChar < 65 && e.KeyChar != 8) || (e.KeyChar > 90 && e.KeyChar < 97) || (e.KeyChar > 122 && e.KeyChar != 130 && e.KeyChar < 160) || e.KeyChar > 165) && e.KeyChar != Convert.ToChar(Keys.Space))
             {
-                MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo letras permitidas", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
@@ -254,9 +240,9 @@ namespace CUMple
 
         private void txbceddit_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 225))
+            if (e.KeyChar < 8 || (e.KeyChar > 8 && e.KeyChar < 48) || e.KeyChar > 57)
             {
-                MessageBox.Show("Solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo números permitidos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
@@ -264,9 +250,9 @@ namespace CUMple
 
         private void txbceledit_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 225))
+            if (e.KeyChar < 8 || (e.KeyChar > 8 && e.KeyChar < 48) || e.KeyChar > 57)
             {
-                MessageBox.Show("Solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo números permitidos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
@@ -279,13 +265,12 @@ namespace CUMple
 
         private void mskcedula_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 225))
+            if (((e.KeyChar < 65 && e.KeyChar != 8) || (e.KeyChar > 90 && e.KeyChar < 97) || (e.KeyChar > 122 && e.KeyChar != 130 && e.KeyChar < 160) || e.KeyChar > 165) && e.KeyChar != Convert.ToChar(Keys.Space))
             {
-                MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo letras permitidas", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
-           
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -331,6 +316,11 @@ namespace CUMple
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void cmbdiscipuloseleccionado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

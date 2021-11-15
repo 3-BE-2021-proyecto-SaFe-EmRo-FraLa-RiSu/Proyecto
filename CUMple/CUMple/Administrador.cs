@@ -41,7 +41,7 @@ namespace CUMple
         private void botcrearus_Click(object sender, EventArgs e)
         {
             if (cmbalumnosexistentes.SelectedIndex != -1) {
-                new Userprofile(cmbalumnosexistentes.SelectedItem.ToString()).Show();
+                new Userprofile(cmbalumnosexistentes.SelectedItem.ToString(), cmbalumnosexistentes.SelectedIndex).Show();
                 this.Dispose();
             }
             else
