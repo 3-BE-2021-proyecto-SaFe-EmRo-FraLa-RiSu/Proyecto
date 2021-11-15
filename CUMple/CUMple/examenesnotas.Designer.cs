@@ -101,7 +101,7 @@ namespace CUMple
             this.dgvexamenes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvexamenes.EnableHeadersVisualStyles = false;
             this.dgvexamenes.GridColor = System.Drawing.Color.White;
-            this.dgvexamenes.Location = new System.Drawing.Point(300, 152);
+            this.dgvexamenes.Location = new System.Drawing.Point(326, 152);
             this.dgvexamenes.Name = "dgvexamenes";
             this.dgvexamenes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

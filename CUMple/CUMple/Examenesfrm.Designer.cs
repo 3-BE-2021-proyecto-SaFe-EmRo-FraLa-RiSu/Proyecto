@@ -131,6 +131,7 @@ namespace CUMple
             this.dgvexamenes.TabIndex = 0;
             this.dgvexamenes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvexamenes_CellClick);
             this.dgvexamenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvexamenes_CellContentClick);
+            this.dgvexamenes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvexamenes_MouseDown);
             // 
             // colexaminadores
             // 

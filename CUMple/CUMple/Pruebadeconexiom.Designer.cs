@@ -197,6 +197,7 @@ namespace CUMple
             this.btncargaraños.Text = "Cargar todos los años";
             this.btncargaraños.UseVisualStyleBackColor = true;
             this.btncargaraños.Click += new System.EventHandler(this.btncargaraños_Click);
+            this.btncargaraños.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btncargaraños_MouseDown);
             // 
             // btnvolverpruebaconexion
             // 
