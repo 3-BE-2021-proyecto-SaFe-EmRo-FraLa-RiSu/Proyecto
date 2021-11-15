@@ -121,6 +121,7 @@
     <Compile Include="Iniciodesesion.Designer.cs">
       <DependentUpon>Iniciodesesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Notas%28NOTOCAR%29.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
