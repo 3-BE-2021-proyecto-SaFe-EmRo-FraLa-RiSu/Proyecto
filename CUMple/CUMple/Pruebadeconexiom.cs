@@ -34,19 +34,23 @@ namespace CUMple
                 conexionprograma2.Open();
                 lectordedatostkd = comandoleertaekwondo.ExecuteReader();
                 lectordedatoskrav = comandoleerkrav.ExecuteReader();
+               
                 while (lectordedatostkd.Read())
                 {
 
                     Graficadealumnos.Series[series].Points.AddXY(lectordedatostkd.GetString("tipos"), lectordedatostkd.GetUInt32("Asistencia"));
 
                 }
+                
+                {
 
+                }
                 while (lectordedatoskrav.Read())
                 {
                     Graficadealumnos.Series[series].Points.AddXY(lectordedatoskrav.GetString("tipos"), lectordedatoskrav.GetUInt32("Asistencia"));
 
                 }
-
+              
 
                 conexionprograma.Close();
                 conexionprograma2.Close();
@@ -132,7 +136,10 @@ namespace CUMple
             {
                 buscarsoloaño();
             }
-
+            if (Graficadealumnos.Series["Asistencias"].Points.Count == 0 && Graficadealumnos.Series["Faltas"].Points.Count == 0)
+            {
+                MessageBox.Show("No hay datos de este mes.");
+            }
 
         }
 

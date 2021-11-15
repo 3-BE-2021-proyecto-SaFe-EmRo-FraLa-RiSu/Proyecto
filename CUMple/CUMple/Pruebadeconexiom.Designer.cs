@@ -38,8 +38,6 @@ namespace CUMple
             this.cmbmeses = new System.Windows.Forms.ComboBox();
             this.cmbAño = new System.Windows.Forms.ComboBox();
             this.btncargardatos = new System.Windows.Forms.Button();
-            this.btncargarmeses = new System.Windows.Forms.Button();
-            this.btncargaraños = new System.Windows.Forms.Button();
             this.btnvolverpruebaconexion = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.restaurar = new System.Windows.Forms.PictureBox();
@@ -49,8 +47,6 @@ namespace CUMple
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelapoyo2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelapoyo3 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.Graficadealumnos)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
@@ -168,37 +164,6 @@ namespace CUMple
             this.btncargardatos.UseVisualStyleBackColor = true;
             this.btncargardatos.Click += new System.EventHandler(this.btncargardatos_Click);
             // 
-            // btncargarmeses
-            // 
-            this.btncargarmeses.FlatAppearance.BorderSize = 0;
-            this.btncargarmeses.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.btncargarmeses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncargarmeses.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncargarmeses.ForeColor = System.Drawing.Color.White;
-            this.btncargarmeses.Location = new System.Drawing.Point(0, 288);
-            this.btncargarmeses.Name = "btncargarmeses";
-            this.btncargarmeses.Size = new System.Drawing.Size(165, 44);
-            this.btncargarmeses.TabIndex = 8;
-            this.btncargarmeses.Text = "Cargar todos los meses";
-            this.btncargarmeses.UseVisualStyleBackColor = true;
-            this.btncargarmeses.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // btncargaraños
-            // 
-            this.btncargaraños.FlatAppearance.BorderSize = 0;
-            this.btncargaraños.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.btncargaraños.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncargaraños.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncargaraños.ForeColor = System.Drawing.Color.White;
-            this.btncargaraños.Location = new System.Drawing.Point(0, 184);
-            this.btncargaraños.Name = "btncargaraños";
-            this.btncargaraños.Size = new System.Drawing.Size(165, 44);
-            this.btncargaraños.TabIndex = 9;
-            this.btncargaraños.Text = "Cargar todos los años";
-            this.btncargaraños.UseVisualStyleBackColor = true;
-            this.btncargaraños.Click += new System.EventHandler(this.btncargaraños_Click);
-            this.btncargaraños.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btncargaraños_MouseDown);
-            // 
             // btnvolverpruebaconexion
             // 
             this.btnvolverpruebaconexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -207,7 +172,7 @@ namespace CUMple
             this.btnvolverpruebaconexion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnvolverpruebaconexion.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolverpruebaconexion.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolverpruebaconexion.Location = new System.Drawing.Point(3, 388);
+            this.btnvolverpruebaconexion.Location = new System.Drawing.Point(3, 198);
             this.btnvolverpruebaconexion.Name = "btnvolverpruebaconexion";
             this.btnvolverpruebaconexion.Size = new System.Drawing.Size(165, 42);
             this.btnvolverpruebaconexion.TabIndex = 10;
@@ -289,12 +254,8 @@ namespace CUMple
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.panel2.Controls.Add(this.flowLayoutPanel1);
             this.panel2.Controls.Add(this.panelapoyo1);
-            this.panel2.Controls.Add(this.panelapoyo2);
-            this.panel2.Controls.Add(this.panelapoyo3);
-            this.panel2.Controls.Add(this.btncargaraños);
             this.panel2.Controls.Add(this.btnvolverpruebaconexion);
             this.panel2.Controls.Add(this.btncargardatos);
-            this.panel2.Controls.Add(this.btncargarmeses);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.ForeColor = System.Drawing.Color.Coral;
             this.panel2.Location = new System.Drawing.Point(0, 35);
@@ -306,7 +267,7 @@ namespace CUMple
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 388);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 198);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(5, 44);
             this.flowLayoutPanel1.TabIndex = 22;
@@ -318,22 +279,6 @@ namespace CUMple
             this.panelapoyo1.Name = "panelapoyo1";
             this.panelapoyo1.Size = new System.Drawing.Size(5, 44);
             this.panelapoyo1.TabIndex = 22;
-            // 
-            // panelapoyo2
-            // 
-            this.panelapoyo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo2.Location = new System.Drawing.Point(0, 184);
-            this.panelapoyo2.Name = "panelapoyo2";
-            this.panelapoyo2.Size = new System.Drawing.Size(5, 44);
-            this.panelapoyo2.TabIndex = 20;
-            // 
-            // panelapoyo3
-            // 
-            this.panelapoyo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo3.Location = new System.Drawing.Point(0, 288);
-            this.panelapoyo3.Name = "panelapoyo3";
-            this.panelapoyo3.Size = new System.Drawing.Size(5, 44);
-            this.panelapoyo3.TabIndex = 21;
             // 
             // Pruebadeconexiom
             // 
@@ -372,8 +317,6 @@ namespace CUMple
         private System.Windows.Forms.ComboBox cmbmeses;
         private System.Windows.Forms.ComboBox cmbAño;
         private System.Windows.Forms.Button btncargardatos;
-        private System.Windows.Forms.Button btncargarmeses;
-        private System.Windows.Forms.Button btncargaraños;
         private System.Windows.Forms.Button btnvolverpruebaconexion;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -382,8 +325,6 @@ namespace CUMple
         private System.Windows.Forms.PictureBox cerrarclic;
         private System.Windows.Forms.PictureBox maximizar;
         private System.Windows.Forms.FlowLayoutPanel panelapoyo1;
-        private System.Windows.Forms.FlowLayoutPanel panelapoyo2;
-        private System.Windows.Forms.FlowLayoutPanel panelapoyo3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
