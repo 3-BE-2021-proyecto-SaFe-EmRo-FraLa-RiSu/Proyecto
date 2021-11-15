@@ -236,5 +236,11 @@ namespace CUMple
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        private void btnvolverexamenes_Click(object sender, EventArgs e)
+        {
+            new Principal().Show();
+            this.Dispose();
+        }
     }
 }
