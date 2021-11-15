@@ -318,6 +318,7 @@ namespace CUMple
             this.panel1.Size = new System.Drawing.Size(165, 456);
             this.panel1.TabIndex = 49;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // flowLayoutPanel1
             // 
@@ -347,6 +348,7 @@ namespace CUMple
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(983, 35);
             this.panel2.TabIndex = 48;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // maximizar
             // 
@@ -465,6 +467,7 @@ namespace CUMple
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Userprofileadd";
             this.Load += new System.EventHandler(this.Userprofileadd_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Userprofileadd_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();

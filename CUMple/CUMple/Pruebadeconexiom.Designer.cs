@@ -29,10 +29,10 @@ namespace CUMple
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pruebadeconexiom));
             this.Graficadealumnos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cmbmeses = new System.Windows.Forms.ComboBox();
@@ -47,10 +47,10 @@ namespace CUMple
             this.cerrarclic = new System.Windows.Forms.PictureBox();
             this.maximizar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.Graficadealumnos)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
@@ -64,23 +64,23 @@ namespace CUMple
             // 
             this.Graficadealumnos.BackColor = System.Drawing.Color.Transparent;
             this.Graficadealumnos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            chartArea1.Name = "ChartArea1";
-            this.Graficadealumnos.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.Graficadealumnos.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.Graficadealumnos.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.Graficadealumnos.Legends.Add(legend3);
             this.Graficadealumnos.Location = new System.Drawing.Point(312, 72);
             this.Graficadealumnos.Name = "Graficadealumnos";
             this.Graficadealumnos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.ChartArea = "ChartArea1";
-            series1.Color = System.Drawing.Color.Red;
-            series1.Legend = "Legend1";
-            series1.Name = "Asistencias";
-            series2.ChartArea = "ChartArea1";
-            series2.Color = System.Drawing.Color.Black;
-            series2.Legend = "Legend1";
-            series2.Name = "Faltas";
-            this.Graficadealumnos.Series.Add(series1);
-            this.Graficadealumnos.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.Color = System.Drawing.Color.Red;
+            series5.Legend = "Legend1";
+            series5.Name = "Asistencias";
+            series6.ChartArea = "ChartArea1";
+            series6.Color = System.Drawing.Color.Black;
+            series6.Legend = "Legend1";
+            series6.Name = "Faltas";
+            this.Graficadealumnos.Series.Add(series5);
+            this.Graficadealumnos.Series.Add(series6);
             this.Graficadealumnos.Size = new System.Drawing.Size(729, 501);
             this.Graficadealumnos.TabIndex = 0;
             this.Graficadealumnos.Text = "chart1";
@@ -198,6 +198,7 @@ namespace CUMple
             this.panel1.Size = new System.Drawing.Size(1100, 35);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // restaurar
             // 
@@ -269,6 +270,15 @@ namespace CUMple
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(165, 565);
             this.panel2.TabIndex = 13;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 388);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(5, 44);
+            this.flowLayoutPanel1.TabIndex = 22;
             // 
             // panelapoyo1
             // 
@@ -294,14 +304,6 @@ namespace CUMple
             this.panelapoyo3.Size = new System.Drawing.Size(5, 44);
             this.panelapoyo3.TabIndex = 21;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 388);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(5, 44);
-            this.flowLayoutPanel1.TabIndex = 22;
-            // 
             // Pruebadeconexiom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +323,7 @@ namespace CUMple
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pruebadeconexiom";
             this.Load += new System.EventHandler(this.Pruebadeconexiom_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pruebadeconexiom_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.Graficadealumnos)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();

@@ -57,9 +57,9 @@ namespace CUMple
             this.panel2 = new System.Windows.Forms.Panel();
             this.restaurar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -361,6 +361,8 @@ namespace CUMple
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1100, 35);
             this.panel2.TabIndex = 46;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // restaurar
             // 
@@ -391,6 +393,15 @@ namespace CUMple
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(165, 494);
             this.panel1.TabIndex = 47;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 266);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(5, 44);
+            this.flowLayoutPanel1.TabIndex = 21;
             // 
             // panelapoyo1
             // 
@@ -407,14 +418,6 @@ namespace CUMple
             this.panelapoyo2.Name = "panelapoyo2";
             this.panelapoyo2.Size = new System.Drawing.Size(5, 44);
             this.panelapoyo2.TabIndex = 20;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 266);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(5, 44);
-            this.flowLayoutPanel1.TabIndex = 21;
             // 
             // panel3
             // 
@@ -492,6 +495,7 @@ namespace CUMple
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Perfil de usuario";
             this.Load += new System.EventHandler(this.Userprofile_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Userprofile_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).EndInit();

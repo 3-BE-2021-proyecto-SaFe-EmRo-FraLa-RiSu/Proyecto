@@ -175,6 +175,7 @@ namespace CUMple
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1154, 35);
             this.panel2.TabIndex = 8;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // maximizar
             // 
@@ -245,6 +246,7 @@ namespace CUMple
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 620);
             this.panel1.TabIndex = 9;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // panelapoyo1
             // 
@@ -307,6 +309,7 @@ namespace CUMple
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrador";
             this.Load += new System.EventHandler(this.formadmin_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.formadmin_MouseDown);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();

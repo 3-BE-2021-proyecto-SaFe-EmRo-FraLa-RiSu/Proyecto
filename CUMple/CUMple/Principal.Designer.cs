@@ -147,6 +147,7 @@ namespace CUMple
             this.barramenu.Size = new System.Drawing.Size(849, 35);
             this.barramenu.TabIndex = 11;
             this.barramenu.Paint += new System.Windows.Forms.PaintEventHandler(this.barramenu_Paint);
+            this.barramenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barramenu_MouseDown);
             // 
             // maximizar
             // 
@@ -220,6 +221,7 @@ namespace CUMple
             this.barradebotones.Size = new System.Drawing.Size(200, 493);
             this.barradebotones.TabIndex = 12;
             this.barradebotones.Paint += new System.Windows.Forms.PaintEventHandler(this.barradebotones_Paint);
+            this.barradebotones.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barradebotones_MouseDown);
             // 
             // panelapoyo5
             // 
@@ -271,6 +273,7 @@ namespace CUMple
             this.imagenata.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imagenata.TabIndex = 13;
             this.imagenata.TabStop = false;
+            this.imagenata.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imagenata_MouseDown);
             // 
             // Principal
             // 
@@ -288,6 +291,7 @@ namespace CUMple
             this.Name = "Principal";
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.Principal_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Principal_MouseDown);
             this.barramenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();

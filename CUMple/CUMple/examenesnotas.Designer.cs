@@ -165,7 +165,7 @@ namespace CUMple
             this.cbidexamen.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbidexamen.FormattingEnabled = true;
             this.cbidexamen.Location = new System.Drawing.Point(699, 106);
-            this.cbidexamen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbidexamen.Margin = new System.Windows.Forms.Padding(2);
             this.cbidexamen.Name = "cbidexamen";
             this.cbidexamen.Size = new System.Drawing.Size(129, 31);
             this.cbidexamen.TabIndex = 21;
@@ -233,7 +233,7 @@ namespace CUMple
             "3er DAN",
             "4to DAN"});
             this.cbrango.Location = new System.Drawing.Point(699, 48);
-            this.cbrango.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbrango.Margin = new System.Windows.Forms.Padding(2);
             this.cbrango.Name = "cbrango";
             this.cbrango.Size = new System.Drawing.Size(129, 31);
             this.cbrango.TabIndex = 43;
@@ -255,7 +255,7 @@ namespace CUMple
             this.cbcedula.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbcedula.FormattingEnabled = true;
             this.cbcedula.Location = new System.Drawing.Point(421, 48);
-            this.cbcedula.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbcedula.Margin = new System.Windows.Forms.Padding(2);
             this.cbcedula.Name = "cbcedula";
             this.cbcedula.Size = new System.Drawing.Size(129, 31);
             this.cbcedula.TabIndex = 45;
@@ -285,6 +285,7 @@ namespace CUMple
             this.panel1.Size = new System.Drawing.Size(1100, 35);
             this.panel1.TabIndex = 46;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // restaurar
             // 
@@ -351,6 +352,7 @@ namespace CUMple
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(176, 523);
             this.panel2.TabIndex = 47;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // panelapoyo4
             // 
@@ -407,6 +409,7 @@ namespace CUMple
             this.Name = "examenesnotas";
             this.Text = "examenesnotas";
             this.Load += new System.EventHandler(this.examenesnotas_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.examenesnotas_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();

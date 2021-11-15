@@ -53,7 +53,7 @@ namespace CUMple
             this.txbconb.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbconb.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txbconb.Location = new System.Drawing.Point(346, 202);
-            this.txbconb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbconb.Margin = new System.Windows.Forms.Padding(2);
             this.txbconb.Name = "txbconb";
             this.txbconb.Size = new System.Drawing.Size(400, 24);
             this.txbconb.TabIndex = 2;
@@ -74,7 +74,7 @@ namespace CUMple
             this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.GrayText;
             this.button1.Location = new System.Drawing.Point(444, 306);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(234, 34);
             this.button1.TabIndex = 3;
@@ -91,17 +91,19 @@ namespace CUMple
             this.panelogo.Name = "panelogo";
             this.panelogo.Size = new System.Drawing.Size(250, 402);
             this.panelogo.TabIndex = 7;
+            this.panelogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelogo_Paint);
             // 
             // logoescuela
             // 
             this.logoescuela.Image = global::CUMple.Properties.Resources.logo_de_Academia_DO_difuminado_;
-            this.logoescuela.Location = new System.Drawing.Point(0, -3);
+            this.logoescuela.Location = new System.Drawing.Point(0, 0);
             this.logoescuela.Name = "logoescuela";
-            this.logoescuela.Size = new System.Drawing.Size(250, 402);
+            this.logoescuela.Size = new System.Drawing.Size(250, 399);
             this.logoescuela.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoescuela.TabIndex = 12;
             this.logoescuela.TabStop = false;
             this.logoescuela.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.logoescuela.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseDown);
             // 
             // panel2
             // 
@@ -118,7 +120,7 @@ namespace CUMple
             this.txbuserb.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbuserb.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txbuserb.Location = new System.Drawing.Point(346, 123);
-            this.txbuserb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbuserb.Margin = new System.Windows.Forms.Padding(2);
             this.txbuserb.Name = "txbuserb";
             this.txbuserb.Size = new System.Drawing.Size(396, 24);
             this.txbuserb.TabIndex = 1;
