@@ -461,12 +461,13 @@ namespace CUMple
                 else
                 {
                     MessageBox.Show("Solo se puede buscar por un elemento o por: " +
-                        "\n-fecha y hora"+ 
-                        "\n-fecha y examinador"+
-                        "\n-fecha, hora y examinador"+
-                        "\n-examinador y disciplina"+
-                        "\n-fecha,hora,examinador y disciplina");
+                        "\n-Fecha y hora"+ 
+                        "\n-Fecha y examinador"+
+                        "\n-Fecha, hora y examinador"+
+                        "\n-Examinador y disciplina"+
+                        "\n-Fecha,hora,examinador y disciplina");
                     conexionbd.Close();
+                    return;
                 }
 
 
