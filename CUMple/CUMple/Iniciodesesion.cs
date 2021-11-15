@@ -18,9 +18,6 @@ namespace CUMple
         public forming()
         {
             InitializeComponent();
-           
-           
-
         }
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
         MySqlCommand comandoparamysql = new MySqlCommand();
@@ -28,14 +25,9 @@ namespace CUMple
 
 
         public class Detallesusarios
-        {
-            
+        {           
        
-        }
-
-     
-    
-
+        }   
 private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -84,49 +76,38 @@ private void textBox2_TextChanged(object sender, EventArgs e)
             string logIn = "SELECT * FROM usuarios WHERE usuario= '" + txbuserb.Text + "' and contraseña= '" + txbconb.Text + "'";
             comandoparamysql = new MySqlCommand(logIn, conexionprograma);
             MySqlDataReader lectordedatos = comandoparamysql.ExecuteReader();
-
-            if (lectordedatos.Read() == true && lectordedatos.GetString("tipo") == "Adm")
-            {
-
-                new formadmin().Show();
-                this.Hide();
-
-            }
-            else if (lectordedatos.Read() == true && lectordedatos.GetString("tipo") == "Alm")
-            {
-
-                new Principal().Show();
-                this.Hide();
-
-            }
-
-            else
-            {
-
-                MessageBox.Show("Usuario o contraseña incorrecta");
-
-            }
-
-
             if (txbuserb.Text == "" && txbconb.Text == "" || (txbuserb.Text == "Usuario" && txbconb.Text == "Contraseña"))
             {
                 MessageBox.Show("Los campos no pueden estar vacios");
-
+                txbuserb.Focus();
             }
-
             else if (txbuserb.Text == "" || txbuserb.Text == "Usuario")
             {
                 MessageBox.Show("El campo de usuario esta vacio");
                 txbuserb.Focus();
-
             }
             else if (txbconb.Text == "" || txbconb.Text == "Contraseña")
             {
                 MessageBox.Show("El campo de la contraseña esta vacio");
                 txbconb.Focus();
-
             }
-
+            else 
+            { 
+                if (lectordedatos.Read() == true && lectordedatos.GetString("tipo") == "Adm")
+                {
+                    new formadmin().Show();
+                    this.Hide();
+                }
+                else if (lectordedatos.Read() == true && lectordedatos.GetString("tipo") == "Alm")
+                {
+                    new Principal().Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrecta");
+                }
+            }
             conexionprograma.Close();
         }
 

@@ -156,7 +156,7 @@ namespace CUMple
 
         private void txbnombrecompleto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 225))
+            if ((e.KeyChar < 65 && e.KeyChar != 8) || (e.KeyChar > 90 && e.KeyChar < 97) || (e.KeyChar > 122 && e.KeyChar != 130 && e.KeyChar < 160) || e.KeyChar > 165)
             {
                 MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
@@ -166,7 +166,7 @@ namespace CUMple
 
         private void txbprofesion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 225))
+            if ( (e.KeyChar < 65 && e.KeyChar != 8) || (e.KeyChar > 90 && e.KeyChar < 97) || (e.KeyChar > 122 && e.KeyChar != 130 && e.KeyChar < 160) || e.KeyChar > 165)
             {
                 MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
@@ -182,13 +182,8 @@ namespace CUMple
 
         private void mskcedula_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar >= 48 && e.KeyChar <= 57)
+            if (e.KeyChar < 8 || (e.KeyChar > 8 && e.KeyChar < 48) || e.KeyChar > 57)
             {
-
-            }
-            else
-            {
-
                 MessageBox.Show("Solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
@@ -202,13 +197,8 @@ namespace CUMple
 
         private void txbcelular_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar >= 48 && e.KeyChar <= 57)
+            if (e.KeyChar < 8 || (e.KeyChar > 8 && e.KeyChar < 48) || e.KeyChar > 57)
             {
-
-            }
-            else
-            {
-
                 MessageBox.Show("Solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
@@ -217,7 +207,7 @@ namespace CUMple
 
         private void txbemail_Enter(object sender, EventArgs e)
         {
-            if (txbemail.Text=="ejemplo@dominio.com")
+            if (txbemail.Text=="correo@ejemplo.com")
             {
                 txbemail.Text = "";
                 txbemail.ForeColor = Color.White;
@@ -233,7 +223,7 @@ namespace CUMple
         {
             if (txbemail.Text == "")
             {
-                txbemail.Text = "ejemplo@dominio.com";
+                txbemail.Text = "correo@ejemplo.com";
                 txbemail.ForeColor = Color.Gray;
             }
         }
