@@ -213,3 +213,4 @@ C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMpl
 C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Userprofileadd.resources
 C:\Users\rimas\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Userprofileadd.resources
 D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.listaasistencias.resources
+C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.listaasistencias.resources
