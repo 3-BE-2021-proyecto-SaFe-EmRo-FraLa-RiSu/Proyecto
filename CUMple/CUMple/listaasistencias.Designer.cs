@@ -33,10 +33,10 @@ namespace CUMple
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(listaasistencias));
-            this.dgvasistencias = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Clase = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asistencia = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvlistas = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
@@ -60,26 +60,34 @@ namespace CUMple
             this.txbbucar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelapoyo = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvasistencias)).BeginInit();
+            this.dgvalumnospresentes = new System.Windows.Forms.DataGridView();
+            this.lblpresente = new System.Windows.Forms.Label();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Clase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvlistas)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvalumnospresentes)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvasistencias
+            // dgvlistas
             // 
-            this.dgvasistencias.AllowUserToAddRows = false;
-            this.dgvasistencias.AllowUserToDeleteRows = false;
-            this.dgvasistencias.AllowUserToResizeColumns = false;
-            this.dgvasistencias.AllowUserToResizeRows = false;
-            this.dgvasistencias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dgvasistencias.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgvasistencias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.dgvasistencias.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvasistencias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvlistas.AllowUserToAddRows = false;
+            this.dgvlistas.AllowUserToDeleteRows = false;
+            this.dgvlistas.AllowUserToResizeColumns = false;
+            this.dgvlistas.AllowUserToResizeRows = false;
+            this.dgvlistas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvlistas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvlistas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvlistas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.dgvlistas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvlistas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -87,12 +95,11 @@ namespace CUMple
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvasistencias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvasistencias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvlistas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvlistas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
-            this.Clase,
-            this.Asistencia});
-            this.dgvasistencias.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Clase});
+            this.dgvlistas.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,13 +107,13 @@ namespace CUMple
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvasistencias.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvasistencias.EnableHeadersVisualStyles = false;
-            this.dgvasistencias.GridColor = System.Drawing.Color.White;
-            this.dgvasistencias.Location = new System.Drawing.Point(278, 134);
-            this.dgvasistencias.Name = "dgvasistencias";
-            this.dgvasistencias.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgvasistencias.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvlistas.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvlistas.EnableHeadersVisualStyles = false;
+            this.dgvlistas.GridColor = System.Drawing.Color.White;
+            this.dgvlistas.Location = new System.Drawing.Point(349, 141);
+            this.dgvlistas.Name = "dgvlistas";
+            this.dgvlistas.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dgvlistas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -114,32 +121,11 @@ namespace CUMple
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvasistencias.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvasistencias.Size = new System.Drawing.Size(552, 501);
-            this.dgvasistencias.TabIndex = 0;
-            this.dgvasistencias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvasistencias_CellContentClick);
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "nomcompleto";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 94;
-            // 
-            // Clase
-            // 
-            this.Clase.DataPropertyName = "tipos";
-            this.Clase.HeaderText = "Clase";
-            this.Clase.Name = "Clase";
-            this.Clase.ReadOnly = true;
-            this.Clase.Width = 76;
-            // 
-            // Asistencia
-            // 
-            this.Asistencia.HeaderText = "Asistencia";
-            this.Asistencia.Name = "Asistencia";
-            this.Asistencia.Width = 96;
+            this.dgvlistas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvlistas.Size = new System.Drawing.Size(304, 501);
+            this.dgvlistas.TabIndex = 0;
+            this.dgvlistas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvlistas_CellClick);
+            this.dgvlistas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvasistencias_CellContentClick);
             // 
             // panel2
             // 
@@ -345,7 +331,7 @@ namespace CUMple
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(889, 35);
+            this.panel1.Size = new System.Drawing.Size(1019, 35);
             this.panel1.TabIndex = 14;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -354,7 +340,7 @@ namespace CUMple
             this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(793, 0);
+            this.restaurar.Location = new System.Drawing.Point(923, 0);
             this.restaurar.Name = "restaurar";
             this.restaurar.Size = new System.Drawing.Size(37, 30);
             this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -368,7 +354,7 @@ namespace CUMple
             this.minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(750, 2);
+            this.minimizar.Location = new System.Drawing.Point(880, 2);
             this.minimizar.Name = "minimizar";
             this.minimizar.Size = new System.Drawing.Size(37, 30);
             this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -381,7 +367,7 @@ namespace CUMple
             this.cerrarclic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(840, 2);
+            this.cerrarclic.Location = new System.Drawing.Point(970, 2);
             this.cerrarclic.Name = "cerrarclic";
             this.cerrarclic.Size = new System.Drawing.Size(37, 30);
             this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -394,7 +380,7 @@ namespace CUMple
             this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(793, 2);
+            this.maximizar.Location = new System.Drawing.Point(923, 2);
             this.maximizar.Name = "maximizar";
             this.maximizar.Size = new System.Drawing.Size(37, 30);
             this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -404,11 +390,12 @@ namespace CUMple
             // 
             // txbbucar
             // 
+            this.txbbucar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txbbucar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.txbbucar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbbucar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbbucar.ForeColor = System.Drawing.Color.White;
-            this.txbbucar.Location = new System.Drawing.Point(389, 82);
+            this.txbbucar.Location = new System.Drawing.Point(445, 78);
             this.txbbucar.Name = "txbbucar";
             this.txbbucar.Size = new System.Drawing.Size(178, 20);
             this.txbbucar.TabIndex = 16;
@@ -418,10 +405,11 @@ namespace CUMple
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(313, 86);
+            this.label1.Location = new System.Drawing.Point(346, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 18);
             this.label1.TabIndex = 17;
@@ -429,37 +417,130 @@ namespace CUMple
             // 
             // panelapoyo
             // 
-            this.panelapoyo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelapoyo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panelapoyo.BackColor = System.Drawing.Color.Gray;
-            this.panelapoyo.Location = new System.Drawing.Point(388, 104);
+            this.panelapoyo.Location = new System.Drawing.Point(445, 100);
             this.panelapoyo.Name = "panelapoyo";
             this.panelapoyo.Size = new System.Drawing.Size(180, 1);
             this.panelapoyo.TabIndex = 19;
+            // 
+            // dgvalumnospresentes
+            // 
+            this.dgvalumnospresentes.AllowUserToAddRows = false;
+            this.dgvalumnospresentes.AllowUserToDeleteRows = false;
+            this.dgvalumnospresentes.AllowUserToResizeColumns = false;
+            this.dgvalumnospresentes.AllowUserToResizeRows = false;
+            this.dgvalumnospresentes.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvalumnospresentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvalumnospresentes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvalumnospresentes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.dgvalumnospresentes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvalumnospresentes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvalumnospresentes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvalumnospresentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colNombre,
+            this.Tipo});
+            this.dgvalumnospresentes.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvalumnospresentes.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvalumnospresentes.EnableHeadersVisualStyles = false;
+            this.dgvalumnospresentes.GridColor = System.Drawing.Color.White;
+            this.dgvalumnospresentes.Location = new System.Drawing.Point(727, 141);
+            this.dgvalumnospresentes.Name = "dgvalumnospresentes";
+            this.dgvalumnospresentes.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dgvalumnospresentes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvalumnospresentes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvalumnospresentes.Size = new System.Drawing.Size(190, 501);
+            this.dgvalumnospresentes.TabIndex = 20;
+            // 
+            // lblpresente
+            // 
+            this.lblpresente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblpresente.AutoSize = true;
+            this.lblpresente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpresente.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblpresente.Location = new System.Drawing.Point(724, 83);
+            this.lblpresente.Name = "lblpresente";
+            this.lblpresente.Size = new System.Drawing.Size(165, 18);
+            this.lblpresente.TabIndex = 21;
+            this.lblpresente.Text = "Alumnos presentes";
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "nomcompleto";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 94;
+            // 
+            // Clase
+            // 
+            this.Clase.DataPropertyName = "tipos";
+            this.Clase.HeaderText = "Clase";
+            this.Clase.Name = "Clase";
+            this.Clase.ReadOnly = true;
+            this.Clase.Width = 76;
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.Width = 94;
+            // 
+            // Tipo
+            // 
+            this.Tipo.HeaderText = "tipo";
+            this.Tipo.Name = "Tipo";
+            this.Tipo.Visible = false;
+            this.Tipo.Width = 63;
             // 
             // listaasistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(889, 775);
+            this.ClientSize = new System.Drawing.Size(1019, 775);
+            this.Controls.Add(this.lblpresente);
+            this.Controls.Add(this.dgvalumnospresentes);
             this.Controls.Add(this.panelapoyo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbbucar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvasistencias);
+            this.Controls.Add(this.dgvlistas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "listaasistencias";
             this.Text = "listaasistencias";
             this.Load += new System.EventHandler(this.listaasistencias_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listaasistencias_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvasistencias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvlistas)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvalumnospresentes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,7 +548,7 @@ namespace CUMple
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvasistencias;
+        private System.Windows.Forms.DataGridView dgvlistas;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.FlowLayoutPanel panelapoyo1;
         private System.Windows.Forms.Button btncargardatos;
@@ -489,10 +570,13 @@ namespace CUMple
         private System.Windows.Forms.Button btnasistencia;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnvolverpruebaconexion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clase;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Asistencia;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Clase;
+        private System.Windows.Forms.DataGridView dgvalumnospresentes;
+        private System.Windows.Forms.Label lblpresente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
     }
 }
