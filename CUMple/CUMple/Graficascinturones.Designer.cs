@@ -33,10 +33,7 @@ namespace CUMple
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Graficadecinturones = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.cmbfiltrarrangos = new System.Windows.Forms.ComboBox();
-            this.btncargarcinturones = new System.Windows.Forms.Button();
             this.btnvolver = new System.Windows.Forms.Button();
-            this.dtpfecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.Graficadecinturones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +66,7 @@ namespace CUMple
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.Graficadecinturones.Legends.Add(legend1);
-            this.Graficadecinturones.Location = new System.Drawing.Point(286, 111);
+            this.Graficadecinturones.Location = new System.Drawing.Point(261, 96);
             this.Graficadecinturones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Graficadecinturones.Name = "Graficadecinturones";
             this.Graficadecinturones.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -77,60 +74,27 @@ namespace CUMple
             series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
             series1.LabelForeColor = System.Drawing.Color.White;
             series1.Legend = "Legend1";
-            series1.Name = "Cinturones";
+            series1.Name = "rango";
             this.Graficadecinturones.Series.Add(series1);
             this.Graficadecinturones.Size = new System.Drawing.Size(921, 518);
             this.Graficadecinturones.TabIndex = 1;
             this.Graficadecinturones.Text = "chart1";
             // 
-            // cmbfiltrarrangos
-            // 
-            this.cmbfiltrarrangos.FormattingEnabled = true;
-            this.cmbfiltrarrangos.Location = new System.Drawing.Point(26, 65);
-            this.cmbfiltrarrangos.Name = "cmbfiltrarrangos";
-            this.cmbfiltrarrangos.Size = new System.Drawing.Size(208, 28);
-            this.cmbfiltrarrangos.TabIndex = 2;
-            this.cmbfiltrarrangos.Text = "Filtrar:";
-            // 
-            // btncargarcinturones
-            // 
-            this.btncargarcinturones.Location = new System.Drawing.Point(26, 142);
-            this.btncargarcinturones.Name = "btncargarcinturones";
-            this.btncargarcinturones.Size = new System.Drawing.Size(208, 48);
-            this.btncargarcinturones.TabIndex = 4;
-            this.btncargarcinturones.Text = "cargar";
-            this.btncargarcinturones.UseVisualStyleBackColor = true;
-            this.btncargarcinturones.Click += new System.EventHandler(this.btncargarcinturones_Click);
-            // 
             // btnvolver
             // 
-            this.btnvolver.Location = new System.Drawing.Point(26, 216);
+            this.btnvolver.Location = new System.Drawing.Point(37, 464);
             this.btnvolver.Name = "btnvolver";
             this.btnvolver.Size = new System.Drawing.Size(208, 48);
             this.btnvolver.TabIndex = 5;
             this.btnvolver.Text = "volver";
             this.btnvolver.UseVisualStyleBackColor = true;
             // 
-            // dtpfecha
-            // 
-            this.dtpfecha.CustomFormat = "yyyy-MM-dd";
-            this.dtpfecha.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpfecha.Location = new System.Drawing.Point(286, 65);
-            this.dtpfecha.Name = "dtpfecha";
-            this.dtpfecha.Size = new System.Drawing.Size(184, 37);
-            this.dtpfecha.TabIndex = 43;
-            this.dtpfecha.ValueChanged += new System.EventHandler(this.dtpfec_nac_ValueChanged);
-            // 
             // Graficascinturones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1220, 842);
-            this.Controls.Add(this.dtpfecha);
             this.Controls.Add(this.btnvolver);
-            this.Controls.Add(this.btncargarcinturones);
-            this.Controls.Add(this.cmbfiltrarrangos);
             this.Controls.Add(this.Graficadecinturones);
             this.Name = "Graficascinturones";
             this.Text = "Graficascinturones";
@@ -143,9 +107,6 @@ namespace CUMple
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart Graficadecinturones;
-        private System.Windows.Forms.ComboBox cmbfiltrarrangos;
-        private System.Windows.Forms.Button btncargarcinturones;
         private System.Windows.Forms.Button btnvolver;
-        private System.Windows.Forms.DateTimePicker dtpfecha;
     }
 }

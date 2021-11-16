@@ -14,13 +14,14 @@ namespace CUMple
     public partial class Graficascinturones : Form
     {
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
+        MySqlConnection conexionprograma2 = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
         public Graficascinturones()
         {
             InitializeComponent();
         }
         public void limpiargrafica()
         {
-            Graficadecinturones.Series["Cinturones"].Points.Clear();
+            Graficadecinturones.Series["rango"].Points.Clear();
         }
         private void btncargarcinturones_Click(object sender, EventArgs e)
         {
@@ -29,17 +30,22 @@ namespace CUMple
 
         public void creargrafica(string rangos, string leercant_alumnos)
         {
-        MySqlCommand comandoleertaekwondo = new MySqlCommand(leercant_alumnos, conexionprograma);
-        MySqlDataReader lectordedatoscinturones;
+            MySqlCommand comandoleeralumnos = new MySqlCommand(leercant_alumnos, conexionprograma);
+            MySqlDataReader lectordedatoscinturones;
+            MySqlCommand comandoleerrangos = new MySqlCommand(rangos, conexionprograma2);
+            MySqlDataReader lectorderangos;
             try
             {            
                 conexionprograma.Open();
-                lectordedatoscinturones = comandoleertaekwondo.ExecuteReader();
-                while (lectordedatoscinturones.Read())
+                conexionprograma2.Open();
+                lectordedatoscinturones = comandoleeralumnos.ExecuteReader();
+                lectorderangos = comandoleerrangos.ExecuteReader();
+                while (lectordedatoscinturones.Read() && lectorderangos.Read())
                 {
-                    Graficadecinturones.Series[rangos].Points.AddXY(lectordedatoscinturones.GetString("Cinturones"));
+                    Graficadecinturones.Series["rango"].Points.AddXY(lectorderangos.GetString("rango"), lectordedatoscinturones.GetInt32("Alumnos"));
                 }
                 conexionprograma.Close();
+                conexionprograma2.Close();
             }
             catch (Exception ex)
             {
@@ -48,7 +54,7 @@ namespace CUMple
         }
         private void Graficascinturones_Load(object sender, EventArgs e)
         {
-
+            cargargrafica();
         }
         
         private void dtpfec_nac_ValueChanged(object sender, EventArgs e)
@@ -59,7 +65,7 @@ namespace CUMple
         public void cargargrafica() 
         {
             limpiargrafica();
-            creargrafica("Cinturones", "select nomcompleto, nuevo_rango, fecha from discipulos d join rango_obtenido r on d.cedula = r.cedula join examenes e on r.idexamen = e.idexamen where fecha <= '" + dtpfecha.Text + "' group by nomcompleto;");
+            creargrafica("select rango from discipulos group by rango", "select count(*)'Alumnos' from discipulos group by rango");
         }
     }
 } 
