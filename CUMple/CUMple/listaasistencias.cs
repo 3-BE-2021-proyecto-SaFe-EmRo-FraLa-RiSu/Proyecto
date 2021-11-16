@@ -53,37 +53,36 @@ namespace CUMple
             {
                 if (krav == true)
                 {
-                    string comando = "SELECT nomcompleto,fecha_de_nac from discipulos where MONTH(fecha_de_nac)<='2008' and krav_maga=1 group by cedula";
-
+                    string comando = "SELECT nomcompleto,TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE) from discipulos where krav_maga=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 group by cedula";
                     MySqlCommand comandosql = new MySqlCommand(comando, conexionbd);
+
                     
                 }
 
                 if (adultos==true)
                 {
-                    string comando = "SELECT nomcompleto,fecha_de_nac from discipulos where MONTH(fecha_de_nac)<='2008' and taekwondo=1 group by cedula";
-
+                    string comando = "SELECT nomcompleto,TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE) from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 group by cedula";
                     MySqlCommand comandosql = new MySqlCommand(comando, conexionbd);
 
                 }
 
                 if (avanzados == true)
                 {
-                    string comando = "SELECT nomcompleto,fecha_de_nac,rango from discipulos where MONTH(fecha_de_nac)<='2008' and taekwondo=1 and rango NOT IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado','Camuflado','Camuflado confirmado') group by cedula";
+                    string comando = "SELECT nomcompleto,TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE) from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 and rango NOT IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado','Camuflado','Camuflado confirmado') group by cedula";
 
                     MySqlCommand comandosql = new MySqlCommand(comando, conexionbd);
 
                 }
                 if (adolescentes == true)
                 {
-                    string comando = "SELECT nomcompleto,fecha_de_nac,rango from discipulos where MONTH(fecha_de_nac)<='2010' and taekwondo=1 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado','Camuflado','Camuflado confirmado') group by cedula";
+                    string comando = "SELECT nomcompleto,TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE) from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<=13  and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>6 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado','Camuflado','Camuflado confirmado') group by cedula";
                     MySqlCommand comandosql = new MySqlCommand(comando, conexionbd);
 
                 }
 
                 if (tigres == true)
                 {
-                    string comando = "SELECT nomcompleto,fecha_de_nac,rango from discipulos where MONTH(fecha_de_nac)<='2015' and taekwondo=1 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado','Camuflado','Camuflado confirmado') group by cedula";
+                    string comando = "SELECT nomcompleto,TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE) from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=3  and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<6 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado','Camuflado','Camuflado confirmado') group by cedula";
                     MySqlCommand comandosql = new MySqlCommand(comando, conexionbd);
                                                            
                 }
