@@ -20,6 +20,7 @@ namespace CUMple
         }
         bool krav, adultos, tigres, avanzados,adolescentes;
 
+       
         private void listaasistencias_Load(object sender, EventArgs e)
         {
 
@@ -37,9 +38,15 @@ namespace CUMple
 
         private void button2_Click(object sender, EventArgs e)
         {
-        
+            if (krav != false || adultos != false || avanzados != false || adolescentes != false || tigres != false)
+            {
+                if (krav==true && txbbucar.Text=="")
+                {
+                    dgvalumnospresentes.Refresh();
+                    dgvalumnospresentes.DataSource = dgvlistas.DataSource;
+                }
+            }
         }
-
         private void txbbucar_KeyDown(object sender, KeyEventArgs e)
         {
            
@@ -56,9 +63,9 @@ namespace CUMple
                     string comando = "SELECT nomcompleto from discipulos where krav_maga=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 and nomcompleto like '%" + txbbucar.Text + "%' group by cedula";
                     MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
                     comandosql.Fill(filas);
-                    dgvasistencias.Refresh();
-                    dgvasistencias.DataSource = filas;
-                    if (dgvasistencias.RowCount == 0)
+                    dgvlistas.Refresh();
+                    dgvlistas.DataSource = filas;
+                    if (dgvlistas.RowCount == 0)
                     {
                         conexionbd.Close();
                         MessageBox.Show("No se encontro a ningún discipulo con este nombre");
@@ -66,9 +73,9 @@ namespace CUMple
                         txbbucar.Text = "";
                         return;
                     }
-                    for (int i = 0; i < dgvasistencias.RowCount; i++)
+                    for (int i = 0; i < dgvlistas.RowCount; i++)
                     {
-                        dgvasistencias.Rows[i].Cells["Clase"].Value = "Krav Maga";
+                        dgvlistas.Rows[i].Cells["Clase"].Value = "Krav Maga";
                         
                     }
 
@@ -79,9 +86,9 @@ namespace CUMple
                     string comando = "SELECT nomcompleto from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 and nomcompleto like '%" + txbbucar.Text + "%' group by cedula";
                     MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
                     comandosql.Fill(filas);
-                    dgvasistencias.Refresh();
-                    dgvasistencias.DataSource = filas;
-                    if (dgvasistencias.RowCount==0)
+                    dgvlistas.Refresh();
+                    dgvlistas.DataSource = filas;
+                    if (dgvlistas.RowCount==0)
                     {
                         conexionbd.Close();
                         MessageBox.Show("No se encontro a ningún discipulo con este nombre");
@@ -89,9 +96,9 @@ namespace CUMple
                         txbbucar.Text = "";
                         return;
                     }
-                    for (int i = 0; i < dgvasistencias.RowCount; i++)
+                    for (int i = 0; i < dgvlistas.RowCount; i++)
                     {
-                        dgvasistencias.Rows[i].Cells["Clase"].Value = "Adultos";
+                        dgvlistas.Rows[i].Cells["Clase"].Value = "Adultos";
                     }
 
                 }
@@ -102,9 +109,9 @@ namespace CUMple
                    
                     MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
                     comandosql.Fill(filas);
-                    dgvasistencias.Refresh();
-                    dgvasistencias.DataSource = filas;
-                    if (dgvasistencias.RowCount == 0)
+                    dgvlistas.Refresh();
+                    dgvlistas.DataSource = filas;
+                    if (dgvlistas.RowCount == 0)
                     {
                         conexionbd.Close();
                         MessageBox.Show("No se encontro a ningún discipulo con este nombre");
@@ -112,9 +119,9 @@ namespace CUMple
                         txbbucar.Text = "";
                         return;
                     }
-                    for (int i = 0; i < dgvasistencias.RowCount; i++)
+                    for (int i = 0; i < dgvlistas.RowCount; i++)
                     {
-                        dgvasistencias.Rows[i].Cells["Clase"].Value = "Avanzados";
+                        dgvlistas.Rows[i].Cells["Clase"].Value = "Avanzados";
                     }
 
                 }
@@ -124,9 +131,9 @@ namespace CUMple
                     MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
                     comandosql.Fill(filas);
                   
-                    dgvasistencias.Refresh();
-                    dgvasistencias.DataSource = filas;
-                    if (dgvasistencias.RowCount == 0)
+                    dgvlistas.Refresh();
+                    dgvlistas.DataSource = filas;
+                    if (dgvlistas.RowCount == 0)
                     {
                         conexionbd.Close();
                         MessageBox.Show("No se encontro a ningún discipulo con este nombre");
@@ -134,9 +141,9 @@ namespace CUMple
                         txbbucar.Text = "";
                         return;
                     }
-                    for (int i = 0; i < dgvasistencias.RowCount - 1; i++)
+                    for (int i = 0; i < dgvlistas.RowCount - 1; i++)
                     {
-                        dgvasistencias.Rows[i].Cells["Clase"].Value = "Adolescentes";
+                        dgvlistas.Rows[i].Cells["Clase"].Value = "Adolescentes";
                     }
 
                 }
@@ -147,9 +154,9 @@ namespace CUMple
                     MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
                     comandosql.Fill(filas);
                    
-                    dgvasistencias.Refresh();
-                    dgvasistencias.DataSource = filas;
-                    if (dgvasistencias.RowCount == 0)
+                    dgvlistas.Refresh();
+                    dgvlistas.DataSource = filas;
+                    if (dgvlistas.RowCount == 0)
                     {
                         conexionbd.Close();
                         MessageBox.Show("No se encontro a ningún discipulo con este nombre");
@@ -158,9 +165,9 @@ namespace CUMple
                         return;
                     }
 
-                    for (int i = 0; i < dgvasistencias.RowCount; i++)
+                    for (int i = 0; i < dgvlistas.RowCount; i++)
                     {
-                        dgvasistencias.Rows[i].Cells["Clase"].Value = "Tigres";
+                        dgvlistas.Rows[i].Cells["Clase"].Value = "Tigres";
                     }
 
 
@@ -221,52 +228,149 @@ namespace CUMple
 
         private void btnkravmaga_Click(object sender, EventArgs e)
         {
-       
+           
+            dgvalumnospresentes.Rows.Clear();
             krav = true;
             adultos = false;
             tigres = false;
             avanzados = false;
             adolescentes = false;
+            DataTable filas = new DataTable();
+            conexionbd.Open();
+            string comando = "SELECT nomcompleto from discipulos where krav_maga=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 group by cedula";
+            MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
+           
+                comandosql.Fill(filas);
+                dgvlistas.Refresh();
+                dgvlistas.DataSource = filas;
+                for (int i = 0; i < dgvlistas.RowCount; i++)
+                {
+                    dgvlistas.Rows[i].Cells["Clase"].Value = "Krav Maga";
+
+                }
+
+            
+            conexionbd.Close();
+           
+           
         }
 
         private void clicktigres(object sender, EventArgs e)
         {
+            DataTable filas = new DataTable();
+            dgvalumnospresentes.Rows.Clear();
             krav = false;
             adultos = false;
             tigres = true;
             avanzados = false;
             adolescentes = false;
+            conexionbd.Open();
+            string comando = "SELECT nomcompleto from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=3 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<6 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado','Camuflado','Camuflado confirmado') and nomcompleto like '%" + txbbucar.Text + "%' group by cedula";
+            MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
+            comandosql.Fill(filas);
+            dgvlistas.Refresh();
+            dgvlistas.DataSource = filas;
+            for (int i = 0; i < dgvlistas.RowCount; i++)
+            {
+                dgvlistas.Rows[i].Cells["Clase"].Value = "Tigres";
+            }
+            conexionbd.Close();
         }
 
         private void btnavanzados_Click(object sender, EventArgs e)
         {
+            DataTable filas = new DataTable();
+            dgvalumnospresentes.Rows.Clear();
             krav = false;
             adultos = false;
             tigres = false;
             avanzados = true;
             adolescentes = false;
+
+
+            string comando = "SELECT nomcompleto from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 and rango NOT IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado','Camuflado','Camuflado confirmado') group by cedula";
+
+            MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
+            comandosql.Fill(filas);
+            dgvlistas.Refresh();
+            dgvlistas.DataSource = filas;
+            for (int i = 0; i < dgvlistas.RowCount; i++)
+            {
+                dgvlistas.Rows[i].Cells["Clase"].Value = "Avanzados";
+            }
+
         }
 
         private void adolescentes_Click(object sender, EventArgs e)
         {
+            DataTable filas = new DataTable();
+            dgvalumnospresentes.Rows.Clear();
+
             krav = false;
             adultos = false;
             tigres = false;
             avanzados = false;
             adolescentes = true;
+
+            string comando = "SELECT nomcompleto from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<=13 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>6 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmadmuflado confo','Naranja','Naranja confirmado','Camuflado','Cairmado') and nomcompleto group by cedula";
+            MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
+            comandosql.Fill(filas);
+
+            dgvlistas.Refresh();
+            dgvlistas.DataSource = filas;
+          
+            for (int i = 0; i < dgvlistas.RowCount - 1; i++)
+            {
+                dgvlistas.Rows[i].Cells["Clase"].Value = "Adolescentes";
+            }
         }
 
-        private void dgvasistencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvlistas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+              
+                DataGridViewRow filas = dgvlistas.Rows[e.RowIndex];
+                for (int i = 0; i < dgvalumnospresentes.RowCount; i++)
+                {
+                    string nombre = filas.Cells["Nombre"].Value.ToString();
+                    if (dgvalumnospresentes.Rows[i].Cells["colNombre"].Value.ToString() == nombre)
+                    {
+                        MessageBox.Show("Este alumno ya esta ingresado.");
+                        return;
+                    }
+
+                }
+                dgvalumnospresentes.Rows.Add(filas.Cells["Nombre"].Value.ToString());
+              
+            }
+           
+        }
+
+            private void dgvasistencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
         private void btnadulto(object sender, EventArgs e)
         {
+            DataTable filas = new DataTable();
+            dgvalumnospresentes.Rows.Clear();
             krav = false;
             adultos = true;
             tigres = false;
             avanzados = false;
+            string comando = "SELECT nomcompleto from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 group by cedula";
+            MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
+            comandosql.Fill(filas);
+            dgvlistas.Refresh();
+            dgvlistas.DataSource = filas;          
+            for (int i = 0; i < dgvlistas.RowCount; i++)
+            {
+                dgvlistas.Rows[i].Cells["Clase"].Value = "Adultos";
+            }
+
+
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
