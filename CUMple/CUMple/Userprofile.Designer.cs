@@ -241,7 +241,7 @@ namespace CUMple
             this.label12.Size = new System.Drawing.Size(154, 18);
             this.label12.TabIndex = 28;
             this.label12.Text = "Fecha de ingreso:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+         
             // 
             // lblfecingpref
             // 
