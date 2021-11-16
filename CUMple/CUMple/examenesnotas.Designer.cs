@@ -29,9 +29,9 @@ namespace CUMple
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(examenesnotas));
             this.dgvexamenes = new System.Windows.Forms.DataGridView();
             this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +62,8 @@ namespace CUMple
             this.panelapoyo3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnbuscar = new System.Windows.Forms.Button();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
@@ -74,44 +76,45 @@ namespace CUMple
             // dgvexamenes
             // 
             this.dgvexamenes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvexamenes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvexamenes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.dgvexamenes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvexamenes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvexamenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvexamenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvexamenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvexamenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cedula,
             this.idexamen,
             this.notas,
             this.nuevo_rango});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvexamenes.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvexamenes.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvexamenes.EnableHeadersVisualStyles = false;
             this.dgvexamenes.GridColor = System.Drawing.Color.White;
             this.dgvexamenes.Location = new System.Drawing.Point(326, 152);
             this.dgvexamenes.Name = "dgvexamenes";
             this.dgvexamenes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvexamenes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvexamenes.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvexamenes.Size = new System.Drawing.Size(670, 406);
             this.dgvexamenes.TabIndex = 0;
             this.dgvexamenes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvexamenes_CellClick);
@@ -122,24 +125,28 @@ namespace CUMple
             this.cedula.DataPropertyName = "cedula";
             this.cedula.HeaderText = "Cédula";
             this.cedula.Name = "cedula";
+            this.cedula.Width = 87;
             // 
             // idexamen
             // 
             this.idexamen.DataPropertyName = "idexamen";
             this.idexamen.HeaderText = "ID del exámen";
             this.idexamen.Name = "idexamen";
+            this.idexamen.Width = 138;
             // 
             // notas
             // 
             this.notas.DataPropertyName = "notas";
             this.notas.HeaderText = "Nota";
             this.notas.Name = "notas";
+            this.notas.Width = 70;
             // 
             // nuevo_rango
             // 
             this.nuevo_rango.DataPropertyName = "nuevo_rango";
             this.nuevo_rango.HeaderText = "Rango nuevo";
             this.nuevo_rango.Name = "nuevo_rango";
+            this.nuevo_rango.Width = 125;
             // 
             // btnlimpiar
             // 
@@ -148,7 +155,7 @@ namespace CUMple
             this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlimpiar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnlimpiar.Location = new System.Drawing.Point(4, 261);
+            this.btnlimpiar.Location = new System.Drawing.Point(4, 328);
             this.btnlimpiar.Name = "btnlimpiar";
             this.btnlimpiar.Size = new System.Drawing.Size(172, 35);
             this.btnlimpiar.TabIndex = 20;
@@ -204,23 +211,32 @@ namespace CUMple
             // cbidexamen
             // 
             this.cbidexamen.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbidexamen.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbidexamen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.cbidexamen.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cbidexamen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbidexamen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbidexamen.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbidexamen.ForeColor = System.Drawing.Color.White;
             this.cbidexamen.FormattingEnabled = true;
-            this.cbidexamen.Location = new System.Drawing.Point(699, 106);
+            this.cbidexamen.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cbidexamen.Location = new System.Drawing.Point(676, 110);
             this.cbidexamen.Margin = new System.Windows.Forms.Padding(2);
             this.cbidexamen.Name = "cbidexamen";
-            this.cbidexamen.Size = new System.Drawing.Size(129, 31);
+            this.cbidexamen.Size = new System.Drawing.Size(76, 26);
             this.cbidexamen.TabIndex = 21;
             this.cbidexamen.SelectedIndexChanged += new System.EventHandler(this.cbidexamen_SelectedIndexChanged);
             // 
             // txbnota
             // 
             this.txbnota.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbnota.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbnota.Location = new System.Drawing.Point(421, 107);
+            this.txbnota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txbnota.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbnota.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbnota.Location = new System.Drawing.Point(421, 111);
             this.txbnota.Name = "txbnota";
-            this.txbnota.Size = new System.Drawing.Size(129, 31);
+            this.txbnota.Size = new System.Drawing.Size(129, 27);
             this.txbnota.TabIndex = 37;
+            this.txbnota.TextChanged += new System.EventHandler(this.txbnota_TextChanged);
             // 
             // lblid
             // 
@@ -251,8 +267,13 @@ namespace CUMple
             // cbrango
             // 
             this.cbrango.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbrango.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbrango.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.cbrango.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbrango.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbrango.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbrango.ForeColor = System.Drawing.Color.White;
             this.cbrango.FormattingEnabled = true;
+            this.cbrango.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cbrango.Items.AddRange(new object[] {
             "Blanco",
             "Blanco confirmado",
@@ -278,10 +299,10 @@ namespace CUMple
             "2ndo DAN",
             "3er DAN",
             "4to DAN"});
-            this.cbrango.Location = new System.Drawing.Point(699, 48);
+            this.cbrango.Location = new System.Drawing.Point(676, 47);
             this.cbrango.Margin = new System.Windows.Forms.Padding(2);
             this.cbrango.Name = "cbrango";
-            this.cbrango.Size = new System.Drawing.Size(129, 31);
+            this.cbrango.Size = new System.Drawing.Size(169, 26);
             this.cbrango.TabIndex = 43;
             // 
             // label2
@@ -300,12 +321,16 @@ namespace CUMple
             // cbcedula
             // 
             this.cbcedula.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbcedula.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbcedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.cbcedula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbcedula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbcedula.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbcedula.ForeColor = System.Drawing.Color.White;
             this.cbcedula.FormattingEnabled = true;
             this.cbcedula.Location = new System.Drawing.Point(421, 48);
             this.cbcedula.Margin = new System.Windows.Forms.Padding(2);
             this.cbcedula.Name = "cbcedula";
-            this.cbcedula.Size = new System.Drawing.Size(129, 31);
+            this.cbcedula.Size = new System.Drawing.Size(160, 26);
             this.cbcedula.TabIndex = 45;
             // 
             // label3
@@ -397,7 +422,9 @@ namespace CUMple
             this.panel2.Controls.Add(this.btnvolverexamenes);
             this.panel2.Controls.Add(this.panelapoyo4);
             this.panel2.Controls.Add(this.btneliminar);
+            this.panel2.Controls.Add(this.flowLayoutPanel2);
             this.panel2.Controls.Add(this.panelapoyo3);
+            this.panel2.Controls.Add(this.btnbuscar);
             this.panel2.Controls.Add(this.btneditar);
             this.panel2.Controls.Add(this.panelapoyo2);
             this.panel2.Controls.Add(this.btnlimpiar);
@@ -412,7 +439,7 @@ namespace CUMple
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 335);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 402);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(5, 39);
             this.flowLayoutPanel1.TabIndex = 53;
@@ -425,7 +452,7 @@ namespace CUMple
             this.btnvolverexamenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnvolverexamenes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolverexamenes.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolverexamenes.Location = new System.Drawing.Point(3, 335);
+            this.btnvolverexamenes.Location = new System.Drawing.Point(3, 402);
             this.btnvolverexamenes.Name = "btnvolverexamenes";
             this.btnvolverexamenes.Size = new System.Drawing.Size(173, 39);
             this.btnvolverexamenes.TabIndex = 52;
@@ -436,7 +463,7 @@ namespace CUMple
             // panelapoyo4
             // 
             this.panelapoyo4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo4.Location = new System.Drawing.Point(0, 261);
+            this.panelapoyo4.Location = new System.Drawing.Point(0, 328);
             this.panelapoyo4.Name = "panelapoyo4";
             this.panelapoyo4.Size = new System.Drawing.Size(5, 35);
             this.panelapoyo4.TabIndex = 56;
@@ -465,6 +492,29 @@ namespace CUMple
             this.panelapoyo1.Size = new System.Drawing.Size(5, 35);
             this.panelapoyo1.TabIndex = 54;
             // 
+            // btnbuscar
+            // 
+            this.btnbuscar.FlatAppearance.BorderSize = 0;
+            this.btnbuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscar.ForeColor = System.Drawing.Color.White;
+            this.btnbuscar.Location = new System.Drawing.Point(2, 261);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(173, 35);
+            this.btnbuscar.TabIndex = 17;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscarr_Click);
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(-1, 261);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(5, 35);
+            this.flowLayoutPanel2.TabIndex = 57;
+            // 
             // examenesnotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,6 +533,7 @@ namespace CUMple
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.cbidexamen);
             this.Controls.Add(this.dgvexamenes);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "examenesnotas";
@@ -532,5 +583,7 @@ namespace CUMple
         private System.Windows.Forms.FlowLayoutPanel panelapoyo1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnvolverexamenes;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Button btnbuscar;
     }
 }

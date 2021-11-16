@@ -197,15 +197,25 @@ namespace CUMple
 
         private void btneditar_Click(object sender, EventArgs e)
         {
+            if (cbcedula.SelectedIndex!=-1)
+            {
+
+         
             if (txbnota.Text!="")
             {
 
                 editarexamenes("notas", txbnota.Text, cbcedula.SelectedItem.ToString());
             }
 
-            if (true)
+            if (cbrango.SelectedIndex!=-1)
             {
-
+                editarexamenes("nuevo_rango", cbrango.SelectedItem.ToString(), cbcedula.SelectedItem.ToString());
+            }
+            
+            }
+            else
+            {
+                MessageBox.Show("Si quiere editar debe tener una cédula seleccionada.");
             }
         }
 
@@ -271,7 +281,121 @@ namespace CUMple
 
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
+            limpiar();
+        }
+        public void limpiar()
+        {
+            txbnota.Text = "";
+            cbcedula.SelectedIndex = -1;
+            cbidexamen.SelectedIndex = -1;
+            cbrango.SelectedIndex = -1;
+            dgvexamenes.Refresh();
+        }
+        private void btnbuscarr_Click(object sender, EventArgs e)
+        {
+
+            DataTable dtexamenes = new DataTable();
+
+            string  nota, comandonota="";
+            string rango, comandorango="";
+            string cedula, comandocedula="";
+            if (true)
+            {
+
             
+            if (txbnota.Text!="")
+            {
+                nota = txbnota.Text;
+                comandonota = " nota=" + nota + "";
+
+
+            }
+            
+            if (cbrango.SelectedIndex!=-1)
+            {
+                rango = cbrango.SelectedItem.ToString();
+                comandorango = " nuevo_rango='" + rango + "'";
+            }
+            
+            if (cbcedula.SelectedIndex!=-1)
+            {
+                cedula = cbcedula.SelectedItem.ToString();
+                comandocedula = " cedula='" + cedula + "'";
+            }
+
+
+          
+            for (int i = 0; i < dgvexamenes.RowCount-1; i++)
+            {
+                if (txbnota.Text != "" && cbcedula.SelectedIndex == -1 && cbrango.SelectedIndex == -1)
+                {
+
+                    
+                        MySqlDataAdapter comandobuscar = new MySqlDataAdapter("select * from rango_obtenido where" + comandonota + "", conexionbd);
+                        dgvexamenes.Refresh();
+                        comandobuscar.Fill(dtexamenes);
+                        dgvexamenes.DataSource = dtexamenes;
+                        if (dgvexamenes.Rows[0].Cells[0].Value == null)
+                        {
+                            MessageBox.Show("El alumno no se ha encontrado. Prueba utilizando otros parametros");
+                            conexionbd.Close();
+                            dgvexamenes.DataSource = cargarexamenes(idexamen1);
+                        limpiar();
+                            return;
+                        }
+                        conexionbd.Close();
+                        return;
+                    
+
+                }
+
+                if (txbnota.Text == "" && cbcedula.SelectedIndex != -1 && cbrango.SelectedIndex == -1)
+                {
+
+                    MySqlDataAdapter comandobuscar = new MySqlDataAdapter("select * from rango_obtenido where" + comandocedula + "", conexionbd);
+                    dgvexamenes.Refresh();
+                    comandobuscar.Fill(dtexamenes);
+                    dgvexamenes.DataSource = dtexamenes;
+                    if (dgvexamenes.Rows[0].Cells[0].Value == null)
+                    {
+                        MessageBox.Show("El alumno no se ha encontrado. Prueba utilizando otros parametros");
+                        conexionbd.Close();
+                        dgvexamenes.DataSource = cargarexamenes(idexamen1);
+                        limpiar();
+                        return;
+                    }
+                    conexionbd.Close();
+                    return;
+                }
+
+                if (txbnota.Text == "" && cbcedula.SelectedIndex == -1 && cbrango.SelectedIndex != -1)
+                {
+
+                    MySqlDataAdapter comandobuscar = new MySqlDataAdapter("select * from rango_obtenido where" + comandorango + "", conexionbd);
+                    dgvexamenes.Refresh();
+                    comandobuscar.Fill(dtexamenes);
+                    dgvexamenes.DataSource = dtexamenes;
+                    if (dgvexamenes.Rows[0].Cells[0].Value == null)
+                    {
+                        MessageBox.Show("El alumno no se ha encontrado. Prueba utilizando otros parametros");
+                        conexionbd.Close();
+                        dgvexamenes.DataSource = cargarexamenes(idexamen1);
+                        limpiar();
+                        return;
+                    }
+                    conexionbd.Close();
+                    return;
+                }
+                
+
+            }
+            }
+
+        }
+
+        private void txbnota_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
