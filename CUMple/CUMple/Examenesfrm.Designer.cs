@@ -29,12 +29,17 @@ namespace CUMple
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Examenesfrm));
             this.dgvexamenes = new System.Windows.Forms.DataGridView();
+            this.colexaminadores = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colfecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coldisciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colhora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colidexamen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btneditar = new System.Windows.Forms.Button();
             this.txbexaminadores = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,11 +69,6 @@ namespace CUMple
             this.panelapoyo2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.colexaminadores = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colfecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coldisciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colhora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colidexamen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restau)).BeginInit();
@@ -85,14 +85,14 @@ namespace CUMple
             this.dgvexamenes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.dgvexamenes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvexamenes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvexamenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvexamenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvexamenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvexamenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colexaminadores,
@@ -100,14 +100,14 @@ namespace CUMple
             this.coldisciplina,
             this.colhora,
             this.colidexamen});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvexamenes.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvexamenes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvexamenes.EnableHeadersVisualStyles = false;
             this.dgvexamenes.GridColor = System.Drawing.Color.White;
             this.dgvexamenes.Location = new System.Drawing.Point(288, 121);
@@ -115,25 +115,69 @@ namespace CUMple
             this.dgvexamenes.Name = "dgvexamenes";
             this.dgvexamenes.ReadOnly = true;
             this.dgvexamenes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvexamenes.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvexamenes.RowHeadersVisible = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvexamenes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvexamenes.RowHeadersWidth = 62;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvexamenes.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvexamenes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvexamenes.Size = new System.Drawing.Size(790, 613);
             this.dgvexamenes.TabIndex = 0;
             this.dgvexamenes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvexamenes_CellClick);
             this.dgvexamenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvexamenes_CellContentClick);
             this.dgvexamenes.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvexamenes_MouseDoubleClick);
             this.dgvexamenes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvexamenes_MouseDown);
+            // 
+            // colexaminadores
+            // 
+            this.colexaminadores.DataPropertyName = "examinadores";
+            this.colexaminadores.HeaderText = "Examinadores";
+            this.colexaminadores.MinimumWidth = 8;
+            this.colexaminadores.Name = "colexaminadores";
+            this.colexaminadores.ReadOnly = true;
+            this.colexaminadores.Width = 145;
+            // 
+            // colfecha
+            // 
+            this.colfecha.DataPropertyName = "fecha";
+            this.colfecha.HeaderText = "Fecha";
+            this.colfecha.MinimumWidth = 8;
+            this.colfecha.Name = "colfecha";
+            this.colfecha.ReadOnly = true;
+            this.colfecha.Width = 78;
+            // 
+            // coldisciplina
+            // 
+            this.coldisciplina.DataPropertyName = "disciplina";
+            this.coldisciplina.HeaderText = "Disciplina";
+            this.coldisciplina.MinimumWidth = 8;
+            this.coldisciplina.Name = "coldisciplina";
+            this.coldisciplina.ReadOnly = true;
+            this.coldisciplina.Width = 110;
+            // 
+            // colhora
+            // 
+            this.colhora.DataPropertyName = "hora";
+            this.colhora.HeaderText = "Hora";
+            this.colhora.MinimumWidth = 8;
+            this.colhora.Name = "colhora";
+            this.colhora.ReadOnly = true;
+            this.colhora.Width = 69;
+            // 
+            // colidexamen
+            // 
+            this.colidexamen.DataPropertyName = "idexamen";
+            this.colidexamen.HeaderText = "ID del exámen";
+            this.colidexamen.MinimumWidth = 8;
+            this.colidexamen.Name = "colidexamen";
+            this.colidexamen.ReadOnly = true;
+            this.colidexamen.Width = 138;
             // 
             // btneditar
             // 
@@ -512,51 +556,6 @@ namespace CUMple
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(141, 1);
             this.panel3.TabIndex = 49;
-            // 
-            // colexaminadores
-            // 
-            this.colexaminadores.DataPropertyName = "examinadores";
-            this.colexaminadores.HeaderText = "Examinadores";
-            this.colexaminadores.MinimumWidth = 8;
-            this.colexaminadores.Name = "colexaminadores";
-            this.colexaminadores.ReadOnly = true;
-            this.colexaminadores.Width = 145;
-            // 
-            // colfecha
-            // 
-            this.colfecha.DataPropertyName = "fecha";
-            this.colfecha.HeaderText = "Fecha";
-            this.colfecha.MinimumWidth = 8;
-            this.colfecha.Name = "colfecha";
-            this.colfecha.ReadOnly = true;
-            this.colfecha.Width = 78;
-            // 
-            // coldisciplina
-            // 
-            this.coldisciplina.DataPropertyName = "disciplina";
-            this.coldisciplina.HeaderText = "Disciplina";
-            this.coldisciplina.MinimumWidth = 8;
-            this.coldisciplina.Name = "coldisciplina";
-            this.coldisciplina.ReadOnly = true;
-            this.coldisciplina.Width = 110;
-            // 
-            // colhora
-            // 
-            this.colhora.DataPropertyName = "hora";
-            this.colhora.HeaderText = "Hora";
-            this.colhora.MinimumWidth = 8;
-            this.colhora.Name = "colhora";
-            this.colhora.ReadOnly = true;
-            this.colhora.Width = 69;
-            // 
-            // colidexamen
-            // 
-            this.colidexamen.DataPropertyName = "idexamen";
-            this.colidexamen.HeaderText = "ID del exámen";
-            this.colidexamen.MinimumWidth = 8;
-            this.colidexamen.Name = "colidexamen";
-            this.colidexamen.ReadOnly = true;
-            this.colidexamen.Width = 138;
             // 
             // Examenesfrm
             // 

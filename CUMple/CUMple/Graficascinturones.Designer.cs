@@ -66,8 +66,7 @@ namespace CUMple
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.Graficadecinturones.Legends.Add(legend1);
-            this.Graficadecinturones.Location = new System.Drawing.Point(290, 94);
-            this.Graficadecinturones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Graficadecinturones.Location = new System.Drawing.Point(174, 112);
             this.Graficadecinturones.Name = "Graficadecinturones";
             this.Graficadecinturones.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea1";
@@ -83,16 +82,17 @@ namespace CUMple
             series2.Name = "Faltas";
             this.Graficadecinturones.Series.Add(series1);
             this.Graficadecinturones.Series.Add(series2);
-            this.Graficadecinturones.Size = new System.Drawing.Size(921, 518);
+            this.Graficadecinturones.Size = new System.Drawing.Size(614, 337);
             this.Graficadecinturones.TabIndex = 1;
             this.Graficadecinturones.Text = "chart1";
             // 
             // Graficascinturones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1277, 683);
+            this.ClientSize = new System.Drawing.Size(813, 547);
             this.Controls.Add(this.Graficadecinturones);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Graficascinturones";
             this.Text = "Graficascinturones";
             ((System.ComponentModel.ISupportInitialize)(this.Graficadecinturones)).EndInit();

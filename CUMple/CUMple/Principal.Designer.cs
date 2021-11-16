@@ -289,7 +289,7 @@ namespace CUMple
             this.button4.TabIndex = 9;
             this.button4.Text = "Lista";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.btnentrarexamenes_Click);
+            this.button4.Click += new System.EventHandler(this.btnlista_Click);
             // 
             // imagenata
             // 

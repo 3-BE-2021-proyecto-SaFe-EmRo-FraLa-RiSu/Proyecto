@@ -134,5 +134,10 @@ namespace CUMple
         {
 
         }
+
+        private void btnlista_Click(object sender, EventArgs e)
+        {
+            new listaasistencias().Show();
+        }
     }
 }

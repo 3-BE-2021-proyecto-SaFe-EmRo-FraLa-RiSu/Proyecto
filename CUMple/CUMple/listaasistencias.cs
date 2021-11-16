@@ -18,13 +18,9 @@ namespace CUMple
         {
             InitializeComponent();
         }
+        bool krav, adultos, tigres, avanzados,adolescentes;
 
         private void listaasistencias_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btneditarusuario_Click(object sender, EventArgs e)
         {
 
         }
@@ -41,7 +37,7 @@ namespace CUMple
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+        
         }
 
         private void txbbucar_KeyDown(object sender, KeyEventArgs e)
@@ -52,13 +48,44 @@ namespace CUMple
         private void txbbucar_KeyPress(object sender, KeyPressEventArgs e)
         {
             DataTable filas = new DataTable();
-            string comando = "SELECT nomcompleto,tipos FROM discipulos d JOIN van v ON d.cedula = v.cedula JOIN clase c ON v.idclase = c.idclase where nomcompleto like '%" + txbbucar.Text  + "%' GROUP BY c.idclase";
-            conexionbd.Open();
-            MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
-            comandosql.Fill(filas);
-            conexionbd.Close();
-            dgvasistencias.Refresh();
-            dgvasistencias.DataSource = filas;
+
+            if (krav!=false || adultos!=false || avanzados!=false || adolescentes!=false ||  tigres!=false)
+            {
+                if (krav == true)
+                {
+                    string comando = "SELECT nomcompleto,fecha_de_nac from discipulos where MONTH(fecha_de_nac)<='2008' and krav_maga=1 group by cedula";
+
+                    MySqlCommand comandosql = new MySqlCommand(comando, conexionbd);
+                   
+
+                }
+
+                if (adultos==true)
+                {
+                    string comando = "SELECT nomcompleto,fecha_de_nac from discipulos where MONTH(fecha_de_nac)<='2008' and taekwondo=1 group by cedula";
+
+                    MySqlCommand comandosql = new MySqlCommand(comando, conexionbd);
+                }
+
+                if (avanzados == true)
+                {
+                    string comando = "SELECT nomcompleto,fecha_de_nac,rango from discipulos where MONTH(fecha_de_nac)<='2008' and taekwondo=1 and rango NOT IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado','Camuflado','Camuflado confirmado') group by cedula";
+
+                    MySqlCommand comandosql = new MySqlCommand(comando, conexionbd);
+                }
+                if (avanzados == true)
+                {
+                    string comando = "SELECT nomcompleto,fecha_de_nac,rango from discipulos where MONTH(fecha_de_nac)<='2008' and taekwondo=1 and rango  IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado','Camuflado','Camuflado confirmado') group by cedula";
+
+                    MySqlCommand comandosql = new MySqlCommand(comando, conexionbd);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una clase.","Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
         }
 
         private void txbbucar_TextChanged(object sender, EventArgs e)
@@ -105,6 +132,55 @@ namespace CUMple
             }
         }
 
+        private void btnkravmaga_Click(object sender, EventArgs e)
+        {
+             krav = true;
+             adultos = false;
+             tigres = false;
+             avanzados = false;
+            adolescentes = false;
+        }
+
+        private void clicktigres(object sender, EventArgs e)
+        {
+            krav = false;
+            adultos = false;
+            tigres = true;
+            avanzados = false;
+            adolescentes = false;
+        }
+
+        private void btnavanzados_Click(object sender, EventArgs e)
+        {
+            krav = false;
+            adultos = false;
+            tigres = false;
+            avanzados = true;
+            adolescentes = false;
+        }
+
+        private void adolescentes_Click(object sender, EventArgs e)
+        {
+            krav = false;
+            adultos = false;
+            tigres = false;
+            avanzados = false;
+            adolescentes = true;
+        }
+
+        private void dgvasistencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnadulto(object sender, EventArgs e)
+        {
+            krav = false;
+            adultos = true;
+            tigres = false;
+            avanzados = false;
+        }
+
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -122,5 +198,7 @@ namespace CUMple
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+      
     }
 }
