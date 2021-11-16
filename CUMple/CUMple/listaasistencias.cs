@@ -56,8 +56,7 @@ namespace CUMple
                     string comando = "SELECT nomcompleto,fecha_de_nac from discipulos where MONTH(fecha_de_nac)<='2008' and krav_maga=1 group by cedula";
 
                     MySqlCommand comandosql = new MySqlCommand(comando, conexionbd);
-                   
-
+                    
                 }
 
                 if (adultos==true)
@@ -65,6 +64,7 @@ namespace CUMple
                     string comando = "SELECT nomcompleto,fecha_de_nac from discipulos where MONTH(fecha_de_nac)<='2008' and taekwondo=1 group by cedula";
 
                     MySqlCommand comandosql = new MySqlCommand(comando, conexionbd);
+
                 }
 
                 if (avanzados == true)
@@ -72,12 +72,20 @@ namespace CUMple
                     string comando = "SELECT nomcompleto,fecha_de_nac,rango from discipulos where MONTH(fecha_de_nac)<='2008' and taekwondo=1 and rango NOT IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado','Camuflado','Camuflado confirmado') group by cedula";
 
                     MySqlCommand comandosql = new MySqlCommand(comando, conexionbd);
-                }
-                if (avanzados == true)
-                {
-                    string comando = "SELECT nomcompleto,fecha_de_nac,rango from discipulos where MONTH(fecha_de_nac)<='2008' and taekwondo=1 and rango  IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado','Camuflado','Camuflado confirmado') group by cedula";
 
+                }
+                if (adolescentes == true)
+                {
+                    string comando = "SELECT nomcompleto,fecha_de_nac,rango from discipulos where MONTH(fecha_de_nac)<='2010' and taekwondo=1 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado','Camuflado','Camuflado confirmado') group by cedula";
                     MySqlCommand comandosql = new MySqlCommand(comando, conexionbd);
+
+                }
+
+                if (tigres == true)
+                {
+                    string comando = "SELECT nomcompleto,fecha_de_nac,rango from discipulos where MONTH(fecha_de_nac)<='2015' and taekwondo=1 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado','Camuflado','Camuflado confirmado') group by cedula";
+                    MySqlCommand comandosql = new MySqlCommand(comando, conexionbd);
+                                                           
                 }
 
             }

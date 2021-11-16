@@ -31,7 +31,6 @@ namespace CUMple
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.botingprog = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnentrarexamenes = new System.Windows.Forms.Button();
             this.barramenu = new System.Windows.Forms.Panel();
@@ -45,10 +44,11 @@ namespace CUMple
             this.panelapoyo5 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelapoyo3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo2 = new System.Windows.Forms.FlowLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.imagenata = new System.Windows.Forms.PictureBox();
+            this.btnvolver = new System.Windows.Forms.Button();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.barramenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurarr)).BeginInit();
@@ -74,21 +74,6 @@ namespace CUMple
             this.botingprog.UseVisualStyleBackColor = false;
             this.botingprog.Click += new System.EventHandler(this.botingprog_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 381);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 37);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Opciones";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -97,7 +82,7 @@ namespace CUMple
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(3, 462);
+            this.button2.Location = new System.Drawing.Point(3, 384);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(196, 37);
             this.button2.TabIndex = 8;
@@ -112,9 +97,9 @@ namespace CUMple
             this.btnentrarexamenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnentrarexamenes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnentrarexamenes.ForeColor = System.Drawing.Color.White;
-            this.btnentrarexamenes.Location = new System.Drawing.Point(2, 225);
+            this.btnentrarexamenes.Location = new System.Drawing.Point(0, 227);
             this.btnentrarexamenes.Name = "btnentrarexamenes";
-            this.btnentrarexamenes.Size = new System.Drawing.Size(195, 37);
+            this.btnentrarexamenes.Size = new System.Drawing.Size(200, 37);
             this.btnentrarexamenes.TabIndex = 9;
             this.btnentrarexamenes.Text = "Examenes";
             this.btnentrarexamenes.UseVisualStyleBackColor = false;
@@ -193,12 +178,12 @@ namespace CUMple
             this.barradebotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.barradebotones.Controls.Add(this.flowLayoutPanel1);
             this.barradebotones.Controls.Add(this.button3);
+            this.barradebotones.Controls.Add(this.flowLayoutPanel3);
             this.barradebotones.Controls.Add(this.panelapoyo5);
             this.barradebotones.Controls.Add(this.flowLayoutPanel2);
             this.barradebotones.Controls.Add(this.panelapoyo4);
-            this.barradebotones.Controls.Add(this.panelapoyo3);
             this.barradebotones.Controls.Add(this.panelapoyo2);
-            this.barradebotones.Controls.Add(this.button1);
+            this.barradebotones.Controls.Add(this.btnvolver);
             this.barradebotones.Controls.Add(this.button2);
             this.barradebotones.Controls.Add(this.button4);
             this.barradebotones.Controls.Add(this.btnentrarexamenes);
@@ -238,7 +223,7 @@ namespace CUMple
             // panelapoyo5
             // 
             this.panelapoyo5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo5.Location = new System.Drawing.Point(0, 462);
+            this.panelapoyo5.Location = new System.Drawing.Point(0, 384);
             this.panelapoyo5.Name = "panelapoyo5";
             this.panelapoyo5.Size = new System.Drawing.Size(5, 37);
             this.panelapoyo5.TabIndex = 14;
@@ -254,18 +239,10 @@ namespace CUMple
             // panelapoyo4
             // 
             this.panelapoyo4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo4.Location = new System.Drawing.Point(2, 225);
+            this.panelapoyo4.Location = new System.Drawing.Point(0, 227);
             this.panelapoyo4.Name = "panelapoyo4";
             this.panelapoyo4.Size = new System.Drawing.Size(5, 37);
             this.panelapoyo4.TabIndex = 14;
-            // 
-            // panelapoyo3
-            // 
-            this.panelapoyo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo3.Location = new System.Drawing.Point(0, 381);
-            this.panelapoyo3.Name = "panelapoyo3";
-            this.panelapoyo3.Size = new System.Drawing.Size(5, 37);
-            this.panelapoyo3.TabIndex = 14;
             // 
             // panelapoyo2
             // 
@@ -303,6 +280,30 @@ namespace CUMple
             this.imagenata.TabStop = false;
             this.imagenata.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imagenata_MouseDown);
             // 
+            // btnvolver
+            // 
+            this.btnvolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnvolver.FlatAppearance.BorderSize = 0;
+            this.btnvolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.btnvolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnvolver.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvolver.ForeColor = System.Drawing.Color.White;
+            this.btnvolver.Location = new System.Drawing.Point(3, 463);
+            this.btnvolver.Name = "btnvolver";
+            this.btnvolver.Size = new System.Drawing.Size(196, 37);
+            this.btnvolver.TabIndex = 8;
+            this.btnvolver.Text = "Volver";
+            this.btnvolver.UseVisualStyleBackColor = false;
+            this.btnvolver.Click += new System.EventHandler(this.btnvolveradmin);
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 463);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(5, 37);
+            this.flowLayoutPanel3.TabIndex = 14;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,7 +334,6 @@ namespace CUMple
 
         #endregion
         private System.Windows.Forms.Button botingprog;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnentrarexamenes;
         private System.Windows.Forms.Panel barramenu;
@@ -344,12 +344,13 @@ namespace CUMple
         private System.Windows.Forms.Panel barradebotones;
         private System.Windows.Forms.FlowLayoutPanel panelapoyo5;
         private System.Windows.Forms.FlowLayoutPanel panelapoyo4;
-        private System.Windows.Forms.FlowLayoutPanel panelapoyo3;
         private System.Windows.Forms.FlowLayoutPanel panelapoyo2;
         private System.Windows.Forms.PictureBox imagenata;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Button btnvolver;
     }
 }

@@ -138,6 +138,13 @@ namespace CUMple
         private void btnlista_Click(object sender, EventArgs e)
         {
             new listaasistencias().Show();
+            this.Dispose();
+        }
+
+        private void btnvolveradmin(object sender, EventArgs e)
+        {
+            new formadmin().Show();
+            this.Dispose();
         }
     }
 }

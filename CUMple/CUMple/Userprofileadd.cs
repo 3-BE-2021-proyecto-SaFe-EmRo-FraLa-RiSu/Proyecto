@@ -69,9 +69,15 @@ namespace CUMple
                 aviso = aviso + "\n-Email";
                 camposincompletos++;
             }
+            if (cbrango.SelectedIndex!=-1)
+            {
+                aviso = aviso + "\n-Rango";
+                camposincompletos++;
+            }
+
             if (camposincompletos == 0)
             {
-                agregarusuario(txbnombrecompleto.Text, mskcedula.Text, txbcelular.Text, txbprofesion.Text, dtpfec_nac.Text, txbemail.Text, taekwondobool, krav_magabool, dtpfechadeingreso.Text);
+                agregarusuario(txbnombrecompleto.Text, mskcedula.Text, txbcelular.Text, txbprofesion.Text, dtpfec_nac.Text, txbemail.Text, taekwondobool, krav_magabool, dtpfechadeingreso.Text ,cbrango.SelectedItem.ToString());
                 /*
                 conexionprograma.Open();
                 string comando = "insert into discipulos values ('" + txbcelular.ToString()+ "', '" + dtpfechadeingreso.ToString()+ "', '" + txbnombrecompleto.ToString()+ "', '" + krav_magabool+ "', '" + taekwondobool+ "', '" + txbprofesion.ToString()+ "', '" + dtpfec_nac.ToString()+ "', '" + txbemail.ToString()+ "');";
@@ -94,11 +100,11 @@ namespace CUMple
             }
         }
         
-        public void agregarusuario(string nombrecompleto, string cedula , string celular, string profesion, string fech_nac, string email, int taekwondo, int krav, string fech_ingreso)
+        public void agregarusuario(string nombrecompleto, string cedula , string celular, string profesion, string fech_nac, string email, int taekwondo, int krav, string fech_ingreso, string rango)
         { 
             
             conexionprograma.Open();
-            string comando = "insert into discipulos values ('" + celular + "', '"+ cedula +"', '" + fech_ingreso + "', '" + nombrecompleto + "', " + krav + ", " + taekwondo + ", '" + profesion + "', '" + fech_nac + "', '" + email + "');";
+            string comando = "insert into discipulos values ('" + celular + "', '"+ cedula +"', '" + fech_ingreso + "', '" + nombrecompleto + "', " + krav + ", " + taekwondo + ", '" + profesion + "', '" + fech_nac + "', '" + email + "','"+rango+"');";
             MySqlCommand comandoeditarusuario = new MySqlCommand(comando, conexionprograma);
             try
             {

@@ -61,6 +61,8 @@ namespace CUMple
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblrango = new System.Windows.Forms.Label();
+            this.cbrango = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
@@ -73,10 +75,10 @@ namespace CUMple
             // 
             this.btnagregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.btnagregar.FlatAppearance.BorderSize = 0;
-            this.btnagregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.btnagregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
             this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnagregar.Location = new System.Drawing.Point(0, 105);
-            this.btnagregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnagregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(165, 44);
             this.btnagregar.TabIndex = 0;
@@ -90,7 +92,7 @@ namespace CUMple
             this.txbemail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbemail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbemail.ForeColor = System.Drawing.Color.Gray;
-            this.txbemail.Location = new System.Drawing.Point(717, 212);
+            this.txbemail.Location = new System.Drawing.Point(717, 219);
             this.txbemail.Name = "txbemail";
             this.txbemail.Size = new System.Drawing.Size(199, 20);
             this.txbemail.TabIndex = 30;
@@ -115,7 +117,7 @@ namespace CUMple
             this.lblemail.AutoSize = true;
             this.lblemail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblemail.ForeColor = System.Drawing.Color.White;
-            this.lblemail.Location = new System.Drawing.Point(528, 212);
+            this.lblemail.Location = new System.Drawing.Point(528, 219);
             this.lblemail.Name = "lblemail";
             this.lblemail.Size = new System.Drawing.Size(60, 18);
             this.lblemail.TabIndex = 27;
@@ -207,7 +209,7 @@ namespace CUMple
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(200, 265);
+            this.label5.Location = new System.Drawing.Point(200, 310);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 18);
             this.label5.TabIndex = 35;
@@ -218,8 +220,8 @@ namespace CUMple
             this.chbtaekwondo.AutoSize = true;
             this.chbtaekwondo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbtaekwondo.ForeColor = System.Drawing.Color.White;
-            this.chbtaekwondo.Location = new System.Drawing.Point(365, 261);
-            this.chbtaekwondo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbtaekwondo.Location = new System.Drawing.Point(365, 306);
+            this.chbtaekwondo.Margin = new System.Windows.Forms.Padding(2);
             this.chbtaekwondo.Name = "chbtaekwondo";
             this.chbtaekwondo.Size = new System.Drawing.Size(117, 22);
             this.chbtaekwondo.TabIndex = 36;
@@ -231,8 +233,8 @@ namespace CUMple
             this.chbkrav.AutoSize = true;
             this.chbkrav.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbkrav.ForeColor = System.Drawing.Color.White;
-            this.chbkrav.Location = new System.Drawing.Point(365, 289);
-            this.chbkrav.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbkrav.Location = new System.Drawing.Point(365, 334);
+            this.chbkrav.Margin = new System.Windows.Forms.Padding(2);
             this.chbkrav.Name = "chbkrav";
             this.chbkrav.Size = new System.Drawing.Size(112, 22);
             this.chbkrav.TabIndex = 37;
@@ -243,12 +245,12 @@ namespace CUMple
             // 
             this.btnvolveruserprofile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.btnvolveruserprofile.FlatAppearance.BorderSize = 0;
-            this.btnvolveruserprofile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.btnvolveruserprofile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
             this.btnvolveruserprofile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnvolveruserprofile.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolveruserprofile.ForeColor = System.Drawing.Color.Transparent;
             this.btnvolveruserprofile.Location = new System.Drawing.Point(2, 199);
-            this.btnvolveruserprofile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnvolveruserprofile.Margin = new System.Windows.Forms.Padding(2);
             this.btnvolveruserprofile.Name = "btnvolveruserprofile";
             this.btnvolveruserprofile.Size = new System.Drawing.Size(165, 44);
             this.btnvolveruserprofile.TabIndex = 41;
@@ -262,7 +264,7 @@ namespace CUMple
             this.dtpfec_nac.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpfec_nac.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpfec_nac.Location = new System.Drawing.Point(717, 167);
-            this.dtpfec_nac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpfec_nac.Margin = new System.Windows.Forms.Padding(2);
             this.dtpfec_nac.Name = "dtpfec_nac";
             this.dtpfec_nac.Size = new System.Drawing.Size(124, 27);
             this.dtpfec_nac.TabIndex = 42;
@@ -272,7 +274,7 @@ namespace CUMple
             this.lblfechadeingreso.AutoSize = true;
             this.lblfechadeingreso.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfechadeingreso.ForeColor = System.Drawing.Color.White;
-            this.lblfechadeingreso.Location = new System.Drawing.Point(528, 265);
+            this.lblfechadeingreso.Location = new System.Drawing.Point(528, 270);
             this.lblfechadeingreso.Name = "lblfechadeingreso";
             this.lblfechadeingreso.Size = new System.Drawing.Size(154, 18);
             this.lblfechadeingreso.TabIndex = 43;
@@ -285,8 +287,8 @@ namespace CUMple
             this.dtpfechadeingreso.Enabled = false;
             this.dtpfechadeingreso.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpfechadeingreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpfechadeingreso.Location = new System.Drawing.Point(717, 259);
-            this.dtpfechadeingreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpfechadeingreso.Location = new System.Drawing.Point(717, 264);
+            this.dtpfechadeingreso.Margin = new System.Windows.Forms.Padding(2);
             this.dtpfechadeingreso.Name = "dtpfechadeingreso";
             this.dtpfechadeingreso.Size = new System.Drawing.Size(124, 27);
             this.dtpfechadeingreso.TabIndex = 44;
@@ -298,7 +300,7 @@ namespace CUMple
             this.mskcedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mskcedula.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskcedula.ForeColor = System.Drawing.Color.White;
-            this.mskcedula.Location = new System.Drawing.Point(365, 167);
+            this.mskcedula.Location = new System.Drawing.Point(366, 174);
             this.mskcedula.Mask = "0000000-0";
             this.mskcedula.Name = "mskcedula";
             this.mskcedula.Size = new System.Drawing.Size(98, 20);
@@ -433,10 +435,61 @@ namespace CUMple
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Gray;
-            this.panel6.Location = new System.Drawing.Point(717, 232);
+            this.panel6.Location = new System.Drawing.Point(717, 239);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(200, 1);
             this.panel6.TabIndex = 53;
+            // 
+            // lblrango
+            // 
+            this.lblrango.AutoSize = true;
+            this.lblrango.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblrango.ForeColor = System.Drawing.Color.White;
+            this.lblrango.Location = new System.Drawing.Point(206, 265);
+            this.lblrango.Name = "lblrango";
+            this.lblrango.Size = new System.Drawing.Size(66, 18);
+            this.lblrango.TabIndex = 29;
+            this.lblrango.Text = "Rango:";
+            // 
+            // cbrango
+            // 
+            this.cbrango.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbrango.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.cbrango.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbrango.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbrango.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbrango.ForeColor = System.Drawing.Color.White;
+            this.cbrango.FormattingEnabled = true;
+            this.cbrango.Items.AddRange(new object[] {
+            "Blanco",
+            "Blanco confirmado",
+            "Naranja",
+            "Naranja confirmado",
+            "Amarillo",
+            "Amarillo confirmado",
+            "Camuflado",
+            "Camuflado confirmado",
+            "Verde",
+            "Verde confirmado",
+            "Violeta",
+            "Violeta confirmado",
+            "Marrón",
+            "Marrón cornfirmado",
+            "Rojo ",
+            "Rojo confirmado",
+            "Rojo negro",
+            "Rojo negro confirmado",
+            "Negro",
+            "Negro confirmado",
+            "1mer DAN",
+            "2ndo DAN",
+            "3er DAN",
+            "4to DAN"});
+            this.cbrango.Location = new System.Drawing.Point(365, 262);
+            this.cbrango.Margin = new System.Windows.Forms.Padding(2);
+            this.cbrango.Name = "cbrango";
+            this.cbrango.Size = new System.Drawing.Size(139, 26);
+            this.cbrango.TabIndex = 54;
             // 
             // Userprofileadd
             // 
@@ -444,6 +497,7 @@ namespace CUMple
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(983, 491);
+            this.Controls.Add(this.cbrango);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -462,13 +516,14 @@ namespace CUMple
             this.Controls.Add(this.lblnombrecompleto);
             this.Controls.Add(this.txbcelular);
             this.Controls.Add(this.txbemail);
+            this.Controls.Add(this.lblrango);
             this.Controls.Add(this.lblcelular);
             this.Controls.Add(this.lblemail);
             this.Controls.Add(this.txbnombrecompleto);
             this.Controls.Add(this.lblcedula);
             this.Controls.Add(this.lblprofesion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Userprofileadd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Userprofileadd";
@@ -518,5 +573,7 @@ namespace CUMple
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label lblrango;
+        private System.Windows.Forms.ComboBox cbrango;
     }
 }
