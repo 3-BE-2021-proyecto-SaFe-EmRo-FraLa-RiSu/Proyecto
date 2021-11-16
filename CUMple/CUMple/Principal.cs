@@ -44,8 +44,7 @@ namespace CUMple
 
         private void btnnotas_Click(object sender, EventArgs e)
         {
-            new examenesnotas().Show();
-            this.Dispose();
+            
         }
 
         private void restaurar_Click(object sender, EventArgs e)
@@ -129,6 +128,11 @@ namespace CUMple
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

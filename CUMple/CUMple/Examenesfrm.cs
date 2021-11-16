@@ -20,7 +20,7 @@ namespace CUMple
             InitializeComponent();
 
         }
-        int id;
+        int id=0;
         public void buscarexamenes()
 
         {
@@ -106,7 +106,10 @@ namespace CUMple
         }
         private void btneditar_Click(object sender, EventArgs e)
         {
-           
+            if (id!=0)
+            {
+ 
+          
             if (cbdisciplina.SelectedIndex!=-1)
             {
                 editarexamen("disciplina", cbdisciplina.SelectedItem.ToString(), id);
@@ -125,7 +128,11 @@ namespace CUMple
             }
                 MessageBox.Show("El examén se ha editado de manera correcta");
                 limpiar();
-            
+            }
+            else
+            {
+                MessageBox.Show("Debe selecionar un exámen");
+            }
 
         }
                
@@ -593,11 +600,13 @@ namespace CUMple
 
         private void dgvexamenes_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-            }
+        }
+
+        private void dgvexamenes_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+          
+                new examenesnotas(id.ToString()).Show();
+            this.Dispose();
         }
     }
 }

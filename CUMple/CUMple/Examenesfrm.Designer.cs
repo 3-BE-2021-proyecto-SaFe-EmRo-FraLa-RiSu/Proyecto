@@ -35,11 +35,6 @@ namespace CUMple
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Examenesfrm));
             this.dgvexamenes = new System.Windows.Forms.DataGridView();
-            this.colexaminadores = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colfecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coldisciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colhora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colidexamen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btneditar = new System.Windows.Forms.Button();
             this.txbexaminadores = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -69,6 +64,11 @@ namespace CUMple
             this.panelapoyo2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.colexaminadores = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colfecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coldisciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colhora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colidexamen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restau)).BeginInit();
@@ -127,56 +127,12 @@ namespace CUMple
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvexamenes.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvexamenes.Size = new System.Drawing.Size(953, 613);
+            this.dgvexamenes.Size = new System.Drawing.Size(790, 613);
             this.dgvexamenes.TabIndex = 0;
             this.dgvexamenes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvexamenes_CellClick);
             this.dgvexamenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvexamenes_CellContentClick);
+            this.dgvexamenes.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvexamenes_MouseDoubleClick);
             this.dgvexamenes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvexamenes_MouseDown);
-            // 
-            // colexaminadores
-            // 
-            this.colexaminadores.DataPropertyName = "examinadores";
-            this.colexaminadores.HeaderText = "Examinadores";
-            this.colexaminadores.MinimumWidth = 8;
-            this.colexaminadores.Name = "colexaminadores";
-            this.colexaminadores.ReadOnly = true;
-            this.colexaminadores.Width = 150;
-            // 
-            // colfecha
-            // 
-            this.colfecha.DataPropertyName = "fecha";
-            this.colfecha.HeaderText = "Fecha";
-            this.colfecha.MinimumWidth = 8;
-            this.colfecha.Name = "colfecha";
-            this.colfecha.ReadOnly = true;
-            this.colfecha.Width = 150;
-            // 
-            // coldisciplina
-            // 
-            this.coldisciplina.DataPropertyName = "disciplina";
-            this.coldisciplina.HeaderText = "Disciplina";
-            this.coldisciplina.MinimumWidth = 8;
-            this.coldisciplina.Name = "coldisciplina";
-            this.coldisciplina.ReadOnly = true;
-            this.coldisciplina.Width = 150;
-            // 
-            // colhora
-            // 
-            this.colhora.DataPropertyName = "hora";
-            this.colhora.HeaderText = "Hora";
-            this.colhora.MinimumWidth = 8;
-            this.colhora.Name = "colhora";
-            this.colhora.ReadOnly = true;
-            this.colhora.Width = 150;
-            // 
-            // colidexamen
-            // 
-            this.colidexamen.DataPropertyName = "idexamen";
-            this.colidexamen.HeaderText = "ID del exámen";
-            this.colidexamen.MinimumWidth = 8;
-            this.colidexamen.Name = "colidexamen";
-            this.colidexamen.ReadOnly = true;
-            this.colidexamen.Width = 150;
             // 
             // btneditar
             // 
@@ -555,6 +511,51 @@ namespace CUMple
             this.panel3.Size = new System.Drawing.Size(141, 1);
             this.panel3.TabIndex = 49;
             // 
+            // colexaminadores
+            // 
+            this.colexaminadores.DataPropertyName = "examinadores";
+            this.colexaminadores.HeaderText = "Examinadores";
+            this.colexaminadores.MinimumWidth = 8;
+            this.colexaminadores.Name = "colexaminadores";
+            this.colexaminadores.ReadOnly = true;
+            this.colexaminadores.Width = 150;
+            // 
+            // colfecha
+            // 
+            this.colfecha.DataPropertyName = "fecha";
+            this.colfecha.HeaderText = "Fecha";
+            this.colfecha.MinimumWidth = 8;
+            this.colfecha.Name = "colfecha";
+            this.colfecha.ReadOnly = true;
+            this.colfecha.Width = 150;
+            // 
+            // coldisciplina
+            // 
+            this.coldisciplina.DataPropertyName = "disciplina";
+            this.coldisciplina.HeaderText = "Disciplina";
+            this.coldisciplina.MinimumWidth = 8;
+            this.coldisciplina.Name = "coldisciplina";
+            this.coldisciplina.ReadOnly = true;
+            this.coldisciplina.Width = 150;
+            // 
+            // colhora
+            // 
+            this.colhora.DataPropertyName = "hora";
+            this.colhora.HeaderText = "Hora";
+            this.colhora.MinimumWidth = 8;
+            this.colhora.Name = "colhora";
+            this.colhora.ReadOnly = true;
+            this.colhora.Width = 150;
+            // 
+            // colidexamen
+            // 
+            this.colidexamen.DataPropertyName = "idexamen";
+            this.colidexamen.HeaderText = "ID del exámen";
+            this.colidexamen.MinimumWidth = 8;
+            this.colidexamen.Name = "colidexamen";
+            this.colidexamen.ReadOnly = true;
+            this.colidexamen.Width = 150;
+            // 
             // Examenesfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -604,11 +605,6 @@ namespace CUMple
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colexaminadores;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colfecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coldisciplina;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colhora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colidexamen;
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.Button btnvolverexamenes;
         private System.Windows.Forms.Button btneliminar;
@@ -632,5 +628,10 @@ namespace CUMple
         private System.Windows.Forms.FlowLayoutPanel panelapoyo5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colexaminadores;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colfecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coldisciplina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colhora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colidexamen;
     }
 }

@@ -13,13 +13,24 @@ namespace CUMple
 {
     public partial class examenesnotas : Form
     {
-        public examenesnotas()
+        public examenesnotas(string idexamen)
         {
-            InitializeComponent();
             
+            InitializeComponent();
+             idexamen1=idexamen;
         }
         string idexamen1;
         MySqlConnection conexionbd = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
+
+
+
+        private void editarexamenes(string columnaaeditar,string datonuevo, string datodefinitivo)
+        {
+            string comand = "update examenes set "+columnaaeditar+"='"+datonuevo+ "' where and cedula='"+ datodefinitivo + "' ;";
+            conexionbd.Open();
+            MySqlCommand comando = new MySqlCommand(comand, conexionbd);
+          
+        }
         private DataTable cargarexamenes(string idexamenx)
         {
 
@@ -74,6 +85,7 @@ namespace CUMple
         {
             comboboxcedula();
             comboboxidactualizado();
+            dgvexamenes.DataSource = cargarexamenes(idexamen1);
                  
         }
 
@@ -185,7 +197,16 @@ namespace CUMple
 
         private void btneditar_Click(object sender, EventArgs e)
         {
-           
+            if (txbnota.Text!="")
+            {
+
+                editarexamenes("notas", txbnota.Text, cbcedula.SelectedItem.ToString());
+            }
+
+            if (true)
+            {
+
+            }
         }
 
         private void dgvexamenes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -193,7 +214,12 @@ namespace CUMple
             if (e.RowIndex != -1)
             {
                 DataGridViewRow filas = dgvexamenes.Rows[e.RowIndex];
-
+                if (filas.Cells["cedula"].Value.ToString() == "")
+                {
+                    MessageBox.Show("Esta seleccionando una casilla vacia", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }              
                 txbnota.Text = filas.Cells["notas"].Value.ToString();
                 cbcedula.SelectedItem = filas.Cells["cedula"].Value.ToString();
                 cbrango.SelectedItem = filas.Cells["nuevo_rango"].Value.ToString();
@@ -239,8 +265,13 @@ namespace CUMple
 
         private void btnvolverexamenes_Click(object sender, EventArgs e)
         {
-            new Principal().Show();
+            new Examenesfrm().Show();
             this.Dispose();
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

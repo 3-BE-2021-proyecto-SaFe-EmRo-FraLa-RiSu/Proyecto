@@ -38,10 +38,10 @@ namespace CUMple
             this.btnfiltrar = new System.Windows.Forms.Button();
             this.txbapellidofiltrar = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.maximizar = new System.Windows.Forms.PictureBox();
             this.restaurarr = new System.Windows.Forms.PictureBox();
             this.cerrarclic = new System.Windows.Forms.PictureBox();
             this.restaurar = new System.Windows.Forms.PictureBox();
-            this.maximizar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -49,10 +49,10 @@ namespace CUMple
             this.panelapoyo4 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurarr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -157,7 +157,7 @@ namespace CUMple
             this.txbapellidofiltrar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbapellidofiltrar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbapellidofiltrar.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.txbapellidofiltrar.Location = new System.Drawing.Point(536, 365);
+            this.txbapellidofiltrar.Location = new System.Drawing.Point(536, 334);
             this.txbapellidofiltrar.Name = "txbapellidofiltrar";
             this.txbapellidofiltrar.Size = new System.Drawing.Size(300, 20);
             this.txbapellidofiltrar.TabIndex = 1;
@@ -176,6 +176,19 @@ namespace CUMple
             this.panel2.Size = new System.Drawing.Size(1154, 35);
             this.panel2.TabIndex = 8;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // maximizar
+            // 
+            this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
+            this.maximizar.Location = new System.Drawing.Point(1073, 2);
+            this.maximizar.Name = "maximizar";
+            this.maximizar.Size = new System.Drawing.Size(37, 30);
+            this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.maximizar.TabIndex = 27;
+            this.maximizar.TabStop = false;
+            this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
             // 
             // restaurarr
             // 
@@ -216,19 +229,6 @@ namespace CUMple
             this.restaurar.TabStop = false;
             this.restaurar.Visible = false;
             this.restaurar.Click += new System.EventHandler(this.restaurar_Click);
-            // 
-            // maximizar
-            // 
-            this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(1073, 2);
-            this.maximizar.Name = "maximizar";
-            this.maximizar.Size = new System.Drawing.Size(37, 30);
-            this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.maximizar.TabIndex = 27;
-            this.maximizar.TabStop = false;
-            this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
             // 
             // panel1
             // 
@@ -284,7 +284,7 @@ namespace CUMple
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.Gray;
-            this.panel3.Location = new System.Drawing.Point(536, 387);
+            this.panel3.Location = new System.Drawing.Point(536, 356);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(300, 1);
             this.panel3.TabIndex = 11;
@@ -311,10 +311,10 @@ namespace CUMple
             this.Load += new System.EventHandler(this.formadmin_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.formadmin_MouseDown);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurarr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

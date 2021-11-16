@@ -56,12 +56,12 @@ namespace CUMple
             this.cerrarclic = new System.Windows.Forms.PictureBox();
             this.maximizar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnvolverexamenes = new System.Windows.Forms.Button();
             this.panelapoyo4 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnvolverexamenes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvexamenes)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
@@ -148,12 +148,13 @@ namespace CUMple
             this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlimpiar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnlimpiar.Location = new System.Drawing.Point(7, 261);
+            this.btnlimpiar.Location = new System.Drawing.Point(4, 261);
             this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Size = new System.Drawing.Size(169, 35);
+            this.btnlimpiar.Size = new System.Drawing.Size(172, 35);
             this.btnlimpiar.TabIndex = 20;
             this.btnlimpiar.Text = "Limpiar";
             this.btnlimpiar.UseVisualStyleBackColor = true;
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
             // 
             // btneliminar
             // 
@@ -162,7 +163,7 @@ namespace CUMple
             this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneliminar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.ForeColor = System.Drawing.Color.White;
-            this.btneliminar.Location = new System.Drawing.Point(6, 117);
+            this.btneliminar.Location = new System.Drawing.Point(4, 117);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(170, 35);
             this.btneliminar.TabIndex = 19;
@@ -177,7 +178,7 @@ namespace CUMple
             this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnagregar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnagregar.ForeColor = System.Drawing.Color.White;
-            this.btnagregar.Location = new System.Drawing.Point(6, 43);
+            this.btnagregar.Location = new System.Drawing.Point(5, 43);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(170, 35);
             this.btnagregar.TabIndex = 18;
@@ -192,9 +193,9 @@ namespace CUMple
             this.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneditar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneditar.ForeColor = System.Drawing.Color.White;
-            this.btneditar.Location = new System.Drawing.Point(6, 187);
+            this.btneditar.Location = new System.Drawing.Point(3, 187);
             this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(170, 35);
+            this.btneditar.Size = new System.Drawing.Size(173, 35);
             this.btneditar.TabIndex = 17;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = true;
@@ -408,6 +409,30 @@ namespace CUMple
             this.panel2.TabIndex = 47;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 335);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(5, 39);
+            this.flowLayoutPanel1.TabIndex = 53;
+            // 
+            // btnvolverexamenes
+            // 
+            this.btnvolverexamenes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnvolverexamenes.FlatAppearance.BorderSize = 0;
+            this.btnvolverexamenes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.btnvolverexamenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnvolverexamenes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvolverexamenes.ForeColor = System.Drawing.Color.Transparent;
+            this.btnvolverexamenes.Location = new System.Drawing.Point(3, 335);
+            this.btnvolverexamenes.Name = "btnvolverexamenes";
+            this.btnvolverexamenes.Size = new System.Drawing.Size(173, 39);
+            this.btnvolverexamenes.TabIndex = 52;
+            this.btnvolverexamenes.Text = "Volver";
+            this.btnvolverexamenes.UseVisualStyleBackColor = false;
+            this.btnvolverexamenes.Click += new System.EventHandler(this.btnvolverexamenes_Click);
+            // 
             // panelapoyo4
             // 
             this.panelapoyo4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
@@ -439,30 +464,6 @@ namespace CUMple
             this.panelapoyo1.Name = "panelapoyo1";
             this.panelapoyo1.Size = new System.Drawing.Size(5, 35);
             this.panelapoyo1.TabIndex = 54;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 335);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(5, 39);
-            this.flowLayoutPanel1.TabIndex = 53;
-            // 
-            // btnvolverexamenes
-            // 
-            this.btnvolverexamenes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnvolverexamenes.FlatAppearance.BorderSize = 0;
-            this.btnvolverexamenes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.btnvolverexamenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnvolverexamenes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnvolverexamenes.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolverexamenes.Location = new System.Drawing.Point(0, 335);
-            this.btnvolverexamenes.Name = "btnvolverexamenes";
-            this.btnvolverexamenes.Size = new System.Drawing.Size(176, 39);
-            this.btnvolverexamenes.TabIndex = 52;
-            this.btnvolverexamenes.Text = "Volver";
-            this.btnvolverexamenes.UseVisualStyleBackColor = false;
-            this.btnvolverexamenes.Click += new System.EventHandler(this.btnvolverexamenes_Click);
             // 
             // examenesnotas
             // 
