@@ -215,3 +215,4 @@ C:\Users\rimas\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Userprof
 D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.listaasistencias.resources
 C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.listaasistencias.resources
 D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Graficascinturones.resources
+C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Graficascinturones.resources

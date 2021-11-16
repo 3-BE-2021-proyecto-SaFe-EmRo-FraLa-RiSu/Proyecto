@@ -37,9 +37,7 @@ namespace CUMple
                
                 while (lectordedatostkd.Read())
                 {
-
                     Graficadealumnos.Series[series].Points.AddXY(lectordedatostkd.GetString("tipos"), lectordedatostkd.GetUInt32("Asistencia"));
-
                 }
                 
                 {
@@ -48,20 +46,14 @@ namespace CUMple
                 while (lectordedatoskrav.Read())
                 {
                     Graficadealumnos.Series[series].Points.AddXY(lectordedatoskrav.GetString("tipos"), lectordedatoskrav.GetUInt32("Asistencia"));
-
                 }
-              
-
                 conexionprograma.Close();
                 conexionprograma2.Close();
-
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 throw;
-
             }
         }
         public Pruebadeconexiom()
@@ -77,7 +69,6 @@ namespace CUMple
         private void Pruebadeconexiom_Load(object sender, EventArgs e)
         {
             cmbAño.Items.Add("Ninguno");
-            cmbmeses.Items.Add("Ninguno");
             MySqlDataReader lectordedatos;
             string comand = "Select year(fecha) from van group by year(fecha);";
             conexionprograma.Open();
@@ -102,7 +93,6 @@ namespace CUMple
 
         private void comboxmeses_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
           
         }
 
@@ -165,14 +155,12 @@ namespace CUMple
             meses = mesesindex + 1;
             creargrafica("Asistencias", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and concurre=1 and month(fecha)='" + meses + "' group by YEAR(fecha);", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and concurre=1 and month(fecha)='" + meses + "' group by YEAR(fecha);");
             creargrafica("Faltas", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and concurre=0 and month(fecha)='" + meses + "' group by YEAR(fecha);", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and concurre=0 and month(fecha)='" + meses + "' group by YEAR(fecha);");
-
         }
         public void buscarsoloaño() 
         {
             limpiargrafica();
             creargrafica("Asistencias", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and concurre=1 group by year(fecha);", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and concurre=1 group by year(fecha);");
             creargrafica("Faltas", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and concurre=0 group by year(fecha);", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and concurre=0 group by year(fecha);");
-
         }
 
         private void cerrar_Click(object sender, EventArgs e)
@@ -218,7 +206,6 @@ namespace CUMple
 
         private void Pruebadeconexiom_MouseDown(object sender, MouseEventArgs e)
         {
-
             if (e.Button == MouseButtons.Left)
             {
                 ReleaseCapture();
@@ -228,7 +215,6 @@ namespace CUMple
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
-
             if (e.Button == MouseButtons.Left)
             {
                 ReleaseCapture();
@@ -238,7 +224,6 @@ namespace CUMple
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
-
             if (e.Button == MouseButtons.Left)
             {
                 ReleaseCapture();

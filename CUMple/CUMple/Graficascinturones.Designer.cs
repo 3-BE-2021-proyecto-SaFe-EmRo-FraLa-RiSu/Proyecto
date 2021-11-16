@@ -32,8 +32,11 @@ namespace CUMple
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Graficadecinturones = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.cmbanoscinturones = new System.Windows.Forms.ComboBox();
+            this.cmbmesescinturones = new System.Windows.Forms.ComboBox();
+            this.btncargarcinturones = new System.Windows.Forms.Button();
+            this.btnvolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Graficadecinturones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,35 +69,84 @@ namespace CUMple
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.Graficadecinturones.Legends.Add(legend1);
-            this.Graficadecinturones.Location = new System.Drawing.Point(174, 112);
+            this.Graficadecinturones.Location = new System.Drawing.Point(286, 111);
+            this.Graficadecinturones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Graficadecinturones.Name = "Graficadecinturones";
             this.Graficadecinturones.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea1";
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(202)))), ((int)(((byte)(24)))));
-            series1.IsValueShownAsLabel = true;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
             series1.LabelForeColor = System.Drawing.Color.White;
             series1.Legend = "Legend1";
-            series1.Name = "Asistencias";
-            series2.ChartArea = "ChartArea1";
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
-            series2.LabelForeColor = System.Drawing.Color.White;
-            series2.Legend = "Legend1";
-            series2.Name = "Faltas";
+            series1.Name = "Cinturones";
             this.Graficadecinturones.Series.Add(series1);
-            this.Graficadecinturones.Series.Add(series2);
-            this.Graficadecinturones.Size = new System.Drawing.Size(614, 337);
+            this.Graficadecinturones.Size = new System.Drawing.Size(921, 518);
             this.Graficadecinturones.TabIndex = 1;
             this.Graficadecinturones.Text = "chart1";
             // 
+            // cmbanoscinturones
+            // 
+            this.cmbanoscinturones.FormattingEnabled = true;
+            this.cmbanoscinturones.Location = new System.Drawing.Point(368, 51);
+            this.cmbanoscinturones.Name = "cmbanoscinturones";
+            this.cmbanoscinturones.Size = new System.Drawing.Size(121, 28);
+            this.cmbanoscinturones.TabIndex = 2;
+            this.cmbanoscinturones.Text = "Años:";
+            // 
+            // cmbmesescinturones
+            // 
+            this.cmbmesescinturones.FormattingEnabled = true;
+            this.cmbmesescinturones.Items.AddRange(new object[] {
+            "Ninguno",
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Setiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cmbmesescinturones.Location = new System.Drawing.Point(524, 51);
+            this.cmbmesescinturones.Name = "cmbmesescinturones";
+            this.cmbmesescinturones.Size = new System.Drawing.Size(121, 28);
+            this.cmbmesescinturones.TabIndex = 3;
+            this.cmbmesescinturones.Text = "Meses:";
+            // 
+            // btncargarcinturones
+            // 
+            this.btncargarcinturones.Location = new System.Drawing.Point(26, 142);
+            this.btncargarcinturones.Name = "btncargarcinturones";
+            this.btncargarcinturones.Size = new System.Drawing.Size(208, 48);
+            this.btncargarcinturones.TabIndex = 4;
+            this.btncargarcinturones.Text = "cargar";
+            this.btncargarcinturones.UseVisualStyleBackColor = true;
+            this.btncargarcinturones.Click += new System.EventHandler(this.btncargarcinturones_Click);
+            // 
+            // btnvolver
+            // 
+            this.btnvolver.Location = new System.Drawing.Point(26, 216);
+            this.btnvolver.Name = "btnvolver";
+            this.btnvolver.Size = new System.Drawing.Size(208, 48);
+            this.btnvolver.TabIndex = 5;
+            this.btnvolver.Text = "volver";
+            this.btnvolver.UseVisualStyleBackColor = true;
+            // 
             // Graficascinturones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 547);
+            this.ClientSize = new System.Drawing.Size(1220, 842);
+            this.Controls.Add(this.btnvolver);
+            this.Controls.Add(this.btncargarcinturones);
+            this.Controls.Add(this.cmbmesescinturones);
+            this.Controls.Add(this.cmbanoscinturones);
             this.Controls.Add(this.Graficadecinturones);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Graficascinturones";
             this.Text = "Graficascinturones";
+            this.Load += new System.EventHandler(this.Graficascinturones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Graficadecinturones)).EndInit();
             this.ResumeLayout(false);
 
@@ -103,5 +155,9 @@ namespace CUMple
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart Graficadecinturones;
+        private System.Windows.Forms.ComboBox cmbanoscinturones;
+        private System.Windows.Forms.ComboBox cmbmesescinturones;
+        private System.Windows.Forms.Button btncargarcinturones;
+        private System.Windows.Forms.Button btnvolver;
     }
 }
