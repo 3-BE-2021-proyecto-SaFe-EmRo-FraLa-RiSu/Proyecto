@@ -66,7 +66,7 @@ namespace CUMple
                         txbbucar.Text = "";
                         return;
                     }
-                    for (int i = 0; i < dgvasistencias.RowCount - 1; i++)
+                    for (int i = 0; i < dgvasistencias.RowCount; i++)
                     {
                         dgvasistencias.Rows[i].Cells["Clase"].Value = "Krav Maga";
                         
