@@ -108,7 +108,7 @@ namespace CUMple
 
         private void btncargardatos_Click(object sender, EventArgs e)
         {
-            if (cmbAño.SelectedItem != null && cmbAño.SelectedItem.ToString() != "Ninguno" && cmbmeses.SelectedItem != null && cmbmeses.SelectedItem.ToString() != "Ninguno")
+            if (cmbAño.SelectedIndex != -1 && cmbAño.SelectedItem.ToString() != "Ninguno" && cmbmeses.SelectedIndex != -1 && cmbmeses.SelectedItem.ToString() != "Ninguno")
             {
                 limpiargrafica();
                 int mesesindex = cmbmeses.SelectedIndex, meses, años = Int32.Parse(cmbAño.SelectedItem.ToString());
@@ -116,13 +116,13 @@ namespace CUMple
                 creargrafica("Asistencias", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and month(fecha)='" + meses + "' and year(fecha)='" + años + "' and concurre=1 group by v.idclase;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and month(fecha)='" + meses + "' and year(fecha)='" + años + "' and concurre=1 group by v.idclase;");
                 creargrafica("Faltas", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and month(fecha)='" + meses + "' and year(fecha)='" + años + "' and concurre=0 group by v.idclase;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and month(fecha)='" + meses + "' and year(fecha)='" + años + "' and concurre=0 group by v.idclase;");
             }
-            else if (cmbAño.SelectedItem == null || cmbAño.SelectedItem.ToString() == "Ninguno")
+            else if (cmbAño.SelectedIndex == -1 || cmbAño.SelectedItem.ToString() == "Ninguno")
             {
                 int mesesindex = cmbmeses.SelectedIndex, meses;
                 meses = mesesindex + 1;
                 buscarsolomes(meses);
             }
-            else if (cmbmeses.SelectedItem == null || cmbmeses.SelectedItem.ToString() == "Ninguno")
+            else if (cmbmeses.SelectedIndex == -1 || cmbmeses.SelectedItem.ToString() == "Ninguno")
             {
                 buscarsoloaño();
             }

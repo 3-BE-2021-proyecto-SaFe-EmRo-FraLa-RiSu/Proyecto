@@ -132,7 +132,8 @@ namespace CUMple
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            new Graficascinturones().Show();
+            this.Dispose();
         }
 
         private void btnlista_Click(object sender, EventArgs e)
@@ -145,6 +146,11 @@ namespace CUMple
         {
             new formadmin().Show();
             this.Dispose();
+        }
+
+        private void btngraficacinturones_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

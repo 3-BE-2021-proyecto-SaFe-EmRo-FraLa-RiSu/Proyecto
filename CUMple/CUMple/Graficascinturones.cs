@@ -24,42 +24,15 @@ namespace CUMple
         }
         private void btncargarcinturones_Click(object sender, EventArgs e)
         {
-            if (cmbanoscinturones.SelectedItem != null && cmbanoscinturones.SelectedItem.ToString() != "Ninguno" && cmbmesescinturones.SelectedItem != null && cmbmesescinturones.SelectedItem.ToString() != "Ninguno")
-            {
-                limpiargrafica();
-                int mesesindex = cmbmesescinturones.SelectedIndex, meses, años = Int32.Parse(cmbmesescinturones.SelectedItem.ToString());
-                meses = mesesindex + 1;
-                creargrafica("Cinturones", "select count(*)'Cinturones', ");//consulta mysql
-            }
-            else if (cmbanoscinturones.SelectedItem == null || cmbanoscinturones.SelectedItem.ToString() == "Ninguno")
-            {
-                int mesesindex = cmbmesescinturones.SelectedIndex, meses;
-                meses = mesesindex + 1;
-                buscarsolomes(meses);
-            }
-            else if (cmbmesescinturones.SelectedItem == null || cmbmesescinturones.SelectedItem.ToString() == "Ninguno")
-            {
-                buscarsoloaño(Int32.Parse(cmbmesescinturones.SelectedItem.ToString()));
-            }
-        }
-
-        public void buscarsolomes(int meses) 
-        {
-            limpiargrafica();
-            creargrafica("","");
-        }
-        public void buscarsoloaño(int año)
-        {
-            limpiargrafica();
-            creargrafica("Cinturones", "");
+            cargargrafica();
         }
 
         public void creargrafica(string rangos, string leercant_alumnos)
         {
-            MySqlCommand comandoleertaekwondo = new MySqlCommand(leercant_alumnos, conexionprograma);
-            MySqlDataReader lectordedatoscinturones;
+        MySqlCommand comandoleertaekwondo = new MySqlCommand(leercant_alumnos, conexionprograma);
+        MySqlDataReader lectordedatoscinturones;
             try
-            {
+            {            
                 conexionprograma.Open();
                 lectordedatoscinturones = comandoleertaekwondo.ExecuteReader();
                 while (lectordedatoscinturones.Read())
@@ -71,22 +44,23 @@ namespace CUMple
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                throw;
             }
         }
         private void Graficascinturones_Load(object sender, EventArgs e)
         {
-            cmbanoscinturones.Items.Add("Ninguno");
-            MySqlDataReader lectordedatos;
-            string comand = "Select year(fecha) from examenes group by year(fecha);";
-            conexionprograma.Open();
-            MySqlCommand comando = new MySqlCommand(comand, conexionprograma);
-            lectordedatos = comando.ExecuteReader();
-            while (lectordedatos.Read())
-            {
-                cmbanoscinturones.Items.Add(lectordedatos["year(fecha)"].ToString());
-            }
-            conexionprograma.Close();
+
+        }
+        
+        private void dtpfec_nac_ValueChanged(object sender, EventArgs e)
+        {
+            cargargrafica();
+        }
+
+        public void cargargrafica() 
+        {
+            limpiargrafica();
+            creargrafica("Cinturones", "select nomcompleto, nuevo_rango, fecha from discipulos d join rango_obtenido r on d.cedula = r.cedula join examenes e on r.idexamen = e.idexamen where fecha <= '" + dtpfecha.Text + "' group by nomcompleto;");
         }
     }
-}
+} 
+
