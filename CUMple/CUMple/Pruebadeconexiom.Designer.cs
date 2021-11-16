@@ -85,7 +85,8 @@ namespace CUMple
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.Graficadealumnos.Legends.Add(legend1);
-            this.Graficadealumnos.Location = new System.Drawing.Point(300, 72);
+            this.Graficadealumnos.Location = new System.Drawing.Point(450, 111);
+            this.Graficadealumnos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Graficadealumnos.Name = "Graficadealumnos";
             this.Graficadealumnos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea1";
@@ -101,7 +102,7 @@ namespace CUMple
             series2.Name = "Faltas";
             this.Graficadealumnos.Series.Add(series1);
             this.Graficadealumnos.Series.Add(series2);
-            this.Graficadealumnos.Size = new System.Drawing.Size(788, 501);
+            this.Graficadealumnos.Size = new System.Drawing.Size(1182, 771);
             this.Graficadealumnos.TabIndex = 0;
             this.Graficadealumnos.Text = "chart1";
             this.Graficadealumnos.Click += new System.EventHandler(this.Graficadealumnos_Click_1);
@@ -115,6 +116,7 @@ namespace CUMple
             this.cmbmeses.ForeColor = System.Drawing.Color.White;
             this.cmbmeses.FormattingEnabled = true;
             this.cmbmeses.Items.AddRange(new object[] {
+            "Ninguno",
             "Enero",
             "Febrero",
             "Marzo",
@@ -127,9 +129,10 @@ namespace CUMple
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.cmbmeses.Location = new System.Drawing.Point(192, 72);
+            this.cmbmeses.Location = new System.Drawing.Point(288, 111);
+            this.cmbmeses.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbmeses.Name = "cmbmeses";
-            this.cmbmeses.Size = new System.Drawing.Size(114, 26);
+            this.cmbmeses.Size = new System.Drawing.Size(169, 37);
             this.cmbmeses.TabIndex = 4;
             this.cmbmeses.Text = "Mes:";
             this.cmbmeses.SelectedIndexChanged += new System.EventHandler(this.comboxmeses_SelectedIndexChanged);
@@ -142,9 +145,10 @@ namespace CUMple
             this.cmbAño.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAño.ForeColor = System.Drawing.Color.White;
             this.cmbAño.FormattingEnabled = true;
-            this.cmbAño.Location = new System.Drawing.Point(192, 190);
+            this.cmbAño.Location = new System.Drawing.Point(288, 292);
+            this.cmbAño.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbAño.Name = "cmbAño";
-            this.cmbAño.Size = new System.Drawing.Size(114, 26);
+            this.cmbAño.Size = new System.Drawing.Size(169, 37);
             this.cmbAño.TabIndex = 5;
             this.cmbAño.Text = "Año:";
             this.cmbAño.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
@@ -156,9 +160,10 @@ namespace CUMple
             this.btncargardatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncargardatos.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncargardatos.ForeColor = System.Drawing.SystemColors.Window;
-            this.btncargardatos.Location = new System.Drawing.Point(3, 82);
+            this.btncargardatos.Location = new System.Drawing.Point(4, 126);
+            this.btncargardatos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btncargardatos.Name = "btncargardatos";
-            this.btncargardatos.Size = new System.Drawing.Size(165, 44);
+            this.btncargardatos.Size = new System.Drawing.Size(248, 68);
             this.btncargardatos.TabIndex = 7;
             this.btncargardatos.Text = "Cargar";
             this.btncargardatos.UseVisualStyleBackColor = true;
@@ -172,9 +177,10 @@ namespace CUMple
             this.btnvolverpruebaconexion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnvolverpruebaconexion.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolverpruebaconexion.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolverpruebaconexion.Location = new System.Drawing.Point(3, 198);
+            this.btnvolverpruebaconexion.Location = new System.Drawing.Point(4, 305);
+            this.btnvolverpruebaconexion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnvolverpruebaconexion.Name = "btnvolverpruebaconexion";
-            this.btnvolverpruebaconexion.Size = new System.Drawing.Size(165, 42);
+            this.btnvolverpruebaconexion.Size = new System.Drawing.Size(248, 65);
             this.btnvolverpruebaconexion.TabIndex = 10;
             this.btnvolverpruebaconexion.Text = "Volver";
             this.btnvolverpruebaconexion.UseVisualStyleBackColor = false;
@@ -190,8 +196,9 @@ namespace CUMple
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1100, 35);
+            this.panel1.Size = new System.Drawing.Size(1650, 54);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -201,9 +208,10 @@ namespace CUMple
             this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(1008, 2);
+            this.restaurar.Location = new System.Drawing.Point(1512, 3);
+            this.restaurar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.restaurar.Name = "restaurar";
-            this.restaurar.Size = new System.Drawing.Size(37, 30);
+            this.restaurar.Size = new System.Drawing.Size(56, 46);
             this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.restaurar.TabIndex = 15;
             this.restaurar.TabStop = false;
@@ -215,9 +223,10 @@ namespace CUMple
             this.minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(961, 2);
+            this.minimizar.Location = new System.Drawing.Point(1442, 3);
+            this.minimizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.minimizar.Name = "minimizar";
-            this.minimizar.Size = new System.Drawing.Size(37, 30);
+            this.minimizar.Size = new System.Drawing.Size(56, 46);
             this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.minimizar.TabIndex = 14;
             this.minimizar.TabStop = false;
@@ -228,9 +237,10 @@ namespace CUMple
             this.cerrarclic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(1051, 2);
+            this.cerrarclic.Location = new System.Drawing.Point(1576, 3);
+            this.cerrarclic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cerrarclic.Name = "cerrarclic";
-            this.cerrarclic.Size = new System.Drawing.Size(37, 30);
+            this.cerrarclic.Size = new System.Drawing.Size(56, 46);
             this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cerrarclic.TabIndex = 13;
             this.cerrarclic.TabStop = false;
@@ -241,9 +251,10 @@ namespace CUMple
             this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(1004, 2);
+            this.maximizar.Location = new System.Drawing.Point(1506, 3);
+            this.maximizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.maximizar.Name = "maximizar";
-            this.maximizar.Size = new System.Drawing.Size(37, 30);
+            this.maximizar.Size = new System.Drawing.Size(56, 46);
             this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.maximizar.TabIndex = 12;
             this.maximizar.TabStop = false;
@@ -258,36 +269,39 @@ namespace CUMple
             this.panel2.Controls.Add(this.btncargardatos);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.ForeColor = System.Drawing.Color.Coral;
-            this.panel2.Location = new System.Drawing.Point(0, 35);
+            this.panel2.Location = new System.Drawing.Point(0, 54);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(165, 565);
+            this.panel2.Size = new System.Drawing.Size(248, 869);
             this.panel2.TabIndex = 13;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 198);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 305);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(5, 44);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 68);
             this.flowLayoutPanel1.TabIndex = 22;
             // 
             // panelapoyo1
             // 
             this.panelapoyo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo1.Location = new System.Drawing.Point(0, 82);
+            this.panelapoyo1.Location = new System.Drawing.Point(0, 126);
+            this.panelapoyo1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelapoyo1.Name = "panelapoyo1";
-            this.panelapoyo1.Size = new System.Drawing.Size(5, 44);
+            this.panelapoyo1.Size = new System.Drawing.Size(8, 68);
             this.panelapoyo1.TabIndex = 22;
             // 
             // Pruebadeconexiom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1100, 600);
+            this.ClientSize = new System.Drawing.Size(1650, 923);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cmbmeses);
             this.Controls.Add(this.cmbAño);
@@ -295,6 +309,7 @@ namespace CUMple
             this.Controls.Add(this.Graficadealumnos);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Pruebadeconexiom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pruebadeconexiom";
