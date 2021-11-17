@@ -89,7 +89,7 @@ namespace CUMple
             this.btnedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnedit.Name = "btnedit";
             this.btnedit.Size = new System.Drawing.Size(242, 68);
-            this.btnedit.TabIndex = 2;
+            this.btnedit.TabIndex = 8;
             this.btnedit.Text = "Editar";
             this.btnedit.UseVisualStyleBackColor = true;
             this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
@@ -104,7 +104,7 @@ namespace CUMple
             this.txbnomedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbnomedit.Name = "txbnomedit";
             this.txbnomedit.Size = new System.Drawing.Size(326, 30);
-            this.txbnomedit.TabIndex = 7;
+            this.txbnomedit.TabIndex = 1;
             this.txbnomedit.TextChanged += new System.EventHandler(this.txbnomedit_TextChanged);
             this.txbnomedit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbnomedit_KeyPress);
             // 
@@ -144,7 +144,7 @@ namespace CUMple
             this.txbprofedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbprofedit.Name = "txbprofedit";
             this.txbprofedit.Size = new System.Drawing.Size(338, 30);
-            this.txbprofedit.TabIndex = 11;
+            this.txbprofedit.TabIndex = 6;
             this.txbprofedit.TextChanged += new System.EventHandler(this.txbprofedit_TextChanged);
             this.txbprofedit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbprofedit_KeyPress);
             // 
@@ -171,7 +171,7 @@ namespace CUMple
             this.txbfecdenacedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbfecdenacedit.Name = "txbfecdenacedit";
             this.txbfecdenacedit.Size = new System.Drawing.Size(338, 30);
-            this.txbfecdenacedit.TabIndex = 18;
+            this.txbfecdenacedit.TabIndex = 5;
             this.txbfecdenacedit.TextChanged += new System.EventHandler(this.txbfecdenacedit_TextChanged);
             // 
             // label3
@@ -210,7 +210,7 @@ namespace CUMple
             this.txbemailedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbemailedit.Name = "txbemailedit";
             this.txbemailedit.Size = new System.Drawing.Size(338, 30);
-            this.txbemailedit.TabIndex = 22;
+            this.txbemailedit.TabIndex = 7;
             this.txbemailedit.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label6
@@ -248,7 +248,7 @@ namespace CUMple
             this.lblfecingpref.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblfecingpref.Name = "lblfecingpref";
             this.lblfecingpref.Size = new System.Drawing.Size(0, 29);
-            this.lblfecingpref.TabIndex = 33;
+            this.lblfecingpref.TabIndex = 4;
             // 
             // btnvolveruserprofile
             // 
@@ -261,7 +261,7 @@ namespace CUMple
             this.btnvolveruserprofile.Location = new System.Drawing.Point(6, 409);
             this.btnvolveruserprofile.Name = "btnvolveruserprofile";
             this.btnvolveruserprofile.Size = new System.Drawing.Size(242, 68);
-            this.btnvolveruserprofile.TabIndex = 36;
+            this.btnvolveruserprofile.TabIndex = 10;
             this.btnvolveruserprofile.Text = "Volver";
             this.btnvolveruserprofile.UseVisualStyleBackColor = false;
             this.btnvolveruserprofile.Click += new System.EventHandler(this.btnvolveruserprofile_Click);
@@ -277,7 +277,7 @@ namespace CUMple
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(242, 68);
-            this.button1.TabIndex = 40;
+            this.button1.TabIndex = 9;
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -306,7 +306,7 @@ namespace CUMple
             this.mskcedula.Mask = "0000000-0";
             this.mskcedula.Name = "mskcedula";
             this.mskcedula.Size = new System.Drawing.Size(141, 30);
-            this.mskcedula.TabIndex = 45;
+            this.mskcedula.TabIndex = 2;
             this.mskcedula.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskcédula_MaskInputRejected);
             this.mskcedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskcedula_KeyPress);
             // 
@@ -474,7 +474,7 @@ namespace CUMple
             this.cmbdiscipuloseleccionado.Location = new System.Drawing.Point(578, 131);
             this.cmbdiscipuloseleccionado.Name = "cmbdiscipuloseleccionado";
             this.cmbdiscipuloseleccionado.Size = new System.Drawing.Size(448, 37);
-            this.cmbdiscipuloseleccionado.TabIndex = 51;
+            this.cmbdiscipuloseleccionado.TabIndex = 0;
             this.cmbdiscipuloseleccionado.Text = "Discipulos:";
             this.cmbdiscipuloseleccionado.SelectedIndexChanged += new System.EventHandler(this.cmbdiscipuloseleccionado_SelectedIndexChanged);
             this.cmbdiscipuloseleccionado.SelectedValueChanged += new System.EventHandler(this.cmbdiscipuloseleccionado_SelectedValueChanged);
@@ -490,7 +490,7 @@ namespace CUMple
             this.mskcelular.Mask = "000-000-000";
             this.mskcelular.Name = "mskcelular";
             this.mskcelular.Size = new System.Drawing.Size(195, 30);
-            this.mskcelular.TabIndex = 55;
+            this.mskcelular.TabIndex = 3;
             this.mskcelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskcelular_KeyPress);
             // 
             // Userprofile

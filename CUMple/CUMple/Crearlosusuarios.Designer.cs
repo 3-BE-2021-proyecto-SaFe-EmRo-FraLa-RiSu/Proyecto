@@ -128,7 +128,7 @@ namespace CUMple
             this.btnvolvercrearlosusuarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnvolvercrearlosusuarios.Name = "btnvolvercrearlosusuarios";
             this.btnvolvercrearlosusuarios.Size = new System.Drawing.Size(326, 68);
-            this.btnvolvercrearlosusuarios.TabIndex = 4;
+            this.btnvolvercrearlosusuarios.TabIndex = 7;
             this.btnvolvercrearlosusuarios.Text = "Volver";
             this.btnvolvercrearlosusuarios.UseVisualStyleBackColor = false;
             this.btnvolvercrearlosusuarios.Click += new System.EventHandler(this.button1_Click);
@@ -145,7 +145,7 @@ namespace CUMple
             this.btcrearusuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btcrearusuario.Name = "btcrearusuario";
             this.btcrearusuario.Size = new System.Drawing.Size(322, 68);
-            this.btcrearusuario.TabIndex = 5;
+            this.btcrearusuario.TabIndex = 4;
             this.btcrearusuario.Text = "Crear usuario";
             this.btcrearusuario.UseVisualStyleBackColor = false;
             this.btcrearusuario.Click += new System.EventHandler(this.btcrearusuario_Click);
@@ -190,7 +190,7 @@ namespace CUMple
             this.txbcontraconf.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbcontraconf.Name = "txbcontraconf";
             this.txbcontraconf.Size = new System.Drawing.Size(368, 30);
-            this.txbcontraconf.TabIndex = 10;
+            this.txbcontraconf.TabIndex = 3;
             // 
             // label5
             // 
@@ -217,7 +217,7 @@ namespace CUMple
             this.btnborrarusuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnborrarusuario.Name = "btnborrarusuario";
             this.btnborrarusuario.Size = new System.Drawing.Size(321, 68);
-            this.btnborrarusuario.TabIndex = 12;
+            this.btnborrarusuario.TabIndex = 6;
             this.btnborrarusuario.Text = "Borrar usuario";
             this.btnborrarusuario.UseVisualStyleBackColor = false;
             this.btnborrarusuario.Click += new System.EventHandler(this.btnborrarusuario_Click);
@@ -234,7 +234,7 @@ namespace CUMple
             this.btneditarusuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btneditarusuario.Name = "btneditarusuario";
             this.btneditarusuario.Size = new System.Drawing.Size(322, 68);
-            this.btneditarusuario.TabIndex = 13;
+            this.btneditarusuario.TabIndex = 5;
             this.btneditarusuario.Text = "Editar usuario";
             this.btneditarusuario.UseVisualStyleBackColor = false;
             this.btneditarusuario.Click += new System.EventHandler(this.button2_Click);

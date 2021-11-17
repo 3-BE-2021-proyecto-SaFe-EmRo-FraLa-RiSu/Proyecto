@@ -218,7 +218,7 @@ namespace CUMple
             this.btnverexamenespersonales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnverexamenespersonales.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnverexamenespersonales.ForeColor = System.Drawing.Color.White;
-            this.btnverexamenespersonales.Location = new System.Drawing.Point(4, 226);
+            this.btnverexamenespersonales.Location = new System.Drawing.Point(6, 226);
             this.btnverexamenespersonales.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnverexamenespersonales.Name = "btnverexamenespersonales";
             this.btnverexamenespersonales.Size = new System.Drawing.Size(294, 57);

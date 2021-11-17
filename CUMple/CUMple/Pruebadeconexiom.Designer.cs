@@ -133,7 +133,7 @@ namespace CUMple
             this.cmbmeses.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbmeses.Name = "cmbmeses";
             this.cmbmeses.Size = new System.Drawing.Size(169, 37);
-            this.cmbmeses.TabIndex = 4;
+            this.cmbmeses.TabIndex = 1;
             this.cmbmeses.Text = "Mes:";
             this.cmbmeses.SelectedIndexChanged += new System.EventHandler(this.comboxmeses_SelectedIndexChanged);
             // 
@@ -149,7 +149,7 @@ namespace CUMple
             this.cmbAño.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbAño.Name = "cmbAño";
             this.cmbAño.Size = new System.Drawing.Size(169, 37);
-            this.cmbAño.TabIndex = 5;
+            this.cmbAño.TabIndex = 2;
             this.cmbAño.Text = "Año:";
             this.cmbAño.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
@@ -164,7 +164,7 @@ namespace CUMple
             this.btncargardatos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btncargardatos.Name = "btncargardatos";
             this.btncargardatos.Size = new System.Drawing.Size(248, 68);
-            this.btncargardatos.TabIndex = 7;
+            this.btncargardatos.TabIndex = 3;
             this.btncargardatos.Text = "Cargar";
             this.btncargardatos.UseVisualStyleBackColor = true;
             this.btncargardatos.Click += new System.EventHandler(this.btncargardatos_Click);
@@ -181,7 +181,7 @@ namespace CUMple
             this.btnvolverpruebaconexion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnvolverpruebaconexion.Name = "btnvolverpruebaconexion";
             this.btnvolverpruebaconexion.Size = new System.Drawing.Size(248, 65);
-            this.btnvolverpruebaconexion.TabIndex = 10;
+            this.btnvolverpruebaconexion.TabIndex = 4;
             this.btnvolverpruebaconexion.Text = "Volver";
             this.btnvolverpruebaconexion.UseVisualStyleBackColor = false;
             this.btnvolverpruebaconexion.Click += new System.EventHandler(this.btnvolvercrearlosusuarios_Click);

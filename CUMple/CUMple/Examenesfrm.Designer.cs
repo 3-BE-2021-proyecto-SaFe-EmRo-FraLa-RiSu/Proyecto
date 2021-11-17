@@ -110,7 +110,8 @@ namespace CUMple
             this.dgvexamenes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvexamenes.EnableHeadersVisualStyles = false;
             this.dgvexamenes.GridColor = System.Drawing.Color.White;
-            this.dgvexamenes.Location = new System.Drawing.Point(288, 121);
+            this.dgvexamenes.Location = new System.Drawing.Point(489, 209);
+            this.dgvexamenes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvexamenes.MultiSelect = false;
             this.dgvexamenes.Name = "dgvexamenes";
             this.dgvexamenes.ReadOnly = true;
@@ -127,7 +128,7 @@ namespace CUMple
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvexamenes.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvexamenes.Size = new System.Drawing.Size(790, 613);
+            this.dgvexamenes.Size = new System.Drawing.Size(1074, 657);
             this.dgvexamenes.TabIndex = 0;
             this.dgvexamenes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvexamenes_CellClick);
             this.dgvexamenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvexamenes_CellContentClick);
@@ -141,7 +142,7 @@ namespace CUMple
             this.colexaminadores.MinimumWidth = 8;
             this.colexaminadores.Name = "colexaminadores";
             this.colexaminadores.ReadOnly = true;
-            this.colexaminadores.Width = 145;
+            this.colexaminadores.Width = 215;
             // 
             // colfecha
             // 
@@ -150,7 +151,7 @@ namespace CUMple
             this.colfecha.MinimumWidth = 8;
             this.colfecha.Name = "colfecha";
             this.colfecha.ReadOnly = true;
-            this.colfecha.Width = 78;
+            this.colfecha.Width = 116;
             // 
             // coldisciplina
             // 
@@ -159,7 +160,7 @@ namespace CUMple
             this.coldisciplina.MinimumWidth = 8;
             this.coldisciplina.Name = "coldisciplina";
             this.coldisciplina.ReadOnly = true;
-            this.coldisciplina.Width = 110;
+            this.coldisciplina.Width = 160;
             // 
             // colhora
             // 
@@ -168,7 +169,7 @@ namespace CUMple
             this.colhora.MinimumWidth = 8;
             this.colhora.Name = "colhora";
             this.colhora.ReadOnly = true;
-            this.colhora.Width = 69;
+            this.colhora.Width = 104;
             // 
             // colidexamen
             // 
@@ -177,7 +178,7 @@ namespace CUMple
             this.colidexamen.MinimumWidth = 8;
             this.colidexamen.Name = "colidexamen";
             this.colidexamen.ReadOnly = true;
-            this.colidexamen.Width = 138;
+            this.colidexamen.Width = 202;
             // 
             // btneditar
             // 
@@ -186,10 +187,11 @@ namespace CUMple
             this.btneditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneditar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneditar.ForeColor = System.Drawing.Color.White;
-            this.btneditar.Location = new System.Drawing.Point(6, 176);
+            this.btneditar.Location = new System.Drawing.Point(9, 170);
+            this.btneditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(168, 39);
-            this.btneditar.TabIndex = 1;
+            this.btneditar.Size = new System.Drawing.Size(252, 60);
+            this.btneditar.TabIndex = 8;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = true;
             this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
@@ -201,10 +203,11 @@ namespace CUMple
             this.txbexaminadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbexaminadores.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbexaminadores.ForeColor = System.Drawing.Color.White;
-            this.txbexaminadores.Location = new System.Drawing.Point(459, 59);
+            this.txbexaminadores.Location = new System.Drawing.Point(688, 91);
+            this.txbexaminadores.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbexaminadores.Name = "txbexaminadores";
-            this.txbexaminadores.Size = new System.Drawing.Size(139, 20);
-            this.txbexaminadores.TabIndex = 2;
+            this.txbexaminadores.Size = new System.Drawing.Size(208, 30);
+            this.txbexaminadores.TabIndex = 1;
             this.txbexaminadores.TextChanged += new System.EventHandler(this.txbexaminadores_TextChanged);
             this.txbexaminadores.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbexaminadores_KeyPress);
             // 
@@ -215,9 +218,10 @@ namespace CUMple
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(323, 53);
+            this.label1.Location = new System.Drawing.Point(484, 82);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 18);
+            this.label1.Size = new System.Drawing.Size(192, 29);
             this.label1.TabIndex = 5;
             this.label1.Text = "Examinadores:";
             // 
@@ -228,9 +232,10 @@ namespace CUMple
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(639, 94);
+            this.label2.Location = new System.Drawing.Point(958, 145);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 18);
+            this.label2.Size = new System.Drawing.Size(93, 29);
             this.label2.TabIndex = 7;
             this.label2.Text = "Fecha:";
             // 
@@ -241,9 +246,10 @@ namespace CUMple
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(323, 96);
+            this.label3.Location = new System.Drawing.Point(484, 148);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 18);
+            this.label3.Size = new System.Drawing.Size(137, 29);
             this.label3.TabIndex = 8;
             this.label3.Text = "Disciplina:";
             // 
@@ -254,9 +260,10 @@ namespace CUMple
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(639, 54);
+            this.label4.Location = new System.Drawing.Point(958, 83);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 18);
+            this.label4.Size = new System.Drawing.Size(81, 29);
             this.label4.TabIndex = 9;
             this.label4.Text = "Hora:";
             // 
@@ -267,10 +274,11 @@ namespace CUMple
             this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnagregar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnagregar.ForeColor = System.Drawing.Color.White;
-            this.btnagregar.Location = new System.Drawing.Point(5, 97);
+            this.btnagregar.Location = new System.Drawing.Point(8, 48);
+            this.btnagregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(171, 39);
-            this.btnagregar.TabIndex = 13;
+            this.btnagregar.Size = new System.Drawing.Size(256, 60);
+            this.btnagregar.TabIndex = 7;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
@@ -283,10 +291,11 @@ namespace CUMple
             this.btnvolverexamenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnvolverexamenes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolverexamenes.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolverexamenes.Location = new System.Drawing.Point(0, 524);
+            this.btnvolverexamenes.Location = new System.Drawing.Point(0, 705);
+            this.btnvolverexamenes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnvolverexamenes.Name = "btnvolverexamenes";
-            this.btnvolverexamenes.Size = new System.Drawing.Size(176, 39);
-            this.btnvolverexamenes.TabIndex = 14;
+            this.btnvolverexamenes.Size = new System.Drawing.Size(264, 60);
+            this.btnvolverexamenes.TabIndex = 12;
             this.btnvolverexamenes.Text = "Volver";
             this.btnvolverexamenes.UseVisualStyleBackColor = false;
             this.btnvolverexamenes.Click += new System.EventHandler(this.btnvolverexamenes_Click);
@@ -298,10 +307,11 @@ namespace CUMple
             this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneliminar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.ForeColor = System.Drawing.Color.White;
-            this.btneliminar.Location = new System.Drawing.Point(3, 433);
+            this.btneliminar.Location = new System.Drawing.Point(4, 565);
+            this.btneliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(173, 39);
-            this.btneliminar.TabIndex = 15;
+            this.btneliminar.Size = new System.Drawing.Size(260, 60);
+            this.btneliminar.TabIndex = 11;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
@@ -313,10 +323,11 @@ namespace CUMple
             this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlimpiar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnlimpiar.Location = new System.Drawing.Point(3, 347);
+            this.btnlimpiar.Location = new System.Drawing.Point(4, 433);
+            this.btnlimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Size = new System.Drawing.Size(173, 39);
-            this.btnlimpiar.TabIndex = 16;
+            this.btnlimpiar.Size = new System.Drawing.Size(260, 60);
+            this.btnlimpiar.TabIndex = 10;
             this.btnlimpiar.Text = "Limpiar";
             this.btnlimpiar.UseVisualStyleBackColor = true;
             this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
@@ -333,11 +344,10 @@ namespace CUMple
             this.cbdisciplina.Items.AddRange(new object[] {
             "Taekwondo",
             "Krav Maga"});
-            this.cbdisciplina.Location = new System.Drawing.Point(458, 93);
-            this.cbdisciplina.Margin = new System.Windows.Forms.Padding(2);
+            this.cbdisciplina.Location = new System.Drawing.Point(687, 143);
             this.cbdisciplina.Name = "cbdisciplina";
-            this.cbdisciplina.Size = new System.Drawing.Size(139, 26);
-            this.cbdisciplina.TabIndex = 17;
+            this.cbdisciplina.Size = new System.Drawing.Size(206, 37);
+            this.cbdisciplina.TabIndex = 2;
             this.cbdisciplina.SelectedIndexChanged += new System.EventHandler(this.cbdisciplina_SelectedIndexChanged);
             // 
             // Fechadatatimer
@@ -346,10 +356,11 @@ namespace CUMple
             this.Fechadatatimer.CustomFormat = "yyyy-MM-dd";
             this.Fechadatatimer.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fechadatatimer.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Fechadatatimer.Location = new System.Drawing.Point(755, 88);
+            this.Fechadatatimer.Location = new System.Drawing.Point(1132, 135);
+            this.Fechadatatimer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Fechadatatimer.Name = "Fechadatatimer";
-            this.Fechadatatimer.Size = new System.Drawing.Size(127, 27);
-            this.Fechadatatimer.TabIndex = 18;
+            this.Fechadatatimer.Size = new System.Drawing.Size(188, 37);
+            this.Fechadatatimer.TabIndex = 4;
             // 
             // horadatatimer
             // 
@@ -358,10 +369,11 @@ namespace CUMple
             this.horadatatimer.CustomFormat = "H:mm";
             this.horadatatimer.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.horadatatimer.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.horadatatimer.Location = new System.Drawing.Point(755, 50);
+            this.horadatatimer.Location = new System.Drawing.Point(1132, 77);
+            this.horadatatimer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.horadatatimer.Name = "horadatatimer";
-            this.horadatatimer.Size = new System.Drawing.Size(74, 27);
-            this.horadatatimer.TabIndex = 19;
+            this.horadatatimer.Size = new System.Drawing.Size(109, 37);
+            this.horadatatimer.TabIndex = 3;
             this.horadatatimer.ValueChanged += new System.EventHandler(this.horadatatimer_ValueChanged);
             // 
             // cbhabfe
@@ -371,10 +383,11 @@ namespace CUMple
             this.cbhabfe.BackColor = System.Drawing.Color.Transparent;
             this.cbhabfe.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbhabfe.ForeColor = System.Drawing.Color.White;
-            this.cbhabfe.Location = new System.Drawing.Point(899, 93);
+            this.cbhabfe.Location = new System.Drawing.Point(1348, 143);
+            this.cbhabfe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbhabfe.Name = "cbhabfe";
-            this.cbhabfe.Size = new System.Drawing.Size(147, 22);
-            this.cbhabfe.TabIndex = 20;
+            this.cbhabfe.Size = new System.Drawing.Size(209, 33);
+            this.cbhabfe.TabIndex = 6;
             this.cbhabfe.Text = "Habilitar fecha";
             this.cbhabfe.UseVisualStyleBackColor = false;
             this.cbhabfe.CheckedChanged += new System.EventHandler(this.cbhabfe_CheckedChanged);
@@ -386,10 +399,11 @@ namespace CUMple
             this.cbhabhora.BackColor = System.Drawing.Color.Transparent;
             this.cbhabhora.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbhabhora.ForeColor = System.Drawing.Color.White;
-            this.cbhabhora.Location = new System.Drawing.Point(899, 54);
+            this.cbhabhora.Location = new System.Drawing.Point(1348, 83);
+            this.cbhabhora.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbhabhora.Name = "cbhabhora";
-            this.cbhabhora.Size = new System.Drawing.Size(139, 22);
-            this.cbhabhora.TabIndex = 21;
+            this.cbhabhora.Size = new System.Drawing.Size(199, 33);
+            this.cbhabhora.TabIndex = 5;
             this.cbhabhora.Text = "Habilitar hora";
             this.cbhabhora.UseVisualStyleBackColor = false;
             this.cbhabhora.CheckedChanged += new System.EventHandler(this.cbhabhora_CheckedChanged);
@@ -401,10 +415,11 @@ namespace CUMple
             this.txbbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txbbuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbbuscar.ForeColor = System.Drawing.Color.White;
-            this.txbbuscar.Location = new System.Drawing.Point(3, 262);
+            this.txbbuscar.Location = new System.Drawing.Point(4, 302);
+            this.txbbuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbbuscar.Name = "txbbuscar";
-            this.txbbuscar.Size = new System.Drawing.Size(173, 39);
-            this.txbbuscar.TabIndex = 23;
+            this.txbbuscar.Size = new System.Drawing.Size(260, 60);
+            this.txbbuscar.TabIndex = 9;
             this.txbbuscar.Text = "Buscar";
             this.txbbuscar.UseVisualStyleBackColor = true;
             this.txbbuscar.Click += new System.EventHandler(this.txbbuscar_Click);
@@ -418,8 +433,9 @@ namespace CUMple
             this.panel1.Controls.Add(this.maximizar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1216, 35);
+            this.panel1.Size = new System.Drawing.Size(1824, 54);
             this.panel1.TabIndex = 47;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -429,9 +445,10 @@ namespace CUMple
             this.restau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.restau.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restau.Image = ((System.Drawing.Image)(resources.GetObject("restau.Image")));
-            this.restau.Location = new System.Drawing.Point(1087, 0);
+            this.restau.Location = new System.Drawing.Point(1630, 0);
+            this.restau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.restau.Name = "restau";
-            this.restau.Size = new System.Drawing.Size(37, 30);
+            this.restau.Size = new System.Drawing.Size(56, 46);
             this.restau.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.restau.TabIndex = 18;
             this.restau.TabStop = false;
@@ -442,9 +459,10 @@ namespace CUMple
             this.cerrarclic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(1177, 0);
+            this.cerrarclic.Location = new System.Drawing.Point(1766, 0);
+            this.cerrarclic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cerrarclic.Name = "cerrarclic";
-            this.cerrarclic.Size = new System.Drawing.Size(37, 30);
+            this.cerrarclic.Size = new System.Drawing.Size(56, 46);
             this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cerrarclic.TabIndex = 17;
             this.cerrarclic.TabStop = false;
@@ -455,9 +473,10 @@ namespace CUMple
             this.minim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minim.Image = ((System.Drawing.Image)(resources.GetObject("minim.Image")));
-            this.minim.Location = new System.Drawing.Point(1130, 0);
+            this.minim.Location = new System.Drawing.Point(1695, 0);
+            this.minim.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.minim.Name = "minim";
-            this.minim.Size = new System.Drawing.Size(37, 30);
+            this.minim.Size = new System.Drawing.Size(56, 46);
             this.minim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.minim.TabIndex = 19;
             this.minim.TabStop = false;
@@ -469,9 +488,10 @@ namespace CUMple
             this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(1130, 0);
+            this.maximizar.Location = new System.Drawing.Point(1695, 0);
+            this.maximizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.maximizar.Name = "maximizar";
-            this.maximizar.Size = new System.Drawing.Size(37, 30);
+            this.maximizar.Size = new System.Drawing.Size(56, 46);
             this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.maximizar.TabIndex = 16;
             this.maximizar.TabStop = false;
@@ -494,75 +514,83 @@ namespace CUMple
             this.panel2.Controls.Add(this.btnvolverexamenes);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.ForeColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(0, 35);
+            this.panel2.Location = new System.Drawing.Point(0, 54);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(176, 699);
+            this.panel2.Size = new System.Drawing.Size(264, 826);
             this.panel2.TabIndex = 48;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 524);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 705);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(5, 39);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 60);
             this.flowLayoutPanel1.TabIndex = 51;
             // 
             // panelapoyo5
             // 
             this.panelapoyo5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo5.Location = new System.Drawing.Point(0, 433);
+            this.panelapoyo5.Location = new System.Drawing.Point(0, 565);
+            this.panelapoyo5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelapoyo5.Name = "panelapoyo5";
-            this.panelapoyo5.Size = new System.Drawing.Size(5, 39);
+            this.panelapoyo5.Size = new System.Drawing.Size(8, 60);
             this.panelapoyo5.TabIndex = 50;
             // 
             // panelapoyo4
             // 
             this.panelapoyo4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo4.Location = new System.Drawing.Point(0, 347);
+            this.panelapoyo4.Location = new System.Drawing.Point(0, 433);
+            this.panelapoyo4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelapoyo4.Name = "panelapoyo4";
-            this.panelapoyo4.Size = new System.Drawing.Size(5, 39);
+            this.panelapoyo4.Size = new System.Drawing.Size(8, 60);
             this.panelapoyo4.TabIndex = 51;
             // 
             // panelapoyo3
             // 
             this.panelapoyo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo3.Location = new System.Drawing.Point(0, 262);
+            this.panelapoyo3.Location = new System.Drawing.Point(0, 302);
+            this.panelapoyo3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelapoyo3.Name = "panelapoyo3";
-            this.panelapoyo3.Size = new System.Drawing.Size(5, 39);
+            this.panelapoyo3.Size = new System.Drawing.Size(8, 60);
             this.panelapoyo3.TabIndex = 52;
             // 
             // panelapoyo2
             // 
             this.panelapoyo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo2.Location = new System.Drawing.Point(0, 176);
+            this.panelapoyo2.Location = new System.Drawing.Point(0, 170);
+            this.panelapoyo2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelapoyo2.Name = "panelapoyo2";
-            this.panelapoyo2.Size = new System.Drawing.Size(5, 39);
+            this.panelapoyo2.Size = new System.Drawing.Size(8, 60);
             this.panelapoyo2.TabIndex = 53;
             // 
             // panelapoyo1
             // 
             this.panelapoyo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo1.Location = new System.Drawing.Point(0, 97);
+            this.panelapoyo1.Location = new System.Drawing.Point(0, 48);
+            this.panelapoyo1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelapoyo1.Name = "panelapoyo1";
-            this.panelapoyo1.Size = new System.Drawing.Size(5, 39);
+            this.panelapoyo1.Size = new System.Drawing.Size(8, 60);
             this.panelapoyo1.TabIndex = 49;
             // 
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackColor = System.Drawing.Color.Gray;
-            this.panel3.Location = new System.Drawing.Point(458, 81);
+            this.panel3.Location = new System.Drawing.Point(687, 125);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(141, 1);
+            this.panel3.Size = new System.Drawing.Size(212, 2);
             this.panel3.TabIndex = 49;
             // 
             // Examenesfrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1216, 734);
+            this.ClientSize = new System.Drawing.Size(1824, 880);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -579,6 +607,7 @@ namespace CUMple
             this.Controls.Add(this.dgvexamenes);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Examenesfrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Examenes";
