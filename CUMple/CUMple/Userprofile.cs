@@ -26,7 +26,6 @@ namespace CUMple
                 cmbdiscipuloseleccionado.Items.Add(lectordedatos["nomcompleto"].ToString());
             }
             conexionprograma.Close();
-            llblnombrediscelec.Text = nombrebuscado;
             cmbdiscipuloseleccionado.SelectedIndex = index;
         }
      
@@ -59,7 +58,7 @@ namespace CUMple
           
             conexionprograma.Open();
             string dato;
-            string mostrardiscipulos= "select * from discipulos where nomcompleto='"+ llblnombrediscelec.Text +"'";
+            string mostrardiscipulos= "select * from discipulos where nomcompleto='"+ cmbdiscipuloseleccionado.SelectedItem.ToString() +"'";
             MySqlCommand comandolabel = new MySqlCommand(mostrardiscipulos,conexionprograma);
             MySqlDataReader lectordecomando = comandolabel.ExecuteReader();
            if (lectordecomando.Read())
@@ -84,7 +83,7 @@ namespace CUMple
         private void Userprofile_Load(object sender, EventArgs e)
         {
             mskcedula.Text = mostrarlabel("cedula");
-            txbceledit.Text = mostrarlabel("celular");
+            mskcelular.Text = mostrarlabel("celular");
             txbemailedit.Text = mostrarlabel("emails");
             lblfecingpref.Text = mostrarlabel("fecha_de_ing");
             txbfecdenacedit.Text = mostrarlabel("fecha_de_nac");
@@ -128,9 +127,9 @@ namespace CUMple
             {
                 editarusuario("cedula", mskcedula.Text, mostrarlabel("cedula"), mostrarlabel("cedula"));
             }           
-            if (txbceledit.Text != mostrarlabel("celular"))
+            if (mskcelular.Text != mostrarlabel("celular"))
             {
-                editarusuario("celular", txbceledit.Text, mostrarlabel("celular"), mostrarlabel("cedula"));
+                editarusuario("celular", mskcelular.Text, mostrarlabel("celular"), mostrarlabel("cedula"));
             }           
             if (txbemailedit.Text != mostrarlabel("emails"))
             {
@@ -320,7 +319,13 @@ namespace CUMple
 
         private void cmbdiscipuloseleccionado_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            mskcedula.Text = mostrarlabel("cedula");
+            mskcelular.Text = mostrarlabel("celular");
+            txbemailedit.Text = mostrarlabel("emails");
+            lblfecingpref.Text = mostrarlabel("fecha_de_ing");
+            txbfecdenacedit.Text = mostrarlabel("fecha_de_nac");
+            txbnomedit.Text = mostrarlabel("nomcompleto");
+            txbprofedit.Text = mostrarlabel("profesiones");
         }
 
         private void cerrarclic_Click_1(object sender, EventArgs e)
@@ -348,6 +353,21 @@ namespace CUMple
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mskcelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < 8 || (e.KeyChar > 8 && e.KeyChar < 48) || e.KeyChar > 57)
+            {
+                MessageBox.Show("Solo números permitidos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void cmbdiscipuloseleccionado_SelectedValueChanged(object sender, EventArgs e)
         {
 
         }

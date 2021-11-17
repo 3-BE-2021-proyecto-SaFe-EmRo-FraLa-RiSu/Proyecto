@@ -90,12 +90,23 @@ namespace CUMple
 
         private void txbapellidofiltrar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 225))
+            if (((e.KeyChar < 65 && e.KeyChar != 8) || (e.KeyChar > 90 && e.KeyChar < 97) || (e.KeyChar > 122 && e.KeyChar != 130 && e.KeyChar < 160) || e.KeyChar > 165) && e.KeyChar != Convert.ToChar(Keys.Space))
             {
-                MessageBox.Show("Solo letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo letras permitidas", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
+            MySqlDataReader lectordedatos;
+            string buscar = "Select nomcompleto from discipulos where nomcompleto like '%" + txbapellidofiltrar.Text + "%'";
+            conexionprograma.Open();
+            MySqlCommand comando = new MySqlCommand(buscar, conexionprograma);
+            lectordedatos = comando.ExecuteReader();
+            while (lectordedatos.Read())
+            {
+                cmbalumnosexistentes.Items.Clear();
+                cmbalumnosexistentes.Items.Add(lectordedatos["nomcompleto"].ToString());
+            }
+            conexionprograma.Close();
         }
 
         private void lblxd_Click(object sender, EventArgs e)

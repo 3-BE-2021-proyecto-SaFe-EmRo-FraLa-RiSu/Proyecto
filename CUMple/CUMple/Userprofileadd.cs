@@ -44,7 +44,7 @@ namespace CUMple
                 aviso = aviso + "\n-Cedula";
                 camposincompletos++;
             }
-            if (txbcelular.Text == "")
+            if (mskcelular.Text == "")
             {
                 aviso = aviso + "\n-Celular";
                 camposincompletos++;
@@ -73,7 +73,7 @@ namespace CUMple
 
             if (camposincompletos == 0)
             {
-                agregarusuario(txbnombrecompleto.Text, mskcedula.Text, txbcelular.Text, txbprofesion.Text, dtpfec_nac.Text, txbemail.Text, taekwondobool, krav_magabool, dtpfechadeingreso.Text);
+                agregarusuario(txbnombrecompleto.Text, mskcedula.Text, mskcelular.Text, txbprofesion.Text, dtpfec_nac.Text, txbemail.Text, taekwondobool, krav_magabool, dtpfechadeingreso.Text);
                 /*
                 conexionprograma.Open();
                 string comando = "insert into discipulos values ('" + txbcelular.ToString()+ "', '" + dtpfechadeingreso.ToString()+ "', '" + txbnombrecompleto.ToString()+ "', '" + krav_magabool+ "', '" + taekwondobool+ "', '" + txbprofesion.ToString()+ "', '" + dtpfec_nac.ToString()+ "', '" + txbemail.ToString()+ "');";
@@ -302,6 +302,16 @@ namespace CUMple
             WindowState = FormWindowState.Maximized;
             maximizar.Visible = false;
             restaurar.Visible = true;
+        }
+
+        private void mskcelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < 8 || (e.KeyChar > 8 && e.KeyChar < 48) || e.KeyChar > 57)
+            {
+                MessageBox.Show("Solo números permitidos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }
