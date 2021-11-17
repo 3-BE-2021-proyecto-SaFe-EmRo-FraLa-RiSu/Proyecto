@@ -65,7 +65,29 @@ namespace CUMple
         public void cargargrafica() 
         {
             limpiargrafica();
-            creargrafica("select rango from discipulos group by rango", "select count(*)'Alumnos' from discipulos group by rango");
+            
+        }
+
+        private void Graficadecinturones_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            DateTime myDateTime = DateTime.Now;
+            string fechaparasql = myDateTime.ToString("yyyy-MM-dd");
+            if (fechaparasql==Fechadatatimer.Value.ToString())
+            {
+           
+            }
+            else
+            {
+                creargrafica("SELECT nuevo_rango FROM rango_obtenido WHERE idexamen=(SELECT idexamen from examenes WHERE fecha<='" + Fechadatatimer.Text + "' LIMIT 1) GROUP BY nuevo_rango", "SELECT COUNT(*) FROM rango_obtenido WHERE idexamen=(SELECT idexamen from examenes WHERE fecha<='" + Fechadatatimer.Text + "' LIMIT 1) GROUP BY nuevo_rango");
+            }
+            
+            
         }
     }
 } 

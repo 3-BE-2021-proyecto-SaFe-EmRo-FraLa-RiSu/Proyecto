@@ -333,36 +333,65 @@ namespace CUMple
                 DataGridViewRow filas = dgvlistas.Rows[e.RowIndex];
                 for (int i = 0; i < dgvalumnospresentes.RowCount; i++)
                 {
-                    string cedula = filas.Cells["cedula"].Value.ToString();
-                    if (dgvalumnospresentes.Rows[i].Cells["cedula"].Value.ToString() == cedula)
+                    string cedula = filas.Cells["Cedulalist"].Value.ToString();
+                    if (dgvalumnospresentes.Rows[i].Cells["Cedulapres"].Value.ToString() == cedula)
                     {
                         MessageBox.Show("Este alumno ya esta ingresado.");
                         return;
                     }
 
                 }
-                dgvalumnospresentes.Rows.Add(filas.Cells["Nombre"].Value.ToString(),filas.Cells["cedula"].Value.ToString(), filas.Cells["tipo"].Value.ToString());
+                dgvalumnospresentes.Rows.Add(filas.Cells["Nombrelist"].Value.ToString(),filas.Cells["Cedulalist"].Value.ToString(), filas.Cells["Claselist"].Value.ToString());
               
             }
            
         }
 
+        private bool comprobarquenosepasolista(int idclase,string identificaciondeclase)
+        {
+            conexionbd.Open();
+            DateTime myDateTime = DateTime.Now;
+            string fechaparasql = myDateTime.ToString("yyyy-MM-dd");
+            string listanopasada="select * from van where fecha='"+fechaparasql+"' and idclase="+idclase+"";
+            MySqlCommand comandocomprobar = new MySqlCommand(listanopasada,conexionbd);
+            MySqlDataReader lector = comandocomprobar.ExecuteReader();
+            if (lector.Read())
+            {
+                MessageBox.Show("Ya se paso la lista de los "+identificaciondeclase+"");
+                conexionbd.Close();
+                return true;
+            }
+            else
+            {
+                conexionbd.Close();
+                return false;
+            }
+        }
+
         private void btnlista_Click(object sender, EventArgs e)
         {
-
+            
             DateTime myDateTime = DateTime.Now;
             string fechaparasql = myDateTime.ToString("yyyy-MM-dd");
             if (adultos==true)
             {
+                if (comprobarquenosepasolista(1,"adultos")==true)
+                {
+                 
+                    return;
+                }
+                conexionbd.Open();
                 for (int i = 0; i < dgvalumnospresentes.RowCount; i++)
                 {
-                    string pasarlista = "insert into van values(1,'" + fechaparasql + "','"+dgvalumnospresentes.Rows[i].Cells["cedula"]+"',1)";
-                    MySqlCommand comandoparamysql = new MySqlCommand(fechaparasql,conexionbd);
+                    
+                    string pasarlista = "insert into van values(1,'" + fechaparasql + "','"+dgvalumnospresentes.Rows[i].Cells["Cedulapres"].Value.ToString() +"',1)";
+                    MySqlCommand comandoparamysql = new MySqlCommand(pasarlista,conexionbd);
                     comandoparamysql.ExecuteNonQuery();
 
                 }
             }
-           
+            dgvalumnospresentes.Rows.Clear();
+            conexionbd.Close();
         }
 
         private void dgvasistencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -387,7 +416,7 @@ namespace CUMple
             dgvlistas.DataSource = filas;          
             for (int i = 0; i < dgvlistas.RowCount; i++)
             {
-                dgvlistas.Rows[i].Cells["Clase"].Value = "Adultos";
+                dgvlistas.Rows[i].Cells["Claselist"].Value = "Adultos";
             }
 
 

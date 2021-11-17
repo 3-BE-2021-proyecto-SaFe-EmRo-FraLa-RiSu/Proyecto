@@ -17,12 +17,13 @@ namespace CUMple
     {
         public Principal(bool admin)
         {
+            InitializeComponent();
             if (admin == true)
             {
                 btnverasistenciaspersonales.Visible = false;
                 btnverexamenespersonales.Visible = false;
             }
-            else 
+            else
             {
                 flowLayoutPanel3.Visible = false;
                 btnvolver.Visible = false;
@@ -30,11 +31,8 @@ namespace CUMple
                 btnentrarexamenes.Visible = false;
                 btnlista.Visible = false;
             }
-
-
-            InitializeComponent();
         }
-
+     
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -42,7 +40,7 @@ namespace CUMple
 
         private void Principal_Load(object sender, EventArgs e)
         {
-
+     
         }
 
         private void botingprog_Click(object sender, EventArgs e)
@@ -169,6 +167,16 @@ namespace CUMple
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnverexamenespersonales_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnverasistenciaspersonales_Click(object sender, EventArgs e)
         {
 
         }

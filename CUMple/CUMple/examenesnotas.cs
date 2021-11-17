@@ -397,5 +397,10 @@ namespace CUMple
         {
 
         }
+
+        private void txbnota_KeyPress(object sender, KeyPressEventArgs e)
+        {
+         
+        }
     }
 }

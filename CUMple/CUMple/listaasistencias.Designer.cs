@@ -63,13 +63,13 @@ namespace CUMple
             this.label1 = new System.Windows.Forms.Label();
             this.panelapoyo = new System.Windows.Forms.Panel();
             this.dgvalumnospresentes = new System.Windows.Forms.DataGridView();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblpresente = new System.Windows.Forms.Label();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cedulax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Clase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombrelist = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cedulalist = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Claselist = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombrepres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cedulapres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipopres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvlistas)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -101,9 +101,9 @@ namespace CUMple
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvlistas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvlistas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.cedulax,
-            this.Clase});
+            this.Nombrelist,
+            this.Cedulalist,
+            this.Claselist});
             this.dgvlistas.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -115,7 +115,7 @@ namespace CUMple
             this.dgvlistas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvlistas.EnableHeadersVisualStyles = false;
             this.dgvlistas.GridColor = System.Drawing.Color.White;
-            this.dgvlistas.Location = new System.Drawing.Point(349, 141);
+            this.dgvlistas.Location = new System.Drawing.Point(204, 141);
             this.dgvlistas.Name = "dgvlistas";
             this.dgvlistas.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvlistas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -127,7 +127,7 @@ namespace CUMple
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvlistas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvlistas.Size = new System.Drawing.Size(304, 501);
+            this.dgvlistas.Size = new System.Drawing.Size(419, 501);
             this.dgvlistas.TabIndex = 0;
             this.dgvlistas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvlistas_CellClick);
             this.dgvlistas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvasistencias_CellContentClick);
@@ -426,7 +426,7 @@ namespace CUMple
             this.txbbucar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbbucar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbbucar.ForeColor = System.Drawing.Color.White;
-            this.txbbucar.Location = new System.Drawing.Point(445, 78);
+            this.txbbucar.Location = new System.Drawing.Point(343, 78);
             this.txbbucar.Name = "txbbucar";
             this.txbbucar.Size = new System.Drawing.Size(178, 20);
             this.txbbucar.TabIndex = 16;
@@ -440,7 +440,7 @@ namespace CUMple
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(346, 83);
+            this.label1.Location = new System.Drawing.Point(244, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 18);
             this.label1.TabIndex = 17;
@@ -450,7 +450,7 @@ namespace CUMple
             // 
             this.panelapoyo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panelapoyo.BackColor = System.Drawing.Color.Gray;
-            this.panelapoyo.Location = new System.Drawing.Point(445, 100);
+            this.panelapoyo.Location = new System.Drawing.Point(343, 100);
             this.panelapoyo.Name = "panelapoyo";
             this.panelapoyo.Size = new System.Drawing.Size(180, 1);
             this.panelapoyo.TabIndex = 19;
@@ -476,9 +476,9 @@ namespace CUMple
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvalumnospresentes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvalumnospresentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colNombre,
-            this.cedula,
-            this.Tipo});
+            this.Nombrepres,
+            this.Cedulapres,
+            this.Tipopres});
             this.dgvalumnospresentes.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -490,7 +490,7 @@ namespace CUMple
             this.dgvalumnospresentes.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvalumnospresentes.EnableHeadersVisualStyles = false;
             this.dgvalumnospresentes.GridColor = System.Drawing.Color.White;
-            this.dgvalumnospresentes.Location = new System.Drawing.Point(727, 141);
+            this.dgvalumnospresentes.Location = new System.Drawing.Point(661, 141);
             this.dgvalumnospresentes.Name = "dgvalumnospresentes";
             this.dgvalumnospresentes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvalumnospresentes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -502,31 +502,8 @@ namespace CUMple
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvalumnospresentes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvalumnospresentes.Size = new System.Drawing.Size(190, 501);
+            this.dgvalumnospresentes.Size = new System.Drawing.Size(299, 501);
             this.dgvalumnospresentes.TabIndex = 20;
-            // 
-            // colNombre
-            // 
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.Width = 94;
-            // 
-            // cedula
-            // 
-            this.cedula.DataPropertyName = "cedula";
-            this.cedula.HeaderText = "cedula";
-            this.cedula.Name = "cedula";
-            this.cedula.ReadOnly = true;
-            this.cedula.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cedula.Visible = false;
-            this.cedula.Width = 84;
-            // 
-            // Tipo
-            // 
-            this.Tipo.HeaderText = "tipo";
-            this.Tipo.Name = "Tipo";
-            this.Tipo.Visible = false;
-            this.Tipo.Width = 63;
             // 
             // lblpresente
             // 
@@ -540,28 +517,51 @@ namespace CUMple
             this.lblpresente.TabIndex = 21;
             this.lblpresente.Text = "Alumnos presentes";
             // 
-            // Nombre
+            // Nombrelist
             // 
-            this.Nombre.DataPropertyName = "nomcompleto";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 94;
+            this.Nombrelist.DataPropertyName = "nomcompleto";
+            this.Nombrelist.HeaderText = "Nombre";
+            this.Nombrelist.Name = "Nombrelist";
+            this.Nombrelist.ReadOnly = true;
+            this.Nombrelist.Width = 94;
             // 
-            // cedulax
+            // Cedulalist
             // 
-            this.cedulax.HeaderText = "cedulax";
-            this.cedulax.Name = "cedulax";
-            this.cedulax.Visible = false;
-            this.cedulax.Width = 93;
+            this.Cedulalist.DataPropertyName = "Cedula";
+            this.Cedulalist.HeaderText = "Cedula";
+            this.Cedulalist.Name = "Cedulalist";
+            this.Cedulalist.Width = 87;
             // 
-            // Clase
+            // Claselist
             // 
-            this.Clase.DataPropertyName = "tipos";
-            this.Clase.HeaderText = "Clase";
-            this.Clase.Name = "Clase";
-            this.Clase.ReadOnly = true;
-            this.Clase.Width = 76;
+            this.Claselist.DataPropertyName = "tipos";
+            this.Claselist.HeaderText = "Clase";
+            this.Claselist.Name = "Claselist";
+            this.Claselist.ReadOnly = true;
+            this.Claselist.Width = 76;
+            // 
+            // Nombrepres
+            // 
+            this.Nombrepres.DataPropertyName = "nomcompleto";
+            this.Nombrepres.HeaderText = "Nombre";
+            this.Nombrepres.Name = "Nombrepres";
+            this.Nombrepres.Width = 94;
+            // 
+            // Cedulapres
+            // 
+            this.Cedulapres.DataPropertyName = "cedula";
+            this.Cedulapres.HeaderText = "Cedula";
+            this.Cedulapres.Name = "Cedulapres";
+            this.Cedulapres.ReadOnly = true;
+            this.Cedulapres.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Cedulapres.Width = 87;
+            // 
+            // Tipopres
+            // 
+            this.Tipopres.DataPropertyName = "tipos";
+            this.Tipopres.HeaderText = "Clase";
+            this.Tipopres.Name = "Tipopres";
+            this.Tipopres.Width = 76;
             // 
             // listaasistencias
             // 
@@ -625,11 +625,11 @@ namespace CUMple
         private System.Windows.Forms.Label lblpresente;
         private System.Windows.Forms.Button btnlista;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cedula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cedulax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clase;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombrelist;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cedulalist;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Claselist;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombrepres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cedulapres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipopres;
     }
 }
