@@ -21,7 +21,7 @@ namespace CUMple
         }
         public void limpiargrafica()
         {
-            Graficadecinturones.Series["rango"].Points.Clear();
+            Graficadecinturones.Series["Rangos"].Points.Clear();
         }
         private void btncargarcinturones_Click(object sender, EventArgs e)
         {

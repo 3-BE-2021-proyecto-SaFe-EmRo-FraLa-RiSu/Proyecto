@@ -41,7 +41,6 @@ namespace CUMple
             this.txbcontraconf = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnborrarusuario = new System.Windows.Forms.Button();
-            this.btneditarusuario = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.maximizar = new System.Windows.Forms.PictureBox();
             this.restaurar = new System.Windows.Forms.PictureBox();
@@ -59,6 +58,7 @@ namespace CUMple
             this.lblcedula = new System.Windows.Forms.Label();
             this.txbcedula = new System.Windows.Forms.TextBox();
             this.cmbusuarioseleccionado = new System.Windows.Forms.ComboBox();
+            this.btneditarusuario = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
@@ -225,23 +225,6 @@ namespace CUMple
             this.btnborrarusuario.Text = "Borrar usuario";
             this.btnborrarusuario.UseVisualStyleBackColor = false;
             this.btnborrarusuario.Click += new System.EventHandler(this.btnborrarusuario_Click);
-            // 
-            // btneditarusuario
-            // 
-            this.btneditarusuario.BackColor = System.Drawing.Color.Transparent;
-            this.btneditarusuario.FlatAppearance.BorderSize = 0;
-            this.btneditarusuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.btneditarusuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btneditarusuario.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneditarusuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btneditarusuario.Location = new System.Drawing.Point(8, 198);
-            this.btneditarusuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btneditarusuario.Name = "btneditarusuario";
-            this.btneditarusuario.Size = new System.Drawing.Size(322, 68);
-            this.btneditarusuario.TabIndex = 5;
-            this.btneditarusuario.Text = "Editar usuario";
-            this.btneditarusuario.UseVisualStyleBackColor = false;
-            this.btneditarusuario.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2
             // 
@@ -448,6 +431,23 @@ namespace CUMple
             this.cmbusuarioseleccionado.Text = "Usuarios:";
             this.cmbusuarioseleccionado.SelectedIndexChanged += new System.EventHandler(this.cmbusuarioseleccionado_SelectedIndexChanged);
             // 
+            // btneditarusuario
+            // 
+            this.btneditarusuario.BackColor = System.Drawing.Color.Transparent;
+            this.btneditarusuario.FlatAppearance.BorderSize = 0;
+            this.btneditarusuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.btneditarusuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneditarusuario.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditarusuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btneditarusuario.Location = new System.Drawing.Point(8, 198);
+            this.btneditarusuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btneditarusuario.Name = "btneditarusuario";
+            this.btneditarusuario.Size = new System.Drawing.Size(322, 68);
+            this.btneditarusuario.TabIndex = 5;
+            this.btneditarusuario.Text = "Editar usuario";
+            this.btneditarusuario.UseVisualStyleBackColor = false;
+            this.btneditarusuario.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Editarusuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -505,7 +505,6 @@ namespace CUMple
         private System.Windows.Forms.TextBox txbcontraconf;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnborrarusuario;
-        private System.Windows.Forms.Button btneditarusuario;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox maximizar;
         private System.Windows.Forms.PictureBox restaurar;
@@ -523,5 +522,6 @@ namespace CUMple
         private System.Windows.Forms.Label lblcedula;
         private System.Windows.Forms.TextBox txbcedula;
         private System.Windows.Forms.ComboBox cmbusuarioseleccionado;
+        private System.Windows.Forms.Button btneditarusuario;
     }
 }

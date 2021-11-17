@@ -33,6 +33,8 @@ namespace CUMple
                 botingprog.Visible = false;
                 flowLayoutPanel3.Visible = false;
                 panelapoyo5.Visible = false;
+                flowLayoutPanel2.Visible = false;
+                panelapoyo5.Visible = false;
             }
 
          
