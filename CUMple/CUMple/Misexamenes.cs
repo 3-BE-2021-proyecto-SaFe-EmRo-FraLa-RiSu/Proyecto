@@ -83,33 +83,21 @@ namespace CUMple
 
             string nota, comandonota = "";
             string rango, comandorango = "";
-           
-            
 
                 if (txbnota.Text != "")
                 {
                     nota = txbnota.Text;
                     comandonota = " nota=" + nota + "";
-
-
                 }
-
                 if (cbrango.SelectedIndex != -1)
                 {
                     rango = cbrango.SelectedItem.ToString();
                     comandorango = " nuevo_rango='" + rango + "'";
                 }
-
-
-
-
                 for (int i = 0; i < dgvexamenes.RowCount - 1; i++)
                 {
-                
                     if (txbnota.Text != "" && cbrango.SelectedIndex == -1)
                     {
-
-
                         MySqlDataAdapter comandobuscar = new MySqlDataAdapter("select * from rango_obtenido where" + comandonota + "", conexionbd);
                         dgvexamenes.Refresh();
                         comandobuscar.Fill(dtexamenes);
@@ -124,15 +112,9 @@ namespace CUMple
                         }
                         conexionbd.Close();
                         return;
-
-
                     }
-
-                 
-
                     if (txbnota.Text == "" && cbrango.SelectedIndex != -1)
                     {
-
                         MySqlDataAdapter comandobuscar = new MySqlDataAdapter("select * from rango_obtenido where" + comandorango + "", conexionbd);
                         dgvexamenes.Refresh();
                         comandobuscar.Fill(dtexamenes);
@@ -148,14 +130,8 @@ namespace CUMple
                         conexionbd.Close();
                         return;
                     }
-                
-
                 }
-
-
-
-            
-    }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -165,6 +141,25 @@ namespace CUMple
         private void dgvexamenes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void minim_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+            maximizar.Visible = true;
+            minim.Visible = false;
+        }
+
+        private void restau_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void maximizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            maximizar.Visible = false;
+            minim.Visible = true;
         }
     }
 }
