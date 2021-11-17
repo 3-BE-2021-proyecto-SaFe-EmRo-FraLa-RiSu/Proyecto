@@ -20,7 +20,6 @@ namespace CUMple
             InitializeComponent();
             if (tipo == "Adm")
             {
-                btnverasistenciaspersonales.Visible = false;
                 btnverexamenespersonales.Visible = false;
             }
             else
@@ -31,7 +30,7 @@ namespace CUMple
                 btnentrarexamenes.Visible = false;
                 btnlista.Visible = false;               
                 flowLayoutPanel2.Visible = false;
-              
+                panelapoyo4.Visible = false;
             }
 
          
@@ -43,7 +42,6 @@ namespace CUMple
             InitializeComponent();
             if (tipo == "Adm")
             {
-                btnverasistenciaspersonales.Visible = false;
                 btnverexamenespersonales.Visible = false;
             }
             else
@@ -56,6 +54,7 @@ namespace CUMple
                 botingprog.Visible = false;
                 panelapoyo5.Visible = false;
                 flowLayoutPanel2.Visible = false;
+                panelapoyo4.Visible = false;
             }
 
             cedulaprin = cedula;  

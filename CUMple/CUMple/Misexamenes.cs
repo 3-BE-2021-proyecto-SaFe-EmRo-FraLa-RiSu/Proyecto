@@ -161,5 +161,10 @@ namespace CUMple
             maximizar.Visible = false;
             minim.Visible = true;
         }
+
+        private void cerrarclic_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
