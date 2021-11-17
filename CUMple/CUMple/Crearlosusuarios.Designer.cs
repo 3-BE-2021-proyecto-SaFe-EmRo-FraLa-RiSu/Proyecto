@@ -163,9 +163,9 @@ namespace CUMple
             this.label3.Location = new System.Drawing.Point(562, 159);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(276, 29);
+            this.label3.Size = new System.Drawing.Size(257, 29);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Usuario seleccionado:";
+            this.label3.Text = "Usuarios existentes:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // chkboxadmin

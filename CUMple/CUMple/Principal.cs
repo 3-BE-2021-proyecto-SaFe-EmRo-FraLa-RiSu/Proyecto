@@ -30,6 +30,9 @@ namespace CUMple
                 btncinturones.Visible = false;
                 btnentrarexamenes.Visible = false;
                 btnlista.Visible = false;
+                botingprog.Visible = false;
+                flowLayoutPanel3.Visible = false;
+                panelapoyo5.Visible = false;
             }
 
          

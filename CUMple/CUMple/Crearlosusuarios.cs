@@ -15,6 +15,7 @@ namespace CUMple
     public partial class Editarusuarios : Form
     {
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
+        MySqlConnection conexionprograma2 = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
 
         public Editarusuarios()
         {
@@ -160,7 +161,7 @@ namespace CUMple
 
         private void btnborrarusuario_Click(object sender, EventArgs e)
         {
-            if (txbusucre.Text == "" || txtbcontra.Text == "" || txbcontraconf.Text == "")
+            if (txbusucre.Text == "" || txtbcontra.Text == "" || txbcontraconf.Text == "" || txbcedula.Text == "")
             {
                 MessageBox.Show("Ningún campo puede estar vacio");
 
@@ -179,6 +180,8 @@ namespace CUMple
                         txbusucre.Text = "";
                         txtbcontra.Text = "";
                         txbcontraconf.Text = "";
+                        txbcedula.Text = "";
+                        chkboxadmin.Checked = false;
                         MessageBox.Show("El usuario se borro correctamente");
                         conexionprograma.Close();
 
@@ -263,16 +266,6 @@ namespace CUMple
             if (cmbusuarioseleccionado.SelectedItem.ToString() != "Crear usuario nuevo")
             {
                 txbusucre.Text = cmbusuarioseleccionado.SelectedItem.ToString();
-                MySqlDataReader lector;
-                string comand = "select contraseña from usuarios where usuario = '"+ cmbusuarioseleccionado.SelectedItem.ToString() + "';";
-                conexionprograma.Open();
-                MySqlCommand comando = new MySqlCommand(comand, conexionprograma);
-                lector = comando.ExecuteReader();
-                while (lector.Read())
-                {
-                    txbcontraconf.Text = lector["contraseña"].ToString();
-                }
-                conexionprograma.Close();
             }
             else
             {
