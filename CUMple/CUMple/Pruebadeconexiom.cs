@@ -96,15 +96,20 @@ namespace CUMple
 
         private void btncargardatos_Click(object sender, EventArgs e)
         {
-            if ((cmbAño.SelectedIndex != -1 || cmbAño.SelectedItem.ToString() != "Ninguno") && (cmbmeses.SelectedIndex != -1  || cmbmeses.SelectedItem.ToString() != "Ninguno"))
+            if (cmbAño.SelectedIndex != -1 && cmbAño.SelectedItem.ToString() != "Ninguno" && cmbmeses.SelectedIndex != -1  && cmbmeses.SelectedItem.ToString() != "Ninguno")
             {
                 limpiargrafica();
                 int mesesindex = cmbmeses.SelectedIndex, años = Int32.Parse(cmbAño.SelectedItem.ToString());
                
                
                 MessageBox.Show(mesesindex.ToString());
+<<<<<<< HEAD
                 creargrafica("Asistencias", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase an month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=1 group by v.idclase;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=1 group by v.idclase;");
                 creargrafica("Faltas", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=0 group by v.idclase;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=0 group by v.idclase;");
+=======
+                creargrafica("Asistencias", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=1 group by v.idclase;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=1 group by v.idclase;");
+                creargrafica("Faltas", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=0 group by v.idclase;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=0 group by v.idclase;");
+>>>>>>> de0e071b1ce13248b56aa31da804e61f64056c86
             }
             else if (cmbAño.SelectedIndex == -1 || cmbAño.SelectedItem.ToString() == "Ninguno")
             {
@@ -114,7 +119,7 @@ namespace CUMple
             }
             else if (cmbmeses.SelectedIndex == -1 || cmbmeses.SelectedItem.ToString() == "Ninguno")
             {
-                buscarsoloaño();
+                buscarsoloaño(Int32.Parse(cmbAño.SelectedItem.ToString()));
             }
             if (Graficadealumnos.Series["Asistencias"].Points.Count == 0 && Graficadealumnos.Series["Faltas"].Points.Count == 0)
             {
@@ -143,14 +148,14 @@ namespace CUMple
             limpiargrafica();
             int mesesindex = cmbmeses.SelectedIndex, meses;
             meses = mesesindex + 1;
-            creargrafica("Asistencias", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and concurre=1 and month(fecha)='" + meses + "' group by YEAR(fecha);", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and concurre=1 and month(fecha)='" + meses + "' group by YEAR(fecha);");
-            creargrafica("Faltas", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and concurre=0 and month(fecha)='" + meses + "' group by YEAR(fecha);", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and concurre=0 and month(fecha)='" + meses + "' group by YEAR(fecha);");
+            creargrafica("Asistencias", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where concurre=1 and month(fecha)='" + meses + "' group by YEAR(fecha);", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where concurre=1 and month(fecha)='" + meses + "' group by YEAR(fecha);");
+            creargrafica("Faltas", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where concurre=0 and month(fecha)='" + meses + "' group by YEAR(fecha);", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where concurre=0 and month(fecha)='" + meses + "' group by YEAR(fecha);");
         }
-        public void buscarsoloaño() 
+        public void buscarsoloaño(int ano) 
         {
             limpiargrafica();
-            creargrafica("Asistencias", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase WHERE concurre=1 group by v.idclase;;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase WHERE concurre=1 group by v.idclase;");
-            creargrafica("Faltas", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and concurre=0 group by year(fecha);", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and concurre=0 group by year(fecha);");
+            creargrafica("Asistencias", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where concurre=1 and year(fecha)='"+ano+"' group by v.idclase;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where concurre=1 and year(fecha)='" + ano + "' group by v.idclase;");
+            creargrafica("Faltas", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where concurre=0 and year(fecha)='" + ano + "' group by v.idclase;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where concurre=0 and year(fecha)='" + ano + "' group by v.idclase;");
         }
 
         private void cerrar_Click(object sender, EventArgs e)
