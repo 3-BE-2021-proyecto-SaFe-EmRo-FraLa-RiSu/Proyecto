@@ -13,9 +13,11 @@ namespace CUMple
 {
     public partial class Misexamenes : Form
     {
+        string cedulax;
         public Misexamenes(string cedula)
         {
             InitializeComponent();
+            cedulax = cedula;
         }
 
         MySqlConnection conexionbd = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
@@ -103,7 +105,7 @@ namespace CUMple
 
                 for (int i = 0; i < dgvexamenes.RowCount - 1; i++)
                 {
-                /*
+                
                     if (txbnota.Text != "" && cbrango.SelectedIndex == -1)
                     {
 
@@ -114,9 +116,9 @@ namespace CUMple
                         dgvexamenes.DataSource = dtexamenes;
                         if (dgvexamenes.Rows[0].Cells[0].Value == null)
                         {
-                            MessageBox.Show("El alumno no se ha encontrado. Prueba utilizando otros parametros");
+                            MessageBox.Show("No tienes datos aquí");
                             conexionbd.Close();
-                            dgvexamenes.DataSource = cargarexamenes(cedula);
+                            dgvexamenes.DataSource = cargarexamenes(cedulax);
                             limpiar();
                             return;
                         }
@@ -137,16 +139,16 @@ namespace CUMple
                         dgvexamenes.DataSource = dtexamenes;
                         if (dgvexamenes.Rows[0].Cells[0].Value == null)
                         {
-                            MessageBox.Show("El alumno no se ha encontrado. Prueba utilizando otros parametros");
+                            MessageBox.Show("No tienes datos de esta fecha");
                             conexionbd.Close();
-                            dgvexamenes.DataSource = cargarexamenes(cedula);
+                            dgvexamenes.DataSource = cargarexamenes(cedulax);
                             limpiar();
                             return;
                         }
                         conexionbd.Close();
                         return;
                     }
-                */
+                
 
                 }
 

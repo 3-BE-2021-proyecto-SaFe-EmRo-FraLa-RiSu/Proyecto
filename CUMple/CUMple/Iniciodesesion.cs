@@ -125,6 +125,7 @@ private void textBox2_TextChanged(object sender, EventArgs e)
                 }
             }
             conexionprograma.Close();
+            conexionprograma2.Close();
         }
 
         private void txbconb_KeyPress(object sender, KeyPressEventArgs e)
