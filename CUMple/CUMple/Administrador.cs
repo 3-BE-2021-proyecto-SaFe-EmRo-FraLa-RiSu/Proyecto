@@ -20,7 +20,7 @@ namespace CUMple
         }
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
          private void formadmin_Load(object sender, EventArgs e)
-        {
+         {
             MySqlDataReader lectordedatos;
             string comand = "Select nomcompleto from discipulos;";
             conexionprograma.Open();
@@ -31,7 +31,7 @@ namespace CUMple
                 cmbalumnosexistentes.Items.Add(lectordedatos["nomcompleto"].ToString());
             }
             conexionprograma.Close();
-        } 
+         } 
 
         private void botingprog_Click(object sender, EventArgs e)
         {
@@ -96,18 +96,39 @@ namespace CUMple
                 e.Handled = true;
                 return;
             }
-            MySqlDataReader lectordedatos;
-            string buscar = "Select nomcompleto from discipulos where nomcompleto like '%" + txbapellidofiltrar.Text + "%'";
-            conexionprograma.Open();
-            MySqlCommand comando = new MySqlCommand(buscar, conexionprograma);
-            lectordedatos = comando.ExecuteReader();
-            while (lectordedatos.Read())
+        }
+        public void actualizarfiltrado() 
+        {
+            if (txbapellidofiltrar.Text == "")
             {
                 cmbalumnosexistentes.Items.Clear();
-                cmbalumnosexistentes.Items.Add(lectordedatos["nomcompleto"].ToString());
+                MySqlDataReader lectordedatos;
+                string comand = "Select nomcompleto from discipulos;";
+                conexionprograma.Open();
+                MySqlCommand comando = new MySqlCommand(comand, conexionprograma);
+                lectordedatos = comando.ExecuteReader();
+                while (lectordedatos.Read())
+                {
+                    cmbalumnosexistentes.Items.Add(lectordedatos["nomcompleto"].ToString());
+                }
+                conexionprograma.Close();
             }
-            conexionprograma.Close();
+            else 
+            {
+                cmbalumnosexistentes.Items.Clear();
+                MySqlDataReader lectordedatos;
+                string buscar = "Select nomcompleto from discipulos where nomcompleto like '%" + txbapellidofiltrar.Text + "%'";
+                conexionprograma.Open();
+                MySqlCommand comando = new MySqlCommand(buscar, conexionprograma);
+                lectordedatos = comando.ExecuteReader();
+                while (lectordedatos.Read())
+                {
+                    cmbalumnosexistentes.Items.Add(lectordedatos["nomcompleto"].ToString());
+                }
+                conexionprograma.Close();
+            }
         }
+
 
         private void lblxd_Click(object sender, EventArgs e)
         {
@@ -176,6 +197,12 @@ namespace CUMple
         private void button2_Click(object sender, EventArgs e)
         {
             new Editarusuarios().Show();
+            this.Dispose();
+        }
+
+        private void txbapellidofiltrar_TextChanged(object sender, EventArgs e)
+        {
+            actualizarfiltrado();
         }
     }
 }

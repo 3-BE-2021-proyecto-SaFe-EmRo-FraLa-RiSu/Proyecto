@@ -42,12 +42,12 @@ namespace CUMple
             this.cerrarclic = new System.Windows.Forms.PictureBox();
             this.restaurar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurarr)).BeginInit();
@@ -63,9 +63,10 @@ namespace CUMple
             this.lblxd.BackColor = System.Drawing.Color.Transparent;
             this.lblxd.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblxd.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblxd.Location = new System.Drawing.Point(347, 60);
+            this.lblxd.Location = new System.Drawing.Point(520, 92);
+            this.lblxd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblxd.Name = "lblxd";
-            this.lblxd.Size = new System.Drawing.Size(295, 25);
+            this.lblxd.Size = new System.Drawing.Size(446, 38);
             this.lblxd.TabIndex = 0;
             this.lblxd.Text = "Bienvenido, administrador.";
             this.lblxd.Click += new System.EventHandler(this.lblxd_Click);
@@ -78,9 +79,10 @@ namespace CUMple
             this.botingprog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botingprog.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botingprog.ForeColor = System.Drawing.Color.White;
-            this.botingprog.Location = new System.Drawing.Point(3, 55);
+            this.botingprog.Location = new System.Drawing.Point(4, 85);
+            this.botingprog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botingprog.Name = "botingprog";
-            this.botingprog.Size = new System.Drawing.Size(220, 44);
+            this.botingprog.Size = new System.Drawing.Size(330, 68);
             this.botingprog.TabIndex = 2;
             this.botingprog.Text = "Ingresar al programa";
             this.botingprog.UseVisualStyleBackColor = false;
@@ -94,10 +96,11 @@ namespace CUMple
             this.botcrearus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botcrearus.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botcrearus.ForeColor = System.Drawing.Color.White;
-            this.botcrearus.Location = new System.Drawing.Point(3, 129);
+            this.botcrearus.Location = new System.Drawing.Point(4, 198);
+            this.botcrearus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botcrearus.Name = "botcrearus";
             this.botcrearus.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.botcrearus.Size = new System.Drawing.Size(220, 44);
+            this.botcrearus.Size = new System.Drawing.Size(330, 68);
             this.botcrearus.TabIndex = 3;
             this.botcrearus.Text = "Editar Discipulo";
             this.botcrearus.UseVisualStyleBackColor = false;
@@ -110,10 +113,9 @@ namespace CUMple
             this.cmbalumnosexistentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbalumnosexistentes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbalumnosexistentes.ForeColor = System.Drawing.SystemColors.Control;
-            this.cmbalumnosexistentes.Location = new System.Drawing.Point(351, 148);
-            this.cmbalumnosexistentes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbalumnosexistentes.Location = new System.Drawing.Point(526, 228);
             this.cmbalumnosexistentes.Name = "cmbalumnosexistentes";
-            this.cmbalumnosexistentes.Size = new System.Drawing.Size(302, 26);
+            this.cmbalumnosexistentes.Size = new System.Drawing.Size(451, 37);
             this.cmbalumnosexistentes.TabIndex = 0;
             this.cmbalumnosexistentes.Text = "Discipulos:";
             this.cmbalumnosexistentes.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -127,9 +129,10 @@ namespace CUMple
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 204);
+            this.button1.Location = new System.Drawing.Point(4, 314);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(220, 44);
+            this.button1.Size = new System.Drawing.Size(330, 68);
             this.button1.TabIndex = 4;
             this.button1.Text = "Agregar Discipulos";
             this.button1.UseVisualStyleBackColor = false;
@@ -142,10 +145,12 @@ namespace CUMple
             this.txbapellidofiltrar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbapellidofiltrar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbapellidofiltrar.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.txbapellidofiltrar.Location = new System.Drawing.Point(352, 205);
+            this.txbapellidofiltrar.Location = new System.Drawing.Point(528, 315);
+            this.txbapellidofiltrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbapellidofiltrar.Name = "txbapellidofiltrar";
-            this.txbapellidofiltrar.Size = new System.Drawing.Size(300, 20);
+            this.txbapellidofiltrar.Size = new System.Drawing.Size(450, 30);
             this.txbapellidofiltrar.TabIndex = 1;
+            this.txbapellidofiltrar.TextChanged += new System.EventHandler(this.txbapellidofiltrar_TextChanged);
             this.txbapellidofiltrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbapellidofiltrar_KeyPress);
             // 
             // panel2
@@ -157,8 +162,9 @@ namespace CUMple
             this.panel2.Controls.Add(this.restaurar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(785, 35);
+            this.panel2.Size = new System.Drawing.Size(1178, 54);
             this.panel2.TabIndex = 8;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
@@ -167,9 +173,10 @@ namespace CUMple
             this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(705, 2);
+            this.maximizar.Location = new System.Drawing.Point(1058, 3);
+            this.maximizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.maximizar.Name = "maximizar";
-            this.maximizar.Size = new System.Drawing.Size(37, 30);
+            this.maximizar.Size = new System.Drawing.Size(56, 46);
             this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.maximizar.TabIndex = 27;
             this.maximizar.TabStop = false;
@@ -180,9 +187,10 @@ namespace CUMple
             this.restaurarr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.restaurarr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurarr.Image = ((System.Drawing.Image)(resources.GetObject("restaurarr.Image")));
-            this.restaurarr.Location = new System.Drawing.Point(661, 2);
+            this.restaurarr.Location = new System.Drawing.Point(992, 3);
+            this.restaurarr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.restaurarr.Name = "restaurarr";
-            this.restaurarr.Size = new System.Drawing.Size(37, 30);
+            this.restaurarr.Size = new System.Drawing.Size(56, 46);
             this.restaurarr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.restaurarr.TabIndex = 26;
             this.restaurarr.TabStop = false;
@@ -193,9 +201,10 @@ namespace CUMple
             this.cerrarclic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(747, 2);
+            this.cerrarclic.Location = new System.Drawing.Point(1120, 3);
+            this.cerrarclic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cerrarclic.Name = "cerrarclic";
-            this.cerrarclic.Size = new System.Drawing.Size(37, 30);
+            this.cerrarclic.Size = new System.Drawing.Size(56, 46);
             this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cerrarclic.TabIndex = 25;
             this.cerrarclic.TabStop = false;
@@ -206,9 +215,10 @@ namespace CUMple
             this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(705, 2);
+            this.restaurar.Location = new System.Drawing.Point(1058, 3);
+            this.restaurar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.restaurar.Name = "restaurar";
-            this.restaurar.Size = new System.Drawing.Size(37, 30);
+            this.restaurar.Size = new System.Drawing.Size(56, 46);
             this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.restaurar.TabIndex = 28;
             this.restaurar.TabStop = false;
@@ -227,51 +237,20 @@ namespace CUMple
             this.panel1.Controls.Add(this.botingprog);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 35);
+            this.panel1.Location = new System.Drawing.Point(0, 54);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 363);
+            this.panel1.Size = new System.Drawing.Size(330, 558);
             this.panel1.TabIndex = 9;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // panelapoyo1
-            // 
-            this.panelapoyo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo1.Location = new System.Drawing.Point(0, 55);
-            this.panelapoyo1.Name = "panelapoyo1";
-            this.panelapoyo1.Size = new System.Drawing.Size(5, 44);
-            this.panelapoyo1.TabIndex = 19;
-            // 
-            // panelapoyo2
-            // 
-            this.panelapoyo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo2.Location = new System.Drawing.Point(0, 129);
-            this.panelapoyo2.Name = "panelapoyo2";
-            this.panelapoyo2.Size = new System.Drawing.Size(5, 44);
-            this.panelapoyo2.TabIndex = 18;
-            // 
-            // panelapoyo3
-            // 
-            this.panelapoyo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo3.Location = new System.Drawing.Point(1, 204);
-            this.panelapoyo3.Name = "panelapoyo3";
-            this.panelapoyo3.Size = new System.Drawing.Size(5, 44);
-            this.panelapoyo3.TabIndex = 18;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BackColor = System.Drawing.Color.Gray;
-            this.panel3.Location = new System.Drawing.Point(352, 227);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 1);
-            this.panel3.TabIndex = 11;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 275);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 423);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(5, 44);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 68);
             this.flowLayoutPanel1.TabIndex = 21;
             // 
             // button2
@@ -282,21 +261,59 @@ namespace CUMple
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(3, 275);
+            this.button2.Location = new System.Drawing.Point(4, 423);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(220, 44);
+            this.button2.Size = new System.Drawing.Size(330, 68);
             this.button2.TabIndex = 20;
             this.button2.Text = "Administrar Usuario";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // panelapoyo1
+            // 
+            this.panelapoyo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.panelapoyo1.Location = new System.Drawing.Point(0, 85);
+            this.panelapoyo1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelapoyo1.Name = "panelapoyo1";
+            this.panelapoyo1.Size = new System.Drawing.Size(8, 68);
+            this.panelapoyo1.TabIndex = 19;
+            // 
+            // panelapoyo2
+            // 
+            this.panelapoyo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.panelapoyo2.Location = new System.Drawing.Point(0, 198);
+            this.panelapoyo2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelapoyo2.Name = "panelapoyo2";
+            this.panelapoyo2.Size = new System.Drawing.Size(8, 68);
+            this.panelapoyo2.TabIndex = 18;
+            // 
+            // panelapoyo3
+            // 
+            this.panelapoyo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.panelapoyo3.Location = new System.Drawing.Point(2, 314);
+            this.panelapoyo3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelapoyo3.Name = "panelapoyo3";
+            this.panelapoyo3.Size = new System.Drawing.Size(8, 68);
+            this.panelapoyo3.TabIndex = 18;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.BackColor = System.Drawing.Color.Gray;
+            this.panel3.Location = new System.Drawing.Point(528, 349);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(450, 2);
+            this.panel3.TabIndex = 11;
+            // 
             // formadmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(785, 398);
+            this.ClientSize = new System.Drawing.Size(1178, 612);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -306,6 +323,7 @@ namespace CUMple
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "formadmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrador";
