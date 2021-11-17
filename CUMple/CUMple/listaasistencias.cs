@@ -59,8 +59,13 @@ namespace CUMple
             {
                 if (txbbucar.Text=="" && dgvlistas.RowCount > 0)
                 {
-                    dgvalumnospresentes.Refresh();
-                    dgvalumnospresentes.DataSource = dgvlistas.DataSource;
+                    dgvalumnospresentes.Rows.Clear();
+
+                    foreach (DataGridViewRow filas in dgvlistas.Rows)
+                    {
+                        dgvalumnospresentes.Rows.Add(filas.Cells["Nombrelist"].Value.ToString(), filas.Cells["Cedulalist"].Value.ToString(), filas.Cells["Claselist"].Value.ToString());
+                    }
+                   
                 }
                 else
                 {
