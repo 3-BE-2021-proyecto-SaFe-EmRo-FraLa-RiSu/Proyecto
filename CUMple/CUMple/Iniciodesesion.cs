@@ -74,9 +74,13 @@ private void textBox2_TextChanged(object sender, EventArgs e)
         public void iniciarsesion() 
         {
             conexionprograma.Open();
+            conexionprograma2.Open();
             string logIn = "SELECT * FROM usuarios WHERE usuario= '" + txbuserb.Text + "' and contraseña= '" + txbconb.Text + "'";
+
             comandoparamysql = new MySqlCommand(logIn, conexionprograma);
             MySqlDataReader lectordedatos = comandoparamysql.ExecuteReader();
+            MySqlCommand comandoparamysql2 = new MySqlCommand(logIn, conexionprograma2);
+            MySqlDataReader lectordedatos2 = comandoparamysql2.ExecuteReader();
             if (txbuserb.Text == "" && txbconb.Text == "" || (txbuserb.Text == "Usuario" && txbconb.Text == "Contraseña"))
             {
                 MessageBox.Show("Los campos no pueden estar vacios");
@@ -99,17 +103,19 @@ private void textBox2_TextChanged(object sender, EventArgs e)
                     new formadmin().Show();
                     this.Hide();
                 }
-                else if (lectordedatos.Read() == true && lectordedatos.GetString("tipo") == "Alm")
+                else if (lectordedatos2.Read() == true && lectordedatos2.GetString("tipo") == "Alm")
                 {
+                    conexionprograma2.Close();
+                    conexionprograma2.Open();
                     string getcedula = "SELECT cedula FROM usuarios WHERE usuario= '" + txbuserb.Text + "' and contraseña= '" + txbconb.Text + "'";
                     MySqlCommand getcedulasql = new MySqlCommand(getcedula, conexionprograma2);
-                    MySqlDataReader lectordedatos2 = comandoparamysql.ExecuteReader();
+                    MySqlDataReader lectordedatos3 = comandoparamysql2.ExecuteReader();
                     string cedula = "";
-                    while (lectordedatos2.Read())
+                    while (lectordedatos3.Read())
                     {
-                        cedula=lectordedatos2.GetString("cedula");
+                        cedula=lectordedatos3.GetString("cedula");
                     }
-
+                    conexionprograma2.Close();
                     new Principal("Alm",cedula).Show();
                     this.Hide();
                 }
