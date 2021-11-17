@@ -37,6 +37,9 @@ namespace CUMple
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvlistas = new System.Windows.Forms.DataGridView();
+            this.Nombrelist = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cedulalist = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Claselist = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnlista = new System.Windows.Forms.Button();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
@@ -63,13 +66,10 @@ namespace CUMple
             this.label1 = new System.Windows.Forms.Label();
             this.panelapoyo = new System.Windows.Forms.Panel();
             this.dgvalumnospresentes = new System.Windows.Forms.DataGridView();
-            this.lblpresente = new System.Windows.Forms.Label();
-            this.Nombrelist = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cedulalist = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Claselist = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombrepres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cedulapres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipopres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblpresente = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvlistas)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -117,6 +117,7 @@ namespace CUMple
             this.dgvlistas.GridColor = System.Drawing.Color.White;
             this.dgvlistas.Location = new System.Drawing.Point(204, 141);
             this.dgvlistas.Name = "dgvlistas";
+            this.dgvlistas.ReadOnly = true;
             this.dgvlistas.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvlistas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -131,6 +132,30 @@ namespace CUMple
             this.dgvlistas.TabIndex = 0;
             this.dgvlistas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvlistas_CellClick);
             this.dgvlistas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvasistencias_CellContentClick);
+            // 
+            // Nombrelist
+            // 
+            this.Nombrelist.DataPropertyName = "nomcompleto";
+            this.Nombrelist.HeaderText = "Nombre";
+            this.Nombrelist.Name = "Nombrelist";
+            this.Nombrelist.ReadOnly = true;
+            this.Nombrelist.Width = 94;
+            // 
+            // Cedulalist
+            // 
+            this.Cedulalist.DataPropertyName = "Cedula";
+            this.Cedulalist.HeaderText = "Cedula";
+            this.Cedulalist.Name = "Cedulalist";
+            this.Cedulalist.ReadOnly = true;
+            this.Cedulalist.Width = 87;
+            // 
+            // Claselist
+            // 
+            this.Claselist.DataPropertyName = "tipos";
+            this.Claselist.HeaderText = "Clase";
+            this.Claselist.Name = "Claselist";
+            this.Claselist.ReadOnly = true;
+            this.Claselist.Width = 76;
             // 
             // panel2
             // 
@@ -273,7 +298,7 @@ namespace CUMple
             this.btntigres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btntigres.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btntigres.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btntigres.Location = new System.Drawing.Point(5, 183);
+            this.btntigres.Location = new System.Drawing.Point(6, 183);
             this.btntigres.Name = "btntigres";
             this.btntigres.Size = new System.Drawing.Size(159, 44);
             this.btntigres.TabIndex = 23;
@@ -335,6 +360,7 @@ namespace CUMple
             this.btnvolverpruebaconexion.TabIndex = 10;
             this.btnvolverpruebaconexion.Text = "Volver";
             this.btnvolverpruebaconexion.UseVisualStyleBackColor = false;
+            this.btnvolverpruebaconexion.Click += new System.EventHandler(this.btnvolverpruebaconexion_Click);
             // 
             // btncargardatos
             // 
@@ -492,6 +518,7 @@ namespace CUMple
             this.dgvalumnospresentes.GridColor = System.Drawing.Color.White;
             this.dgvalumnospresentes.Location = new System.Drawing.Point(661, 141);
             this.dgvalumnospresentes.Name = "dgvalumnospresentes";
+            this.dgvalumnospresentes.ReadOnly = true;
             this.dgvalumnospresentes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvalumnospresentes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -505,46 +532,12 @@ namespace CUMple
             this.dgvalumnospresentes.Size = new System.Drawing.Size(299, 501);
             this.dgvalumnospresentes.TabIndex = 20;
             // 
-            // lblpresente
-            // 
-            this.lblpresente.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblpresente.AutoSize = true;
-            this.lblpresente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpresente.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblpresente.Location = new System.Drawing.Point(724, 83);
-            this.lblpresente.Name = "lblpresente";
-            this.lblpresente.Size = new System.Drawing.Size(165, 18);
-            this.lblpresente.TabIndex = 21;
-            this.lblpresente.Text = "Alumnos presentes";
-            // 
-            // Nombrelist
-            // 
-            this.Nombrelist.DataPropertyName = "nomcompleto";
-            this.Nombrelist.HeaderText = "Nombre";
-            this.Nombrelist.Name = "Nombrelist";
-            this.Nombrelist.ReadOnly = true;
-            this.Nombrelist.Width = 94;
-            // 
-            // Cedulalist
-            // 
-            this.Cedulalist.DataPropertyName = "Cedula";
-            this.Cedulalist.HeaderText = "Cedula";
-            this.Cedulalist.Name = "Cedulalist";
-            this.Cedulalist.Width = 87;
-            // 
-            // Claselist
-            // 
-            this.Claselist.DataPropertyName = "tipos";
-            this.Claselist.HeaderText = "Clase";
-            this.Claselist.Name = "Claselist";
-            this.Claselist.ReadOnly = true;
-            this.Claselist.Width = 76;
-            // 
             // Nombrepres
             // 
             this.Nombrepres.DataPropertyName = "nomcompleto";
             this.Nombrepres.HeaderText = "Nombre";
             this.Nombrepres.Name = "Nombrepres";
+            this.Nombrepres.ReadOnly = true;
             this.Nombrepres.Width = 94;
             // 
             // Cedulapres
@@ -561,7 +554,20 @@ namespace CUMple
             this.Tipopres.DataPropertyName = "tipos";
             this.Tipopres.HeaderText = "Clase";
             this.Tipopres.Name = "Tipopres";
+            this.Tipopres.ReadOnly = true;
             this.Tipopres.Width = 76;
+            // 
+            // lblpresente
+            // 
+            this.lblpresente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblpresente.AutoSize = true;
+            this.lblpresente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpresente.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblpresente.Location = new System.Drawing.Point(724, 83);
+            this.lblpresente.Name = "lblpresente";
+            this.lblpresente.Size = new System.Drawing.Size(165, 18);
+            this.lblpresente.TabIndex = 21;
+            this.lblpresente.Text = "Alumnos presentes";
             // 
             // listaasistencias
             // 

@@ -100,7 +100,7 @@ namespace CUMple
         { 
             
             conexionprograma.Open();
-            string comando = "insert into discipulos values ('" + celular + "', '"+ cedula +"', '" + fech_ingreso + "', '" + nombrecompleto + "', " + krav + ", " + taekwondo + ", '" + profesion + "', '" + fech_nac + "', '" + email + "');";
+            string comando = "insert into discipulos values ('" + celular + "', '"+ cedula +"', '" + fech_ingreso + "', '" + nombrecompleto + "', " + krav + ", " + taekwondo + ", '" + profesion + "', '" + fech_nac + "', '" + email + "','Blanco');";
             MySqlCommand comandoeditarusuario = new MySqlCommand(comando, conexionprograma);
             try
             {

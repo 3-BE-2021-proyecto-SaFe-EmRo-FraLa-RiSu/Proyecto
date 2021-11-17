@@ -34,23 +34,26 @@ namespace CUMple
             MySqlDataReader lectordedatoscinturones;
             MySqlCommand comandoleerrangos = new MySqlCommand(rangos, conexionprograma2);
             MySqlDataReader lectorderangos;
+            Graficadecinturones.Series["rango"].Points.Clear();
+            conexionprograma.Open();
+            conexionprograma2.Open();
             try
             {            
-                conexionprograma.Open();
-                conexionprograma2.Open();
+              
                 lectordedatoscinturones = comandoleeralumnos.ExecuteReader();
                 lectorderangos = comandoleerrangos.ExecuteReader();
                 while (lectordedatoscinturones.Read() && lectorderangos.Read())
                 {
-                    Graficadecinturones.Series["rango"].Points.AddXY(lectorderangos.GetString("rango"), lectordedatoscinturones.GetInt32("Alumnos"));
+                    Graficadecinturones.Series["rango"].Points.AddXY(lectorderangos.GetString("nuevo_rango"), lectordedatoscinturones.GetInt32("COUNT(*)"));
                 }
-                conexionprograma.Close();
-                conexionprograma2.Close();
+               
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            conexionprograma.Close();
+            conexionprograma2.Close();
         }
         private void Graficascinturones_Load(object sender, EventArgs e)
         {
@@ -84,10 +87,22 @@ namespace CUMple
             }
             else
             {
+                
                 creargrafica("SELECT nuevo_rango FROM rango_obtenido WHERE idexamen=(SELECT idexamen from examenes WHERE fecha<='" + Fechadatatimer.Text + "' LIMIT 1) GROUP BY nuevo_rango", "SELECT COUNT(*) FROM rango_obtenido WHERE idexamen=(SELECT idexamen from examenes WHERE fecha<='" + Fechadatatimer.Text + "' LIMIT 1) GROUP BY nuevo_rango");
             }
             
             
+        }
+
+        private void btnvolver_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnvolveruserprofile_Click(object sender, EventArgs e)
+        {
+            new Principal(true).Show();
+            this.Dispose();
         }
     }
 } 
