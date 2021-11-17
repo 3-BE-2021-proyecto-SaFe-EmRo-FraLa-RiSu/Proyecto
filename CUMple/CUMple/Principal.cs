@@ -29,12 +29,9 @@ namespace CUMple
                 btnvolver.Visible = false;
                 btncinturones.Visible = false;
                 btnentrarexamenes.Visible = false;
-                btnlista.Visible = false;
-                botingprog.Visible = false;
-                flowLayoutPanel3.Visible = false;
-                panelapoyo5.Visible = false;
+                btnlista.Visible = false;               
                 flowLayoutPanel2.Visible = false;
-                panelapoyo5.Visible = false;
+              
             }
 
          
@@ -56,6 +53,9 @@ namespace CUMple
                 btncinturones.Visible = false;
                 btnentrarexamenes.Visible = false;
                 btnlista.Visible = false;
+                botingprog.Visible = false;
+                panelapoyo5.Visible = false;
+                flowLayoutPanel2.Visible = false;
             }
 
             cedulaprin = cedula;  
@@ -209,6 +209,11 @@ namespace CUMple
         private void btnverasistenciaspersonales_Click(object sender, EventArgs e)
         {
             new Misasistencias(cedulaprin).Show();
+        }
+
+        private void panelapoyo4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
