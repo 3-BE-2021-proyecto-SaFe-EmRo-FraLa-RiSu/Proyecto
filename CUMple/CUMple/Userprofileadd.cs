@@ -22,6 +22,19 @@ namespace CUMple
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
+            conexionprograma.Open();
+            string comandocomparardiscipulos = "select cedula from discipulos;";
+            MySqlCommand comandoparacomparardiscipulos = new MySqlCommand(comandocomparardiscipulos, conexionprograma);
+            MySqlDataReader lector = comandoparacomparardiscipulos.ExecuteReader();
+            while (lector.Read())
+            {
+                if (lector.GetString("cedula") == mskcedula.Text)
+                {
+                    MessageBox.Show("Ya hay un usuario existente con esa cédula", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    conexionprograma.Close();
+                    return;
+                }
+            }
             string aviso = "Es necesario rellenar los siguientes campos:";
             int taekwondobool, krav_magabool, camposincompletos = 0;
             if (chbtaekwondo.Checked == true) {

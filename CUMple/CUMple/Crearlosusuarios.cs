@@ -29,14 +29,30 @@ namespace CUMple
 
         private void btcrearusuario_Click(object sender, EventArgs e)
         {
-          if (txbusucre.Text=="" || txtbcontra.Text=="" || txbcontraconf.Text == "")
+            if (txbusucre.Text=="" || txtbcontra.Text=="" || txbcontraconf.Text == "")
             {
                 MessageBox.Show("Ningún campo puede estar vacio");
 
             }
-          else { 
-            if (chkboxadmin.Checked && txbcontraconf.Text.Equals(txtbcontra.Text))
+            else 
             {
+                conexionprograma.Open();
+                string comandocompararusuarios = "select usuario from usuarios;";
+                MySqlCommand comandoparacompararusuarios = new MySqlCommand(comandocompararusuarios, conexionprograma);
+                MySqlDataReader lector = comandoparacompararusuarios.ExecuteReader();
+                while (lector.Read())
+                {
+                    if (lector.GetString("usuario")== txbusucre.Text)
+                    {
+                        MessageBox.Show("El usuario ya existe en la base de datos","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        conexionprograma.Close();
+                        return;
+                    }
+                }
+                conexionprograma.Close();
+
+                if (chkboxadmin.Checked && txbcontraconf.Text.Equals(txtbcontra.Text))
+                {
                
                 try
                 {
@@ -55,20 +71,19 @@ namespace CUMple
                 catch (Exception Ex)
                 {
                     MessageBox.Show(Ex.Message);
-                    throw;
                 }
                    
-            }
+                }
                 else if(chkboxadmin.Checked && txbcontraconf.Text!=txtbcontra.Text)
                 {
                     MessageBox.Show("Las contraseñas no coinciden");
                 }
                
-            else if (chkboxadmin.Checked==false && txbcontraconf.Text.Equals(txtbcontra.Text))
+                else if (chkboxadmin.Checked==false && txbcontraconf.Text.Equals(txtbcontra.Text))
                 { 
            
                 try
-            {
+                {
                     conexionprograma.Open();
                     string comandocrearusuariostring = "insert into usuarios(usuario,contraseña,tipo)values('" + txbusucre.Text + "','" + txtbcontra.Text + "','Alm');";
                     MySqlCommand comandoparacrearusuarios = new MySqlCommand(comandocrearusuariostring, conexionprograma);
@@ -80,14 +95,13 @@ namespace CUMple
                         txbcontraconf.Text = "";
                         conexionprograma.Close();
                 }
-            catch (Exception Ex)
-            {
-                MessageBox.Show(Ex.Message);
-                throw;
-            }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
 
 
-            }
+                }
                 else if (chkboxadmin.Checked==false && txbcontraconf.Text != txtbcontra.Text)
                 {
                     MessageBox.Show("Las contraseñas no coinciden");

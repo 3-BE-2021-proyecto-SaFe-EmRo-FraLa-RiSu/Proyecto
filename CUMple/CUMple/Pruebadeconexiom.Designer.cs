@@ -29,10 +29,10 @@ namespace CUMple
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pruebadeconexiom));
             this.Graficadealumnos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cmbmeses = new System.Windows.Forms.ComboBox();
@@ -63,45 +63,45 @@ namespace CUMple
             this.Graficadealumnos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Graficadealumnos.BorderlineColor = System.Drawing.Color.Transparent;
             this.Graficadealumnos.BorderSkin.BorderColor = System.Drawing.Color.White;
-            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea1.AxisX.IsLabelAutoFit = false;
-            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.IsLabelAutoFit = false;
-            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.White;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            chartArea1.BorderColor = System.Drawing.Color.White;
-            chartArea1.Name = "ChartArea1";
-            this.Graficadealumnos.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            legend1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.ForeColor = System.Drawing.Color.White;
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            this.Graficadealumnos.Legends.Add(legend1);
-            this.Graficadealumnos.Location = new System.Drawing.Point(450, 111);
+            chartArea2.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea2.AxisX.IsLabelAutoFit = false;
+            chartArea2.AxisX.LabelStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisY.IsLabelAutoFit = false;
+            chartArea2.AxisY.LabelStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisY.TitleForeColor = System.Drawing.Color.White;
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            chartArea2.BorderColor = System.Drawing.Color.White;
+            chartArea2.Name = "ChartArea1";
+            this.Graficadealumnos.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            legend2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.ForeColor = System.Drawing.Color.White;
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            this.Graficadealumnos.Legends.Add(legend2);
+            this.Graficadealumnos.Location = new System.Drawing.Point(433, 82);
             this.Graficadealumnos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Graficadealumnos.Name = "Graficadealumnos";
             this.Graficadealumnos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.ChartArea = "ChartArea1";
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(202)))), ((int)(((byte)(24)))));
-            series1.IsValueShownAsLabel = true;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.Name = "Asistencias";
-            series2.ChartArea = "ChartArea1";
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
-            series2.LabelForeColor = System.Drawing.Color.White;
-            series2.Legend = "Legend1";
-            series2.Name = "Faltas";
-            this.Graficadealumnos.Series.Add(series1);
-            this.Graficadealumnos.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(202)))), ((int)(((byte)(24)))));
+            series3.IsValueShownAsLabel = true;
+            series3.LabelForeColor = System.Drawing.Color.White;
+            series3.Legend = "Legend1";
+            series3.Name = "Asistencias";
+            series4.ChartArea = "ChartArea1";
+            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
+            series4.LabelForeColor = System.Drawing.Color.White;
+            series4.Legend = "Legend1";
+            series4.Name = "Faltas";
+            this.Graficadealumnos.Series.Add(series3);
+            this.Graficadealumnos.Series.Add(series4);
             this.Graficadealumnos.Size = new System.Drawing.Size(1182, 771);
             this.Graficadealumnos.TabIndex = 0;
             this.Graficadealumnos.Text = "chart1";
@@ -129,7 +129,7 @@ namespace CUMple
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.cmbmeses.Location = new System.Drawing.Point(288, 111);
+            this.cmbmeses.Location = new System.Drawing.Point(288, 155);
             this.cmbmeses.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbmeses.Name = "cmbmeses";
             this.cmbmeses.Size = new System.Drawing.Size(169, 37);
@@ -145,7 +145,7 @@ namespace CUMple
             this.cmbAño.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAño.ForeColor = System.Drawing.Color.White;
             this.cmbAño.FormattingEnabled = true;
-            this.cmbAño.Location = new System.Drawing.Point(288, 292);
+            this.cmbAño.Location = new System.Drawing.Point(288, 244);
             this.cmbAño.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbAño.Name = "cmbAño";
             this.cmbAño.Size = new System.Drawing.Size(169, 37);
@@ -160,10 +160,10 @@ namespace CUMple
             this.btncargardatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncargardatos.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncargardatos.ForeColor = System.Drawing.SystemColors.Window;
-            this.btncargardatos.Location = new System.Drawing.Point(4, 126);
+            this.btncargardatos.Location = new System.Drawing.Point(4, 84);
             this.btncargardatos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btncargardatos.Name = "btncargardatos";
-            this.btncargardatos.Size = new System.Drawing.Size(248, 68);
+            this.btncargardatos.Size = new System.Drawing.Size(244, 68);
             this.btncargardatos.TabIndex = 3;
             this.btncargardatos.Text = "Cargar";
             this.btncargardatos.UseVisualStyleBackColor = true;
@@ -177,10 +177,10 @@ namespace CUMple
             this.btnvolverpruebaconexion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnvolverpruebaconexion.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolverpruebaconexion.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolverpruebaconexion.Location = new System.Drawing.Point(4, 305);
+            this.btnvolverpruebaconexion.Location = new System.Drawing.Point(4, 219);
             this.btnvolverpruebaconexion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnvolverpruebaconexion.Name = "btnvolverpruebaconexion";
-            this.btnvolverpruebaconexion.Size = new System.Drawing.Size(248, 65);
+            this.btnvolverpruebaconexion.Size = new System.Drawing.Size(244, 65);
             this.btnvolverpruebaconexion.TabIndex = 4;
             this.btnvolverpruebaconexion.Text = "Volver";
             this.btnvolverpruebaconexion.UseVisualStyleBackColor = false;
@@ -279,16 +279,16 @@ namespace CUMple
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 305);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 219);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 68);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(10, 65);
             this.flowLayoutPanel1.TabIndex = 22;
             // 
             // panelapoyo1
             // 
             this.panelapoyo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo1.Location = new System.Drawing.Point(0, 126);
+            this.panelapoyo1.Location = new System.Drawing.Point(0, 84);
             this.panelapoyo1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelapoyo1.Name = "panelapoyo1";
             this.panelapoyo1.Size = new System.Drawing.Size(8, 68);

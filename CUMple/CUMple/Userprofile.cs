@@ -16,6 +16,10 @@ namespace CUMple
         public Userprofile(string nombrebuscado, int index)
         {
             InitializeComponent();
+            cargarcmb(index);
+        }
+        public void cargarcmb(int index) 
+        {
             MySqlDataReader lectordedatos;
             string comand = "Select nomcompleto from discipulos;";
             conexionprograma.Open();
@@ -28,8 +32,10 @@ namespace CUMple
             conexionprograma.Close();
             cmbdiscipuloseleccionado.SelectedIndex = index;
         }
+
      
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
+        MySqlConnection conexionprograma2 = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
         public void editarusuario(string columna,string datonuevo, string datoacambiar, string cedula)
         {      
             conexionprograma.Open();
@@ -55,7 +61,7 @@ namespace CUMple
         
         public string mostrarlabel(string agarrardato)
         {
-          
+            
             conexionprograma.Open();
             string dato;
             string mostrardiscipulos= "select * from discipulos where nomcompleto='"+ cmbdiscipuloseleccionado.SelectedItem.ToString() +"'";
@@ -113,8 +119,19 @@ namespace CUMple
 
         private void btnedit_Click(object sender, EventArgs e)
         {
-            //if ( hay un usuario seleccionado   ) { pedir que se seleccione uno }
-            //else {
+            conexionprograma.Open();
+            string comandocomparardiscipulos = "select cedula from discipulos;";
+            MySqlCommand comandoparacomparardiscipulos = new MySqlCommand(comandocomparardiscipulos, conexionprograma);
+            MySqlDataReader lector = comandoparacomparardiscipulos.ExecuteReader();
+            while (lector.Read())
+            {
+                if (lector.GetString("cedula") == mskcedula.Text)
+                {
+                    MessageBox.Show("Ya hay un usuario existente con esa cédula", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    conexionprograma.Close();
+                    return;
+                }
+            }
             if (txbprofedit.Text != mostrarlabel("profesiones")) 
             {
                 editarusuario("profesiones", txbprofedit.Text, mostrarlabel("profesiones"), mostrarlabel("cedula"));
@@ -138,8 +155,7 @@ namespace CUMple
             if (txbfecdenacedit.Text != mostrarlabel("fecha_de_nac"))
             {
                 editarusuario("fecha_de_nac", txbfecdenacedit.Text, mostrarlabel("fecha_de_nac"), mostrarlabel("cedula"));
-            }       
-            //}       
+            }      
         }
 
         private void lblmostnom_Click(object sender, EventArgs e)
@@ -264,9 +280,9 @@ namespace CUMple
 
         private void mskcedula_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (((e.KeyChar < 65 && e.KeyChar != 8) || (e.KeyChar > 90 && e.KeyChar < 97) || (e.KeyChar > 122 && e.KeyChar != 130 && e.KeyChar < 160) || e.KeyChar > 165) && e.KeyChar != Convert.ToChar(Keys.Space))
+            if (e.KeyChar < 8 || (e.KeyChar > 8 && e.KeyChar < 48) || e.KeyChar > 57)
             {
-                MessageBox.Show("Solo letras permitidas", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo números permitidos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
@@ -354,7 +370,21 @@ namespace CUMple
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            conexionprograma2.Open();
+            string comandoeliminarusuario = "delete from discipulos where cedula = '"+mostrarlabel("cedula").ToString()+"';";
+            MySqlCommand comandoparaeliminarusuario = new MySqlCommand(comandoeliminarusuario, conexionprograma2);
+            
+            if (comandoparaeliminarusuario.ExecuteNonQuery() != 0)
+            {
+                MessageBox.Show("El usuario fue eliminado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cmbdiscipuloseleccionado.Items.Clear();
+                cargarcmb(1);
+            }
+            else
+            {
+                MessageBox.Show("El usuario a eliminar no concuerda con ningun usuario existente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            conexionprograma2.Close();
         }
 
         private void mskcelular_KeyPress(object sender, KeyPressEventArgs e)
