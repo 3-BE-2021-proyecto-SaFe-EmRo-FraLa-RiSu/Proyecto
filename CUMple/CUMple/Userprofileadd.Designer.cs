@@ -77,7 +77,7 @@ namespace CUMple
             this.btnagregar.Location = new System.Drawing.Point(0, 162);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(248, 68);
-            this.btnagregar.TabIndex = 0;
+            this.btnagregar.TabIndex = 9;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = false;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
@@ -92,7 +92,7 @@ namespace CUMple
             this.txbemail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbemail.Name = "txbemail";
             this.txbemail.Size = new System.Drawing.Size(298, 30);
-            this.txbemail.TabIndex = 30;
+            this.txbemail.TabIndex = 8;
             this.txbemail.Text = "correo@ejemplo.com";
             this.txbemail.TextChanged += new System.EventHandler(this.txbemail_TextChanged);
             this.txbemail.Enter += new System.EventHandler(this.txbemail_Enter);
@@ -132,7 +132,7 @@ namespace CUMple
             this.txbnombrecompleto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbnombrecompleto.Name = "txbnombrecompleto";
             this.txbnombrecompleto.Size = new System.Drawing.Size(218, 30);
-            this.txbnombrecompleto.TabIndex = 26;
+            this.txbnombrecompleto.TabIndex = 1;
             this.txbnombrecompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbnombrecompleto_KeyPress);
             // 
             // lblcedula
@@ -169,7 +169,7 @@ namespace CUMple
             this.txbprofesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbprofesion.Name = "txbprofesion";
             this.txbprofesion.Size = new System.Drawing.Size(298, 30);
-            this.txbprofesion.TabIndex = 34;
+            this.txbprofesion.TabIndex = 6;
             this.txbprofesion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbprofesion_KeyPress);
             // 
             // lblfechnac
@@ -216,7 +216,7 @@ namespace CUMple
             this.chbtaekwondo.Location = new System.Drawing.Point(548, 409);
             this.chbtaekwondo.Name = "chbtaekwondo";
             this.chbtaekwondo.Size = new System.Drawing.Size(173, 33);
-            this.chbtaekwondo.TabIndex = 36;
+            this.chbtaekwondo.TabIndex = 4;
             this.chbtaekwondo.Text = "Taekwondo";
             this.chbtaekwondo.UseVisualStyleBackColor = true;
             // 
@@ -228,7 +228,7 @@ namespace CUMple
             this.chbkrav.Location = new System.Drawing.Point(548, 452);
             this.chbkrav.Name = "chbkrav";
             this.chbkrav.Size = new System.Drawing.Size(165, 33);
-            this.chbkrav.TabIndex = 37;
+            this.chbkrav.TabIndex = 5;
             this.chbkrav.Text = "Krav Maga";
             this.chbkrav.UseVisualStyleBackColor = true;
             // 
@@ -243,7 +243,7 @@ namespace CUMple
             this.btnvolveruserprofile.Location = new System.Drawing.Point(3, 306);
             this.btnvolveruserprofile.Name = "btnvolveruserprofile";
             this.btnvolveruserprofile.Size = new System.Drawing.Size(248, 68);
-            this.btnvolveruserprofile.TabIndex = 41;
+            this.btnvolveruserprofile.TabIndex = 10;
             this.btnvolveruserprofile.Text = "Volver";
             this.btnvolveruserprofile.UseVisualStyleBackColor = false;
             this.btnvolveruserprofile.Click += new System.EventHandler(this.btnvolveruserprofile_Click);
@@ -256,7 +256,7 @@ namespace CUMple
             this.dtpfec_nac.Location = new System.Drawing.Point(1076, 257);
             this.dtpfec_nac.Name = "dtpfec_nac";
             this.dtpfec_nac.Size = new System.Drawing.Size(184, 37);
-            this.dtpfec_nac.TabIndex = 42;
+            this.dtpfec_nac.TabIndex = 7;
             // 
             // lblfechadeingreso
             // 
@@ -294,7 +294,7 @@ namespace CUMple
             this.mskcedula.Mask = "0000000-0";
             this.mskcedula.Name = "mskcedula";
             this.mskcedula.Size = new System.Drawing.Size(147, 30);
-            this.mskcedula.TabIndex = 46;
+            this.mskcedula.TabIndex = 2;
             this.mskcedula.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskcedula_MaskInputRejected);
             this.mskcedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskcedula_KeyPress);
             // 
@@ -345,7 +345,7 @@ namespace CUMple
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1474, 54);
+            this.panel2.Size = new System.Drawing.Size(1635, 54);
             this.panel2.TabIndex = 48;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
@@ -354,7 +354,7 @@ namespace CUMple
             this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(1353, 5);
+            this.maximizar.Location = new System.Drawing.Point(1514, 5);
             this.maximizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.maximizar.Name = "maximizar";
             this.maximizar.Size = new System.Drawing.Size(56, 46);
@@ -368,7 +368,7 @@ namespace CUMple
             this.minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(1288, 3);
+            this.minimizar.Location = new System.Drawing.Point(1449, 3);
             this.minimizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.minimizar.Name = "minimizar";
             this.minimizar.Size = new System.Drawing.Size(56, 46);
@@ -382,7 +382,7 @@ namespace CUMple
             this.cerrarclic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(1418, 3);
+            this.cerrarclic.Location = new System.Drawing.Point(1579, 3);
             this.cerrarclic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cerrarclic.Name = "cerrarclic";
             this.cerrarclic.Size = new System.Drawing.Size(56, 46);
@@ -396,7 +396,7 @@ namespace CUMple
             this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(1353, 3);
+            this.restaurar.Location = new System.Drawing.Point(1514, 3);
             this.restaurar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.restaurar.Name = "restaurar";
             this.restaurar.Size = new System.Drawing.Size(56, 46);
@@ -443,8 +443,8 @@ namespace CUMple
             this.mskcelular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mskcelular.Mask = "000-000-000";
             this.mskcelular.Name = "mskcelular";
-            this.mskcelular.Size = new System.Drawing.Size(147, 30);
-            this.mskcelular.TabIndex = 54;
+            this.mskcelular.Size = new System.Drawing.Size(172, 30);
+            this.mskcelular.TabIndex = 3;
             this.mskcelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskcelular_KeyPress);
             // 
             // Userprofileadd
@@ -452,7 +452,7 @@ namespace CUMple
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(1474, 755);
+            this.ClientSize = new System.Drawing.Size(1635, 755);
             this.Controls.Add(this.mskcelular);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);

@@ -54,11 +54,6 @@ namespace CUMple
                 aviso = aviso + "\n-Disciplina";
                 camposincompletos++;
             }
-            if (txbprofesion.Text == "")
-            {
-                aviso = aviso + "\n-Profesion";
-                camposincompletos++;
-            }
             if (dtpfec_nac.ToString() == dtpfechadeingreso.ToString())
             {
                 aviso = aviso + "\n-Fecha de nacimiento";
@@ -69,7 +64,11 @@ namespace CUMple
                 aviso = aviso + "\n-Email";
                 camposincompletos++;
             }
-          
+            if (txbprofesion.Text == "" && camposincompletos == 0)
+            {
+                txbprofesion.Text = "Ninguna";
+                MessageBox.Show("Se agregó como profesión a ´Ninguna´. \nSi desea cambiarlo debe hacerlo en el apartado de editar discipulo","Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                
+            }
 
             if (camposincompletos == 0)
             {
@@ -112,6 +111,15 @@ namespace CUMple
             }
             MessageBox.Show("El usuario se ha creado correctamente");
             conexionprograma.Close();
+            txbnombrecompleto.Text = "";
+            mskcedula.Text = "";
+            mskcelular.Text = "";
+            txbprofesion.Text = "";
+            dtpfec_nac.Text = dtpfechadeingreso.Text;
+            txbemail.Text = "correo@ejemplo.com";
+            txbemail.ForeColor = Color.Gray;
+            chbtaekwondo.Checked = false;
+            chbkrav.Checked = false;
         }
         
         
