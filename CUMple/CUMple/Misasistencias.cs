@@ -21,7 +21,7 @@ namespace CUMple
 
         private void btnvolverpruebaconexion_Click(object sender, EventArgs e)
         {
-
+            new Principal("Alm", cedulaporagarrar).Show();
         }
 
         private void btncargardatos_Click(object sender, EventArgs e)
