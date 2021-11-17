@@ -83,7 +83,7 @@ namespace CUMple
 
                 if (adultos == true)
                 {
-                    string comando = "SELECT nomcompleto from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 and nomcompleto like '%" + txbbucar.Text + "%' group by cedula";
+                    string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 and nomcompleto like '%" + txbbucar.Text + "%' group by cedula";
                     MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
                     comandosql.Fill(filas);
                     dgvlistas.Refresh();
@@ -333,23 +333,43 @@ namespace CUMple
                 DataGridViewRow filas = dgvlistas.Rows[e.RowIndex];
                 for (int i = 0; i < dgvalumnospresentes.RowCount; i++)
                 {
-                    string nombre = filas.Cells["Nombre"].Value.ToString();
-                    if (dgvalumnospresentes.Rows[i].Cells["colNombre"].Value.ToString() == nombre)
+                    string cedula = filas.Cells["cedula"].Value.ToString();
+                    if (dgvalumnospresentes.Rows[i].Cells["cedula"].Value.ToString() == cedula)
                     {
                         MessageBox.Show("Este alumno ya esta ingresado.");
                         return;
                     }
 
                 }
-                dgvalumnospresentes.Rows.Add(filas.Cells["Nombre"].Value.ToString());
+                dgvalumnospresentes.Rows.Add(filas.Cells["Nombre"].Value.ToString(),filas.Cells["cedula"].Value.ToString(), filas.Cells["tipo"].Value.ToString());
               
             }
            
         }
 
-            private void dgvasistencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnlista_Click(object sender, EventArgs e)
         {
 
+            DateTime myDateTime = DateTime.Now;
+            string fechaparasql = myDateTime.ToString("yyyy-MM-dd");
+            if (adultos==true)
+            {
+                for (int i = 0; i < dgvalumnospresentes.RowCount; i++)
+                {
+                    string pasarlista = "insert into van values(1,'" + fechaparasql + "','"+dgvalumnospresentes.Rows[i].Cells["cedula"]+"',1)";
+                    MySqlCommand comandoparamysql = new MySqlCommand(fechaparasql,conexionbd);
+                    comandoparamysql.ExecuteNonQuery();
+
+                }
+            }
+           
+        }
+
+        private void dgvasistencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+            
+           
         }
 
         private void btnadulto(object sender, EventArgs e)
@@ -360,7 +380,7 @@ namespace CUMple
             adultos = true;
             tigres = false;
             avanzados = false;
-            string comando = "SELECT nomcompleto from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 group by cedula";
+            string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 group by cedula";
             MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
             comandosql.Fill(filas);
             dgvlistas.Refresh();

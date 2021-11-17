@@ -61,8 +61,6 @@ namespace CUMple
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.lblrango = new System.Windows.Forms.Label();
-            this.cbrango = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
@@ -209,7 +207,7 @@ namespace CUMple
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(200, 310);
+            this.label5.Location = new System.Drawing.Point(200, 270);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 18);
             this.label5.TabIndex = 35;
@@ -220,7 +218,7 @@ namespace CUMple
             this.chbtaekwondo.AutoSize = true;
             this.chbtaekwondo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbtaekwondo.ForeColor = System.Drawing.Color.White;
-            this.chbtaekwondo.Location = new System.Drawing.Point(365, 306);
+            this.chbtaekwondo.Location = new System.Drawing.Point(365, 266);
             this.chbtaekwondo.Margin = new System.Windows.Forms.Padding(2);
             this.chbtaekwondo.Name = "chbtaekwondo";
             this.chbtaekwondo.Size = new System.Drawing.Size(117, 22);
@@ -233,7 +231,7 @@ namespace CUMple
             this.chbkrav.AutoSize = true;
             this.chbkrav.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbkrav.ForeColor = System.Drawing.Color.White;
-            this.chbkrav.Location = new System.Drawing.Point(365, 334);
+            this.chbkrav.Location = new System.Drawing.Point(365, 294);
             this.chbkrav.Margin = new System.Windows.Forms.Padding(2);
             this.chbkrav.Name = "chbkrav";
             this.chbkrav.Size = new System.Drawing.Size(112, 22);
@@ -440,64 +438,12 @@ namespace CUMple
             this.panel6.Size = new System.Drawing.Size(200, 1);
             this.panel6.TabIndex = 53;
             // 
-            // lblrango
-            // 
-            this.lblrango.AutoSize = true;
-            this.lblrango.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblrango.ForeColor = System.Drawing.Color.White;
-            this.lblrango.Location = new System.Drawing.Point(206, 265);
-            this.lblrango.Name = "lblrango";
-            this.lblrango.Size = new System.Drawing.Size(66, 18);
-            this.lblrango.TabIndex = 29;
-            this.lblrango.Text = "Rango:";
-            // 
-            // cbrango
-            // 
-            this.cbrango.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbrango.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.cbrango.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbrango.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbrango.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbrango.ForeColor = System.Drawing.Color.White;
-            this.cbrango.FormattingEnabled = true;
-            this.cbrango.Items.AddRange(new object[] {
-            "Blanco",
-            "Blanco confirmado",
-            "Naranja",
-            "Naranja confirmado",
-            "Amarillo",
-            "Amarillo confirmado",
-            "Camuflado",
-            "Camuflado confirmado",
-            "Verde",
-            "Verde confirmado",
-            "Violeta",
-            "Violeta confirmado",
-            "Marrón",
-            "Marrón cornfirmado",
-            "Rojo ",
-            "Rojo confirmado",
-            "Rojo negro",
-            "Rojo negro confirmado",
-            "Negro",
-            "Negro confirmado",
-            "1mer DAN",
-            "2ndo DAN",
-            "3er DAN",
-            "4to DAN"});
-            this.cbrango.Location = new System.Drawing.Point(365, 262);
-            this.cbrango.Margin = new System.Windows.Forms.Padding(2);
-            this.cbrango.Name = "cbrango";
-            this.cbrango.Size = new System.Drawing.Size(139, 26);
-            this.cbrango.TabIndex = 54;
-            // 
             // Userprofileadd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(983, 491);
-            this.Controls.Add(this.cbrango);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -516,7 +462,6 @@ namespace CUMple
             this.Controls.Add(this.lblnombrecompleto);
             this.Controls.Add(this.txbcelular);
             this.Controls.Add(this.txbemail);
-            this.Controls.Add(this.lblrango);
             this.Controls.Add(this.lblcelular);
             this.Controls.Add(this.lblemail);
             this.Controls.Add(this.txbnombrecompleto);
@@ -573,7 +518,5 @@ namespace CUMple
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label lblrango;
-        private System.Windows.Forms.ComboBox cbrango;
     }
 }

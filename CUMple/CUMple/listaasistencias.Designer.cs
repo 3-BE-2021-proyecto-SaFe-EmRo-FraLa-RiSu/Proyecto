@@ -38,7 +38,9 @@ namespace CUMple
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvlistas = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnlista = new System.Windows.Forms.Button();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnasistencia = new System.Windows.Forms.Button();
@@ -61,11 +63,13 @@ namespace CUMple
             this.label1 = new System.Windows.Forms.Label();
             this.panelapoyo = new System.Windows.Forms.Panel();
             this.dgvalumnospresentes = new System.Windows.Forms.DataGridView();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblpresente = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cedulax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Clase = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvlistas)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -98,6 +102,7 @@ namespace CUMple
             this.dgvlistas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvlistas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
+            this.cedulax,
             this.Clase});
             this.dgvlistas.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -130,7 +135,9 @@ namespace CUMple
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.panel2.Controls.Add(this.btnlista);
             this.panel2.Controls.Add(this.flowLayoutPanel4);
+            this.panel2.Controls.Add(this.flowLayoutPanel5);
             this.panel2.Controls.Add(this.flowLayoutPanel3);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnasistencia);
@@ -153,18 +160,42 @@ namespace CUMple
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
+            // btnlista
+            // 
+            this.btnlista.BackColor = System.Drawing.Color.Transparent;
+            this.btnlista.FlatAppearance.BorderSize = 0;
+            this.btnlista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.btnlista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlista.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnlista.Location = new System.Drawing.Point(6, 524);
+            this.btnlista.Name = "btnlista";
+            this.btnlista.Size = new System.Drawing.Size(159, 44);
+            this.btnlista.TabIndex = 31;
+            this.btnlista.Text = "Pasar lista";
+            this.btnlista.UseVisualStyleBackColor = false;
+            this.btnlista.Click += new System.EventHandler(this.btnlista_Click);
+            // 
             // flowLayoutPanel4
             // 
             this.flowLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(1, 415);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 349);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(5, 44);
             this.flowLayoutPanel4.TabIndex = 30;
             // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(1, 524);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(5, 44);
+            this.flowLayoutPanel5.TabIndex = 30;
+            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 514);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 435);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(5, 44);
             this.flowLayoutPanel3.TabIndex = 30;
@@ -177,7 +208,7 @@ namespace CUMple
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(5, 415);
+            this.button1.Location = new System.Drawing.Point(4, 349);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(158, 44);
             this.button1.TabIndex = 29;
@@ -193,7 +224,7 @@ namespace CUMple
             this.btnasistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnasistencia.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnasistencia.ForeColor = System.Drawing.Color.Transparent;
-            this.btnasistencia.Location = new System.Drawing.Point(4, 514);
+            this.btnasistencia.Location = new System.Drawing.Point(4, 435);
             this.btnasistencia.Name = "btnasistencia";
             this.btnasistencia.Size = new System.Drawing.Size(161, 44);
             this.btnasistencia.TabIndex = 29;
@@ -209,7 +240,7 @@ namespace CUMple
             this.btnavanzados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnavanzados.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnavanzados.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnavanzados.Location = new System.Drawing.Point(5, 318);
+            this.btnavanzados.Location = new System.Drawing.Point(5, 267);
             this.btnavanzados.Name = "btnavanzados";
             this.btnavanzados.Size = new System.Drawing.Size(158, 44);
             this.btnavanzados.TabIndex = 27;
@@ -220,7 +251,7 @@ namespace CUMple
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(1, 318);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(1, 267);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(5, 44);
             this.flowLayoutPanel2.TabIndex = 28;
@@ -228,7 +259,7 @@ namespace CUMple
             // panelapoyo2
             // 
             this.panelapoyo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo2.Location = new System.Drawing.Point(-1, 35);
+            this.panelapoyo2.Location = new System.Drawing.Point(3, 6);
             this.panelapoyo2.Name = "panelapoyo2";
             this.panelapoyo2.Size = new System.Drawing.Size(5, 44);
             this.panelapoyo2.TabIndex = 25;
@@ -242,7 +273,7 @@ namespace CUMple
             this.btntigres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btntigres.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btntigres.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btntigres.Location = new System.Drawing.Point(5, 218);
+            this.btntigres.Location = new System.Drawing.Point(5, 183);
             this.btntigres.Name = "btntigres";
             this.btntigres.Size = new System.Drawing.Size(159, 44);
             this.btntigres.TabIndex = 23;
@@ -258,7 +289,7 @@ namespace CUMple
             this.btnkravmaga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnkravmaga.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnkravmaga.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnkravmaga.Location = new System.Drawing.Point(3, 35);
+            this.btnkravmaga.Location = new System.Drawing.Point(7, 6);
             this.btnkravmaga.Name = "btnkravmaga";
             this.btnkravmaga.Size = new System.Drawing.Size(160, 44);
             this.btnkravmaga.TabIndex = 24;
@@ -269,7 +300,7 @@ namespace CUMple
             // panelapoyo3
             // 
             this.panelapoyo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo3.Location = new System.Drawing.Point(1, 218);
+            this.panelapoyo3.Location = new System.Drawing.Point(1, 183);
             this.panelapoyo3.Name = "panelapoyo3";
             this.panelapoyo3.Size = new System.Drawing.Size(5, 44);
             this.panelapoyo3.TabIndex = 26;
@@ -277,7 +308,7 @@ namespace CUMple
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 598);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 606);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(5, 44);
             this.flowLayoutPanel1.TabIndex = 22;
@@ -285,7 +316,7 @@ namespace CUMple
             // panelapoyo1
             // 
             this.panelapoyo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo1.Location = new System.Drawing.Point(1, 127);
+            this.panelapoyo1.Location = new System.Drawing.Point(0, 94);
             this.panelapoyo1.Name = "panelapoyo1";
             this.panelapoyo1.Size = new System.Drawing.Size(5, 44);
             this.panelapoyo1.TabIndex = 22;
@@ -298,7 +329,7 @@ namespace CUMple
             this.btnvolverpruebaconexion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnvolverpruebaconexion.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolverpruebaconexion.ForeColor = System.Drawing.Color.Transparent;
-            this.btnvolverpruebaconexion.Location = new System.Drawing.Point(5, 598);
+            this.btnvolverpruebaconexion.Location = new System.Drawing.Point(4, 606);
             this.btnvolverpruebaconexion.Name = "btnvolverpruebaconexion";
             this.btnvolverpruebaconexion.Size = new System.Drawing.Size(160, 44);
             this.btnvolverpruebaconexion.TabIndex = 10;
@@ -312,7 +343,7 @@ namespace CUMple
             this.btncargardatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncargardatos.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncargardatos.ForeColor = System.Drawing.SystemColors.Window;
-            this.btncargardatos.Location = new System.Drawing.Point(5, 127);
+            this.btncargardatos.Location = new System.Drawing.Point(4, 94);
             this.btncargardatos.Name = "btncargardatos";
             this.btncargardatos.Size = new System.Drawing.Size(158, 44);
             this.btncargardatos.TabIndex = 7;
@@ -446,6 +477,7 @@ namespace CUMple
             this.dgvalumnospresentes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvalumnospresentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNombre,
+            this.cedula,
             this.Tipo});
             this.dgvalumnospresentes.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -473,6 +505,29 @@ namespace CUMple
             this.dgvalumnospresentes.Size = new System.Drawing.Size(190, 501);
             this.dgvalumnospresentes.TabIndex = 20;
             // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.Width = 94;
+            // 
+            // cedula
+            // 
+            this.cedula.DataPropertyName = "cedula";
+            this.cedula.HeaderText = "cedula";
+            this.cedula.Name = "cedula";
+            this.cedula.ReadOnly = true;
+            this.cedula.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cedula.Visible = false;
+            this.cedula.Width = 84;
+            // 
+            // Tipo
+            // 
+            this.Tipo.HeaderText = "tipo";
+            this.Tipo.Name = "Tipo";
+            this.Tipo.Visible = false;
+            this.Tipo.Width = 63;
+            // 
             // lblpresente
             // 
             this.lblpresente.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -493,6 +548,13 @@ namespace CUMple
             this.Nombre.ReadOnly = true;
             this.Nombre.Width = 94;
             // 
+            // cedulax
+            // 
+            this.cedulax.HeaderText = "cedulax";
+            this.cedulax.Name = "cedulax";
+            this.cedulax.Visible = false;
+            this.cedulax.Width = 93;
+            // 
             // Clase
             // 
             this.Clase.DataPropertyName = "tipos";
@@ -500,19 +562,6 @@ namespace CUMple
             this.Clase.Name = "Clase";
             this.Clase.ReadOnly = true;
             this.Clase.Width = 76;
-            // 
-            // colNombre
-            // 
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.Width = 94;
-            // 
-            // Tipo
-            // 
-            this.Tipo.HeaderText = "tipo";
-            this.Tipo.Name = "Tipo";
-            this.Tipo.Visible = false;
-            this.Tipo.Width = 63;
             // 
             // listaasistencias
             // 
@@ -572,11 +621,15 @@ namespace CUMple
         private System.Windows.Forms.Button btnvolverpruebaconexion;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clase;
         private System.Windows.Forms.DataGridView dgvalumnospresentes;
         private System.Windows.Forms.Label lblpresente;
+        private System.Windows.Forms.Button btnlista;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cedula;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cedulax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Clase;
     }
 }
