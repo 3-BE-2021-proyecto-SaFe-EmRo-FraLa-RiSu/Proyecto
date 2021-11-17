@@ -61,30 +61,22 @@ namespace CUMple
         
         public string mostrarlabel(string agarrardato)
         {
-            
             conexionprograma.Open();
             string dato;
             string mostrardiscipulos= "select * from discipulos where nomcompleto='"+ cmbdiscipuloseleccionado.SelectedItem.ToString() +"'";
             MySqlCommand comandolabel = new MySqlCommand(mostrardiscipulos,conexionprograma);
             MySqlDataReader lectordecomando = comandolabel.ExecuteReader();
-           if (lectordecomando.Read())
-            { 
-                                             //tabla
+            if (lectordecomando.Read())
+            {
                 dato=lectordecomando.GetString(agarrardato);
                 conexionprograma.Close();
                 return dato;         
             }
-           else
+            else
             {
                 conexionprograma.Close();
                 return dato = "";
-
             }
-
-
-
-
-
         }
         private void Userprofile_Load(object sender, EventArgs e)
         {

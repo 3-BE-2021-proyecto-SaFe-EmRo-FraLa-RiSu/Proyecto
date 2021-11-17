@@ -19,6 +19,17 @@ namespace CUMple
         public Editarusuarios()
         {
             InitializeComponent();
+            MySqlDataReader lectordedatos;
+            string comand = "Select usuario from usuarios;";
+            conexionprograma.Open();
+            MySqlCommand comando = new MySqlCommand(comand, conexionprograma);
+            lectordedatos = comando.ExecuteReader();
+            while (lectordedatos.Read())
+            {
+                cmbusuarioseleccionado.Items.Add(lectordedatos["usuario"].ToString());
+            }
+            conexionprograma.Close();
+            cmbusuarioseleccionado.Items.Add("Crear usuario nuevo");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -116,9 +127,27 @@ namespace CUMple
 
         private void Crearlosusuarios_Load(object sender, EventArgs e)
         {
-
+            
         }
-
+        public string mostrarlabel(string agarrardato)
+        {
+            conexionprograma.Open();
+            string dato = "";
+            string mostrardiscipulos = "select * from usuarios where usuario ='" + cmbusuarioseleccionado.SelectedItem.ToString() + "'";
+            MySqlCommand comandolabel = new MySqlCommand(mostrardiscipulos, conexionprograma);
+            MySqlDataReader lectordecomando = comandolabel.ExecuteReader();
+            if (lectordecomando.Read())
+            {
+                dato = lectordecomando.GetString(agarrardato);
+                conexionprograma.Close();
+                return dato;
+            }
+            else
+            {
+                conexionprograma.Close();
+                return dato;
+            }
+        }
         private void txbusucre_TextChanged(object sender, EventArgs e)
         {
 
@@ -222,6 +251,36 @@ namespace CUMple
         {
             WindowState = FormWindowState.Minimized;
          
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cmbusuarioseleccionado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbusuarioseleccionado.SelectedItem.ToString() != "Crear usuario nuevo")
+            {
+                txbusucre.Text = cmbusuarioseleccionado.SelectedItem.ToString();
+                MySqlDataReader lector;
+                string comand = "select contraseña from usuarios where usuario = '"+ cmbusuarioseleccionado.SelectedItem.ToString() + "';";
+                conexionprograma.Open();
+                MySqlCommand comando = new MySqlCommand(comand, conexionprograma);
+                lector = comando.ExecuteReader();
+                while (lector.Read())
+                {
+                    txbcontraconf.Text = lector["contraseña"].ToString();
+                }
+                conexionprograma.Close();
+            }
+            else
+            {
+                txbusucre.Text = "";
+                txbcedula.Text = "";
+                txbcontraconf.Text = "";
+            }
+            
         }
     }
 }

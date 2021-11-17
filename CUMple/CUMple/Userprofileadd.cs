@@ -19,6 +19,7 @@ namespace CUMple
         }
     
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
+        MySqlConnection conexionprograma3 = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
@@ -111,9 +112,9 @@ namespace CUMple
         public void agregarusuario(string nombrecompleto, string cedula , string celular, string profesion, string fech_nac, string email, int taekwondo, int krav, string fech_ingreso)
         { 
             
-            conexionprograma.Open();
+            conexionprograma3.Open();
             string comando = "insert into discipulos values ('" + celular + "', '"+ cedula +"', '" + fech_ingreso + "', '" + nombrecompleto + "', " + krav + ", " + taekwondo + ", '" + profesion + "', '" + fech_nac + "', '" + email + "','Blanco');";
-            MySqlCommand comandoeditarusuario = new MySqlCommand(comando, conexionprograma);
+            MySqlCommand comandoeditarusuario = new MySqlCommand(comando, conexionprograma3);
             try
             {
                 comandoeditarusuario.ExecuteNonQuery();
@@ -123,7 +124,7 @@ namespace CUMple
                 MessageBox.Show(ex.Message);
             }
             MessageBox.Show("El usuario se ha creado correctamente");
-            conexionprograma.Close();
+            conexionprograma3.Close();
             txbnombrecompleto.Text = "";
             mskcedula.Text = "";
             mskcelular.Text = "";

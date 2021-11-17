@@ -55,6 +55,10 @@ namespace CUMple
             this.panelapoyoo2 = new System.Windows.Forms.Panel();
             this.panelapoyoo = new System.Windows.Forms.Panel();
             this.panelapoyo = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblcedula = new System.Windows.Forms.Label();
+            this.txbcedula = new System.Windows.Forms.TextBox();
+            this.cmbusuarioseleccionado = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
@@ -156,12 +160,12 @@ namespace CUMple
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(891, 108);
+            this.label3.Location = new System.Drawing.Point(562, 159);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(191, 29);
+            this.label3.Size = new System.Drawing.Size(276, 29);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Editar usuarios";
+            this.label3.Text = "Usuario seleccionado:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // chkboxadmin
@@ -170,7 +174,7 @@ namespace CUMple
             this.chkboxadmin.AutoSize = true;
             this.chkboxadmin.BackColor = System.Drawing.Color.Transparent;
             this.chkboxadmin.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkboxadmin.Location = new System.Drawing.Point(896, 494);
+            this.chkboxadmin.Location = new System.Drawing.Point(898, 587);
             this.chkboxadmin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkboxadmin.Name = "chkboxadmin";
             this.chkboxadmin.Size = new System.Drawing.Size(206, 33);
@@ -213,7 +217,7 @@ namespace CUMple
             this.btnborrarusuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnborrarusuario.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnborrarusuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnborrarusuario.Location = new System.Drawing.Point(9, 314);
+            this.btnborrarusuario.Location = new System.Drawing.Point(13, 314);
             this.btnborrarusuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnborrarusuario.Name = "btnborrarusuario";
             this.btnborrarusuario.Size = new System.Drawing.Size(321, 68);
@@ -252,6 +256,7 @@ namespace CUMple
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1626, 54);
             this.panel2.TabIndex = 14;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // maximizar
             // 
@@ -394,6 +399,55 @@ namespace CUMple
             this.panelapoyo.Size = new System.Drawing.Size(370, 2);
             this.panelapoyo.TabIndex = 18;
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.BackColor = System.Drawing.Color.Gray;
+            this.panel3.Location = new System.Drawing.Point(897, 535);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(370, 2);
+            this.panel3.TabIndex = 21;
+            // 
+            // lblcedula
+            // 
+            this.lblcedula.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblcedula.AutoSize = true;
+            this.lblcedula.BackColor = System.Drawing.Color.Transparent;
+            this.lblcedula.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcedula.Location = new System.Drawing.Point(562, 502);
+            this.lblcedula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcedula.Name = "lblcedula";
+            this.lblcedula.Size = new System.Drawing.Size(94, 29);
+            this.lblcedula.TabIndex = 20;
+            this.lblcedula.Text = "Cedula";
+            // 
+            // txbcedula
+            // 
+            this.txbcedula.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbcedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txbcedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbcedula.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbcedula.ForeColor = System.Drawing.Color.White;
+            this.txbcedula.Location = new System.Drawing.Point(898, 502);
+            this.txbcedula.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txbcedula.Name = "txbcedula";
+            this.txbcedula.Size = new System.Drawing.Size(368, 30);
+            this.txbcedula.TabIndex = 19;
+            // 
+            // cmbusuarioseleccionado
+            // 
+            this.cmbusuarioseleccionado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.cmbusuarioseleccionado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbusuarioseleccionado.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbusuarioseleccionado.ForeColor = System.Drawing.SystemColors.Control;
+            this.cmbusuarioseleccionado.Location = new System.Drawing.Point(845, 151);
+            this.cmbusuarioseleccionado.Name = "cmbusuarioseleccionado";
+            this.cmbusuarioseleccionado.Size = new System.Drawing.Size(448, 37);
+            this.cmbusuarioseleccionado.TabIndex = 22;
+            this.cmbusuarioseleccionado.Text = "Usuarios:";
+            this.cmbusuarioseleccionado.SelectedIndexChanged += new System.EventHandler(this.cmbusuarioseleccionado_SelectedIndexChanged);
+            // 
             // Editarusuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -401,6 +455,10 @@ namespace CUMple
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1626, 863);
+            this.Controls.Add(this.cmbusuarioseleccionado);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.lblcedula);
+            this.Controls.Add(this.txbcedula);
             this.Controls.Add(this.panelapoyo);
             this.Controls.Add(this.panelapoyoo);
             this.Controls.Add(this.panelapoyoo2);
@@ -461,5 +519,9 @@ namespace CUMple
         private System.Windows.Forms.Panel panelapoyoo2;
         private System.Windows.Forms.Panel panelapoyoo;
         private System.Windows.Forms.Panel panelapoyo;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblcedula;
+        private System.Windows.Forms.TextBox txbcedula;
+        private System.Windows.Forms.ComboBox cmbusuarioseleccionado;
     }
 }
