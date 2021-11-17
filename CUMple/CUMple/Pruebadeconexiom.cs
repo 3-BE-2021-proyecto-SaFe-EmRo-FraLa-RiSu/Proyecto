@@ -145,7 +145,7 @@ namespace CUMple
 
         private void btnvolvercrearlosusuarios_Click(object sender, EventArgs e)
         {
-            new Principal().Show();
+            new Principal(true).Show();
             this.Dispose();
         }
         public void buscarsolomes(int mes) 
