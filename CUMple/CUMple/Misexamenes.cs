@@ -18,6 +18,7 @@ namespace CUMple
         {
             InitializeComponent();
             cedulax = cedula;
+          
         }
 
         MySqlConnection conexionbd = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
@@ -49,7 +50,7 @@ namespace CUMple
         {
 
             DataTable dtexamenes = new DataTable();
-            string comandostring = "select * from rango_obtenido where cedula=" + cedula + ";";
+            string comandostring = "select * from rango_obtenido where cedula='" + cedula + "';";
             MySqlDataAdapter comandotraernotas = new MySqlDataAdapter(comandostring, conexionbd);
             try
             {
@@ -67,6 +68,7 @@ namespace CUMple
 
         private void Misexamenes_Load(object sender, EventArgs e)
         {
+            dgvexamenes.DataSource = cargarexamenes(cedulax);
 
         }
         private void limpiar()
@@ -77,8 +79,8 @@ namespace CUMple
             dgvexamenes.Refresh();
         }
         private void button1_Click(object sender, EventArgs e)
-        {
-
+        {      
+            
             DataTable dtexamenes = new DataTable();
 
             string nota, comandonota = "";
@@ -94,12 +96,11 @@ namespace CUMple
                     rango = cbrango.SelectedItem.ToString();
                     comandorango = " nuevo_rango='" + rango + "'";
                 }
-                for (int i = 0; i < dgvexamenes.RowCount - 1; i++)
+                for (int i = 0; i < dgvexamenes.RowCount; i++)
                 {
                     if (txbnota.Text != "" && cbrango.SelectedIndex == -1)
                     {
-                        MySqlDataAdapter comandobuscar = new MySqlDataAdapter("select * from rango_obtenido where" + comandonota + "", conexionbd);
-                        dgvexamenes.Refresh();
+                        MySqlDataAdapter comandobuscar = new MySqlDataAdapter("select * from rango_obtenido where" + comandonota + " and cedula='"+cedulax+"'", conexionbd);
                         comandobuscar.Fill(dtexamenes);
                         dgvexamenes.DataSource = dtexamenes;
                         if (dgvexamenes.Rows[0].Cells[0].Value == null)
@@ -115,8 +116,7 @@ namespace CUMple
                     }
                     if (txbnota.Text == "" && cbrango.SelectedIndex != -1)
                     {
-                        MySqlDataAdapter comandobuscar = new MySqlDataAdapter("select * from rango_obtenido where" + comandorango + "", conexionbd);
-                        dgvexamenes.Refresh();
+                        MySqlDataAdapter comandobuscar = new MySqlDataAdapter("select * from rango_obtenido where" + comandorango + " and cedula='" + cedulax + "'", conexionbd);
                         comandobuscar.Fill(dtexamenes);
                         dgvexamenes.DataSource = dtexamenes;
                         if (dgvexamenes.Rows[0].Cells[0].Value == null)
@@ -131,6 +131,13 @@ namespace CUMple
                         return;
                     }
                 }
+            if (dgvexamenes.RowCount==0)
+            {
+                MessageBox.Show("No se encontraron datos");
+                limpiar();
+            }
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -160,6 +167,11 @@ namespace CUMple
             WindowState = FormWindowState.Maximized;
             maximizar.Visible = false;
             minim.Visible = true;
+        }
+
+        private void cerrarclic_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

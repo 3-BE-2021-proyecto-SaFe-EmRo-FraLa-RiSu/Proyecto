@@ -26,8 +26,8 @@ namespace CUMple
         {
             conexionprograma.Open();
             conexionprograma2.Open();            
-            MySqlCommand comandoparagraficataekwondo = new MySqlCommand(strleertkd,conexionprograma);
-            MySqlCommand comandoparagraficakrav = new MySqlCommand(strleerkrav, conexionprograma2);
+            MySqlCommand comandoparagraficataekwondo = new MySqlCommand(strleertkd,conexionprograma); //Asistencias
+            MySqlCommand comandoparagraficakrav = new MySqlCommand(strleerkrav, conexionprograma2); //Faltas
             MySqlDataReader lectordedatostkd = comandoparagraficataekwondo.ExecuteReader();
             MySqlDataReader lectordedatoskrav = comandoparagraficakrav.ExecuteReader();
             while (lectordedatostkd.Read())
@@ -103,7 +103,7 @@ namespace CUMple
                
                
                 MessageBox.Show(mesesindex.ToString());
-                creargrafica("Asistencias", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=1 group by v.idclase;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=1 group by v.idclase;");
+                creargrafica("Asistencias", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase an month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=1 group by v.idclase;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=1 group by v.idclase;");
                 creargrafica("Faltas", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=0 group by v.idclase;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=0 group by v.idclase;");
             }
             else if (cmbAño.SelectedIndex == -1 || cmbAño.SelectedItem.ToString() == "Ninguno")

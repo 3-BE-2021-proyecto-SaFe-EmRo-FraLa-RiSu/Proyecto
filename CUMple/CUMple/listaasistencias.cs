@@ -15,6 +15,7 @@ namespace CUMple
     {
         MySqlConnection conexionbd = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
         MySqlConnection conexionbd2 = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
+        MySqlConnection conexionbd3 = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
         public listaasistencias()
         {
             InitializeComponent();
@@ -540,7 +541,7 @@ namespace CUMple
                     string pasarlista = "insert into van values(1,'" + fechaparasql + "','"+dgvalumnospresentes.Rows[i].Cells["Cedulapres"].Value.ToString() +"',1)";
                     MySqlCommand comandoparamysql = new MySqlCommand(pasarlista,conexionbd);
                     comandoparamysql.ExecuteNonQuery();
-
+                  
                 }
                 dgvalumnospresentes.Rows.Clear();
                 conexionbd.Close();
@@ -589,8 +590,26 @@ namespace CUMple
                 conexionbd.Open();
                 for (int i = 0; i < dgvalumnospresentes.RowCount; i++)
                 {
-
+                    
                     string pasarlista = "insert into van values(1,'" + fechaparasql + "','" + dgvalumnospresentes.Rows[i].Cells["Cedulapres"].Value.ToString() + "',3)";
+                    string falta = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<=13 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=6 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmadmuflado confo','Naranja','Naranja confirmado') group by cedula";
+                     MySqlCommand comandoparamysql2 = new MySqlCommand(falta, conexionbd2);
+                    conexionbd2.Open();
+                    MySqlDataReader lector = comandoparamysql2.ExecuteReader();
+                    while (lector.Read()) 
+                    {
+                        if (lector.GetString("cedula")!= dgvalumnospresentes.Rows[i].Cells["Cedulapres"].Value.ToString())
+                        {
+                            conexionbd3.Open();
+                            string pasarlista2 = "insert into van values(0,'" + fechaparasql + "','" + lector.GetString("cedula") + "',3)";
+                            MySqlCommand comando3 = new MySqlCommand (pasarlista2,conexionbd3);
+                            comando3.ExecuteNonQuery();
+                            conexionbd3.Close();
+                        }
+                       
+                    }
+                    conexionbd2.Close();
+                   
                     MySqlCommand comandoparamysql = new MySqlCommand(pasarlista, conexionbd);
                     comandoparamysql.ExecuteNonQuery();
 

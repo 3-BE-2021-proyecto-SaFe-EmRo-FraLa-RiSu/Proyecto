@@ -188,7 +188,7 @@ namespace CUMple
             this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(1032, 2);
+            this.maximizar.Location = new System.Drawing.Point(1032, 5);
             this.maximizar.Name = "maximizar";
             this.maximizar.Size = new System.Drawing.Size(37, 30);
             this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
