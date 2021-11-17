@@ -15,8 +15,23 @@ namespace CUMple
 
     public partial class Principal : Form
     {
-        public Principal()
+        public Principal(bool admin)
         {
+            if (admin == true)
+            {
+                btnverasistenciaspersonales.Visible = false;
+                btnverexamenespersonales.Visible = false;
+            }
+            else 
+            {
+                flowLayoutPanel3.Visible = false;
+                btnvolver.Visible = false;
+                btncinturones.Visible = false;
+                btnentrarexamenes.Visible = false;
+                btnlista.Visible = false;
+            }
+
+
             InitializeComponent();
         }
 
@@ -149,6 +164,11 @@ namespace CUMple
         }
 
         private void btngraficacinturones_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

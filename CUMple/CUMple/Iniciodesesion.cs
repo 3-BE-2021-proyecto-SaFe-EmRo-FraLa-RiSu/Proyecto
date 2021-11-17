@@ -100,7 +100,7 @@ private void textBox2_TextChanged(object sender, EventArgs e)
                 }
                 else if (lectordedatos.Read() == true && lectordedatos.GetString("tipo") == "Alm")
                 {
-                    new Principal().Show();
+                    new Principal(false).Show();
                     this.Hide();
                 }
                 else
