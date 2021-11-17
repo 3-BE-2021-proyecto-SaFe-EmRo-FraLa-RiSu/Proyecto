@@ -24,37 +24,25 @@ namespace CUMple
         }
         public void creargrafica(string series, string strleertkd, string strleerkrav)
         {
-            MySqlCommand comandoleertaekwondo = new MySqlCommand(strleertkd, conexionprograma);
-            MySqlCommand comandoleerkrav = new MySqlCommand(strleerkrav, conexionprograma2);
-            MySqlDataReader lectordedatostkd;
-            MySqlDataReader lectordedatoskrav;
-            try
+            conexionprograma.Open();
+            conexionprograma2.Open();            
+            MySqlCommand comandoparagraficataekwondo = new MySqlCommand(strleertkd,conexionprograma);
+            MySqlCommand comandoparagraficakrav = new MySqlCommand(strleerkrav, conexionprograma2);
+            MySqlDataReader lectordedatostkd = comandoparagraficataekwondo.ExecuteReader();
+            MySqlDataReader lectordedatoskrav = comandoparagraficakrav.ExecuteReader();
+            while (lectordedatostkd.Read())
             {
-                conexionprograma.Open();
-                conexionprograma2.Open();
-                lectordedatostkd = comandoleertaekwondo.ExecuteReader();
-                lectordedatoskrav = comandoleerkrav.ExecuteReader();
-               
-                while (lectordedatostkd.Read())
-                {
-                    Graficadealumnos.Series[series].Points.AddXY(lectordedatostkd.GetString("tipos"), lectordedatostkd.GetUInt32("Asistencia"));
-                }
-                
-                {
+                Graficadealumnos.Series[series].Points.AddXY(lectordedatostkd.GetString("tipos"),lectordedatostkd.GetUInt32("Asistencia"));
+            }
+            while (lectordedatoskrav.Read())
+            {
+                Graficadealumnos.Series[series].Points.AddXY(lectordedatoskrav.GetString("tipos"), lectordedatoskrav.GetUInt32("Asistencia"));
+            }
+            conexionprograma.Close();
+            conexionprograma2.Close();
 
-                }
-                while (lectordedatoskrav.Read())
-                {
-                    Graficadealumnos.Series[series].Points.AddXY(lectordedatoskrav.GetString("tipos"), lectordedatoskrav.GetUInt32("Asistencia"));
-                }
-                conexionprograma.Close();
-                conexionprograma2.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                throw;
-            }
+
+
         }
         public Pruebadeconexiom()
         {
@@ -108,13 +96,15 @@ namespace CUMple
 
         private void btncargardatos_Click(object sender, EventArgs e)
         {
-            if (cmbAño.SelectedIndex != -1 && cmbAño.SelectedItem.ToString() != "Ninguno" && cmbmeses.SelectedIndex != -1 && cmbmeses.SelectedItem.ToString() != "Ninguno")
+            if ((cmbAño.SelectedIndex != -1 || cmbAño.SelectedItem.ToString() != "Ninguno") && (cmbmeses.SelectedIndex != -1  || cmbmeses.SelectedItem.ToString() != "Ninguno"))
             {
                 limpiargrafica();
-                int mesesindex = cmbmeses.SelectedIndex, meses, años = Int32.Parse(cmbAño.SelectedItem.ToString());
-                meses = mesesindex + 1;
-                creargrafica("Asistencias", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and month(fecha)='" + meses + "' and year(fecha)='" + años + "' and concurre=1 group by v.idclase;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and month(fecha)='" + meses + "' and year(fecha)='" + años + "' and concurre=1 group by v.idclase;");
-                creargrafica("Faltas", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and month(fecha)='" + meses + "' and year(fecha)='" + años + "' and concurre=0 group by v.idclase;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and month(fecha)='" + meses + "' and year(fecha)='" + años + "' and concurre=0 group by v.idclase;");
+                int mesesindex = cmbmeses.SelectedIndex, años = Int32.Parse(cmbAño.SelectedItem.ToString());
+               
+               
+                MessageBox.Show(mesesindex.ToString());
+                creargrafica("Asistencias", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=1 group by v.idclase;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=1 group by v.idclase;");
+                creargrafica("Faltas", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=0 group by v.idclase;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and month(fecha)='" + mesesindex + "' and year(fecha)='" + años + "' and concurre=0 group by v.idclase;");
             }
             else if (cmbAño.SelectedIndex == -1 || cmbAño.SelectedItem.ToString() == "Ninguno")
             {
@@ -159,7 +149,7 @@ namespace CUMple
         public void buscarsoloaño() 
         {
             limpiargrafica();
-            creargrafica("Asistencias", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and concurre=1 group by year(fecha);", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and concurre=1 group by year(fecha);");
+            creargrafica("Asistencias", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase WHERE concurre=1 group by v.idclase;;", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase WHERE concurre=1 group by v.idclase;");
             creargrafica("Faltas", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=1 and concurre=0 group by year(fecha);", "select count(*)'Asistencia',tipos,fecha from discipulos d join van v on d.cedula=v.cedula join clase c on v.idclase=c.idclase where v.idclase=5 and concurre=0 group by year(fecha);");
         }
 

@@ -83,7 +83,7 @@ namespace CUMple
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.Graficadecinturones.Legends.Add(legend1);
-            this.Graficadecinturones.Location = new System.Drawing.Point(332, 65);
+            this.Graficadecinturones.Location = new System.Drawing.Point(332, 60);
             this.Graficadecinturones.Name = "Graficadecinturones";
             this.Graficadecinturones.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea1";
@@ -114,7 +114,7 @@ namespace CUMple
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(4, 176);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 44);
             this.button1.TabIndex = 2;
@@ -162,7 +162,7 @@ namespace CUMple
             this.btnvolveruserprofile.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvolveruserprofile.ForeColor = System.Drawing.Color.Transparent;
             this.btnvolveruserprofile.Location = new System.Drawing.Point(4, 266);
-            this.btnvolveruserprofile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnvolveruserprofile.Margin = new System.Windows.Forms.Padding(2);
             this.btnvolveruserprofile.Name = "btnvolveruserprofile";
             this.btnvolveruserprofile.Size = new System.Drawing.Size(161, 44);
             this.btnvolveruserprofile.TabIndex = 3;
@@ -247,7 +247,7 @@ namespace CUMple
             this.Controls.Add(this.Fechadatatimer);
             this.Controls.Add(this.Graficadecinturones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Graficascinturones";
             this.Text = "Graficascinturones";
             this.Load += new System.EventHandler(this.Graficascinturones_Load);

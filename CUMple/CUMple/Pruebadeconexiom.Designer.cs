@@ -29,83 +29,32 @@ namespace CUMple
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pruebadeconexiom));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pruebadeconexiom));
-            this.Graficadealumnos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cmbmeses = new System.Windows.Forms.ComboBox();
             this.cmbAño = new System.Windows.Forms.ComboBox();
             this.btncargardatos = new System.Windows.Forms.Button();
             this.btnvolverpruebaconexion = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
             this.restaurar = new System.Windows.Forms.PictureBox();
             this.minimizar = new System.Windows.Forms.PictureBox();
             this.cerrarclic = new System.Windows.Forms.PictureBox();
             this.maximizar = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Graficadealumnos)).BeginInit();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Graficadealumnos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Graficadealumnos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Graficadealumnos
-            // 
-            this.Graficadealumnos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Graficadealumnos.BackColor = System.Drawing.Color.Transparent;
-            this.Graficadealumnos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Graficadealumnos.BorderlineColor = System.Drawing.Color.Transparent;
-            this.Graficadealumnos.BorderSkin.BorderColor = System.Drawing.Color.White;
-            chartArea1.AxisX.Interval = 1D;
-            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea1.AxisX.IsLabelAutoFit = false;
-            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.IsLabelAutoFit = false;
-            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.White;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            chartArea1.BorderColor = System.Drawing.Color.White;
-            chartArea1.Name = "ChartArea1";
-            this.Graficadealumnos.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            legend1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.ForeColor = System.Drawing.Color.White;
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            this.Graficadealumnos.Legends.Add(legend1);
-            this.Graficadealumnos.Location = new System.Drawing.Point(289, 53);
-            this.Graficadealumnos.Name = "Graficadealumnos";
-            this.Graficadealumnos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.ChartArea = "ChartArea1";
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(202)))), ((int)(((byte)(24)))));
-            series1.IsValueShownAsLabel = true;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.Name = "Asistencias";
-            series2.ChartArea = "ChartArea1";
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
-            series2.LabelForeColor = System.Drawing.Color.White;
-            series2.Legend = "Legend1";
-            series2.Name = "Faltas";
-            this.Graficadealumnos.Series.Add(series1);
-            this.Graficadealumnos.Series.Add(series2);
-            this.Graficadealumnos.Size = new System.Drawing.Size(788, 501);
-            this.Graficadealumnos.TabIndex = 0;
-            this.Graficadealumnos.Text = "chart1";
-            this.Graficadealumnos.Click += new System.EventHandler(this.Graficadealumnos_Click_1);
             // 
             // cmbmeses
             // 
@@ -198,37 +147,6 @@ namespace CUMple
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.panel2.Controls.Add(this.flowLayoutPanel1);
-            this.panel2.Controls.Add(this.panelapoyo1);
-            this.panel2.Controls.Add(this.btnvolverpruebaconexion);
-            this.panel2.Controls.Add(this.btncargardatos);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.ForeColor = System.Drawing.Color.Coral;
-            this.panel2.Location = new System.Drawing.Point(0, 35);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(165, 565);
-            this.panel2.TabIndex = 13;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 142);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(7, 42);
-            this.flowLayoutPanel1.TabIndex = 22;
-            // 
-            // panelapoyo1
-            // 
-            this.panelapoyo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.panelapoyo1.Location = new System.Drawing.Point(0, 55);
-            this.panelapoyo1.Name = "panelapoyo1";
-            this.panelapoyo1.Size = new System.Drawing.Size(5, 44);
-            this.panelapoyo1.TabIndex = 22;
-            // 
             // restaurar
             // 
             this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -282,6 +200,83 @@ namespace CUMple
             this.maximizar.TabStop = false;
             this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.panel2.Controls.Add(this.flowLayoutPanel1);
+            this.panel2.Controls.Add(this.panelapoyo1);
+            this.panel2.Controls.Add(this.btnvolverpruebaconexion);
+            this.panel2.Controls.Add(this.btncargardatos);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.ForeColor = System.Drawing.Color.Coral;
+            this.panel2.Location = new System.Drawing.Point(0, 35);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(165, 565);
+            this.panel2.TabIndex = 13;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 142);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(7, 42);
+            this.flowLayoutPanel1.TabIndex = 22;
+            // 
+            // panelapoyo1
+            // 
+            this.panelapoyo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.panelapoyo1.Location = new System.Drawing.Point(0, 55);
+            this.panelapoyo1.Name = "panelapoyo1";
+            this.panelapoyo1.Size = new System.Drawing.Size(5, 44);
+            this.panelapoyo1.TabIndex = 22;
+            // 
+            // Graficadealumnos
+            // 
+            this.Graficadealumnos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Graficadealumnos.BackColor = System.Drawing.Color.Transparent;
+            this.Graficadealumnos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Graficadealumnos.BorderlineColor = System.Drawing.Color.Transparent;
+            this.Graficadealumnos.BorderSkin.BorderColor = System.Drawing.Color.White;
+            chartArea1.AxisX.Interval = 1D;
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.IsLabelAutoFit = false;
+            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea1.BorderColor = System.Drawing.Color.White;
+            chartArea1.Name = "ChartArea1";
+            this.Graficadealumnos.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            legend1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.ForeColor = System.Drawing.Color.White;
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            this.Graficadealumnos.Legends.Add(legend1);
+            this.Graficadealumnos.Location = new System.Drawing.Point(319, 41);
+            this.Graficadealumnos.Name = "Graficadealumnos";
+            this.Graficadealumnos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            series1.ChartArea = "ChartArea1";
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.Name = "Asistencias";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Faltas";
+            this.Graficadealumnos.Series.Add(series1);
+            this.Graficadealumnos.Series.Add(series2);
+            this.Graficadealumnos.Size = new System.Drawing.Size(749, 579);
+            this.Graficadealumnos.TabIndex = 23;
+            this.Graficadealumnos.Text = "chart1";
+            // 
             // Pruebadeconexiom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,11 +285,11 @@ namespace CUMple
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1100, 600);
+            this.Controls.Add(this.Graficadealumnos);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cmbmeses);
             this.Controls.Add(this.cmbAño);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.Graficadealumnos);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Pruebadeconexiom";
@@ -302,20 +297,18 @@ namespace CUMple
             this.Text = "Pruebadeconexiom";
             this.Load += new System.EventHandler(this.Pruebadeconexiom_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pruebadeconexiom_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.Graficadealumnos)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Graficadealumnos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataVisualization.Charting.Chart Graficadealumnos;
         private System.Windows.Forms.ComboBox cmbmeses;
         private System.Windows.Forms.ComboBox cmbAño;
         private System.Windows.Forms.Button btncargardatos;
@@ -328,5 +321,6 @@ namespace CUMple
         private System.Windows.Forms.PictureBox maximizar;
         private System.Windows.Forms.FlowLayoutPanel panelapoyo1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart Graficadealumnos;
     }
 }
