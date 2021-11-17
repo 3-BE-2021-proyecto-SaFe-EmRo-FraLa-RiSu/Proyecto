@@ -115,7 +115,7 @@ namespace CUMple
             this.dgvlistas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvlistas.EnableHeadersVisualStyles = false;
             this.dgvlistas.GridColor = System.Drawing.Color.White;
-            this.dgvlistas.Location = new System.Drawing.Point(204, 141);
+            this.dgvlistas.Location = new System.Drawing.Point(274, 141);
             this.dgvlistas.Name = "dgvlistas";
             this.dgvlistas.ReadOnly = true;
             this.dgvlistas.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -388,7 +388,7 @@ namespace CUMple
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1019, 35);
+            this.panel1.Size = new System.Drawing.Size(1158, 35);
             this.panel1.TabIndex = 14;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -397,7 +397,7 @@ namespace CUMple
             this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.restaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurar.Image = ((System.Drawing.Image)(resources.GetObject("restaurar.Image")));
-            this.restaurar.Location = new System.Drawing.Point(923, 0);
+            this.restaurar.Location = new System.Drawing.Point(1062, 0);
             this.restaurar.Name = "restaurar";
             this.restaurar.Size = new System.Drawing.Size(37, 30);
             this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -411,7 +411,7 @@ namespace CUMple
             this.minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(880, 2);
+            this.minimizar.Location = new System.Drawing.Point(1019, 2);
             this.minimizar.Name = "minimizar";
             this.minimizar.Size = new System.Drawing.Size(37, 30);
             this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -424,7 +424,7 @@ namespace CUMple
             this.cerrarclic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(970, 2);
+            this.cerrarclic.Location = new System.Drawing.Point(1109, 2);
             this.cerrarclic.Name = "cerrarclic";
             this.cerrarclic.Size = new System.Drawing.Size(37, 30);
             this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -437,7 +437,7 @@ namespace CUMple
             this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(923, 2);
+            this.maximizar.Location = new System.Drawing.Point(1062, 2);
             this.maximizar.Name = "maximizar";
             this.maximizar.Size = new System.Drawing.Size(37, 30);
             this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -452,7 +452,7 @@ namespace CUMple
             this.txbbucar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbbucar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbbucar.ForeColor = System.Drawing.Color.White;
-            this.txbbucar.Location = new System.Drawing.Point(343, 78);
+            this.txbbucar.Location = new System.Drawing.Point(413, 78);
             this.txbbucar.Name = "txbbucar";
             this.txbbucar.Size = new System.Drawing.Size(178, 20);
             this.txbbucar.TabIndex = 16;
@@ -466,7 +466,7 @@ namespace CUMple
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(244, 83);
+            this.label1.Location = new System.Drawing.Point(314, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 18);
             this.label1.TabIndex = 17;
@@ -476,7 +476,7 @@ namespace CUMple
             // 
             this.panelapoyo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panelapoyo.BackColor = System.Drawing.Color.Gray;
-            this.panelapoyo.Location = new System.Drawing.Point(343, 100);
+            this.panelapoyo.Location = new System.Drawing.Point(413, 100);
             this.panelapoyo.Name = "panelapoyo";
             this.panelapoyo.Size = new System.Drawing.Size(180, 1);
             this.panelapoyo.TabIndex = 19;
@@ -516,7 +516,7 @@ namespace CUMple
             this.dgvalumnospresentes.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvalumnospresentes.EnableHeadersVisualStyles = false;
             this.dgvalumnospresentes.GridColor = System.Drawing.Color.White;
-            this.dgvalumnospresentes.Location = new System.Drawing.Point(661, 141);
+            this.dgvalumnospresentes.Location = new System.Drawing.Point(731, 141);
             this.dgvalumnospresentes.Name = "dgvalumnospresentes";
             this.dgvalumnospresentes.ReadOnly = true;
             this.dgvalumnospresentes.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -529,7 +529,7 @@ namespace CUMple
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvalumnospresentes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvalumnospresentes.Size = new System.Drawing.Size(299, 501);
+            this.dgvalumnospresentes.Size = new System.Drawing.Size(415, 501);
             this.dgvalumnospresentes.TabIndex = 20;
             // 
             // Nombrepres
@@ -563,7 +563,7 @@ namespace CUMple
             this.lblpresente.AutoSize = true;
             this.lblpresente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblpresente.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblpresente.Location = new System.Drawing.Point(724, 83);
+            this.lblpresente.Location = new System.Drawing.Point(794, 83);
             this.lblpresente.Name = "lblpresente";
             this.lblpresente.Size = new System.Drawing.Size(165, 18);
             this.lblpresente.TabIndex = 21;
@@ -574,7 +574,7 @@ namespace CUMple
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1019, 775);
+            this.ClientSize = new System.Drawing.Size(1158, 775);
             this.Controls.Add(this.lblpresente);
             this.Controls.Add(this.dgvalumnospresentes);
             this.Controls.Add(this.panelapoyo);
