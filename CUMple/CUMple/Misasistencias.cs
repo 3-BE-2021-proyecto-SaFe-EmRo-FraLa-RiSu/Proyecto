@@ -23,5 +23,10 @@ namespace CUMple
         {
 
         }
+
+        private void btncargardatos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

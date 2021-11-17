@@ -263,14 +263,15 @@ namespace CUMple
             if (cmbusuarioseleccionado.SelectedItem.ToString() != "Crear usuario nuevo")
             {
                 txbusucre.Text = cmbusuarioseleccionado.SelectedItem.ToString();
-                MySqlDataReader lector;
-                string comand = "select contraseña from usuarios where usuario = '"+ cmbusuarioseleccionado.SelectedItem.ToString() + "';";
+               
+                string comandd = "select contraseña from usuarios where usuario='lol';";
+
                 conexionprograma.Open();
-                MySqlCommand comando = new MySqlCommand(comand, conexionprograma);
-                lector = comando.ExecuteReader();
+                MySqlCommand comando = new MySqlCommand(comandd, conexionprograma);
+                MySqlDataReader lector = comando.ExecuteReader();
                 while (lector.Read())
                 {
-                    txbcontraconf.Text = lector["contraseña"].ToString();
+                    txbcontraconf.Text = (lector.GetValue(lector.GetOrdinal("contraseña")).ToString());
                 }
                 conexionprograma.Close();
             }
