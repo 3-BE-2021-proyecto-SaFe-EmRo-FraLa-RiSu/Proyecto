@@ -132,7 +132,7 @@ namespace CUMple
             this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(1149, 3);
+            this.maximizar.Location = new System.Drawing.Point(1150, 3);
             this.maximizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.maximizar.Name = "maximizar";
             this.maximizar.Size = new System.Drawing.Size(56, 46);
@@ -146,7 +146,7 @@ namespace CUMple
             this.restaurarr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.restaurarr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restaurarr.Image = ((System.Drawing.Image)(resources.GetObject("restaurarr.Image")));
-            this.restaurarr.Location = new System.Drawing.Point(1084, 3);
+            this.restaurarr.Location = new System.Drawing.Point(1086, 3);
             this.restaurarr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.restaurarr.Name = "restaurarr";
             this.restaurarr.Size = new System.Drawing.Size(56, 46);
@@ -160,7 +160,7 @@ namespace CUMple
             this.minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(1149, 5);
+            this.minimizar.Location = new System.Drawing.Point(1149, 3);
             this.minimizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.minimizar.Name = "minimizar";
             this.minimizar.Size = new System.Drawing.Size(56, 46);
@@ -218,7 +218,7 @@ namespace CUMple
             this.btnverexamenespersonales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnverexamenespersonales.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnverexamenespersonales.ForeColor = System.Drawing.Color.White;
-            this.btnverexamenespersonales.Location = new System.Drawing.Point(6, 226);
+            this.btnverexamenespersonales.Location = new System.Drawing.Point(4, 226);
             this.btnverexamenespersonales.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnverexamenespersonales.Name = "btnverexamenespersonales";
             this.btnverexamenespersonales.Size = new System.Drawing.Size(294, 57);
@@ -244,7 +244,7 @@ namespace CUMple
             this.btnverasistenciaspersonales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnverasistenciaspersonales.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnverasistenciaspersonales.ForeColor = System.Drawing.Color.White;
-            this.btnverasistenciaspersonales.Location = new System.Drawing.Point(4, 349);
+            this.btnverasistenciaspersonales.Location = new System.Drawing.Point(6, 349);
             this.btnverasistenciaspersonales.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnverasistenciaspersonales.Name = "btnverasistenciaspersonales";
             this.btnverasistenciaspersonales.Size = new System.Drawing.Size(294, 57);

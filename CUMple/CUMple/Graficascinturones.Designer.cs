@@ -199,6 +199,7 @@ namespace CUMple
             this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.maximizar.TabIndex = 27;
             this.maximizar.TabStop = false;
+            this.maximizar.Click += new System.EventHandler(this.maximizar_Click);
             // 
             // minimizar
             // 
@@ -212,6 +213,7 @@ namespace CUMple
             this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.minimizar.TabIndex = 26;
             this.minimizar.TabStop = false;
+            this.minimizar.Click += new System.EventHandler(this.minimizar_Click);
             // 
             // cerrarclic
             // 
@@ -225,6 +227,7 @@ namespace CUMple
             this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cerrarclic.TabIndex = 25;
             this.cerrarclic.TabStop = false;
+            this.cerrarclic.Click += new System.EventHandler(this.cerrarclic_Click);
             // 
             // restaurar
             // 
@@ -239,6 +242,7 @@ namespace CUMple
             this.restaurar.TabIndex = 28;
             this.restaurar.TabStop = false;
             this.restaurar.Visible = false;
+            this.restaurar.Click += new System.EventHandler(this.restaurar_Click);
             // 
             // Graficascinturones
             // 

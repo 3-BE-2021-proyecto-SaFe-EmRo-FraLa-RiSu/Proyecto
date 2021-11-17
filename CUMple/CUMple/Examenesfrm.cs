@@ -593,7 +593,7 @@ namespace CUMple
 
         private void restaurar_Click(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Normal;
             minim.Visible = false;
             maximizar.Visible = true;
         }

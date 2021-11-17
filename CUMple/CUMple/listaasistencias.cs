@@ -80,13 +80,23 @@ namespace CUMple
 
         private void txbbucar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            DataTable filas = new DataTable();
+        }
+
+        private void txbbucar_TextChanged(object sender, EventArgs e)
+        {
+            actualizarfiltrado();
+        }
+        public void actualizarfiltrado()
+        {
+            if (txbbucar.Text == "")
+            {
+                        DataTable filas = new DataTable();
             conexionbd.Open();
             if (krav != false || adultos != false || avanzados != false || adolescentes != false || tigres != false)
             {
                 if (krav == true)
                 {
-                    string comando = "SELECT nomcompleto,cedula from discipulos where krav_maga=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 and nomcompleto like '%" + txbbucar.Text + "%' group by cedula";
+                    string comando = "SELECT nomcompleto,cedula from discipulos where krav_maga=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 group by cedula";
                     MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
                     comandosql.Fill(filas);
                     dgvlistas.Refresh();
@@ -95,7 +105,6 @@ namespace CUMple
                     {
                         conexionbd.Close();
                         MessageBox.Show("No se encontro a ningún discipulo con este nombre");
-                        e.Handled = true;
                         txbbucar.Text = "";
                         return;
                     }
@@ -109,7 +118,7 @@ namespace CUMple
 
                 if (adultos == true)
                 {
-                    string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 and nomcompleto like '%" + txbbucar.Text + "%' group by cedula";
+                    string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 group by cedula";
                     MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
                     comandosql.Fill(filas);
                     dgvlistas.Refresh();
@@ -118,7 +127,6 @@ namespace CUMple
                     {
                         conexionbd.Close();
                         MessageBox.Show("No se encontro a ningún discipulo con este nombre");
-                        e.Handled = true;
                         txbbucar.Text = "";
                         return;
                     }
@@ -131,7 +139,7 @@ namespace CUMple
 
                 if (avanzados == true)
                 {
-                    string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<=13 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=6 and nomcompleto like '%" + txbbucar.Text + "%' and rango NOT IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado') group by cedula";
+                    string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<=13 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=6 and rango NOT IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado') group by cedula";
                    
                     MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
                     comandosql.Fill(filas);
@@ -141,7 +149,6 @@ namespace CUMple
                     {
                         conexionbd.Close();
                         MessageBox.Show("No se encontro a ningún discipulo con este nombre");
-                        e.Handled = true;
                         txbbucar.Text = "";
                         return;
                     }
@@ -153,7 +160,7 @@ namespace CUMple
                 }
                 if (adolescentes == true)
                 {
-                    string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<=13 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=6 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmadmuflado confo','Naranja','Naranja confirmado') and nomcompleto like '%" + txbbucar.Text + "%' group by cedula";
+                    string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<=13 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=6 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmadmuflado confo','Naranja','Naranja confirmado') group by cedula";
                     MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
                     comandosql.Fill(filas);
                   
@@ -163,7 +170,6 @@ namespace CUMple
                     {
                         conexionbd.Close();
                         MessageBox.Show("No se encontro a ningún discipulo con este nombre");
-                        e.Handled = true;
                         txbbucar.Text = "";
                         return;
                     }
@@ -176,7 +182,7 @@ namespace CUMple
 
                 if (tigres == true)
                 {
-                    string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=3 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<6 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado') and nomcompleto like '%" + txbbucar.Text + "%' group by cedula";
+                    string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=3 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<6 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado') group by cedula";
                     MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
                     comandosql.Fill(filas);
                    
@@ -186,7 +192,6 @@ namespace CUMple
                     {
                         conexionbd.Close();
                         MessageBox.Show("No se encontro a ningún discipulo con este nombre");
-                        e.Handled = true;
                         txbbucar.Text = "";
                         return;
                     }
@@ -203,14 +208,130 @@ namespace CUMple
             else
             {
                 MessageBox.Show("Debe seleccionar una clase.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
             }
             conexionbd.Close();
-        }
+            }
+            else
+            {
+                DataTable filas = new DataTable();
+                conexionbd.Open();
+                if (krav != false || adultos != false || avanzados != false || adolescentes != false || tigres != false)
+                {
+                    if (krav == true)
+                    {
+                        string comando = "SELECT nomcompleto,cedula from discipulos where krav_maga=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 and nomcompleto like '%" + txbbucar.Text + "%' group by cedula";
+                        MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
+                        comandosql.Fill(filas);
+                        dgvlistas.Refresh();
+                        dgvlistas.DataSource = filas;
+                        if (dgvlistas.RowCount == 0)
+                        {
+                            conexionbd.Close();
+                            MessageBox.Show("No se encontro a ningún discipulo con este nombre");
+                            txbbucar.Text = "";
+                            return;
+                        }
+                        for (int i = 0; i < dgvlistas.RowCount; i++)
+                        {
+                        dgvlistas.Rows[i].Cells["Claselist"].Value = "Krav Maga";
+                        
+                        }
 
-        private void txbbucar_TextChanged(object sender, EventArgs e)
-        {
+                    }
+                    if (adultos == true)
+                    {
+                        string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 and nomcompleto like '%" + txbbucar.Text + "%' group by cedula";
+                        MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
+                        comandosql.Fill(filas);
+                        dgvlistas.Refresh();
+                        dgvlistas.DataSource = filas;
+                        if (dgvlistas.RowCount==0)
+                        {
+                            conexionbd.Close();
+                            MessageBox.Show("No se encontro a ningún discipulo con este nombre");
+                            txbbucar.Text = "";
+                            return;
+                        }
+                        for (int i = 0; i < dgvlistas.RowCount; i++)
+                        {
+                            dgvlistas.Rows[i].Cells["Claselist"].Value = "Adultos";
+                        }
 
+                    }
+
+                    if (avanzados == true)
+                    {
+                        string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<=13 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=6 and nomcompleto like '%" + txbbucar.Text + "%' and rango NOT IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado') group by cedula";                  
+                        MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
+                        comandosql.Fill(filas);
+                        dgvlistas.Refresh();
+                        dgvlistas.DataSource = filas;
+                        if (dgvlistas.RowCount == 0)
+                        {
+                            conexionbd.Close();
+                            MessageBox.Show("No se encontro a ningún discipulo con este nombre");
+                            txbbucar.Text = "";
+                            return;
+                        }
+                        for (int i = 0; i < dgvlistas.RowCount; i++)
+                        {
+                            dgvlistas.Rows[i].Cells["Claselist"].Value = "Avanzados";
+                        }
+
+                    }
+                    if (adolescentes == true)
+                    {
+                        string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<=13 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=6 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmadmuflado confo','Naranja','Naranja confirmado') and nomcompleto like '%" + txbbucar.Text + "%' group by cedula";
+                        MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
+                        comandosql.Fill(filas);
+                  
+                        dgvlistas.Refresh();
+                        dgvlistas.DataSource = filas;
+                        if (dgvlistas.RowCount == 0)
+                        {
+                            conexionbd.Close();
+                            MessageBox.Show("No se encontro a ningún discipulo con este nombre");
+                            txbbucar.Text = "";
+                            return;
+                        }
+                        for (int i = 0; i < dgvlistas.RowCount; i++)
+                        {
+                            dgvlistas.Rows[i].Cells["Claselist"].Value = "Adolescentes";
+                        }
+
+                    }
+
+                    if (tigres == true)
+                    {
+                        string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=3 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<6 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado') and nomcompleto like '%" + txbbucar.Text + "%' group by cedula";
+                        MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
+                        comandosql.Fill(filas);
+                   
+                        dgvlistas.Refresh();
+                        dgvlistas.DataSource = filas;
+                        if (dgvlistas.RowCount == 0)
+                        {
+                            conexionbd.Close();
+                            MessageBox.Show("No se encontro a ningún discipulo con este nombre");
+                            txbbucar.Text = "";
+                            return;
+                        }
+
+                        for (int i = 0; i < dgvlistas.RowCount; i++)
+                        {
+                            dgvlistas.Rows[i].Cells["Claselist"].Value = "Tigres";
+                        }
+
+
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar una clase.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                conexionbd.Close();
+            } 
         }
 
         private void cerrarclic_Click(object sender, EventArgs e)
@@ -220,7 +341,7 @@ namespace CUMple
 
         private void restaurar_Click(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Normal;
             restaurar.Visible = false;
             maximizar.Visible = true;
         }
@@ -535,12 +656,11 @@ namespace CUMple
         private void btnvolverpruebaconexion_Click(object sender, EventArgs e)
         {
             new Principal(true).Show();
+            this.Dispose();
         }
 
         private void dgvasistencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
-            
            
         }
 
