@@ -20,6 +20,7 @@ namespace CUMple
             InitializeComponent();
         }
         MySqlConnection conexionprograma = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
+        MySqlConnection conexionprograma2 = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
         MySqlCommand comandoparamysql = new MySqlCommand();
        
 
@@ -100,7 +101,16 @@ private void textBox2_TextChanged(object sender, EventArgs e)
                 }
                 else if (lectordedatos.Read() == true && lectordedatos.GetString("tipo") == "Alm")
                 {
-                    new Principal(false).Show();
+                    string getcedula = "SELECT cedula FROM usuarios WHERE usuario= '" + txbuserb.Text + "' and contraseña= '" + txbconb.Text + "'";
+                    MySqlCommand getcedulasql = new MySqlCommand(getcedula, conexionprograma2);
+                    MySqlDataReader lectordedatos2 = comandoparamysql.ExecuteReader();
+                    string cedula = "";
+                    while (lectordedatos2.Read())
+                    {
+                        cedula=lectordedatos2.GetString("cedula");
+                    }
+
+                    new Principal("Alm",cedula).Show();
                     this.Hide();
                 }
                 else

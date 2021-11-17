@@ -133,6 +133,18 @@
     <Compile Include="listaasistencias.Designer.cs">
       <DependentUpon>listaasistencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Misasistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misasistencias.Designer.cs">
+      <DependentUpon>Misasistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Misexamenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misexamenes.Designer.cs">
+      <DependentUpon>Misexamenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Notas%28NOTOCAR%29.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -180,6 +192,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="listaasistencias.resx">
       <DependentUpon>listaasistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misasistencias.resx">
+      <DependentUpon>Misasistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Misexamenes.resx">
+      <DependentUpon>Misexamenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

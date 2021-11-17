@@ -182,7 +182,7 @@ namespace CUMple
 
         private void btnvolverexamenes_Click(object sender, EventArgs e)
         {
-            new Principal(true).Show();
+            new Principal("Adm").Show();
             this.Dispose();
         }
 

@@ -102,7 +102,7 @@ namespace CUMple
 
         private void btnvolveruserprofile_Click(object sender, EventArgs e)
         {
-            new Principal(true).Show();
+            new Principal("Adm").Show();
             this.Dispose();
         }
 

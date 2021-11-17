@@ -15,10 +15,10 @@ namespace CUMple
 
     public partial class Principal : Form
     {
-        public Principal(bool admin)
+        public Principal(string tipo)
         {
             InitializeComponent();
-            if (admin == true)
+            if (tipo == "Adm")
             {
                 btnverasistenciaspersonales.Visible = false;
                 btnverexamenespersonales.Visible = false;
@@ -31,8 +31,32 @@ namespace CUMple
                 btnentrarexamenes.Visible = false;
                 btnlista.Visible = false;
             }
+
+         
         }
-     
+        string cedulaprin;
+
+       public Principal(string tipo, string cedula)
+        {
+            InitializeComponent();
+            if (tipo == "Adm")
+            {
+                btnverasistenciaspersonales.Visible = false;
+                btnverexamenespersonales.Visible = false;
+            }
+            else
+            {
+                flowLayoutPanel3.Visible = false;
+                btnvolver.Visible = false;
+                btncinturones.Visible = false;
+                btnentrarexamenes.Visible = false;
+                btnlista.Visible = false;
+            }
+
+            cedulaprin = cedula;  
+        }
+       
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -173,12 +197,13 @@ namespace CUMple
 
         private void btnverexamenespersonales_Click(object sender, EventArgs e)
         {
-
+            new Misexamenes(cedulaprin).Show();
+            this.Dispose();
         }
 
         private void btnverasistenciaspersonales_Click(object sender, EventArgs e)
         {
-
+            new Misasistencias(cedulaprin).Show();
         }
     }
 }
