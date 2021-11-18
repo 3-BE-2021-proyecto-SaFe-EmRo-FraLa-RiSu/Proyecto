@@ -547,7 +547,7 @@ namespace CUMple
                         if (lector.GetString("cedula") != dgvalumnospresentes.Rows[i].Cells["Cedulapres"].Value.ToString())
                         {
                             conexionbd3.Open();
-                            string pasarlista2 = "insert into van values(0,'" + fechaparasql + "','" + lector.GetString("cedula") + "',3)";
+                            string pasarlista2 = "insert into van values(0,'" + fechaparasql + "','" + lector.GetString("cedula") + "',1)";
                             MySqlCommand comando3 = new MySqlCommand(pasarlista2, conexionbd3);
                             comando3.ExecuteNonQuery();
                             conexionbd3.Close();
@@ -590,7 +590,7 @@ namespace CUMple
                         if (lector.GetString("cedula") != dgvalumnospresentes.Rows[i].Cells["Cedulapres"].Value.ToString())
                         {
                             conexionbd3.Open();
-                            string pasarlista2 = "insert into van values(0,'" + fechaparasql + "','" + lector.GetString("cedula") + "',3)";
+                            string pasarlista2 = "insert into van values(0,'" + fechaparasql + "','" + lector.GetString("cedula") + "',2)";
                             MySqlCommand comando3 = new MySqlCommand(pasarlista2, conexionbd3);
                             comando3.ExecuteNonQuery();
                             conexionbd3.Close();

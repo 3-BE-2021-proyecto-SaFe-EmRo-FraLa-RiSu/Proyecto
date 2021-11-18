@@ -220,3 +220,7 @@ D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Misasis
 D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Misexamenes.resources
 C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Misasistencias.resources
 C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.Misexamenes.resources
+D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\bin\Debug\CUMple.exe.manifest
+D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\bin\Debug\CUMple.application
+D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.exe.manifest
+D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.application
