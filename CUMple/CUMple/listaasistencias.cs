@@ -413,7 +413,7 @@ namespace CUMple
             avanzados = false;
             adolescentes = false;
             conexionbd.Open();
-            string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=3 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<6 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado') and nomcompleto like '%" + txbbucar.Text + "%' group by cedula";
+            string comando = "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=3 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<6 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado') group by cedula";
             MySqlDataAdapter comandosql = new MySqlDataAdapter(comando, conexionbd);
             comandosql.Fill(filas);
             dgvlistas.Refresh();
@@ -537,8 +537,25 @@ namespace CUMple
                 conexionbd.Open();
                 for (int i = 0; i < dgvalumnospresentes.RowCount; i++)
                 {
-                    
+                    string falta= "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 group by cedula";
                     string pasarlista = "insert into van values(1,'" + fechaparasql + "','"+dgvalumnospresentes.Rows[i].Cells["Cedulapres"].Value.ToString() +"',1)";
+                    MySqlCommand comandoparamysql2 = new MySqlCommand(falta, conexionbd2);
+                    conexionbd2.Open();
+                    MySqlDataReader lector = comandoparamysql2.ExecuteReader();
+                    while (lector.Read())
+                    {
+                        if (lector.GetString("cedula") != dgvalumnospresentes.Rows[i].Cells["Cedulapres"].Value.ToString())
+                        {
+                            conexionbd3.Open();
+                            string pasarlista2 = "insert into van values(0,'" + fechaparasql + "','" + lector.GetString("cedula") + "',3)";
+                            MySqlCommand comando3 = new MySqlCommand(pasarlista2, conexionbd3);
+                            comando3.ExecuteNonQuery();
+                            conexionbd3.Close();
+                        }
+
+                    }
+                    conexionbd2.Close();
+
                     MySqlCommand comandoparamysql = new MySqlCommand(pasarlista,conexionbd);
                     comandoparamysql.ExecuteNonQuery();
                   
@@ -563,8 +580,24 @@ namespace CUMple
                 conexionbd.Open();
                 for (int i = 0; i < dgvalumnospresentes.RowCount; i++)
                 {
-
+                    string falta= "SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<=13 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=6 and rango NOT IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado') group by cedula";
                     string pasarlista = "insert into van values(1,'" + fechaparasql + "','" + dgvalumnospresentes.Rows[i].Cells["Cedulapres"].Value.ToString() + "',2)";
+                    MySqlCommand comandoparamysql2 = new MySqlCommand(falta, conexionbd2);
+                    conexionbd2.Open();
+                    MySqlDataReader lector = comandoparamysql2.ExecuteReader();
+                    while (lector.Read())
+                    {
+                        if (lector.GetString("cedula") != dgvalumnospresentes.Rows[i].Cells["Cedulapres"].Value.ToString())
+                        {
+                            conexionbd3.Open();
+                            string pasarlista2 = "insert into van values(0,'" + fechaparasql + "','" + lector.GetString("cedula") + "',3)";
+                            MySqlCommand comando3 = new MySqlCommand(pasarlista2, conexionbd3);
+                            comando3.ExecuteNonQuery();
+                            conexionbd3.Close();
+                        }
+
+                    }
+                    conexionbd2.Close();
                     MySqlCommand comandoparamysql = new MySqlCommand(pasarlista, conexionbd);
                     comandoparamysql.ExecuteNonQuery();
 
@@ -635,8 +668,24 @@ namespace CUMple
                 conexionbd.Open();
                 for (int i = 0; i < dgvalumnospresentes.RowCount; i++)
                 {
-
+                  string  falta="SELECT nomcompleto,cedula from discipulos where taekwondo=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=3 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)<6 and rango IN ('Blanco','Blanco confirmado','Amarillo','Amarillo confirmado','Naranja','Naranja confirmado') group by cedula";
                     string pasarlista = "insert into van values(1,'" + fechaparasql + "','" + dgvalumnospresentes.Rows[i].Cells["Cedulapres"].Value.ToString() + "',4)";
+                    MySqlCommand comandoparamysql2 = new MySqlCommand(falta, conexionbd2);
+                    conexionbd2.Open();
+                    MySqlDataReader lector = comandoparamysql2.ExecuteReader();
+                    while (lector.Read())
+                    {
+                        if (lector.GetString("cedula") != dgvalumnospresentes.Rows[i].Cells["Cedulapres"].Value.ToString())
+                        {
+                            conexionbd3.Open();
+                            string pasarlista2 = "insert into van values(0,'" + fechaparasql + "','" + lector.GetString("cedula") + "',4)";
+                            MySqlCommand comando3 = new MySqlCommand(pasarlista2, conexionbd3);
+                            comando3.ExecuteNonQuery();
+                            conexionbd3.Close();
+                        }
+
+                    }
+                    conexionbd2.Close();
                     MySqlCommand comandoparamysql = new MySqlCommand(pasarlista, conexionbd);
                     comandoparamysql.ExecuteNonQuery();
 
@@ -661,8 +710,24 @@ namespace CUMple
                 conexionbd.Open();
                 for (int i = 0; i < dgvalumnospresentes.RowCount; i++)
                 {
-
+                    string falta = "SELECT nomcompleto,cedula from discipulos where krav_maga=1 and TIMESTAMPDIFF(YEAR,fecha_de_nac,CURRENT_DATE)>=13 group by cedula";
                     string pasarlista = "insert into van values(1,'" + fechaparasql + "','" + dgvalumnospresentes.Rows[i].Cells["Cedulapres"].Value.ToString() + "',5)";
+                    MySqlCommand comandoparamysql2 = new MySqlCommand(falta, conexionbd2);
+                    conexionbd2.Open();
+                    MySqlDataReader lector = comandoparamysql2.ExecuteReader();
+                    while (lector.Read())
+                    {
+                        if (lector.GetString("cedula") != dgvalumnospresentes.Rows[i].Cells["Cedulapres"].Value.ToString())
+                        {
+                            conexionbd3.Open();
+                            string pasarlista2 = "insert into van values(0,'" + fechaparasql + "','" + lector.GetString("cedula") + "',5)";
+                            MySqlCommand comando3 = new MySqlCommand(pasarlista2, conexionbd3);
+                            comando3.ExecuteNonQuery();
+                            conexionbd3.Close();
+                        }
+
+                    }
+                    conexionbd2.Close();
                     MySqlCommand comandoparamysql = new MySqlCommand(pasarlista, conexionbd);
                     comandoparamysql.ExecuteNonQuery();
 
