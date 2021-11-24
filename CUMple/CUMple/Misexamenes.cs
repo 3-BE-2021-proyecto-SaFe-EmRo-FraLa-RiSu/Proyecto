@@ -140,8 +140,7 @@ namespace CUMple
                     }
                 if (txbnota.Text != "" && cbrango.SelectedIndex != -1)
                 {
-                    MySqlDataAdapter comandobuscar = new MySqlDataAdapter("select * from rango_obtenido where" + comandorango + " and cedula='" + cedulax + " and"+comandonota+"'", conexionbd);
-                    MessageBox.Show("select * from rango_obtenido where" + comandorango + " and cedula='" + cedulax + "' and" + comandonota + "");
+                    MySqlDataAdapter comandobuscar = new MySqlDataAdapter("select * from rango_obtenido where" + comandorango + " and cedula='" + cedulax + "'l and"+comandonota+"", conexionbd);
                     comandobuscar.Fill(dtexamenes);
                     dgvexamenes.DataSource = dtexamenes;
                     if (dgvexamenes.Rows.Count <= 0)
