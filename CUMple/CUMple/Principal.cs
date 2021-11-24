@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Diagnostics;
 
 namespace CUMple
 {
@@ -196,7 +196,7 @@ namespace CUMple
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process.Start(@"D:\Users\Emilio\Desktop\Emi\Cortesproyecto\Manual.docx");
         }
 
         private void btnverexamenespersonales_Click(object sender, EventArgs e)

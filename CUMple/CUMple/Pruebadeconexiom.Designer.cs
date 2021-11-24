@@ -269,6 +269,7 @@ namespace CUMple
             series1.Legend = "Legend1";
             series1.Name = "Asistencias";
             series2.ChartArea = "ChartArea1";
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(229)))), ((int)(((byte)(27)))));
             series2.Legend = "Legend1";
             series2.Name = "Faltas";
             this.Graficadealumnos.Series.Add(series1);

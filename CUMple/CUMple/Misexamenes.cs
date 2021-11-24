@@ -21,7 +21,7 @@ namespace CUMple
           
         }
 
-        MySqlConnection conexionbd = new MySqlConnection("Server=localhost; Database=programa; uid=root; pwd=;");
+        MySqlConnection conexionbd = new MySqlConnection("Server=localhost; Database=programa; uid=alumno; pwd=alumnocontraseña;");
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
