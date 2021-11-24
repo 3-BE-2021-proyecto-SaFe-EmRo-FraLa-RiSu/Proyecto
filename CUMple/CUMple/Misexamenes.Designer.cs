@@ -39,7 +39,7 @@ namespace CUMple
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnlimpia = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo4 = new System.Windows.Forms.FlowLayoutPanel();
@@ -96,7 +96,7 @@ namespace CUMple
             this.panel3.Controls.Add(this.flowLayoutPanel3);
             this.panel3.Controls.Add(this.flowLayoutPanel4);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.btnlimpia);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.ForeColor = System.Drawing.Color.Black;
@@ -145,20 +145,20 @@ namespace CUMple
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnlimpia
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(3, 281);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 39);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Limpiar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnlimpia.FlatAppearance.BorderSize = 0;
+            this.btnlimpia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
+            this.btnlimpia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlimpia.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlimpia.ForeColor = System.Drawing.Color.White;
+            this.btnlimpia.Location = new System.Drawing.Point(3, 281);
+            this.btnlimpia.Name = "btnlimpia";
+            this.btnlimpia.Size = new System.Drawing.Size(173, 39);
+            this.btnlimpia.TabIndex = 10;
+            this.btnlimpia.Text = "Limpiar";
+            this.btnlimpia.UseVisualStyleBackColor = true;
+            this.btnlimpia.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -174,6 +174,7 @@ namespace CUMple
             this.button3.TabIndex = 12;
             this.button3.Text = "Volver";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -358,7 +359,7 @@ namespace CUMple
             "3er DAN",
             "4to DAN"});
             this.cbrango.Location = new System.Drawing.Point(345, 87);
-            this.cbrango.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbrango.Margin = new System.Windows.Forms.Padding(2);
             this.cbrango.Name = "cbrango";
             this.cbrango.Size = new System.Drawing.Size(167, 26);
             this.cbrango.TabIndex = 55;
@@ -537,7 +538,7 @@ namespace CUMple
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnlimpia;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panelapoyo;
         private System.Windows.Forms.DataGridViewTextBoxColumn cedula;

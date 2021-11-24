@@ -21,6 +21,7 @@ namespace CUMple
             if (tipo == "Adm")
             {
                 btnverexamenespersonales.Visible = false;
+                btnmisasistencias.Visible = false;
             }
             else
             {
@@ -43,6 +44,7 @@ namespace CUMple
             if (tipo == "Adm")
             {
                 btnverexamenespersonales.Visible = false;
+                btnmisasistencias.Visible = false;
             }
             else
             {
@@ -54,7 +56,7 @@ namespace CUMple
                 botingprog.Visible = false;
                 panelapoyo5.Visible = false;
                 flowLayoutPanel2.Visible = false;
-                panelapoyo4.Visible = false;
+              
             }
 
             cedulaprin = cedula;  
@@ -208,9 +210,21 @@ namespace CUMple
         private void btnverasistenciaspersonales_Click(object sender, EventArgs e)
         {
             new Misasistencias(cedulaprin).Show();
+            this.Dispose();
         }
 
         private void panelapoyo4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Misasistencias(cedulaprin).Show();
+            this.Dispose();
+        }
+
+        private void flowLayoutPanel4_Paint(object sender, PaintEventArgs e)
         {
 
         }

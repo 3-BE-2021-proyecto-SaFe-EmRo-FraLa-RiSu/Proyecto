@@ -263,6 +263,7 @@ namespace CUMple
             series1.Name = "Asistencias";
             series2.ChartArea = "ChartArea1";
             series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
+            series2.IsValueShownAsLabel = true;
             series2.LabelForeColor = System.Drawing.Color.White;
             series2.Legend = "Legend1";
             series2.Name = "Faltas";
@@ -271,6 +272,7 @@ namespace CUMple
             this.Graficadealumnos.Size = new System.Drawing.Size(788, 501);
             this.Graficadealumnos.TabIndex = 14;
             this.Graficadealumnos.Text = "chart1";
+            this.Graficadealumnos.Click += new System.EventHandler(this.Graficadealumnos_Click);
             // 
             // Misasistencias
             // 

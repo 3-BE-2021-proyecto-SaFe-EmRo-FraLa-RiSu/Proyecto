@@ -44,11 +44,6 @@ namespace CUMple
             InitializeComponent();
         }
 
-        private void Graficadealumnos_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Pruebadeconexiom_Load(object sender, EventArgs e)
         {
             cmbAño.Items.Add("Ninguno");

@@ -239,6 +239,7 @@ namespace CUMple
             this.Graficadealumnos.BorderlineColor = System.Drawing.Color.Transparent;
             this.Graficadealumnos.BorderSkin.BorderColor = System.Drawing.Color.White;
             chartArea1.AxisX.Interval = 1D;
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
             chartArea1.AxisX.IsLabelAutoFit = false;
             chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
@@ -250,7 +251,7 @@ namespace CUMple
             chartArea1.AxisY.LineColor = System.Drawing.Color.White;
             chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
             chartArea1.AxisY.TitleForeColor = System.Drawing.Color.White;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             chartArea1.BorderColor = System.Drawing.Color.White;
             chartArea1.Name = "ChartArea1";
             this.Graficadealumnos.ChartAreas.Add(chartArea1);
@@ -260,22 +261,25 @@ namespace CUMple
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.Graficadealumnos.Legends.Add(legend1);
-            this.Graficadealumnos.Location = new System.Drawing.Point(319, 41);
+            this.Graficadealumnos.Location = new System.Drawing.Point(377, 63);
             this.Graficadealumnos.Name = "Graficadealumnos";
             this.Graficadealumnos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea1";
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(202)))), ((int)(((byte)(24)))));
+            series1.IsValueShownAsLabel = true;
             series1.LabelForeColor = System.Drawing.Color.White;
             series1.Legend = "Legend1";
             series1.Name = "Asistencias";
             series2.ChartArea = "ChartArea1";
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(229)))), ((int)(((byte)(27)))));
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
+            series2.IsValueShownAsLabel = true;
+            series2.LabelForeColor = System.Drawing.Color.White;
             series2.Legend = "Legend1";
             series2.Name = "Faltas";
             this.Graficadealumnos.Series.Add(series1);
             this.Graficadealumnos.Series.Add(series2);
-            this.Graficadealumnos.Size = new System.Drawing.Size(749, 579);
-            this.Graficadealumnos.TabIndex = 23;
+            this.Graficadealumnos.Size = new System.Drawing.Size(686, 501);
+            this.Graficadealumnos.TabIndex = 24;
             this.Graficadealumnos.Text = "chart1";
             // 
             // Pruebadeconexiom

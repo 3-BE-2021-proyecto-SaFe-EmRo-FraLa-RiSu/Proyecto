@@ -76,7 +76,9 @@ namespace CUMple
             txbnota.Text = "";
          
             cbrango.SelectedIndex = -1;
+
             dgvexamenes.Refresh();
+            dgvexamenes.DataSource = cargarexamenes(cedulax);
         }
         private void button1_Click(object sender, EventArgs e)
         {      
@@ -86,24 +88,30 @@ namespace CUMple
             string nota, comandonota = "";
             string rango, comandorango = "";
 
+                
                 if (txbnota.Text != "")
                 {
                     nota = txbnota.Text;
-                    comandonota = " nota=" + nota + "";
+                    comandonota = " notas=" + nota + "";
                 }
                 if (cbrango.SelectedIndex != -1)
                 {
                     rango = cbrango.SelectedItem.ToString();
                     comandorango = " nuevo_rango='" + rango + "'";
                 }
-                for (int i = 0; i < dgvexamenes.RowCount; i++)
+            if (txbnota.Text=="" && cbrango.SelectedIndex==-1)
+            {
+                MessageBox.Show("No selecciono ningún parámetro para buscar.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }    
+            for (int i = 0; i < dgvexamenes.RowCount; i++)
                 {
                     if (txbnota.Text != "" && cbrango.SelectedIndex == -1)
                     {
                         MySqlDataAdapter comandobuscar = new MySqlDataAdapter("select * from rango_obtenido where" + comandonota + " and cedula='"+cedulax+"'", conexionbd);
                         comandobuscar.Fill(dtexamenes);
                         dgvexamenes.DataSource = dtexamenes;
-                        if (dgvexamenes.Rows[0].Cells[0].Value == null)
+                        if (dgvexamenes.Rows.Count<=0)
                         {
                             MessageBox.Show("No tienes datos aquí");
                             conexionbd.Close();
@@ -119,7 +127,7 @@ namespace CUMple
                         MySqlDataAdapter comandobuscar = new MySqlDataAdapter("select * from rango_obtenido where" + comandorango + " and cedula='" + cedulax + "'", conexionbd);
                         comandobuscar.Fill(dtexamenes);
                         dgvexamenes.DataSource = dtexamenes;
-                        if (dgvexamenes.Rows[0].Cells[0].Value == null)
+                        if (dgvexamenes.Rows.Count <= 0)
                         {
                             MessageBox.Show("No tienes datos de esta fecha");
                             conexionbd.Close();
@@ -130,7 +138,25 @@ namespace CUMple
                         conexionbd.Close();
                         return;
                     }
+                if (txbnota.Text != "" && cbrango.SelectedIndex != -1)
+                {
+                    MySqlDataAdapter comandobuscar = new MySqlDataAdapter("select * from rango_obtenido where" + comandorango + " and cedula='" + cedulax + " and"+comandonota+"'", conexionbd);
+                    MessageBox.Show("select * from rango_obtenido where" + comandorango + " and cedula='" + cedulax + "' and" + comandonota + "");
+                    comandobuscar.Fill(dtexamenes);
+                    dgvexamenes.DataSource = dtexamenes;
+                    if (dgvexamenes.Rows.Count <= 0)
+                    {
+                        MessageBox.Show("No tienes datos de esta fecha");
+                        conexionbd.Close();
+                        dgvexamenes.DataSource = cargarexamenes(cedulax);
+                        limpiar();
+                        return;
+                    }
+                    conexionbd.Close();
+                    return;
                 }
+
+            }
             if (dgvexamenes.RowCount==0)
             {
                 MessageBox.Show("No se encontraron datos");
@@ -142,7 +168,7 @@ namespace CUMple
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            limpiar();
         }
 
         private void dgvexamenes_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -172,6 +198,12 @@ namespace CUMple
         private void cerrarclic_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new Principal("Alm", cedulax).Show();
+            this.Dispose();
         }
     }
 }
