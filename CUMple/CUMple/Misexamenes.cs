@@ -204,5 +204,15 @@ namespace CUMple
             new Principal("Alm", cedulax).Show();
             this.Dispose();
         }
+
+        private void txbnota_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < 8 || (e.KeyChar > 8 && e.KeyChar < 48) || e.KeyChar > 57)
+            {
+                MessageBox.Show("Solo números permitidos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }
