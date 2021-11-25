@@ -198,7 +198,7 @@ namespace CUMple
 
         private void button2_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(@"D:\Users\Emilio\Desktop\Emi\Cortesproyecto\Manual.docx");
+            System.Diagnostics.Process.Start(@"C:\Users\felif\OneDrive\Escritorio\Manual.docx");
         }
 
         private void btnverexamenespersonales_Click(object sender, EventArgs e)

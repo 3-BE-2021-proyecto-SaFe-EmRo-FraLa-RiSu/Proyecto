@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CUMple.exe" size="2449896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CUMple.exe" size="2450408">
       <assemblyIdentity name="CUMple" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>239LIfgaaYm+Z5EgyOmRqrFR5hNThurUpOzkJ+fX4qA=</dsig:DigestValue>
+        <dsig:DigestValue>RDW3Zt8iLTG5Y1m6b1KIe+zClLS/6SuV1iH6APTI6Ys=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

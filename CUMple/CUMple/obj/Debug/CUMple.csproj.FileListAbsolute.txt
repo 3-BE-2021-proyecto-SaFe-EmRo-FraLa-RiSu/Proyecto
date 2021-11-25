@@ -224,3 +224,7 @@ D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\bin\Debug\CUMple.exe.man
 D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\bin\Debug\CUMple.application
 D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.exe.manifest
 D:\Users\Emilio\Documents\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.application
+C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\bin\Debug\CUMple.exe.manifest
+C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\bin\Debug\CUMple.application
+C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.exe.manifest
+C:\Users\felif\OneDrive\Documentos\GitHub\Proyecto\CUMple\CUMple\obj\Debug\CUMple.application

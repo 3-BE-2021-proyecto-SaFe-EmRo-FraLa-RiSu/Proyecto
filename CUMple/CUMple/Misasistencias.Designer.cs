@@ -29,11 +29,11 @@ namespace CUMple
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Misasistencias));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelapoyo1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -42,18 +42,18 @@ namespace CUMple
             this.cmbmeses = new System.Windows.Forms.ComboBox();
             this.cmbAño = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Graficadealumnos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.restau = new System.Windows.Forms.PictureBox();
             this.cerrarclic = new System.Windows.Forms.PictureBox();
             this.minim = new System.Windows.Forms.PictureBox();
             this.maximizar = new System.Windows.Forms.PictureBox();
+            this.Graficadealumnos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Graficadealumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restau)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Graficadealumnos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -139,7 +139,7 @@ namespace CUMple
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.cmbmeses.Location = new System.Drawing.Point(207, 218);
+            this.cmbmeses.Location = new System.Drawing.Point(154, 218);
             this.cmbmeses.Name = "cmbmeses";
             this.cmbmeses.Size = new System.Drawing.Size(114, 26);
             this.cmbmeses.TabIndex = 15;
@@ -153,7 +153,7 @@ namespace CUMple
             this.cmbAño.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAño.ForeColor = System.Drawing.Color.White;
             this.cmbAño.FormattingEnabled = true;
-            this.cmbAño.Location = new System.Drawing.Point(207, 276);
+            this.cmbAño.Location = new System.Drawing.Point(154, 276);
             this.cmbAño.Name = "cmbAño";
             this.cmbAño.Size = new System.Drawing.Size(114, 26);
             this.cmbAño.TabIndex = 16;
@@ -170,67 +170,15 @@ namespace CUMple
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1150, 35);
+            this.panel1.Size = new System.Drawing.Size(1044, 35);
             this.panel1.TabIndex = 17;
-            // 
-            // Graficadealumnos
-            // 
-            this.Graficadealumnos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Graficadealumnos.BackColor = System.Drawing.Color.Transparent;
-            this.Graficadealumnos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Graficadealumnos.BorderlineColor = System.Drawing.Color.Transparent;
-            this.Graficadealumnos.BorderSkin.BorderColor = System.Drawing.Color.White;
-            chartArea4.AxisX.Interval = 1D;
-            chartArea4.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea4.AxisX.IsLabelAutoFit = false;
-            chartArea4.AxisX.LabelStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea4.AxisX.LineColor = System.Drawing.Color.White;
-            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea4.AxisY.IsLabelAutoFit = false;
-            chartArea4.AxisY.LabelStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea4.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea4.AxisY.TitleForeColor = System.Drawing.Color.White;
-            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            chartArea4.BorderColor = System.Drawing.Color.White;
-            chartArea4.Name = "ChartArea1";
-            this.Graficadealumnos.ChartAreas.Add(chartArea4);
-            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            legend4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend4.ForeColor = System.Drawing.Color.White;
-            legend4.IsTextAutoFit = false;
-            legend4.Name = "Legend1";
-            this.Graficadealumnos.Legends.Add(legend4);
-            this.Graficadealumnos.Location = new System.Drawing.Point(327, 61);
-            this.Graficadealumnos.Name = "Graficadealumnos";
-            this.Graficadealumnos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series7.ChartArea = "ChartArea1";
-            series7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(202)))), ((int)(((byte)(24)))));
-            series7.IsValueShownAsLabel = true;
-            series7.LabelForeColor = System.Drawing.Color.White;
-            series7.Legend = "Legend1";
-            series7.Name = "Asistencias";
-            series8.ChartArea = "ChartArea1";
-            series8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
-            series8.IsValueShownAsLabel = true;
-            series8.LabelForeColor = System.Drawing.Color.White;
-            series8.Legend = "Legend1";
-            series8.Name = "Faltas";
-            this.Graficadealumnos.Series.Add(series7);
-            this.Graficadealumnos.Series.Add(series8);
-            this.Graficadealumnos.Size = new System.Drawing.Size(788, 501);
-            this.Graficadealumnos.TabIndex = 14;
-            this.Graficadealumnos.Text = "chart1";
-            this.Graficadealumnos.Click += new System.EventHandler(this.Graficadealumnos_Click);
             // 
             // restau
             // 
             this.restau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.restau.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.restau.Image = ((System.Drawing.Image)(resources.GetObject("restau.Image")));
-            this.restau.Location = new System.Drawing.Point(1019, 3);
+            this.restau.Location = new System.Drawing.Point(913, 3);
             this.restau.Name = "restau";
             this.restau.Size = new System.Drawing.Size(37, 30);
             this.restau.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -243,7 +191,7 @@ namespace CUMple
             this.cerrarclic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cerrarclic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cerrarclic.Image = ((System.Drawing.Image)(resources.GetObject("cerrarclic.Image")));
-            this.cerrarclic.Location = new System.Drawing.Point(1105, 2);
+            this.cerrarclic.Location = new System.Drawing.Point(999, 2);
             this.cerrarclic.Name = "cerrarclic";
             this.cerrarclic.Size = new System.Drawing.Size(37, 30);
             this.cerrarclic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -256,7 +204,7 @@ namespace CUMple
             this.minim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.minim.Image = ((System.Drawing.Image)(resources.GetObject("minim.Image")));
-            this.minim.Location = new System.Drawing.Point(1062, 2);
+            this.minim.Location = new System.Drawing.Point(956, 2);
             this.minim.Name = "minim";
             this.minim.Size = new System.Drawing.Size(37, 30);
             this.minim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -270,7 +218,7 @@ namespace CUMple
             this.maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.maximizar.Image = ((System.Drawing.Image)(resources.GetObject("maximizar.Image")));
-            this.maximizar.Location = new System.Drawing.Point(1062, 3);
+            this.maximizar.Location = new System.Drawing.Point(956, 3);
             this.maximizar.Name = "maximizar";
             this.maximizar.Size = new System.Drawing.Size(37, 30);
             this.maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -278,12 +226,64 @@ namespace CUMple
             this.maximizar.TabStop = false;
             this.maximizar.Click += new System.EventHandler(this.maximizar_Click_1);
             // 
+            // Graficadealumnos
+            // 
+            this.Graficadealumnos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Graficadealumnos.BackColor = System.Drawing.Color.Transparent;
+            this.Graficadealumnos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Graficadealumnos.BorderlineColor = System.Drawing.Color.Transparent;
+            this.Graficadealumnos.BorderSkin.BorderColor = System.Drawing.Color.White;
+            chartArea1.AxisX.Interval = 1D;
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.IsLabelAutoFit = false;
+            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.White;
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            chartArea1.BorderColor = System.Drawing.Color.White;
+            chartArea1.Name = "ChartArea1";
+            this.Graficadealumnos.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            legend1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.ForeColor = System.Drawing.Color.White;
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            this.Graficadealumnos.Legends.Add(legend1);
+            this.Graficadealumnos.Location = new System.Drawing.Point(274, 61);
+            this.Graficadealumnos.Name = "Graficadealumnos";
+            this.Graficadealumnos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            series1.ChartArea = "ChartArea1";
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(202)))), ((int)(((byte)(24)))));
+            series1.IsValueShownAsLabel = true;
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.Name = "Asistencias";
+            series2.ChartArea = "ChartArea1";
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
+            series2.IsValueShownAsLabel = true;
+            series2.LabelForeColor = System.Drawing.Color.White;
+            series2.Legend = "Legend1";
+            series2.Name = "Faltas";
+            this.Graficadealumnos.Series.Add(series1);
+            this.Graficadealumnos.Series.Add(series2);
+            this.Graficadealumnos.Size = new System.Drawing.Size(788, 501);
+            this.Graficadealumnos.TabIndex = 14;
+            this.Graficadealumnos.Text = "chart1";
+            this.Graficadealumnos.Click += new System.EventHandler(this.Graficadealumnos_Click);
+            // 
             // Misasistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(1150, 649);
+            this.ClientSize = new System.Drawing.Size(1044, 649);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cmbmeses);
             this.Controls.Add(this.cmbAño);
@@ -295,11 +295,11 @@ namespace CUMple
             this.Load += new System.EventHandler(this.Misasistencias_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Graficadealumnos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restau)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarclic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Graficadealumnos)).EndInit();
             this.ResumeLayout(false);
 
         }
