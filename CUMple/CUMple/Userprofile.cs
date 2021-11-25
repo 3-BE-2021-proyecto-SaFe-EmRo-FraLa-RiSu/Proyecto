@@ -123,7 +123,9 @@ namespace CUMple
                     conexionprograma.Close();
                     return;
                 }
+
             }
+            conexionprograma.Close();
             if (txbprofedit.Text != mostrarlabel("profesiones")) 
             {
                 editarusuario("profesiones", txbprofedit.Text, mostrarlabel("profesiones"), mostrarlabel("cedula"));
